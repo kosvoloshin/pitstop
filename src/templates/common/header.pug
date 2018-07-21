@@ -1,15 +1,15 @@
 header.header
-    .header__top
-        .header__wrap
-            .header__text Комплексные решения в сфере строительных услуг
-            .header__contacts
-                ul.contacts
-                    li.contacts__item info@carral.com
-                    li.contacts__item +00(123)456 78 90
-                    li.contacts__item +00(123)456 78 90
-    .header__main
-        .header__logo
-            a.logo(href="index.html"): img.logo__img(alt="logo" src="./assets/images/logo.png")
-        include ./menu.pug
-        button(type="button").hamburger#openFull
-            .hamburger__menu
+    .header__left
+        .logo
+            a.logo__link(href="index.html")
+                img.logo__image(src="./assets/images/icons/Logo.png")
+    .header__right
+        .nav
+            button.nav__search(type="button")
+                svg.nav__search-icon: use(xlink:href="assets/images/icons/sprite.svg#search")
+                //-https://ru.freepik.com/free-icons
+            .lang
+                .lang__item
+                    a.lang__link(href="#") укр
+                .lang__item
+                    a.lang__link(href="#") eng

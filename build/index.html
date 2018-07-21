@@ -2,355 +2,40 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Каррал</title>
+    <title>Філармонія</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="./assets/styles/app.min.css">
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon-carral.ico">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon-philarmonia.ico">
     <script src="./assets/scripts/bundle.js" defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">
-        <div class="header__top">
-          <div class="header__wrap">
-            <div class="header__text">Комплексные решения в сфере строительных услуг</div>
-            <div class="header__contacts">
-              <ul class="contacts">
-                <li class="contacts__item">info@carral.com</li>
-                <li class="contacts__item">+00(123)456 78 90</li>
-                <li class="contacts__item">+00(123)456 78 90</li>
-              </ul>
+      <div class="container">
+        <header class="header">
+          <div class="header__left">
+            <div class="logo"><a class="logo__link" href="index.html"><img class="logo__image" src="./assets/images/icons/Logo.png"></a></div>
+          </div>
+          <div class="header__right">
+            <div class="nav">
+              <button class="nav__search" type="button">
+                <svg class="nav__search-icon">
+                  <use xlink:href="assets/images/icons/sprite.svg#search"></use>
+                </svg>
+              </button>
+              <div class="lang">
+                <div class="lang__item"><a class="lang__link" href="#">укр</a></div>
+                <div class="lang__item"><a class="lang__link" href="#">eng</a></div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="header__main">
-          <div class="header__logo"><a class="logo" href="index.html"><img class="logo__img" alt="logo" src="./assets/images/logo.png"></a></div>
-          <div class="menu">
-            <ul class="menu__list">
-              <li class="menu__item"><a class="menu__link" href="index.html">ГЛАВНАЯ</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">О КОМПАНИИ</a></li>
-              <li class="menu__item"><a class="menu__link" href="service.html">УСЛУГИ</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">ОБЪЕКТЫ</a></li>
-              <li class="menu__item"><a class="menu__link" href="news.html">НОВОСТИ</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">ДОКУМЕНТЫ</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">КОНТАКТЫ</a></li>
-            </ul>
-          </div>
-          <button class="hamburger" type="button" id="openFull">
-            <div class="hamburger__menu"></div>
-          </button>
-        </div>
-      </header>
-      <section class="section hero">
-        <h1 class="visuallyhidden">Hero</h1>
-        <div class="slider wrap">
-          <ul class="slider__list">
-            <li class="slider__item slider__item_one">
-              <div class="slider__info">
-                <div class="slider__desc">
-                  <h2 class="slider__title">ЭЛЕКТРОМОНТАЖНЫЕ РАБОТЫ</h2>
-                  <div class="slider__text">
-                    <p>Высококвалифицированные бригады электриков выполнят работы по монтажу и демонтажу электросетей и электрооборудованию. Качественное выполнение работ по самым высоким  требованиям к электробезопастности.</p>
-                  </div>
-                  <div class="button"><a class="button__link" href="#">ПОДРОБНЕЕ</a></div>
-                </div>
-              </div>
-            </li>
-            <li class="slider__item slider__item_two">
-              <div class="slider__info">
-                <div class="slider__desc">
-                  <h2 class="slider__title">КРУПНОЗЕРНИСТЫЙ И МЕЛКОЗЕРНИСТЫЙ БЕТОН</h2>
-                  <div class="slider__text">
-                    <p>Высококвалифицированные бригады электриков выполнят работы по монтажу и демонтажу электросетей и электрооборудованию. Качественное выполнение работ по самым высоким  требованиям к электробезопастности.</p>
-                  </div>
-                  <div class="button"><a class="button__link" href="#">ПОДРОБНЕЕ</a></div>
-                </div>
-              </div>
-            </li>
-            <li class="slider__item slider__item_three">
-              <div class="slider__info">
-                <div class="slider__desc">
-                  <h2 class="slider__title">БЕТОН ЛЕТНИЙ И ЗИМНИЙ В КИЕВЕ</h2>
-                  <div class="slider__text">
-                    <p>Высококвалифицированные бригады электриков выполнят работы по монтажу и демонтажу электросетей и электрооборудованию. Качественное выполнение работ по самым высоким  требованиям к электробезопастности.</p>
-                  </div>
-                  <div class="button"><a class="button__link" href="#">ПОДРОБНЕЕ</a></div>
-                </div>
-              </div>
-            </li>
-          </ul>
-          <div class="slider__buttons">
-            <button class="controls slider__controls-prev ASPrev" id="prev-slide" type="button">
-              <div class="controls__triangle-prev"></div>
-            </button>
-            <button class="controls slider__controls-next ASNext" id="next-slide" type="button">
-              <div class="controls__triangle-next"></div>
-            </button>
-          </div>
-          <script>
-            (function($){
-            $(document).ready(function(){
-            var options = {
-            slides: '.slider__item',
-            swipe: false,
-            transition: "slide",
-            slideTracker: false,
-            slideOnInterval: false, 
-            animateDuration: 500, 
-            animationEasing: 'ease', 
-            };
-            $(".slider__list").simpleSlider(options);
-            mainslider = $(".slider__list").data("simpleslider");
-            /* yes, that's all! */
-            $(".slider__list").on("beforeSliding", function(event){
-            var prevSlide = event.prevSlide;
-            var newSlide = event.newSlide;
-            $(".slider__list .slider__list[data-index='" + prevSlide + "'] .slider__info").fadeOut();
-            $(".slider__list .slider__list[data-index='" + newSlide + "'] .slider__info").hide();
-            sliding = true;
-            });
-            $(".slider__list").on("afterSliding", function(event){
-            var prevSlide = event.prevSlide;
-            var newSlide = event.newSlide;
-            $(".slider__list .slider__list[data-index='" + newSlide + "'] .slider__info").fadeIn();
-            sliding = false;
-            });
-            $("#prev-slide").on("click", function(event){
-            mainslider.prevSlide();
-            });
-            $("#next-slide").on("click", function(event){
-            mainslider.nextSlide();
-            });
-            });
-            })(jQuery);
-          </script>
-        </div>
+        </header>
+      </div>
+      <section class="section slider">
+        <div class="image-wrap"></div>
       </section>
-      <section class="section service">
-        <h1 class="visuallyhidden">Service</h1>
-        <div class="service__desc">
-          <h2 class="service__title">Оказываемые Услуги</h2>
-          <div class="service__text"> 
-            <p>Идейные соображения высшего порядка, а также консультация с широким активом способствует подготовки и реализации дальнейших направлений развития. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации модели развития.</p>
-          </div>
-        </div>
-        <div class="service__content">
-          <ul class="service__list">
-            <li class="service__item">
-              <div class="service__image">
-                <div class="service__wrap">
-                  <div class="service__zoom"><img class="service__zoom-logo" alt="zoom" src="./assets/images/zoom.png"></div>
-                </div>
-              </div>
-              <div class="service__button"><a class="service__link" href="#">ДЕМОНТАЖНЫЕ РАБОТЫ</a></div>
-            </li>
-            <li class="service__item">
-              <div class="service__image">
-                <div class="service__wrap">
-                  <div class="service__zoom"><img class="service__zoom-logo" alt="zoom" src="./assets/images/zoom.png"></div>
-                </div>
-              </div>
-              <div class="service__button"><a class="service__link" href="#">ЭЛЕКТРОМОНТАЖНЫЕ РАБОТЫ</a></div>
-            </li>
-            <li class="service__item">
-              <div class="service__image">
-                <div class="service__wrap">
-                  <div class="service__zoom"><img class="service__zoom-logo" alt="zoom" src="./assets/images/zoom.png"></div>
-                </div>
-              </div>
-              <div class="service__button"><a class="service__link" href="#">САНТЕХНИЧЕСКИЕ РАБОТЫ</a></div>
-            </li>
-            <li class="service__item">
-              <div class="service__image">
-                <div class="service__wrap">
-                  <div class="service__zoom"><img class="service__zoom-logo" alt="zoom" src="./assets/images/zoom.png"></div>
-                </div>
-              </div>
-              <div class="service__button"><a class="service__link" href="#">ОТДЕЛОЧНЫЕ РАБОТЫ</a></div>
-            </li>
-            <li class="service__item">
-              <div class="service__image">
-                <div class="service__wrap">
-                  <div class="service__zoom"><img class="service__zoom-logo" alt="zoom" src="./assets/images/zoom.png"></div>
-                </div>
-              </div>
-              <div class="service__button"><a class="service__link" href="#">КРОВЕЛЬНЫЕ РАБОТЫ</a></div>
-            </li>
-            <li class="service__item">
-              <div class="service__image">
-                <div class="service__wrap">
-                  <div class="service__zoom"><img class="service__zoom-logo" alt="zoom" src="./assets/images/zoom.png"></div>
-                </div>
-              </div>
-              <div class="service__button"><a class="service__link" href="#">УКЛАДКА ТРОТУАРНОЙ ПЛИТКИ</a></div>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="section news">
-        <h1 class="visuallyhidden">News</h1>
-        <h2 class="news__title">Новости</h2>
-        <ul class="news__list">
-          <li class="news__item">
-            <div class="news__image news__image-one"></div>
-            <div class="news-desc">
-              <h3 class="news-desc__title">Обеспечение нашей деятельности и идейные соображения </h3>
-              <div class="news-desc__text">
-                <p>Идейные соображения высшего порядка, а также консультация с широким активом способствует подготовки и... </p>
-              </div>
-              <div class="news-desc__btn"><a class="news-desc__btn-link" href="news-in.html">ПОДРОБНЕЕ</a></div>
-            </div>
-          </li>
-          <li class="news__item news__item--right">
-            <div class="news__image news__image-two"></div>
-            <div class="news-desc">
-              <h3 class="news-desc__title">Обеспечение нашей деятельности и идейные соображения </h3>
-              <div class="news-desc__text">
-                <p>Идейные соображения высшего порядка, а также консультация с широким активом способствует подготовки и...  </p>
-              </div>
-              <div class="news-desc__btn"><a class="news-desc__btn-link" href="news-in.html">ПОДРОБНЕЕ</a></div>
-            </div>
-          </li>
-          <li class="news__item">
-            <div class="news__image news__image-three"></div>
-            <div class="news-desc">
-              <h3 class="news-desc__title">Обеспечение нашей деятельности и идейные соображения </h3>
-              <div class="news-desc__text">
-                <p>Идейные соображения высшего порядка, а также консультация с широким активом способствует подготовки и...  </p>
-              </div>
-              <div class="news-desc__btn"><a class="news-desc__btn-link" href="news-in.html">ПОДРОБНЕЕ</a></div>
-            </div>
-          </li>
-          <li class="news__item news__item--right">
-            <div class="news__image news__image-four"></div>
-            <div class="news-desc">
-              <h3 class="news-desc__title">Обеспечение нашей деятельности и идейные соображения </h3>
-              <div class="news-desc__text">
-                <p>Идейные соображения высшего порядка, а также консультация с широким активом способствует подготовки и...  </p>
-              </div>
-              <div class="news-desc__btn"><a class="news-desc__btn-link" href="news-in.html">ПОДРОБНЕЕ</a></div>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <section class="section contacts-footer">
-        <h1 class="visuallyhidden">Partners</h1>
-        <div class="slider-wrap">
-          <div class="partners">
-            <ul class="partners__list" id="lightSlider">
-              <li class="partners__item">
-                <div class="partners__image" style="background-image: url(./assets/images/intel.png);"></div>
-              </li>
-              <li class="partners__item">
-                <div class="partners__image" style="background-image: url(./assets/images/acer.png);"></div>
-              </li>
-              <li class="partners__item">
-                <div class="partners__image" style="background-image: url(./assets/images/lg.png);"></div>
-              </li>
-              <li class="partners__item">
-                <div class="partners__image" style="background-image: url(./assets/images/sp.png);"></div>
-              </li>
-              <li class="partners__item">
-                <div class="partners__image" style="background-image: url(./assets/images/nokia.png);"></div>
-              </li>
-              <li class="partners__item">
-                <div class="partners__image" style="background-image: url(./assets/images/amd.png);">                  </div>
-              </li>
-            </ul>
-          </div>
-          <div class="slider__buttons lSAction">
-            <button class="controls controls--footer slider__controls-prev lSPrev" id="goToPrevSlide" type="button">
-              <div class="controls__triangle-prev"></div>
-            </button>
-            <button class="controls controls--footer slider__controls-next lSNext" id="goToNextSlide" type="button">
-              <div class="controls__triangle-next"></div>
-            </button>
-          </div>
-          <script>
-            $(document).ready(function() {
-                var slider = $('#lightSlider').lightSlider({
-                item:6,
-                loop:false,
-                slideMove:2,
-                easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
-                speed:600,
-                    responsive : [
-                    {
-                    breakpoint:1800,
-                    settings: {
-                    item:5,
-                    slideMove:1,
-                    slideMargin:15,
-                    }
-                    },
-                    {
-                    breakpoint:1200,
-                    settings: {
-                    item:5,
-                    slideMove:1,
-                    slideMargin:15,
-                    }
-                    },
-                    {
-                    breakpoint:992,
-                    settings: {
-                    item:4,
-                    slideMove:1,
-                    slideMargin:15,
-                    }
-                    },
-                    {
-                    breakpoint:768,
-                    settings: {
-                    item:2,
-                    slideMove:1,
-                    slideMargin:15,
-                    }
-                    },
-                    {
-                    breakpoint:480,
-                    settings: {
-                    item:1,
-                    slideMove:1
-                    }
-                    }
-                    ]
-                    });
-                $('#goToPrevSlide').click(function(){
-                    slider.goToPrevSlide();
-                });
-                $('#goToNextSlide').click(function(){
-                    slider.goToNextSlide();
-                });
-            });
-          </script>
-        </div>
-      </section>
-      <footer class="footer">
-        <div class="footer__content">
-          <div class="footer__info">
-            <div class="footer__logo"><a class="logo" href="index.html"><img class="logo__img" alt="logo" src="./assets/images/logo-footer.png"></a></div>
-            <div class="footer__text">Комплексные решения в сфере строительных услуг</div>
-            <div class="footer__copy">© 2018 Строительная компания "Каррал".</div>
-          </div>
-          <div class="footer__nav">
-            <h3 class="footer__nav-title">Навигация</h3>
-            <ul class="footer__nav-list">
-              <li class="footer__nav-item"><a class="footer__nav-link" href="index.html">Главная</a></li>
-              <li class="footer__nav-item"><a class="footer__nav-link" href="service.html">Услуги</a></li>
-              <li class="footer__nav-item"><a class="footer__nav-link" href="news.html">Новости</a></li>
-              <li class="footer__nav-item"><a class="footer__nav-link" href="#">Контакты</a></li>
-              <li class="footer__nav-item"><a class="footer__nav-link" href="#">О компании</a></li>
-              <li class="footer__nav-item"><a class="footer__nav-link" href="#">Объекты</a></li>
-              <li class="footer__nav-item"><a class="footer__nav-link" href="#">Документы</a></li>
-            </ul>
-          </div>
-        </div>
-      </footer>
     </div>
   </body>
 </html>

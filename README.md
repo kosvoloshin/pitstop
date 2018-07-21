@@ -1,5 +1,3 @@
-https://kosvoloshin.github.io/sborka/build/index.html
-
 ## Gulp-webpack 2018
 
 #### Для работы сборки у вас должны быть установлены

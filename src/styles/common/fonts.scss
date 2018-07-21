@@ -1,31 +1,39 @@
 @font-face {
-    font-family: 'Lato reg';
-    src: url('../fonts/subset-Lato-Regular.woff2') format('woff2'),
-        url('../fonts/subset-Lato-Regular.woff') format('woff');
+    font-family: 'Roboto-Medium';
+    src: url('../fonts/subset-Roboto-Medium.woff2') format('woff2'),
+        url('../fonts/subset-Roboto-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../fonts/subset-Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/subset-Roboto-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Open Sans reg';
-    src: url('../fonts/subset-OpenSans.woff2') format('woff2'),
-        url('../fonts/subset-OpenSans.woff') format('woff');
+    font-family: 'Roboto-Italic';
+    src: url('../fonts/subset-Roboto-Italic.woff2') format('woff2'),
+        url('../fonts/subset-Roboto-Italic.woff') format('woff');
     font-weight: normal;
-    font-style: normal;
+    font-style: italic;
 }
 
 @font-face {
-    font-family: 'Open Sans bold';
-    src: url('../fonts/subset-OpenSans-Bold.woff2') format('woff2'),
-        url('../fonts/subset-OpenSans-Bold.woff') format('woff');
+    font-family: 'Roboto-Bold';
+    src: url('../fonts/subset-Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/subset-Roboto-Bold.woff2') format('woff');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Source Sans Pro reg';
-    src: url('../fonts/subset-SourceSansPro-Regular.woff2') format('woff2'),
-        url('../fonts/subset-SourceSansPro-Regular.woff') format('woff');
+    font-family: 'Arial';
+    src: url('../fonts/subset-ArialMT.woff2') format('woff2'),
+        url('../fonts/subset-ArialMT.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
