@@ -17,6 +17,7 @@
     max-width: 1170px;
     margin: 0 auto;
     position: relative;
+    z-index: 10;
 
     @include desktop {
         max-width: 940px;
@@ -29,4 +30,13 @@
     @include tablets {
         max-width: 90%;
     }
+}
+
+.image-wrap {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }

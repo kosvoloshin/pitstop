@@ -1,15 +1,30 @@
 header.header
-    .header__left
+    .header__l
         .logo
             a.logo__link(href="index.html")
-                img.logo__image(src="./assets/images/icons/Logo.png")
-    .header__right
+                img.logo__image(src="./assets/images/icons/Logo.png" alt="logo")
+    .header__r
         .nav
             button.nav__search(type="button")
                 svg.nav__search-icon: use(xlink:href="assets/images/icons/sprite.svg#search")
-                //-https://ru.freepik.com/free-icons
             .lang
                 .lang__item
                     a.lang__link(href="#") укр
                 .lang__item
                     a.lang__link(href="#") eng
+        .menu
+            ul.menu__list
+                li.menu__item
+                    a.menu__link.active(href="#") головна
+                li.menu__item
+                    a.menu__link(href="#") про філармонію
+                li.menu__item
+                    a.menu__link(href="#") виконавці
+                li.menu__item
+                    a.menu__link(href="#") концерти
+                li.menu__item
+                    a.menu__link(href="#") галерея
+                li.menu__item
+                    a.menu__link(href="#") комунальна власність
+                li.menu__item
+                    a.menu__link(href="#") контакти

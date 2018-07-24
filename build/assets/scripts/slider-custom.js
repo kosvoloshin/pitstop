@@ -1,5 +1,3 @@
-/*
-
 var $slider = $('.slideshow .slider'),
   maxItems = $('.item', $slider).length,
   dragging = false,
@@ -78,4 +76,3 @@ $('.slideshow-text').slick({
   cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)'
 });
 
-*/
