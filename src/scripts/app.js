@@ -19,9 +19,10 @@ $slider.addClass('slideshow-left');
 $('.slideshow-left').slick({
   vertical: true,
   verticalSwiping: true,
-  arrows: false,
+  //arrows: false,
+  arrows: true,
   infinite: true,
-  dots: true,
+  //dots: true,
   speed: 1000,
   cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)'
 }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
@@ -63,7 +64,9 @@ $('.slideshow-left').slick({
 $('.slideshow-right .slider').slick({
   swipe: false,
   vertical: true,
+  dots: true,
   arrows: false,
+  //arrows: true,
   infinite: true,
   speed: 950,
   cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',

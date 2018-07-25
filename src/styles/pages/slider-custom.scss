@@ -10,7 +10,7 @@
   .slider {
     width: 100vw;
     height: 100vw;
-    z-index: -1;//было 2
+    z-index: 2;
     
     * {
       outline: none;
@@ -41,36 +41,35 @@
   .slick-dots {
     position: fixed;
     z-index: 100;
-    width: 40px;
-    height: auto;
-    bottom: auto;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
+    width: auto;
+    height: 40px;
+    bottom: 50px;
+    right: 50%;
+    transform: translate(50%, -50%);
     left: auto;
     color: #fff;
-    display: block;
+    display: flex;
     
     li {
-      display: block;
-      width: 100%;
-      height: auto;
+      width: auto;
+      height: 100%;
       
       & button {
         position: relative;
-        width: 20px;
-        height: 15px;
+        width: 32px;
+        height: 20px;
         text-align: center;
         background: none;
         border: initial;
         color: transparent;
+
         
         &:before {
           content: '';
           background: #fff;
           color: #fff;
-          height: 2px;
-          width: 20px;
+          height: 4px;
+          width: 4px;
           border-radius: 0;
           position: absolute;
           top: 50%;
@@ -78,14 +77,19 @@
           left: auto;
           transform: translateY(-50%);
           transition: all .3s ease-in-out;
-          opacity: 0.6;
+          opacity: 1;
         }
+      }
+      
+      &:first-child button {
+        width: 0;
+        padding-left: 0;
       }
       
       &.slick-active {
         button {
           &:before {
-            width: 40px;
+            height: 18px;
             opacity: 1;
           }
         }
@@ -106,24 +110,51 @@
   }
 }
 
+.slideshow-left {
+  .slick-prev {
+    left: 0;
+    top: 50%;
+  }
+  .slick-next {
+    top: 50%;
+    right: 0;
+  }
+}
+
 .slideshow-text {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-100%, -50%);
   z-index: 100;
-  font-size: 20px;
-  width: 100vw;
-  text-align: center;
+  font-size: 18px;
+  width: 265px;
   color: #fff;
-  font-weight: 100;
   pointer-events: none;
-  letter-spacing: 20px;
-  line-height: 1.42;
+  line-height: 1.4;
   overflow: hidden;
-  
-  @media (max-width: 767px) {
-    font-size: 40px;
-  }
-  
+  text-align: right;
+}
+
+.slideshow-text__title {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.slideshow-text__subtitle {
+  font-size: 20px;
+}
+
+.slick-arrow {
+  position: fixed;
+  background: #fff;
+  z-index: 1;
+}
+
+.slick-prev {
+
+}
+
+.slick-next {
+
 }

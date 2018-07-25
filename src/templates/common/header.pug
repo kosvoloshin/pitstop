@@ -1,4 +1,4 @@
-header.header
+header.header.container
     .header__l
         .logo
             a.logo__link(href="index.html")
@@ -8,10 +8,8 @@ header.header
             button.nav__search(type="button")
                 svg.nav__search-icon: use(xlink:href="assets/images/icons/sprite.svg#search")
             .lang
-                .lang__item
-                    a.lang__link(href="#") укр
-                .lang__item
-                    a.lang__link(href="#") eng
+                a.lang__link.active(href="#") укр
+                a.lang__link(href="#") eng
         .menu
             ul.menu__list
                 li.menu__item
