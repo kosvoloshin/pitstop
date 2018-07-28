@@ -5,27 +5,26 @@ block variables
 
 block content
     .wrapper
-        //-.container
         include ../common/header.pug
-        section.section
-        .split-slideshow
-            .slideshow
-                .slider
-                    .item
-                        img.item__img(src='./assets/images/slides/slide-one.jpg' alt="slide")
-                        .image-wrap
-                    .item
-                        img.item__img(src='./assets/images/slides/slide-two.jpg' alt="slide")
-                        .image-wrap
-                    .item
-                        img.item__img(src='./assets/images/slides/slide-three.jpg' alt="slide")
-                        .image-wrap
-                    .item
-                        img.item__img(src='./assets/images/slides/slide-four.jpg' alt="slide")
-                        .image-wrap
-                    .item
-                        img.item__img(src='./assets/images/slides/slide-fifth.jpg' alt="slide")
-                        .image-wrap
+        section.section.section--slider
+            .split-slideshow
+                .slideshow
+                    .slider
+                        .item
+                            img.item__img(src='./assets/images/slides/slide-one.jpg' alt="slide")
+                            .image-wrap
+                        .item
+                            img.item__img(src='./assets/images/slides/slide-two.jpg' alt="slide")
+                            .image-wrap
+                        .item
+                            img.item__img(src='./assets/images/slides/slide-three.jpg' alt="slide")
+                            .image-wrap
+                        .item
+                            img.item__img(src='./assets/images/slides/slide-four.jpg' alt="slide")
+                            .image-wrap
+                        .item
+                            img.item__img(src='./assets/images/slides/slide-fifth.jpg' alt="slide")
+                            .image-wrap
         .slideshow-text
             a(href="#").slideshow-text__title «Радани»
                 .slideshow-text__subtitle Ансамбль пісні та танцю
@@ -37,3 +36,31 @@ block content
                 .slideshow-text__subtitle Знаменитый человек 
             a(href="#").slideshow-text__title «Радани»
                 .slideshow-text__subtitle Ансамбль пісні та танцю
+        .appendArrows
+        footer.footer.footer--abs.container
+            .audio
+                .audio__control
+                    button(type="button").audio__btn
+                        //svg.audio__btn-play: use(xlink:href="assets/images/icons/sprite.svg#play")
+                        //svg.audio__btn-pause: use(xlink:href="assets/images/icons/sprite.svg#pause")
+                .audio__timerail
+                    .audio__band
+                .audio__duration
+                    .audio__time 03:21/06:58
+            .footer__row.footer__row--with-line
+                .contacts
+                    a.contacts__mail(href="mailto:luganskaoblastnafilarmonia@gmail.com")
+                        svg.contacts__icon-mail: use(xlink:href="assets/images/icons/sprite.svg#mail")
+                        .contacts__text e-mail:
+                        .contacts__link luganskaoblastnafilarmonia@gmail.com
+                    a.contacts__phone(href="tel:+380500050055")
+                        svg.contacts__icon-phone: use(xlink:href="assets/images/icons/sprite.svg#phone")
+                        .contacts__text квиткова каса:
+                        .contacts__link +38 050 005 00 55
+            .footer__row
+                .footer__col
+                    .footer__copy © Луганська обласна філармонія  2013-2018
+                .footer__col
+                    .footer__partners
+                        img.footer__img(src='./assets/images/icons/karabas.png' alt="karabas")
+                        img.footer__img(src='./assets/images/icons/stv.png' alt="stv")

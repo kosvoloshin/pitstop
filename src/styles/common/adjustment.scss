@@ -2,11 +2,20 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .section {
     position: relative;
     min-height: 650px;
+    flex: 1 0 auto;
+}
+
+.section--slider {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .container {
@@ -29,6 +38,10 @@
     }
 }
 
+.container--flex {
+    display: flex;
+}
+
 .image-wrap {
     background-color: rgba(0, 0, 0, 0.7);
     height: 100%;
@@ -36,4 +49,8 @@
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.footer {
+    flex: 0 0 auto;
 }

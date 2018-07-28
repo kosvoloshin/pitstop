@@ -1,3 +1,4 @@
+
 /*
 
 var $slider = $('.slideshow .slider'),
@@ -20,7 +21,7 @@ $('.slideshow-left').slick({
   vertical: true,
   verticalSwiping: true,
   //arrows: false,
-  arrows: true,
+  appendArrows: '.appendArrows',
   infinite: true,
   //dots: true,
   speed: 1000,
@@ -66,7 +67,6 @@ $('.slideshow-right .slider').slick({
   vertical: true,
   dots: true,
   arrows: false,
-  //arrows: true,
   infinite: true,
   speed: 950,
   cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',

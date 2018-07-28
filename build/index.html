@@ -17,60 +17,211 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header container">
-        <div class="header__l">
-          <div class="logo"><a class="logo__link" href="index.html"><img class="logo__image" src="./assets/images/icons/Logo.png" alt="logo"></a></div>
-        </div>
-        <div class="header__r">
-          <div class="nav">
-            <button class="nav__search" type="button">
-              <svg class="nav__search-icon">
-                <use xlink:href="assets/images/icons/sprite.svg#search"></use>
-              </svg>
-            </button>
-            <div class="lang"><a class="lang__link active" href="#">укр</a><a class="lang__link" href="#">eng</a></div>
+      <header class="header">
+        <div class="container container--flex">
+          <div class="header__l">
+            <div class="logo"><a class="logo__link" href="index.html"><img class="logo__image" src="./assets/images/icons/Logo.png" alt="logo"></a></div>
           </div>
-          <div class="menu">
-            <ul class="menu__list">
-              <li class="menu__item"><a class="menu__link active" href="#">головна</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">про філармонію</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">виконавці</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">концерти</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">галерея</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">комунальна власність</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">контакти</a></li>
-            </ul>
+          <div class="header__r">
+            <div class="nav nav--top">
+              <button class="nav__search" type="button">
+                <svg class="nav__search-icon">
+                  <use xlink:href="assets/images/icons/sprite.svg#search"></use>
+                </svg>
+              </button>
+              <div class="lang"><a class="lang__link active" href="#">укр</a><a class="lang__link" href="#">eng</a></div>
+            </div>
+            <div class="menu">
+              <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link active" href="#">головна</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">про філармонію</a></li>
+                <li class="menu__item"><a class="menu__link menu__link--drop" href="#">виконавці</a>
+                  <div class="drop-down">
+                    <div class="container">
+                      <div class="drop-menu">
+                        <div class="drop-menu__col">
+                          <ul class="drop-menu__list">
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">79 концертний сезон (2015/2016)</a></li>
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">80 концертний сезон (2015/2016)</a></li>
+                          </ul>
+                        </div>
+                        <div class="drop-menu__col">
+                          <ul class="drop-menu__list">
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">Квитки</a></li>
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">Події</a></li>
+                          </ul>
+                        </div>
+                        <div class="drop-menu__col">
+                          <div class="drop-menu__sudtitle">Абонементи</div>
+                          <ul class="drop-menu__list">
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">Слухай, співай та грай українське</a></li>
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">Вечори з «Аркатою»</a></li>
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">У фокусі — голос</a></li>
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">Steinway & K°</a></li>
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">Jazz у моєму місті</a></li>
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">Знай наших</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="menu__item"><a class="menu__link menu__link--drop" href="#">концерти</a>
+                  <div class="drop-down">
+                    <div class="container">
+                      <div class="drop-menu">
+                        <div class="drop-menu__col">
+                          <ul class="drop-menu__list">
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">79 концертний сезон (2015/2016)</a></li>
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">80 концертний сезон (2015/2016)</a></li>
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">79 концертний сезон (2015/2016)</a></li>
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">80 концертний сезон (2015/2016)</a></li>
+                          </ul>
+                        </div>
+                        <div class="drop-menu__col">
+                          <ul class="drop-menu__list">
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">Квитки</a></li>
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">Події</a></li>
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">Квитки</a></li>
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">Події</a></li>
+                          </ul>
+                        </div>
+                        <div class="drop-menu__col">
+                          <div class="drop-menu__sudtitle">Абонементи</div>
+                          <ul class="drop-menu__list">
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">Слухай, співай та грай українське</a></li>
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">Вечори з «Аркатою»</a></li>
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">У фокусі — голос</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="menu__item"><a class="menu__link menu__link--drop" href="#">галерея</a>
+                  <div class="drop-down">
+                    <div class="container">
+                      <div class="drop-menu">
+                        <div class="drop-menu__col">
+                          <ul class="drop-menu__list">
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">79 концертний сезон (2015/2016)</a></li>
+                          </ul>
+                        </div>
+                        <div class="drop-menu__col">
+                          <ul class="drop-menu__list">
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">Квитки</a></li>
+                          </ul>
+                        </div>
+                        <div class="drop-menu__col">
+                          <div class="drop-menu__sudtitle">Абонементи</div>
+                          <ul class="drop-menu__list">
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">Слухай, співай та грай українське</a></li>
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">Вечори з «Аркатою»</a></li>
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">У фокусі — голос</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="menu__item"><a class="menu__link" href="#">комунальна власність</a></li>
+                <li class="menu__item"><a class="menu__link menu__link--drop" href="#">контакти</a>
+                  <div class="drop-down">
+                    <div class="container">
+                      <div class="drop-menu">
+                        <div class="drop-menu__col">
+                          <ul class="drop-menu__list">
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">79 концертний сезон (2015/2016)</a></li>
+                          </ul>
+                        </div>
+                        <div class="drop-menu__col">
+                          <ul class="drop-menu__list">
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">Квитки</a></li>
+                          </ul>
+                        </div>
+                        <div class="drop-menu__col">
+                          <div class="drop-menu__sudtitle">контакти</div>
+                          <ul class="drop-menu__list">
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">02020202002</a></li>
+                            <li class="drop-menu__item"><a class="drop-menu__link" href="#">4848484848483</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </header>
-      <section class="section"></section>
-      <div class="split-slideshow">
-        <div class="slideshow">
-          <div class="slider">
-            <div class="item"><img class="item__img" src="./assets/images/slides/slide-one.jpg" alt="slide">
-              <div class="image-wrap"></div>
-            </div>
-            <div class="item"><img class="item__img" src="./assets/images/slides/slide-two.jpg" alt="slide">
-              <div class="image-wrap"></div>
-            </div>
-            <div class="item"><img class="item__img" src="./assets/images/slides/slide-three.jpg" alt="slide">
-              <div class="image-wrap"></div>
-            </div>
-            <div class="item"><img class="item__img" src="./assets/images/slides/slide-four.jpg" alt="slide">
-              <div class="image-wrap"></div>
-            </div>
-            <div class="item"><img class="item__img" src="./assets/images/slides/slide-fifth.jpg" alt="slide">
-              <div class="image-wrap"></div>
+      <section class="section section--slider">
+        <div class="split-slideshow">
+          <div class="slideshow">
+            <div class="slider">
+              <div class="item"><img class="item__img" src="./assets/images/slides/slide-one.jpg" alt="slide">
+                <div class="image-wrap"></div>
+              </div>
+              <div class="item"><img class="item__img" src="./assets/images/slides/slide-two.jpg" alt="slide">
+                <div class="image-wrap"></div>
+              </div>
+              <div class="item"><img class="item__img" src="./assets/images/slides/slide-three.jpg" alt="slide">
+                <div class="image-wrap"></div>
+              </div>
+              <div class="item"><img class="item__img" src="./assets/images/slides/slide-four.jpg" alt="slide">
+                <div class="image-wrap"></div>
+              </div>
+              <div class="item"><img class="item__img" src="./assets/images/slides/slide-fifth.jpg" alt="slide">
+                <div class="image-wrap"></div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <div class="slideshow-text"><a class="slideshow-text__title" href="#">«Радани»
           <div class="slideshow-text__subtitle">Ансамбль пісні та танцю</div></a><a class="slideshow-text__title" href="#">«Вот это да»
           <div class="slideshow-text__subtitle">Знаменитый человек </div></a><a class="slideshow-text__title" href="#">«Радани»
           <div class="slideshow-text__subtitle">Ансамбль пісні та танцю</div></a><a class="slideshow-text__title" href="#">«Вот это да»
           <div class="slideshow-text__subtitle">Знаменитый человек </div></a><a class="slideshow-text__title" href="#">«Радани»
           <div class="slideshow-text__subtitle">Ансамбль пісні та танцю</div></a></div>
+      <div class="appendArrows"></div>
+      <footer class="footer footer--abs container">
+        <div class="audio">
+          <div class="audio__control">
+            <button class="audio__btn" type="button">
+              <!--svg.audio__btn-play: use(xlink:href="assets/images/icons/sprite.svg#play")-->
+              <!--svg.audio__btn-pause: use(xlink:href="assets/images/icons/sprite.svg#pause")-->
+            </button>
+          </div>
+          <div class="audio__timerail">
+            <div class="audio__band"></div>
+          </div>
+          <div class="audio__duration">
+            <div class="audio__time">03:21/06:58</div>
+          </div>
+        </div>
+        <div class="footer__row footer__row--with-line">
+          <div class="contacts"><a class="contacts__mail" href="mailto:luganskaoblastnafilarmonia@gmail.com">
+              <svg class="contacts__icon-mail">
+                <use xlink:href="assets/images/icons/sprite.svg#mail"></use>
+              </svg>
+              <div class="contacts__text">e-mail:</div>
+              <div class="contacts__link">luganskaoblastnafilarmonia@gmail.com</div></a><a class="contacts__phone" href="tel:+380500050055">
+              <svg class="contacts__icon-phone">
+                <use xlink:href="assets/images/icons/sprite.svg#phone"></use>
+              </svg>
+              <div class="contacts__text">квиткова каса:</div>
+              <div class="contacts__link">+38 050 005 00 55</div></a></div>
+        </div>
+        <div class="footer__row">
+          <div class="footer__col">
+            <div class="footer__copy">© Луганська обласна філармонія  2013-2018</div>
+          </div>
+          <div class="footer__col">
+            <div class="footer__partners"><img class="footer__img" src="./assets/images/icons/karabas.png" alt="karabas"><img class="footer__img" src="./assets/images/icons/stv.png" alt="stv"></div>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
