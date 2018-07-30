@@ -146,7 +146,8 @@
 
     &:hover {
         .drop-down {
-            display: block;
+            left: 0;
+            z-index: 1;
         }
     }
 }
@@ -219,11 +220,10 @@
     top: rem(139px);
     background: #2a2d33;
     z-index: -1;
-    left: 0;
+    left: 9999px;
     padding-top: rem(38px);
     padding-bottom: rem(38px);
     opacity: 0.8;
-    display: none;
 
     &:before {
         content: '';

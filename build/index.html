@@ -11,6 +11,7 @@
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon-philarmonia.ico">
     <script src="./assets/scripts/bundle.js" defer></script>
     <script src="./assets/scripts/slider-custom.js" defer></script>
+    <script src="./assets/scripts/audio.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
@@ -87,7 +88,7 @@
                           </ul>
                         </div>
                         <div class="drop-menu__col">
-                          <div class="drop-menu__sudtitle">Абонементи</div>
+                          <div class="drop-menu__sudtitle">Концерти</div>
                           <ul class="drop-menu__list">
                             <li class="drop-menu__item"><a class="drop-menu__link" href="#">Слухай, співай та грай українське</a></li>
                             <li class="drop-menu__item"><a class="drop-menu__link" href="#">Вечори з «Аркатою»</a></li>
@@ -113,7 +114,7 @@
                           </ul>
                         </div>
                         <div class="drop-menu__col">
-                          <div class="drop-menu__sudtitle">Абонементи</div>
+                          <div class="drop-menu__sudtitle">Галерея</div>
                           <ul class="drop-menu__list">
                             <li class="drop-menu__item"><a class="drop-menu__link" href="#">Слухай, співай та грай українське</a></li>
                             <li class="drop-menu__item"><a class="drop-menu__link" href="#">Вечори з «Аркатою»</a></li>
@@ -185,22 +186,18 @@
           <div class="slideshow-text__subtitle">Знаменитый человек </div></a><a class="slideshow-text__title" href="#">«Радани»
           <div class="slideshow-text__subtitle">Ансамбль пісні та танцю</div></a></div>
       <div class="appendArrows"></div>
-      <footer class="footer footer--abs container">
-        <div class="audio">
-          <div class="audio__control">
-            <button class="audio__btn" type="button">
-              <!--svg.audio__btn-play: use(xlink:href="assets/images/icons/sprite.svg#play")-->
-              <!--svg.audio__btn-pause: use(xlink:href="assets/images/icons/sprite.svg#pause")-->
-            </button>
-          </div>
-          <div class="audio__timerail">
-            <div class="audio__band"></div>
-          </div>
-          <div class="audio__duration">
-            <div class="audio__time">03:21/06:58</div>
+      <footer class="footer footer--abs">
+        <div class="audio container">
+          <div class="js--audio-wrap">
+            <div>Аудиозапись</div>
+            <audio class="js--audio-cont">
+              <source src="vivaldi.mp3" type="audio/mpeg">	    Тег audio не поддерживается вашим браузером.
+              .
+            </audio><a class="js--audio-play" href="#"><span class="glyphicon glyphicon-play" data-toggle-class="glyphicon glyphicon-pause"></span></a>
+            <div class="js--timeline"><a class="js--timeline-control" href="#"></a></div><a class="js--audio-mute" href="#"><span class="glyphicon glyphicon-volume-up" data-toggle-class="glyphicon glyphicon-volume-off"></span></a>
           </div>
         </div>
-        <div class="footer__row footer__row--with-line">
+        <div class="footer__row footer__row--with-line container">
           <div class="contacts"><a class="contacts__mail" href="mailto:luganskaoblastnafilarmonia@gmail.com">
               <svg class="contacts__icon-mail">
                 <use xlink:href="assets/images/icons/sprite.svg#mail"></use>
@@ -212,8 +209,15 @@
               </svg>
               <div class="contacts__text">квиткова каса:</div>
               <div class="contacts__link">+38 050 005 00 55</div></a></div>
+          <div class="socials"><a class="socials__link socials__link--youtube" href="#">
+              <svg class="socials__icon socials__icon--youtube">
+                <use xlink:href="assets/images/icons/sprite.svg#youtube"></use>
+              </svg></a><a class="socials__link socials__link--facebook" href="#">
+              <svg class="socials__icon socials__icon--facebook">
+                <use xlink:href="assets/images/icons/sprite.svg#facebook"></use>
+              </svg></a></div>
         </div>
-        <div class="footer__row">
+        <div class="footer__row container">
           <div class="footer__col">
             <div class="footer__copy">© Луганська обласна філармонія  2013-2018</div>
           </div>
