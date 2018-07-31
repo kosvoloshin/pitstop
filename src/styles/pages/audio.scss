@@ -1,35 +1,89 @@
-/*#player{
-    position:relative;
-    //margin:50px auto;
-    //width:300px;
-    text-align:center;
-    font-family:Helvetica, Arial;
+.audio {
+  border-top: 1px solid rgba($color: #fff, $alpha: 0.3);
+}
+
+.js--audio-wrap {
+  margin-bottom: rem(22px);
+  position: relative;
+  margin-top: rem(2px);
+}
+
+.js--audio-play {
+  height: rem(36px);
+  width: rem(36px);
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  transition: .3s;
+
+  &:hover {
+    background: #f5f7fc;
+
+    .glyphicon:before {
+      color: #393c42;
+    }
   }
-  #playpause{
-    border:1px solid #eee;
-    cursor:pointer;
-    padding:12px 0;
-    color:#888;
-    font-size:12px;
-    border-radius:3px;
+}
+
+.glyphicon-play {
+  &::before {
+    content: '\25b6';
+    line-height: rem(36px);
+    text-align: center;
+    font-size: rem(24px);
+    color: #f5f7fc;
   }
-  #playpause:hover{
-    border-color: #ccc;
+}
+
+.glyphicon-pause {
+  position: relative;
+  &::before {
+    content: '| |';
+    line-height: rem(36px);
+    text-align: center;
+    font-size: rem(13px);
+    font-weight: 900;
+    color: #f5f7fc;
   }
-  #volume, #progressbar{
-    border:none; 
-    height:2px;
-  }
-  #volume{
-    background:hsla(180,75%,50%,1);
-  }
-  #progressbar{
-    background:#ccc;
-  }
-  .ui-slider-handle{
-    border-radius:50%;
-    top: -5px !important;
-    width: 11px !important;
-    height: 11px !important;
-    margin-left:-5px !important;
-  }*/
+}
+
+.js--timeline {
+  width: calc(100% - 2.5rem);
+  height: rem(4px);
+  background: rgba($color: #fff, $alpha: 0.3);
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.js--timeline-control {
+    height: rem(4px);
+    width: rem(4px);
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 50%;
+
+    &:before {
+      content: '';
+      position: absolute;
+      height: 4px;
+      width: 1170px;
+      background: rgba($color: #fff, $alpha: 0.8);
+      top: 50%;
+      transform: translate(0, -50%);
+      right: 0;
+    }
+}
+
+.js--audio-mute {
+  height: rem(36px);
+  width: rem(36px);
+  display: inline-block;
+  background: #fff;
+  vertical-align: middle;
+  float: right;
+  display: none;
+}

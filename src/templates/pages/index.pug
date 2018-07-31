@@ -40,9 +40,9 @@ block content
         footer.footer.footer--abs
             .audio.container
                 .js--audio-wrap
-                    div Аудиозапись
                     audio.js--audio-cont
-                        source(src='vivaldi.mp3', type='audio/mpeg')
+                        //source(src='vivaldi.mp3', type='audio/mpeg')
+                        source(src='mocart.mp3', type='audio/mpeg')
                         | 	    Тег audio не поддерживается вашим браузером.
                         //-a(href='/path/to/file.mp3') Скачайте музыку
                         | .
@@ -52,14 +52,6 @@ block content
                         a.js--timeline-control(href='#')
                     a.js--audio-mute(href='#')
                         span.glyphicon.glyphicon-volume-up(data-toggle-class='glyphicon glyphicon-volume-off')
-            //-.audio.container
-                #player
-                    audio#audio(src='vivaldi.mp3', type='audio/mpeg')
-                    #volume
-                    br
-                    #progressbar
-                    br
-                    #playpause
             .footer__row.footer__row--with-line.container
                 .contacts
                     a.contacts__mail(href="mailto:luganskaoblastnafilarmonia@gmail.com")

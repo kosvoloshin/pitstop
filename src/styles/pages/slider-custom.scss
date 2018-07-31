@@ -42,14 +42,14 @@
     position: fixed;
     z-index: 100;
     width: auto;
-    height: rem(40px);
-    bottom: rem(140px);
+    height: rem(30px);
+    bottom: rem(205px);
     right: 50%;
     transform: translate(50%, -50%);
     left: auto;
     color: #fff;
     display: flex;
-    
+
     li {
       width: auto;
       height: 100%;
@@ -160,7 +160,7 @@
 }
 
 .slick-prev {
-  top: 50%;
+  top: calc(50% - 1.875rem);
   left: calc(50% - 19.9375rem);
   transform: translate(-50%, 0);
 
@@ -172,6 +172,10 @@
     position: absolute;
     right: rem(-2px);
     opacity: 0.3;
+
+    @include small {
+      height: rem(220px);
+    }
   }
 
   &::after {
@@ -184,7 +188,7 @@
 }
 
 .slick-next {
-  top: 50%;
+  top: calc(50% - 1.875rem);
   right: calc(50% - 19.9375rem);
   transform: translate(50%, 0);
 
@@ -196,6 +200,10 @@
     position: absolute;
     left: rem(-2px);
     opacity: 0.3;
+
+    @include small {
+      height: rem(220px);
+    }
   }
 
   &::after {

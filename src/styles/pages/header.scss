@@ -29,8 +29,14 @@
         position: absolute;
         left: 0;
         opacity: 0.3;
-        bottom: 28px;
+        bottom: rem(3px);
     }
+}
+
+.logo__image {
+    position: absolute;
+    right: rem(4px);
+    z-index: 2;
 }
 
 .header__r {
@@ -57,7 +63,7 @@
         background: #fff;
         position: absolute;
         opacity: 0.3;
-        bottom: rem(28px);
+        bottom: rem(3px);
     }
 }
 
@@ -150,6 +156,16 @@
             z-index: 1;
         }
     }
+
+    &.active {
+        .menu__link--drop:before {
+            transform: rotate(180deg) translate(50%, 0);
+        }
+        .menu__link--drop::after {
+            opacity: 1;
+            color: #fcfaf5;
+        }
+    }
 }
 
 .menu__link {
@@ -203,13 +219,8 @@
         border-top-width: 0rem;
         bottom: rem(-20px);
         transition: .6s;
+        z-index: 2;
     }
-
-    /*&:hover {
-        &:before {
-            transform: rotate(180deg) translate(50%, 0);
-        }
-    }*/
 }
 
 // Dropdown-menu

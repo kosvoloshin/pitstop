@@ -31,3 +31,11 @@
 @function rem($px) {
     @return $px / 16px+0rem;
 }
+
+// Media for height
+
+@mixin small { // 750px
+    @media screen and (max-height: $small) {
+        @content;
+    }
+}
