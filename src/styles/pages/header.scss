@@ -299,3 +299,40 @@
         color: $text_button;
     }
 }
+
+// Header на внутренних страницах 
+.header--within {
+    padding-bottom: rem(35px);
+    background-color: $bg_header;
+
+    .header__l:before,
+    .header__l:after,
+    .header__r:before,
+    .header__r:after {
+        background: $separator;
+    }
+
+    .menu__link {
+        color: $text;
+
+        &.active {
+            color: $text_hover;
+
+            &:after {
+                background-color: $text_hover;
+            }
+        }
+
+        &:hover {
+            color: $text_hover;
+
+            &:after {
+                background-color: $text_hover;
+            }
+        }
+    }
+
+    .menu__link--drop:before {
+        border-bottom-color: $text;
+    }
+}

@@ -1,0 +1,136 @@
+extends ../template
+
+block variables
+    - var title = 'Події'
+
+block content
+    .wrapper
+        header.header.header--within
+            .container.container--flex
+                .header__l
+                    .logo
+                        a.logo__link(href="index.html")
+                            img.logo__image(src="./assets/images/icons/Logo-color.png" alt="logo")
+                .header__r
+                    .nav.nav--top
+                        button.nav__search(type="button")
+                            svg.nav__search-icon: use(xlink:href="assets/images/icons/sprite.svg#search")
+                        .lang
+                            a.lang__link.active(href="#") укр
+                            a.lang__link(href="#") eng
+                    .menu
+                        ul.menu__list
+                            li.menu__item
+                                a.menu__link.active(href="index.html") головна
+                            li.menu__item
+                                a.menu__link(href="#") про філармонію
+                            li.menu__item
+                                a.menu__link.menu__link--drop(href="#") виконавці
+                                .drop-down
+                                    .container
+                                        .drop-menu
+                                            .drop-menu__col
+                                                ul.drop-menu__list
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link 79 концертний сезон (2015/2016)
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link 80 концертний сезон (2015/2016)
+                                            .drop-menu__col
+                                                ul.drop-menu__list
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link Квитки
+                                                    li.drop-menu__item
+                                                        a(href="events.html").drop-menu__link Події
+                                            .drop-menu__col
+                                                .drop-menu__sudtitle Абонементи
+                                                ul.drop-menu__list
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link Слухай, співай та грай українське
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link Вечори з «Аркатою»
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link У фокусі — голос
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link Steinway & K°
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link Jazz у моєму місті
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link Знай наших
+                            li.menu__item
+                                a.menu__link.menu__link--drop(href="#") концерти
+                                .drop-down
+                                    .container
+                                        .drop-menu
+                                            .drop-menu__col
+                                                ul.drop-menu__list
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link 79 концертний сезон (2015/2016)
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link 80 концертний сезон (2015/2016)
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link 79 концертний сезон (2015/2016)
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link 80 концертний сезон (2015/2016)
+                                            .drop-menu__col
+                                                ul.drop-menu__list
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link Квитки
+                                                    li.drop-menu__item
+                                                        a(href="events.html").drop-menu__link Події
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link Квитки
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link Події
+                                            .drop-menu__col
+                                                .drop-menu__sudtitle Концерти
+                                                ul.drop-menu__list
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link Слухай, співай та грай українське
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link Вечори з «Аркатою»
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link У фокусі — голос
+                            li.menu__item
+                                a.menu__link.menu__link--drop(href="#") галерея
+                                .drop-down
+                                    .container
+                                        .drop-menu
+                                            .drop-menu__col
+                                                ul.drop-menu__list
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link 79 концертний сезон (2015/2016)
+                                            .drop-menu__col
+                                                ul.drop-menu__list
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link Квитки
+                                            .drop-menu__col
+                                                .drop-menu__sudtitle Галерея
+                                                ul.drop-menu__list
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link Слухай, співай та грай українське
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link Вечори з «Аркатою»
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link У фокусі — голос
+                            li.menu__item
+                                a.menu__link(href="#") комунальна власність
+                            li.menu__item
+                                a.menu__link.menu__link--drop(href="#") контакти
+                                .drop-down
+                                    .container
+                                        .drop-menu
+                                            .drop-menu__col
+                                                ul.drop-menu__list
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link 79 концертний сезон (2015/2016)
+                                            .drop-menu__col
+                                                ul.drop-menu__list
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link Квитки
+                                            .drop-menu__col
+                                                .drop-menu__sudtitle контакти
+                                                ul.drop-menu__list
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link 02020202002
+                                                    li.drop-menu__item
+                                                        a(href="#").drop-menu__link 4848484848483
