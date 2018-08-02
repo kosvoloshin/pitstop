@@ -260,7 +260,7 @@
     height: 100%;
 }
 
-.drop-menu__sudtitle {
+.drop-menu__subtitle {
     text-transform: uppercase;
     font-family: $r-r;
     font-size: rem(14px);
@@ -304,35 +304,72 @@
 .header--within {
     padding-bottom: rem(35px);
     background-color: $bg_header;
+    flex: 1 0 auto;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
 
     .header__l:before,
     .header__l:after,
     .header__r:before,
     .header__r:after {
-        background: $separator;
+        background: #d3b47e;
     }
 
     .menu__link {
         color: $text;
 
         &.active {
-            color: $text_hover;
+            color: #aa8534;
 
             &:after {
-                background-color: $text_hover;
+                background-color: #aa8534;
+                /*height: rem(10px);
+                border: rem(4px) solid #eee2c8;
+                bottom: rem(-4px);
+                z-index: 1;*/
             }
         }
 
         &:hover {
-            color: $text_hover;
+            color: #aa8534;
 
             &:after {
-                background-color: $text_hover;
+                background-color: #aa8534;
+                /*height: rem(10px);
+                border: rem(4px) solid #eee2c8;
+                bottom: rem(-4px);
+                z-index: 1;*/
             }
         }
     }
 
     .menu__link--drop:before {
         border-bottom-color: $text;
+    }
+
+    .nav__search {
+        &:hover {
+            background-color: $button_hover;
+            .nav__search-icon {
+                fill: $text_button;
+            }
+        }
+    }
+
+    .nav__search-icon {
+        fill: $text;
+    }
+
+    .lang__link {
+        color: $text;
+
+        &:hover {
+            background-color: $button_hover;
+            color: $text_button;
+        }
+
+        &.active {
+            color: $text_button;
+            background-color: #aa8534;
+        }
     }
 }

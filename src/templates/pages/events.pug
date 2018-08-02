@@ -26,111 +26,162 @@ block content
                                 a.menu__link(href="#") про філармонію
                             li.menu__item
                                 a.menu__link.menu__link--drop(href="#") виконавці
-                                .drop-down
-                                    .container
-                                        .drop-menu
-                                            .drop-menu__col
-                                                ul.drop-menu__list
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link 79 концертний сезон (2015/2016)
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link 80 концертний сезон (2015/2016)
-                                            .drop-menu__col
-                                                ul.drop-menu__list
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link Квитки
-                                                    li.drop-menu__item
-                                                        a(href="events.html").drop-menu__link Події
-                                            .drop-menu__col
-                                                .drop-menu__sudtitle Абонементи
-                                                ul.drop-menu__list
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link Слухай, співай та грай українське
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link Вечори з «Аркатою»
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link У фокусі — голос
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link Steinway & K°
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link Jazz у моєму місті
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link Знай наших
+                                //-include ../common/drop-menu.pug
                             li.menu__item
                                 a.menu__link.menu__link--drop(href="#") концерти
-                                .drop-down
-                                    .container
-                                        .drop-menu
-                                            .drop-menu__col
-                                                ul.drop-menu__list
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link 79 концертний сезон (2015/2016)
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link 80 концертний сезон (2015/2016)
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link 79 концертний сезон (2015/2016)
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link 80 концертний сезон (2015/2016)
-                                            .drop-menu__col
-                                                ul.drop-menu__list
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link Квитки
-                                                    li.drop-menu__item
-                                                        a(href="events.html").drop-menu__link Події
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link Квитки
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link Події
-                                            .drop-menu__col
-                                                .drop-menu__sudtitle Концерти
-                                                ul.drop-menu__list
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link Слухай, співай та грай українське
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link Вечори з «Аркатою»
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link У фокусі — голос
                             li.menu__item
                                 a.menu__link.menu__link--drop(href="#") галерея
-                                .drop-down
-                                    .container
-                                        .drop-menu
-                                            .drop-menu__col
-                                                ul.drop-menu__list
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link 79 концертний сезон (2015/2016)
-                                            .drop-menu__col
-                                                ul.drop-menu__list
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link Квитки
-                                            .drop-menu__col
-                                                .drop-menu__sudtitle Галерея
-                                                ul.drop-menu__list
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link Слухай, співай та грай українське
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link Вечори з «Аркатою»
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link У фокусі — голос
                             li.menu__item
                                 a.menu__link(href="#") комунальна власність
                             li.menu__item
                                 a.menu__link.menu__link--drop(href="#") контакти
-                                .drop-down
-                                    .container
-                                        .drop-menu
-                                            .drop-menu__col
-                                                ul.drop-menu__list
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link 79 концертний сезон (2015/2016)
-                                            .drop-menu__col
-                                                ul.drop-menu__list
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link Квитки
-                                            .drop-menu__col
-                                                .drop-menu__sudtitle контакти
-                                                ul.drop-menu__list
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link 02020202002
-                                                    li.drop-menu__item
-                                                        a(href="#").drop-menu__link 4848484848483
+        .crumbs
+            .container
+                ul.crumbs__list
+                    li.crumbs__item
+                        a.crumbs__link(href="#") Головна
+                    li.crumbs__item
+                        a.crumbs__link(href="#") Концерти
+                    li.crumbs__item
+                        .crumbs__link.crumbs__link--active Події
+        section.section.events
+            .container
+                h1.section__title події
+                include ../common/pagination.pug
+                ul.events__list
+                    li.events__item
+                        .events__col-l
+                            .events__date 23.05.2018
+                        .events__col-r
+                            a.events__link(href="#") 
+                                h2.events__subtitle Інтерактивні концертні програми у дитячих таборах відпочинку
+                            .events__text 
+                                p Вінницька обласна філармонія розпочинає цикл інтерактивних концертних програм для дітей, які відпочивають у пришкільних таборах та дитячих оздоровчих закладах області. Довідки за тел.:(0432)66-13-50, (0432)66-06-91, (093)027-75-70
+                include ../common/pagination.pug
+        footer.footer.footer--within
+            .calendar
+                .container
+                    .calendar__row
+                        .calendar__controls
+                            a.calendar__link(href="#")
+                                svg.calendar__link-icon: use(xlink:href="assets/images/icons/sprite.svg#arrow1")
+                            button(type="button").calendar__month 2018 листопад
+                            a.calendar__link(href="#")
+                                svg.calendar__link-icon: use(xlink:href="assets/images/icons/sprite.svg#arrow1")
+                        ul.calendar__list
+                            li.calendar__item
+                                a.calendar__date(href="#") 01
+                                .calendar__day пн
+                            li.calendar__item
+                                a.calendar__date.active(href="#") 02
+                                .calendar__day вт
+                            li.calendar__item
+                                a.calendar__date(href="#") 03
+                                .calendar__day ср
+                            li.calendar__item
+                                a.calendar__date(href="#") 04
+                                .calendar__day чт
+                            li.calendar__item
+                                a.calendar__date(href="#") 05
+                                .calendar__day пт
+                            li.calendar__item
+                                a.calendar__date(href="#") 06
+                                .calendar__day сб
+                            li.calendar__item
+                                a.calendar__date(href="#") 07
+                                .calendar__day вс
+                            li.calendar__item
+                                a.calendar__date.active(href="#") 08
+                                .calendar__day пн
+                            li.calendar__item
+                                a.calendar__date(href="#") 09
+                                .calendar__day вт
+                            li.calendar__item
+                                a.calendar__date(href="#") 10
+                                .calendar__day ср
+                            li.calendar__item
+                                a.calendar__date(href="#") 11
+                                .calendar__day чт
+                            li.calendar__item
+                                a.calendar__date(href="#") 12
+                                .calendar__day пт
+                            li.calendar__item
+                                a.calendar__date(href="#") 13
+                                .calendar__day сб
+                            li.calendar__item
+                                a.calendar__date.active(href="#") 14
+                                .calendar__day нд
+                            li.calendar__item
+                                a.calendar__date.active(href="#") 15
+                                .calendar__day пн
+                            li.calendar__item
+                                a.calendar__date.active(href="#") 16
+                                .calendar__day вт
+                            li.calendar__item
+                                a.calendar__date(href="#") 17
+                                .calendar__day ср
+                            li.calendar__item
+                                a.calendar__date.active(href="#") 18
+                                .calendar__day чт
+                            li.calendar__item
+                                a.calendar__date(href="#") 19
+                                .calendar__day пт
+                            li.calendar__item
+                                a.calendar__date(href="#") 20
+                                .calendar__day сб
+                            li.calendar__item
+                                a.calendar__date(href="#") 21
+                                .calendar__day вс
+                            li.calendar__item
+                                a.calendar__date(href="#") 22
+                                .calendar__day пн
+                            li.calendar__item
+                                a.calendar__date(href="#") 23
+                                .calendar__day вт
+                            li.calendar__item
+                                a.calendar__date(href="#") 24
+                                .calendar__day ср
+                            li.calendar__item
+                                a.calendar__date(href="#") 25
+                                .calendar__day чт
+                            li.calendar__item
+                                a.calendar__date(href="#") 26
+                                .calendar__day пт
+                            li.calendar__item
+                                a.calendar__date(href="#") 27
+                                .calendar__day сб
+                            li.calendar__item
+                                a.calendar__date.active(href="#") 28
+                                .calendar__day нд
+                            li.calendar__item
+                                a.calendar__date(href="#") 29
+                                .calendar__day пн
+                            li.calendar__item
+                                a.calendar__date(href="#") 30
+                                .calendar__day вт
+                            li.calendar__item
+                                a.calendar__date(href="#") 31
+                                .calendar__day ср
+            .footer__row.footer__row--with-line.container
+                .contacts
+                    a.contacts__mail(href="mailto:luganskaoblastnafilarmonia@gmail.com")
+                        svg.contacts__icon-mail: use(xlink:href="assets/images/icons/sprite.svg#mail")
+                        .contacts__text e-mail:
+                        .contacts__link luganskaoblastnafilarmonia@gmail.com
+                    a.contacts__phone(href="tel:+380500050055")
+                        svg.contacts__icon-phone: use(xlink:href="assets/images/icons/sprite.svg#phone")
+                        .contacts__text квиткова каса:
+                        .contacts__link +38 050 005 00 55
+                .socials
+                    a.socials__link.socials__link--youtube(href="#")
+                        svg.socials__icon.socials__icon--youtube: use(xlink:href="assets/images/icons/sprite.svg#youtube")
+                    a.socials__link.socials__link--facebook(href="#")
+                        svg.socials__icon.socials__icon--facebook: use(xlink:href="assets/images/icons/sprite.svg#facebook")
+            .footer__row.container
+                .footer__col
+                    .footer__copy © Луганська обласна філармонія 2013-2018
+                .footer__col
+                    .footer__partners
+                        img.footer__img(src='./assets/images/icons/karabas.png' alt="karabas")
+                        img.footer__img(src='./assets/images/icons/stv.png' alt="stv")
+                    

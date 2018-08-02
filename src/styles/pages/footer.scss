@@ -7,6 +7,10 @@
     z-index: 2;
 }
 
+.footer--within {
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+}
+
 .footer__row {
     display: flex;
     flex-direction: row;

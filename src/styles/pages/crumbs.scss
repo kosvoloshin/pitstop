@@ -1,0 +1,40 @@
+.crumbs {
+    background-color: #322205;
+    padding: rem(19px) 0;
+}
+
+.crumbs__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.crumbs__item {
+    &:last-child {
+        .crumbs__link:after {
+            content: '';
+        }
+    }
+}
+
+.crumbs__link {
+    font-family: $r-i;
+    font-size: rem(14px);
+    font-style: italic;
+    color: #c59b41;
+    transition: .3s;
+
+    &:hover:not(.crumbs__link--active) {
+        color: $button_active;
+    }
+
+    &:after {
+        content: '/';
+        margin: 0 rem(12px);
+        color: #c59b41;
+    }
+}
+
+.crumbs__link--active {
+    color: #e5d2aa;
+}
