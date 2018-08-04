@@ -7,10 +7,6 @@
     z-index: 2;
 }
 
-.footer--within {
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
-}
-
 .footer__row {
     display: flex;
     flex-direction: row;
@@ -21,7 +17,11 @@
 .footer__row--with-line {
     border-bottom: rem(1px) solid rgba($color: #fff, $alpha: 0.3);
     padding-bottom: rem(2px);
-    margin-bottom: rem(46px);
+    margin-bottom: rem(38px);
+}
+
+.footer__row--dark {
+    background-color: #32270f;
 }
 
 .contacts {
@@ -169,10 +169,72 @@
     color: $text_button;
 }
 
+.footer__partners {
+    display: flex;
+    padding: rem(8px) 0;
+}
+
 .footer__img {
     margin-left: rem(8px);
 
     &:first-child {
         margin-left: 0;
+    }
+}
+
+// Footer on pages
+
+.footer--within {
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+    background-color: $bg_header;
+
+    .footer__row--with-line {
+        border-bottom: 1px solid #cab380;
+    }
+
+    .contacts__icon-mail {
+        fill: $text;
+    }
+
+    .contacts__text {
+        color: $text;
+    }
+
+    .contacts__link {
+        color: $text;
+    }
+
+    .contacts__mail:hover {
+        background-color: #2e4f96;
+        .contacts__icon-mail {
+            fill: $text_button;
+        }
+    
+        .contacts__text {
+            color: $text_button;
+        }
+    
+        .contacts__link {
+            color: $text_button;
+        }
+    }
+
+    .contacts__icon-phone {
+        fill: $text;
+    }
+
+    .contacts__phone:hover {
+        background-color: #2e4f96;
+        .contacts__icon-phone {
+            fill: $text_button;
+        }
+    
+        .contacts__text {
+            color: $text_button;
+        }
+    
+        .contacts__link {
+            color: $text_button;
+        }
     }
 }

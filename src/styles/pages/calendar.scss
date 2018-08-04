@@ -1,0 +1,109 @@
+.calendar__row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top: rem(1px) solid #cab380;
+    padding-top: rem(2px);
+    margin-top: rem(38px);
+    margin-bottom: rem(22px);
+}
+
+.calendar__controls {
+    display: flex;
+    flex-direction: row;
+    background-color: #aa8534;
+}
+
+.calendar__link {
+    height: rem(36px);
+    width: rem(36px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+
+    &:first-child {
+        .calendar__link-icon {
+            transform: rotate(180deg);
+        }
+    }
+
+    &:hover {
+        background-color: #2e4f96;
+        .calendar__link-icon {
+            fill: $text_button;
+        }
+    }
+}
+
+.calendar__link-icon {
+    height: rem(15px);
+    width: rem(9px);
+    fill: $text_button;
+    transition: .3s;
+}
+
+.calendar__month {
+    background: none;
+    border: initial;
+    font-family: $r-r;
+    font-size: rem(12px);
+    line-height: rem(16px);
+    color: $text_button;
+    text-transform: uppercase;
+    transition: .3s;
+
+    &:hover {
+        background-color: #2e4f96;
+        color: $text_button;
+    }
+}
+
+.calendar__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: rem(990px);
+}
+
+.calendar__item {
+    text-align: center;
+    max-height: rem(36px);
+}
+
+.calendar__date {
+    font-family: $r-r;
+    font-size: rem(14px);
+    color: rgba($color: $text, $alpha: 0.7);
+    line-height: rem(16px);
+    transition: .3s;
+
+    &:hover {
+        color: rgba($color: $text, $alpha: 1.0); 
+    }
+
+    &.active {
+        color: rgba($color: $text, $alpha: 1.0); 
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            border: 0.25rem solid transparent;
+            border-top-color: #0f1a32;
+            border-bottom-width: 0rem;
+            transform: translate(-50%, 0);
+            bottom: rem(38px);
+        }
+    }
+}
+
+.calendar__day {
+    font-family: $r-r;
+    font-size: rem(10px);
+    color: #8c6d2b;
+    line-height: rem(16px);
+    text-transform: uppercase;
+}

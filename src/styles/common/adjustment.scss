@@ -45,6 +45,13 @@
     display: flex;
 }
 
+.container--footer-bg {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .image-wrap {
     background-color: rgba(0, 0, 0, 0.7);
     height: 100%;

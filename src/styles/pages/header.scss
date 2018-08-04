@@ -314,38 +314,6 @@
         background: #d3b47e;
     }
 
-    .menu__link {
-        color: $text;
-
-        &.active {
-            color: #aa8534;
-
-            &:after {
-                background-color: #aa8534;
-                /*height: rem(10px);
-                border: rem(4px) solid #eee2c8;
-                bottom: rem(-4px);
-                z-index: 1;*/
-            }
-        }
-
-        &:hover {
-            color: #aa8534;
-
-            &:after {
-                background-color: #aa8534;
-                /*height: rem(10px);
-                border: rem(4px) solid #eee2c8;
-                bottom: rem(-4px);
-                z-index: 1;*/
-            }
-        }
-    }
-
-    .menu__link--drop:before {
-        border-bottom-color: $text;
-    }
-
     .nav__search {
         &:hover {
             background-color: $button_hover;
@@ -370,6 +338,71 @@
         &.active {
             color: $text_button;
             background-color: #aa8534;
+        }
+    }
+
+    .menu__item.active {
+        .menu__link:after {
+            background-color: #aa8534;
+        }
+    }
+
+    .menu__link {
+        color: $text;
+
+        &.active {
+            color: #aa8534;
+
+            &:after {
+                background-color: #aa8534;
+            }
+        }
+
+        &:hover {
+            color: #aa8534;
+
+            &:after {
+                background-color: #aa8534;
+            }
+        }
+    }
+
+    .menu__link--drop:before {
+        border-bottom-color: $text;
+    }
+
+    .drop-down {
+        background-color: #f3e3c8;
+        opacity: 1;
+        padding-top: 0;
+        top: rem(176px);
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 6px 0px;
+
+        &::before {
+            height: rem(60px);
+            top: rem(-55px);
+        }
+    }
+
+    .drop-menu {
+        border-top: none;
+        //border-top: rem(1px) solid #d3b47e;
+        border-bottom: rem(1px) solid #d3b47e;
+    }
+
+    .drop-menu__link {
+        color: #00132f;
+
+        &:hover {
+            color: #8e6b26;
+        }
+    }
+
+    .drop-menu__subtitle {
+        color: #87621a;
+
+        &::after {
+            background: #87621a;
         }
     }
 }
