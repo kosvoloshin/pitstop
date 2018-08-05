@@ -12,6 +12,7 @@
 .section {
     position: relative;
     flex: 1 0 auto;
+    min-height: rem(650px);
 }
 
 .section--slider {
