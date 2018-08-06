@@ -18,6 +18,14 @@
     border-bottom: rem(1px) solid rgba($color: #fff, $alpha: 0.3);
     padding-bottom: rem(2px);
     margin-bottom: rem(38px);
+
+    @include desktop {
+        margin-bottom: rem(24px);
+    }
+
+    @include laptop {
+        margin-bottom: rem(21px);
+    }
 }
 
 .footer__row--dark {
@@ -28,6 +36,14 @@
     display: flex;
     flex-direction: row;
     width: 50%;
+
+    @include desktop {
+        width: 60%;
+    }
+
+    @include laptop {
+        width: 70%;
+    }
 }
 
 .contacts__mail {
@@ -116,6 +132,14 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+
+    @include desktop {
+        width: 40%;
+    }
+
+    @include laptop {
+        width: 30%;
+    }
 }
 
 .socials__link {
@@ -176,6 +200,7 @@
 
 .footer__img {
     margin-left: rem(8px);
+    max-height: rem(44px);
 
     &:first-child {
         margin-left: 0;

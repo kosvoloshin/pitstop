@@ -6,6 +6,10 @@
   margin-bottom: rem(22px);
   position: relative;
   margin-top: rem(2px);
+
+  @include desktop {
+    margin-bottom: rem(13px);
+  }
 }
 
 .js--audio-play {
