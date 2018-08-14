@@ -294,9 +294,9 @@
 // Dropdown-menu
 
 .drop-down {
-    position: fixed;
+    position: absolute;
     width: 100%;
-    top: rem(139px);
+    top: rem(124px);
     background: #2a2d33;
     z-index: -1;
     left: 9999px;
@@ -313,7 +313,7 @@
     }
 
     @include desktop {
-        top: rem(124px);
+        top: rem(109px);
         padding-top: rem(32px);
         padding-bottom: rem(32px);
     }
@@ -472,12 +472,16 @@
         background-color: #f3e3c8;
         opacity: 1;
         padding-top: 0;
-        top: rem(176px);
+        top: rem(161px);
         box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 6px 0px;
 
         &::before {
             height: rem(60px);
             top: rem(-55px);
+        }
+
+        @include desktop {
+            top: rem(144px);
         }
     }
 

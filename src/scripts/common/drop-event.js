@@ -2,10 +2,15 @@ const $ = require('jquery');
 
 $(document).ready(function() {
     if($('.drop-down').length) {
+        
+        $('.drop-down').width($(window).width());
+
+        var menuOffset = $('.header__r').offset().left; 
+
         if(document.documentElement.clientWidth > 769) {
             $('.menu__item').mousemove(function(){
                 $(this).addClass('active');
-                $('.drop-down', this).css('left', '0');
+                $('.drop-down', this).css('left', -menuOffset);
                 $('.drop-down', this).css('z-index', '1');
 
                 if($(window).scroll(function(){
