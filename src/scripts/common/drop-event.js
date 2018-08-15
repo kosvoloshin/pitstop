@@ -26,5 +26,10 @@ $(document).ready(function() {
                 $('.drop-down', this).css('z-index', '-1');
             });
         }
+
+        if(document.documentElement.clientWidth < 769) {
+            $('.menu').width($(window).width());
+            $('.menu').css('left', -menuOffset);
+        }
     }
 })
