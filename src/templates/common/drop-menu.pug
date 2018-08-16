@@ -1,6 +1,11 @@
 .drop-down
     .container
         .drop-menu
+            .drop-menu__col.visuallyhidden
+                .drop-menu__heading
+                    button(type="button").drop-menu__btn
+                        svg.drop-menu__btn-icon: use(xlink:href="assets/images/icons/sprite.svg#arrow2")
+                    .drop-menu__title концерти
             .drop-menu__col
                 ul.drop-menu__list
                     li.drop-menu__item

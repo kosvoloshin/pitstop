@@ -10,6 +10,10 @@
   @include desktop {
     margin-bottom: rem(13px);
   }
+
+  @include phones {
+    margin-bottom: rem(15px);
+  }
 }
 
 .js--audio-play {
@@ -36,6 +40,10 @@
     text-align: center;
     font-size: rem(21px);
     color: #f5f7fc;
+
+    @include phones {
+      font-size: rem(15px);
+    }
   }
 }
 

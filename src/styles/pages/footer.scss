@@ -12,6 +12,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    @include phones-large {
+        align-items: flex-end;
+    }
 }
 
 .footer__row--with-line {
@@ -25,6 +29,10 @@
 
     @include laptop {
         margin-bottom: rem(21px);
+    }
+
+    @include phones {
+        margin-bottom: rem(10px);
     }
 }
 
@@ -43,6 +51,18 @@
 
     @include laptop {
         width: 70%;
+    }
+
+    @include tablets {
+        width: 85%;
+    }
+
+    @include phones-large {
+        flex-direction: column;
+    }
+
+    @include phones {
+        width: 80%;
     }
 }
 
@@ -69,6 +89,16 @@
             color: #393c42;
         }
     }
+
+    @include phones-large {
+        width: -moz-max-content;
+        width: -webkit-max-content;
+        width: max-content;
+    }
+
+    @include phones {
+        margin-bottom: rem(15px);
+    }
 }
 
 .contacts__icon-mail {
@@ -86,6 +116,10 @@
     color: #f5f7fc;
     margin-right: rem(4px);
     transition: .3s;
+
+    @include phones {
+        display: none;
+    }
 }
 
 .contacts__link {
@@ -93,6 +127,10 @@
     font-size: rem(12px);
     color: #f5f7fc;
     transition: .3s;
+
+    @include phones {
+        font-size: rem(16px);
+    }
 }
 
 .contacts__phone {
@@ -117,6 +155,12 @@
             color: #393c42;
         }
     }
+
+    @include phones-large {
+        width: -moz-max-content;
+        width: -webkit-max-content;
+        width: max-content;
+    }
 }
 
 .contacts__icon-phone {
@@ -140,11 +184,19 @@
     @include laptop {
         width: 30%;
     }
+
+    @include tablets {
+        width: 15%;
+    }
+
+    @include phones {
+        width: 20%;
+    }
 }
 
 .socials__link {
-    width: rem(36px);
-    height: rem(36px);
+    width: 36px;
+    height: 36px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,21 +228,46 @@
 }
 
 .socials__icon--youtube {
-    height: rem(14px);
-    width: rem(20px);
+    height: 14px;
+    width: 20px;
     fill: #ff0000;
 }
 
 .socials__icon--facebook {
-    height: rem(18px);
-    width: rem(18px);
+    height: 18px;
+    width: 18px;
     fill: #3b5998;
+}
+
+.footer__row--bottom {
+    @include phones {
+        flex-direction: column;
+        margin-bottom: rem(15px);
+        
+        .footer__col:first-child {
+            order: 1;
+            margin-top: rem(5px);
+            text-align: center;
+        }
+
+        .footer__col {
+            width: 100%;
+        }
+
+        .footer__partners {
+            justify-content: space-around;
+        }
+    }
 }
 
 .footer__copy {
     font-family: $r-i;
     font-size: rem(14px);
     color: $text_button;
+
+    @include phones {
+        font-size: rem(16px);
+    }
 }
 
 .footer__partners {

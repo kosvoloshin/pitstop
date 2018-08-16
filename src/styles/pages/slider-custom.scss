@@ -50,6 +50,14 @@
     color: #fff;
     display: flex;
 
+    @include phones {
+      bottom: rem(256px);
+    }
+
+    @include small3 {
+      bottom: rem(240px);
+    }
+
     li {
       width: auto;
       height: 100%;
@@ -123,15 +131,33 @@
   line-height: 1.4;
   overflow: hidden;
   text-align: right;
+
+  @include tablets {
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  @include phones {
+    text-align: right;
+    top: 45%;
+  }
 }
 
 .slideshow-text__title {
   font-size: rem(24px);
   color: #ffffff;
+
+  @include tablets {
+    font-size: rem(29px);
+  }
 }
 
 .slideshow-text__subtitle {
   font-size: rem(20px);
+
+  @include tablets {
+    font-size: rem(24px);
+  }
 }
 
 .slick-arrow {
@@ -176,6 +202,14 @@
     @include small {
       height: rem(220px);
     }
+
+    @include small2 {
+      height: rem(180px);
+    }
+
+    @include small3 {
+      height: rem(140px);
+    }
   }
 
   &::after {
@@ -184,6 +218,15 @@
     font-size: 1.7rem;
     color: #f4f6fb;
     position: fixed;
+  }
+
+  @include phones-large {
+    left: calc(50% - 15rem);
+  }
+
+  @include phones {
+    top: calc(45% - 1.875rem);
+    left: calc(50% - 11rem);
   }
 }
 
@@ -204,6 +247,14 @@
     @include small {
       height: rem(220px);
     }
+
+    @include small2 {
+      height: rem(180px);
+    }
+
+    @include small3 {
+      height: rem(140px);
+    }
   }
 
   &::after {
@@ -212,5 +263,14 @@
     font-size: 1.7rem;
     color: #f4f6fb;
     position: fixed;
+  }
+
+  @include phones-large {
+    right: calc(50% - 15rem);
+  }
+
+  @include phones {
+    top: calc(45% - 1.875rem);
+    right: calc(50% - 11rem);
   }
 }

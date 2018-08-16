@@ -22,6 +22,12 @@
     }
 }
 
+@mixin phones-large { // 640px
+    @media screen and (max-width: $phones-large) {
+        @content;
+    }
+}
+
 @mixin phones { // 480px
     @media screen and (max-width: $phones) {
         @content;
@@ -36,6 +42,18 @@
 
 @mixin small { // 750px
     @media screen and (max-height: $small) {
+        @content;
+    }
+}
+
+@mixin small2 { // 650px
+    @media screen and (max-height: $small2) {
+        @content;
+    }
+}
+
+@mixin small3 { // 550px
+    @media screen and (max-height: $small3) {
         @content;
     }
 }

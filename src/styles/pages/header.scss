@@ -16,7 +16,7 @@
 
     &:before {
         content: '';
-        height: rem(1px);
+        height: 1px;
         width: rem(71px);
         background: #fff;
         position: absolute;
@@ -39,7 +39,7 @@
 
     &:after {
         content: '';
-        height: rem(1px);
+        height: 1px;
         width: rem(71px);
         background: #fff;
         position: absolute;
@@ -365,7 +365,7 @@
 
     @include tablets {
         position: absolute;
-        top: calc(100% + 27px);
+        top: calc(100% + 20px);
         background: #2a2c32;
         padding: 0;
         transition: .3s;
@@ -375,7 +375,7 @@
 
     &.active {
         transform: translate(0%, 0);
-        opacity: .8;
+        opacity: .95;
     }
 }
 
@@ -402,7 +402,7 @@
 
         &::after {
             content: '';
-            width: rem(1px);
+            width: 1px;
             height: calc(100% - 3rem);
             background: #fff;
             opacity: .3;
@@ -474,6 +474,10 @@
             right: -24px;
             top: 50%;
             transform: translate(0, -50%);
+        }
+
+        @include phones {
+            right: -20px;
         }
     }
 
@@ -560,6 +564,18 @@
         padding-top: rem(29px);
         padding-bottom: rem(29px);
     }
+
+    @include tablets {
+        top: 0;
+        left: initial;
+        transition: .3s;
+        padding: 0;
+
+        &.active {
+            z-index: 3;
+            opacity: .99;
+        }
+    }
 }
 
 .drop-menu {
@@ -575,11 +591,91 @@
         padding-top: rem(24px);
         padding-bottom: rem(32px);
     }
+
+    @include tablets {
+        flex-direction: column;
+        align-items: flex-end;
+        border-bottom: none;
+    }
+
+    @include phones {
+        padding-top: rem(16px);
+        padding-bottom: rem(16px);
+    }
+}
+
+.drop-menu__heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: rem(14px) 0;
+    margin-bottom: rem(16px);
+
+    @include phones {
+        padding: rem(8px) 0;
+    }
+}
+
+.drop-menu__btn {
+    background: none;
+    border: initial;
+    outline: none;
+    padding: 4px;
+    cursor: pointer;
+    padding-left: 10px;
+
+    &:hover {
+        .drop-menu__btn-icon {
+            color: #f7f2e6;
+        }
+    } 
+}
+
+.drop-menu__btn-icon {
+    height: rem(14px);
+    width: rem(14px);
+    fill: #f4f6fb;
+    transition: .3s;
+}
+
+.drop-menu__title {
+    text-transform: uppercase;
+    font-size: rem(17px);
+    font-weight: 400;
+    line-height: rem(30px);
+    color: #f7f2e6;
+    border-right: 1px solid rgba($color: #fff, $alpha: 0.3);
+    padding-right: rem(29px);
+    margin-right: rem(47px);
+
+    &:after {
+        content: '';
+        height: 0;
+        width: 0;
+        border: 0.3rem solid transparent;
+        border-bottom-color: #f5f7fc;
+        border-top-width: 0rem;
+        top: 50%;
+        position: absolute;
+        transform: translate(0, -50%) rotate(90deg);
+        right: 16px;
+    }
 }
 
 .drop-menu__col {
     width: 33.3%;
     height: 100%;
+
+    @include tablets {
+        width: 60%;
+        height: initial;
+    }
+
+    @include phones-large {
+        width: 100%;
+    }
 }
 
 .drop-menu__subtitle {
@@ -599,12 +695,18 @@
         opacity: 0.3;
         position: absolute;
         top: 50%;
-        transform: translate(5px, 0/*-50%*/);
+        transform: translate(5px, 0);
     }
 
     @include desktop {
         margin-bottom: rem(10px);
         font-size: rem(13px);
+    }
+
+    @include tablets {
+        font-size: rem(18px);
+        margin-bottom: rem(19px);
+        margin-top: rem(5px);
     }
 }
 
@@ -617,6 +719,17 @@
 
     @include desktop {
         margin-bottom: rem(10px);
+    }
+
+    @include tablets {
+        margin-bottom: rem(16px);
+        &:last-child {
+            margin-bottom: rem(16px);
+        }
+    }
+
+    @include phones {
+        margin-bottom: rem(8px);
     }
 }
 
@@ -632,6 +745,10 @@
 
     @include desktop {
         font-size: rem(14px);
+    }
+
+    @include tablets {
+        font-size: rem(19px);
     }
 }
 

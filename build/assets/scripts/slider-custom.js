@@ -17,10 +17,8 @@ $slider.addClass('slideshow-left');
 $('.slideshow-left').slick({
   vertical: true,
   verticalSwiping: true,
-  //arrows: false,
   appendArrows: '.appendArrows',
   infinite: true,
-  //dots: true,
   speed: 1000,
   cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)'
 }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
