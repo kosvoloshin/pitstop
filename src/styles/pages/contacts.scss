@@ -1,0 +1,43 @@
+.data {
+    padding-top: rem(50px);
+    padding-bottom: rem(60px);
+    z-index: 1;
+}
+
+.data__map {
+    padding: 0 rem(15px);
+    border-top: 1px solid #d4c29a;
+}
+
+.data__title {
+    font-size: rem(18px);
+    font-weight: 700;
+    line-height: rem(24px);
+    color: #1d273c;
+    font-family: $r-r;
+}
+
+.data__details {
+    display: flex;
+    flex-direction: row;
+}
+
+.data__desc {
+    font-family: $r-r;
+    font-size: rem(16px);
+    line-height: rem(24px);
+    color: #7d6226;
+
+}
+
+.data__adress {
+    font-family: $r-r;
+    font-size: rem(16px);
+    line-height: rem(24px);
+    color: #2b3345;
+}
+
+.map {
+    height: rem(354px);
+    width: 100%;
+}

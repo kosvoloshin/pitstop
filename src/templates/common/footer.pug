@@ -1,5 +1,19 @@
-footer.footer.container
-    .footer__row.footer__row--with-line
+footer.footer.footer--abs#footer
+    .audio.container
+        .js--audio-wrap
+            audio.js--audio-cont
+                //source(src='vivaldi.mp3', type='audio/mpeg')
+                source(src='mocart.mp3', type='audio/mpeg')
+                | 	    Тег audio не поддерживается вашим браузером.
+                //-a(href='/path/to/file.mp3') Скачайте музыку
+                | .
+            a.js--audio-play(href='#')
+                span.glyphicon.glyphicon-play(data-toggle-class='glyphicon glyphicon-pause')
+            .js--timeline
+                a.js--timeline-control(href='#')
+            a.js--audio-mute(href='#')
+                span.glyphicon.glyphicon-volume-up(data-toggle-class='glyphicon glyphicon-volume-off')
+    .footer__row.footer__row--with-line.container
         .contacts
             a.contacts__mail(href="mailto:luganskaoblastnafilarmonia@gmail.com")
                 svg.contacts__icon-mail: use(xlink:href="assets/images/icons/sprite.svg#mail")
@@ -10,11 +24,11 @@ footer.footer.container
                 .contacts__text квиткова каса:
                 .contacts__link +38 050 005 00 55
         .socials
-            a.socials__link.socials__link--youtube(href="#" target="blanc")
+            a.socials__link.socials__link--youtube(href="https://www.youtube.com/" target="blanc")
                 svg.socials__icon.socials__icon--youtube: use(xlink:href="assets/images/icons/sprite.svg#youtube")
-            a.socials__link.socials__link--facebook(href="#" target="blanc")
+            a.socials__link.socials__link--facebook(href="https://www.facebook.com/lugansk.philharmonic/" target="blanc")
                 svg.socials__icon.socials__icon--facebook: use(xlink:href="assets/images/icons/sprite.svg#facebook")
-    .footer__row.footer__row--bottom
+    .footer__row.container.footer__row--bottom
         .footer__col
             .footer__copy © Луганська обласна філармонія 2013-2018
         .footer__col

@@ -289,6 +289,7 @@
 .footer--within {
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
     background-color: $bg_header;
+    z-index: 1;
 
     .footer__row--with-line {
         border-bottom: 1px solid #cab380;

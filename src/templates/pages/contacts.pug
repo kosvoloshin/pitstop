@@ -1,0 +1,71 @@
+extends ../template
+
+block variables
+    - var title = 'Контакти'
+
+block content
+    .wrapper
+        include ../common/header--within.pug
+        .crumbs
+            .container
+                ul.crumbs__list
+                    li.crumbs__item
+                        a.crumbs__link(href="index.html") Головна
+                    li.crumbs__item
+                        .crumbs__link.crumbs__link--active Контакти
+        section.section.data
+            .container
+                .section__title-wrap
+                    h1.section__title Контакти
+                .data__map
+                    h2.data__title Луганська обласна філармонія
+                    .data__details
+                        .data__desc Адреса:
+                        .data__adress вул. Шевченка, 3 м. Сєвєродонецьк, Луганська область, 93404
+                    .map#map
+                    script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDVhY3WnieoejfofJd3Cbo4w4Lv17WTxbs&callback=initMap')
+                .data__contacts
+                    .data__col
+                        .data__row
+                            .data__tel Тел:
+                            .data__numbers
+                                a(href="tel:+380662195580").data__number +38 (066) 219 55 80 
+                                a(href="tel:+380633266255").data__number +38 (063) 326 62 55
+                        .data__row
+                            .data__mail e-mail:
+                            .data__adresses
+                                a(href="mailto:lugansk.philharmonic@i.ua").data__postal lugansk.philharmonic@i.ua 
+                                a(href="mailto:lugansk.philharmonic@gmail.com").data__postal lugansk.philharmonic@gmail.com
+                    .data__col
+                        .data__row
+                            .data__social-name Facebook:
+                            a(href="https://www.facebook.com/lugansk.philharmonic/" target="blanc").data__social https://www.facebook.com/lugansk.philharmonic/
+                        .data__row
+                            .data__social-name Youtube:
+                            a(href="https://www.youtube.com/lugansk.philharmonic/" target="blanc").data__social https://www.youtube.com/lugansk.philharmonic/
+                form.form
+                    h2.form__title Зв`язатись з нами
+                    .form__columns
+                        .form__col-left
+                            .form__row
+                                label.form__block
+                                    .form__title * Прізвище, ім’я:
+                                    input(type="text" name="user-name" required).form__input
+                            .form__row
+                                label.form__block
+                                    .form__title * E-mail:
+                                    input(type="text" name="e-mail" required).form__input
+                            .form__row
+                                label.form__block
+                                    .form__title Телефон (у міжнародному форматі):
+                                    input(type="text" name="phone-number").form__input
+                        .form__col-right
+                            .form__row
+                                label.form__block
+                                    .form__title * Повідомлення:
+                                    textarea(name="message" cols="30" rows="5" required).form__textarea
+                    .form__desc 
+                        p Увага! Поля з позначкою (*) - зірочка, обов'язкові до заповнення.
+                    .form__btn
+                        button(type="submit").form__btn-send Відправити
+        include ../common/footer--within.pug

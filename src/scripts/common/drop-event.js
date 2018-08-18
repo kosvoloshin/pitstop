@@ -31,12 +31,12 @@ $(document).ready(function() {
         if(document.documentElement.clientWidth < 769) {
             $('.drop-menu__col').removeClass('visuallyhidden');
             var windowWidth = $(window).width();
-            
+
             $('.menu').width($(window).width());
             $('.menu').css('left', -menuOffset);
             $('.drop-down').css('right', windowWidth);
 
-            $('.menu__link').on('click', function(event) {
+            $('.menu__link--drop').on('click', function(event) {
                 event.preventDefault();
                 $(this).next('.drop-down').toggleClass('active');
                 $(this).next('.drop-down').css('right', -menuOffset2);
