@@ -52,6 +52,7 @@
     color: $text_button;
     text-transform: uppercase;
     transition: .3s;
+    cursor: pointer;
 
     &:hover {
         background-color: #2e4f96;
@@ -96,6 +97,18 @@
             border-bottom-width: 0rem;
             transform: translate(-50%, 0);
             bottom: rem(38px);
+            transition: .5s;
+        }
+
+        &:hover {
+
+            &:after {
+                transform: translate(-50%, 0) rotate(180deg); 
+            }
+
+            .tooltip {
+                transform: translate(-50%, 0) scale(1);
+            }
         }
     }
 }
@@ -106,4 +119,70 @@
     color: #8c6d2b;
     line-height: rem(16px);
     text-transform: uppercase;
+}
+
+.tooltip {
+    position: absolute;
+    width: rem(280px);
+    bottom: rem(75px);
+    left: 50%;
+    transform: translate(-50%, 0) scale(0);
+    transition: .5s;
+    background-color: #f3ead7;
+    box-shadow: 0px 5px 26.5px 0.5px rgba(0, 0, 0, 0.16);
+}
+
+.tooltip__wrap {
+    padding: rem(15px) 0;
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%) rotate(45deg);
+        height: rem(12px);
+        width: rem(12px);
+        background: #f3ead7;
+    }
+
+    &:before {
+        content: '';
+        top: 98%;
+        height: rem(60px);
+        width: 70%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+
+.tooltip__heading {
+    border-bottom: 1px solid #d4c29a;
+    padding: 0 rem(15px);
+    text-align: left;
+    font-family: $r-r;
+    font-size: rem(14px);
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: rem(24px);
+    letter-spacing: normal;
+    color: #00132f;
+    padding-bottom: rem(8px);
+}
+
+.tooltip__content {
+    padding: 0 rem(15px);
+    text-align: left;
+    font-family: $r-r;
+    font-size: rem(14px);
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: rem(18px);
+    letter-spacing: normal;
+    color: #00132f;
+    padding-top: rem(5px);
 }
