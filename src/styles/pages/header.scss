@@ -17,47 +17,116 @@
     &:before {
         content: '';
         height: 1px;
-        width: rem(71px);
         background: #fff;
         position: absolute;
         left: 0;
         top: rem(23px);
         opacity: .3;
-        
-        @include desktop {
-            width: rem(57px);
+        width: 0;
+        transition: 1s;
+    }
+
+    &.animate {
+        &:before {
+            width: rem(71px);
         }
 
-        @include laptop {
-            width: rem(32px);
+        &:after {
+            width: rem(71px);
         }
-
-        @include tablets {
-            width: calc(100% - 64px);
+    }
+    @include desktop {
+        &.animate {
+            &:before {
+                width: rem(57px);
+            }
+    
+            &:after {
+                width: rem(57px);
+            }
+        }
+    }
+    @include laptop {
+        &.animate {
+            &:before {
+                width: rem(32px);
+            }
+    
+            &:after {
+                width: rem(32px);
+            }
+        }
+    }
+    @include tablets {
+        width: calc(100% - 64px);
+        &.animate {
+            &:before {
+                width: calc(100% - 64px);
+            }
+    
+            &:after {
+                width: calc(100% - 64px);
+            }
         }
     }
 
     &:after {
         content: '';
         height: 1px;
-        width: rem(71px);
         background: #fff;
         position: absolute;
         left: 0;
         opacity: 0.3;
         bottom: rem(3px);
-
-        @include desktop {
-            width: rem(57px);
-        }
-
-        @include laptop {
-            width: rem(32px);
-        }
+        width: 0;
+        transition: 1s;
 
         @include tablets {
-            width: calc(100% - 64px);
             bottom: rem(16px);
+        }
+    }
+
+    &.animate {
+        &:before {
+            width: rem(71px);
+        }
+
+        &:after {
+            width: rem(71px);
+        }
+    }
+    @include desktop {
+        &.animate {
+            &:before {
+                width: rem(57px);
+            }
+    
+            &:after {
+                width: rem(57px);
+            }
+        }
+    }
+    @include laptop {
+        &.animate {
+            &:before {
+                width: rem(32px);
+            }
+    
+            &:after {
+                width: rem(32px);
+            }
+        }
+    }
+    @include tablets {
+        width: calc(100% - 64px);
+        &.animate {
+            &:before {
+                width: calc(100% - 64px);
+            }
+    
+            &:after {
+                width: calc(100% - 64px);
+            }
         }
     }
 
@@ -94,29 +163,57 @@
     &:before {
         content: '';
         height: 1px;
-        width: 100%;
         background: #fff;
         position: absolute;
         opacity: 0.3;
-
+        width: 0;
+        transition: 1s;
+        
         @include tablets {
-            width: calc(100% - 64px);
             top: rem(23px);
+        }
+    }
+
+    &.animate {
+        &:before {
+            width: 100%;
+        }
+    }
+
+    @include tablets {
+        &.animate {
+            &:before {
+                width: calc(100% - 64px);
+            }
         }
     }
 
     &:after {
         content: '';
         height: 1px;
-        width: 100%;
         background: #fff;
         position: absolute;
         opacity: 0.3;
         bottom: rem(3px);
+        width: 0;
+        transition: 1s;
 
         @include tablets {
-            width: calc(100% - 64px);
             bottom: rem(16px);
+        }
+    }
+
+    &.animate {
+        &:after {
+            width: 100%;
+        }
+    }
+
+    @include tablets {
+        &.animate {
+            &:after {
+                width: calc(100% - 64px);
+            }
         }
     }
 
@@ -759,6 +856,52 @@
     flex: 0 0 auto;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
 
+    @include tablets {
+        height: rem(213px);
+    }
+
+    .hamburger {
+        .hamburger__menu,
+        .hamburger__menu::before,
+        .hamburger__menu::after {
+            background-color: $button_hover;
+        }
+    }
+
+    .hamburger:hover {
+        background-color: $button_hover;
+
+        .hamburger__menu,
+        .hamburger__menu::before,
+        .hamburger__menu::after {
+            background-color: $text_button;
+        }
+    }
+
+    .hamburger.active {
+
+        &:hover {
+            background-color: $button_hover;
+    
+            .hamburger__menu::before,
+            .hamburger__menu::after {
+                background-color: $text_button;
+            }
+        }
+    
+        .hamburger__menu {
+            background: none;
+    
+            &:before {
+                background: $button_hover;
+            }
+    
+            &:after {
+                background: $button_hover;
+            }
+        }
+    }
+
     .header__l:before,
     .header__l:after,
     .header__r:before,
@@ -790,6 +933,26 @@
         &.active {
             color: $text_button;
             background-color: #aa8534;
+        }
+    }
+
+    .menu {
+        @include tablets {
+            background-color: #eee2c8;
+            opacity: 1;
+            top: calc(100% + 28px);
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    .menu__list {
+        @include tablets {
+            border-top: 1px solid rgba($color: #d3b47e, $alpha: 0.3);
+        }
+    }
+    .menu__list::after {
+        @include tablets {
+            background: #d3b47e;
         }
     }
 
@@ -838,11 +1001,39 @@
         @include desktop {
             top: rem(144px);
         }
+
+        @include tablets {
+            top: 0;
+        }
+    }
+
+    .drop-menu__btn:hover {
+        .drop-menu__btn-icon {
+            fill: $text_hover;
+        }
+    }
+
+    .drop-menu__btn-icon {
+        fill: $text;
+        transition: .3s;
+    }
+
+    .drop-menu__title {
+        color: $text_hover;
+        border-right: 1px solid rgba($color: $text_hover, $alpha: 0.3);
+        transition: .3s;
+
+        &:hover {
+            color: $text;
+        }
+    }
+
+    .drop-menu__title:after {
+        border-bottom-color: $text;
     }
 
     .drop-menu {
         border-top: none;
-        //border-top: rem(1px) solid #d3b47e;
         border-bottom: rem(1px) solid #d3b47e;
     }
 

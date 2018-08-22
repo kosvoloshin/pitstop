@@ -6,6 +6,8 @@ require('./common/hamburger');
 
 require('./common/google-map');
 
+require('./common/animate');
+
 import preloader from './common/preloader';
 
 $(document).ready(() => {

@@ -49,7 +49,19 @@
 }
 
 .about__img {
+    @include desktop {
+        max-width: rem(590px);
+        height: auto;
+    }
+    @include laptop {
+        max-width: rem(480px);
+        height: auto;
+    }
 
+    @include tablets {
+        max-width: 60%;
+        height: auto;
+    }
 }
 
 .about__caption {
@@ -58,4 +70,19 @@
     line-height: rem(18px);
     color: #8f7953;
     padding-left: rem(60px);
+
+    @include desktop {
+        padding-left: rem(50px);
+        padding-right: rem(50px);
+    }
+    
+    @include laptop {
+        padding-left: rem(40px);
+        padding-right: rem(40px);
+    }
+
+    @include tablets {
+        padding-left: rem(30px);
+        padding-right: rem(30px);
+    }
 }

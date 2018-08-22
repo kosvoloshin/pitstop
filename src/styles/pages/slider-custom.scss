@@ -193,22 +193,42 @@
   &::before {
     content: '';
     width: 1px;
-    height: rem(356px);
     background-color: #fff;
     position: absolute;
     right: rem(-2px);
     opacity: 0.3;
+    height: 0;
+    transition: 1s;
+  }
 
-    @include small {
-      height: rem(220px);
+  &.animate {
+    $test: rem(356px);
+    &:before {
+      height: $test;
     }
-
-    @include small2 {
-      height: rem(180px);
+  }
+  @include small {
+    $test: rem(220px);
+    &.animate {
+      &:before {
+        height: $test;
+      }
     }
-
-    @include small3 {
-      height: rem(140px);
+  }
+  @include small2 {
+    $test: rem(180px);
+    &.animate {
+      &:before {
+        height: $test;
+      }
+    }
+  }
+  @include small3 {
+    $test: rem(140px);
+    &.animate {
+      &:before {
+        height: $test;
+      }
     }
   }
 
@@ -238,22 +258,42 @@
   &::before {
     content: '';
     width: 1px;
-    height: rem(356px);
     background-color: #fff;
     position: absolute;
     left: rem(-2px);
     opacity: 0.3;
+    height: 0;
+    transition: 1s;
+  }
 
-    @include small {
-      height: rem(220px);
+  &.animate {
+    $test: rem(356px);
+    &:before {
+      height: $test;
     }
-
-    @include small2 {
-      height: rem(180px);
+  }
+  @include small {
+    $test: rem(220px);
+    &.animate {
+      &:before {
+        height: $test;
+      }
     }
-
-    @include small3 {
-      height: rem(140px);
+  }
+  @include small2 {
+    $test: rem(180px);
+    &.animate {
+      &:before {
+        height: $test;
+      }
+    }
+  }
+  @include small3 {
+    $test: rem(140px);
+    &.animate {
+      &:before {
+        height: $test;
+      }
     }
   }
 
