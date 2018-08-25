@@ -1,20 +1,34 @@
 footer.footer.footer--within
     .calendar
         .container
-            .calendar__row
+            .calendar__row.calendar__row--hiden
+                .tooltip
+                    .tooltip__wrap
+                        .tooltip__heading “Вечори з аркатою”
+                        .tooltip__content
+                            p Мистецькі проекти 79-го концертного сезону Вінницької обласної філармонії  (2015-16 рр.)
                 .calendar__controls
                     a.calendar__link(href="#")
                         svg.calendar__link-icon: use(xlink:href="assets/images/icons/sprite.svg#arrow1")
                     button(type="button").calendar__month 2018 листопад
                     a.calendar__link(href="#")
                         svg.calendar__link-icon: use(xlink:href="assets/images/icons/sprite.svg#arrow1")
+                .calendar__week
+                    ul.calendar__days
+                        li.calendar__day пн
+                        li.calendar__day вт
+                        li.calendar__day ср
+                        li.calendar__day чт
+                        li.calendar__day пт
+                        li.calendar__day сб
+                        li.calendar__day нд
                 ul.calendar__list
                     li.calendar__item
                         a.calendar__date(href="#") 01
                         .calendar__day пн
                     li.calendar__item
                         a.calendar__date.active(href="#") 02
-                            .tooltip
+                            //.tooltip
                                 .tooltip__wrap
                                     .tooltip__heading “Вечори з аркатою”
                                     .tooltip__content
@@ -37,7 +51,7 @@ footer.footer.footer--within
                         .calendar__day вс
                     li.calendar__item
                         a.calendar__date.active(href="#") 08
-                            .tooltip
+                            //.tooltip
                                 .tooltip__wrap
                                     .tooltip__heading “Вечори з аркатою”
                                     .tooltip__content
@@ -60,7 +74,7 @@ footer.footer.footer--within
                         .calendar__day сб
                     li.calendar__item
                         a.calendar__date.active(href="#") 14
-                            .tooltip
+                            //.tooltip
                                 .tooltip__wrap
                                     .tooltip__heading “Вечори з аркатою”
                                     .tooltip__content
@@ -68,7 +82,7 @@ footer.footer.footer--within
                         .calendar__day нд
                     li.calendar__item
                         a.calendar__date.active(href="#") 15
-                            .tooltip
+                            //.tooltip
                                 .tooltip__wrap
                                     .tooltip__heading “Вечори з аркатою”
                                     .tooltip__content
@@ -76,7 +90,7 @@ footer.footer.footer--within
                         .calendar__day пн
                     li.calendar__item
                         a.calendar__date.active(href="#") 16
-                            .tooltip
+                            //.tooltip
                                 .tooltip__wrap
                                     .tooltip__heading “Вечори з аркатою”
                                     .tooltip__content
@@ -87,7 +101,7 @@ footer.footer.footer--within
                         .calendar__day ср
                     li.calendar__item
                         a.calendar__date.active(href="#") 18
-                            .tooltip
+                            //.tooltip
                                 .tooltip__wrap
                                     .tooltip__heading “Вечори з аркатою”
                                     .tooltip__content
@@ -122,7 +136,7 @@ footer.footer.footer--within
                         .calendar__day сб
                     li.calendar__item
                         a.calendar__date.active(href="#") 28
-                            .tooltip
+                            //.tooltip
                                 .tooltip__wrap
                                     .tooltip__heading “Вечори з аркатою”
                                     .tooltip__content
@@ -137,6 +151,8 @@ footer.footer.footer--within
                     li.calendar__item
                         a.calendar__date(href="#") 31
                         .calendar__day ср
+            .calendar__row.calendar__row--desktop
+                button(type="button").calendar__btn-event Календар подій
     .footer__row.footer__row--with-line.container
         .contacts
             a.contacts__mail(href="mailto:luganskaoblastnafilarmonia@gmail.com")

@@ -8,6 +8,8 @@ require('./common/google-map');
 
 require('./common/animate');
 
+require('./common/calendar');
+
 import preloader from './common/preloader';
 
 $(document).ready(() => {
