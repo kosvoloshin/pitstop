@@ -27,6 +27,14 @@
         height: 280px;
         visibility: visible;
         opacity: 1;
+
+        @include tablets {
+            height: 250px;
+        }
+
+        @include phones {
+            height: 230px;
+        }
     }
 } 
 
@@ -177,16 +185,20 @@
 .tooltip {
     position: absolute;
     width: rem(280px);
-    bottom: calc(100% + 15px);
-    left: rem(7.5px);
+    bottom: calc(100% + 25px);
+    left: 0;
     transform: scale(0);
     transition: .5s;
     background-color: #f3ead7;
     box-shadow: 0px 5px 26.5px 0.5px rgba(0, 0, 0, 0.16);
-    display: none;
 
     @include desktop {
-        display: block;
+        left: rem(7.5px);
+        bottom: calc(100% + 15px);
+    }
+
+    &.scale {
+        transform: scale(1);
     }
 }
 
@@ -198,14 +210,18 @@
         content: '';
         position: absolute;
         bottom: 0;
-        left: 50%;
+        left: 35%;
         transform: translate(-50%, 50%) rotate(45deg);
         height: rem(12px);
         width: rem(12px);
         background: #f3ead7;
+
+        @include desktop {
+            left: 50%;
+        }
     }
 
-    &:before {
+    /*&:before {
         content: '';
         top: 98%;
         height: rem(60px);
@@ -213,7 +229,7 @@
         position: absolute;
         left: 50%;
         transform: translate(-50%, 0);
-    }
+    }*/
 }
 
 .tooltip__heading {

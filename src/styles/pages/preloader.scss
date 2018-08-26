@@ -8,6 +8,10 @@
     background: #232323;
 }
 
+.preloader--light {
+  background: $bg_header;
+}
+
 .preloader__spinner {
     width: 150px;
     height: 150px;
@@ -24,6 +28,10 @@
     transform: translate(-50%, -50%);
     color: #fff;
     font-size: 18px;
+}
+
+.preloader__percents--light {
+  color: $text;
 }
 
 .preloader__animation {
@@ -60,6 +68,14 @@
       right: $margin;
       bottom: $margin;
       animation: spin 3s linear infinite;
+    }
+}
+
+.preloader__animation--light {
+  &,
+    &:after,
+    &:before {
+      border-top-color: $text;
     }
 }
 

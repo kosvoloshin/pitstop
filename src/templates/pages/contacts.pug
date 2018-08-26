@@ -5,6 +5,10 @@ block variables
 
 block content
     .wrapper
+        .preloader.preloader--light
+            .preloader__spinner
+                .preloader__animation.preloader__animation--light
+                .preloader__percents.preloader__percents--light 0%
         include ../common/header--within.pug
         .crumbs
             .container
@@ -21,6 +25,7 @@ block content
                     h2.data__title Луганська обласна філармонія
                     .data__details
                         .data__desc Адреса:
+                        svg.data__desc-icon: use(xlink:href="assets/images/icons/sprite.svg#maps")
                         .data__adress вул. Шевченка, 3 м. Сєвєродонецьк, Луганська область, 93404
                     .map#map
                     script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDVhY3WnieoejfofJd3Cbo4w4Lv17WTxbs&callback=initMap')
@@ -28,20 +33,24 @@ block content
                     .data__col
                         .data__row
                             .data__tel Тел.:
+                            svg.data__tel-icon: use(xlink:href="assets/images/icons/sprite.svg#phone")
                             .data__numbers
                                 a(href="tel:+380662195580").data__number +38 (066) 219 55 80 
                                 a(href="tel:+380633266255").data__number +38 (063) 326 62 55
                         .data__row
                             .data__mail e-mail:
+                            svg.data__mail-icon: use(xlink:href="assets/images/icons/sprite.svg#mail")
                             .data__adresses
                                 a(href="mailto:lugansk.philharmonic@i.ua").data__postal lugansk.philharmonic@i.ua 
                                 a(href="mailto:lugansk.philharmonic@gmail.com").data__postal lugansk.philharmonic@gmail.com
                     .data__col
                         .data__row
                             .data__social-name Facebook:
+                            svg.data__social-name-icon1: use(xlink:href="assets/images/icons/sprite.svg#facebook")
                             a(href="https://www.facebook.com/lugansk.philharmonic/" target="blanc").data__social https://www.facebook.com/lugansk.philharmonic/
                         .data__row
                             .data__social-name Youtube:
+                            svg.data__social-name-icon2: use(xlink:href="assets/images/icons/sprite.svg#youtube")
                             a(href="https://www.youtube.com/lugansk.philharmonic/" target="blanc").data__social https://www.youtube.com/lugansk.philharmonic/
                 form.form
                     h2.form__title Зв`язатись з нами

@@ -42,6 +42,10 @@
     align-items: center;
     margin-top: rem(23px);
     margin-bottom: rem(39px);
+
+    @include phones-large {
+        flex-direction: column;
+    }
 }
 
 .about__desc--no-margin {
@@ -61,6 +65,10 @@
     @include tablets {
         max-width: 60%;
         height: auto;
+    }
+
+    @include phones-large {
+        max-width: 100%;
     }
 }
 
@@ -84,5 +92,13 @@
     @include tablets {
         padding-left: rem(30px);
         padding-right: rem(30px);
+    }
+
+    @include phones-large {
+        margin-top: rem(15px);
+    }
+
+    @include phones {
+        padding: 0;
     }
 }

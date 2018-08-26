@@ -249,7 +249,7 @@
 .footer__row--bottom {
     @include phones {
         flex-direction: column;
-        margin-bottom: rem(15px);
+        padding-bottom: rem(15px);
         
         .footer__col:first-child {
             order: 1;
@@ -300,6 +300,10 @@
 
     .footer__row--with-line {
         border-bottom: 1px solid #cab380;
+
+        @include phones {
+            margin-bottom: rem(20px);
+        }
     }
 
     .contacts__icon-mail {

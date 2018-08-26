@@ -58,18 +58,39 @@
     font-size: rem(16px);
     color: #7d6226;
     padding-left: rem(75px);
+
+    @include laptop {
+        padding-left: rem(50px);
+    }
+
+    @include tablets {
+        padding-left: rem(30px);
+    }
+
+    @include phones-large {
+        padding-left: rem(15px);
+    }
 }
 
 .events__col-r {
     width: rem(970px);
     padding-left: rem(15px);
     padding-right: rem(75px);
+
+    @include laptop {
+        padding-right: rem(50px);
+    }
+
+    @include tablets {
+        padding-right: rem(15px);
+    }
 }
 
 .events__link {
     &:hover {
         .events__subtitle {
-            border-bottom: 1px solid #1d273c;
+            //border-bottom: 1px solid #1d273c;
+            text-decoration: underline;
         }
     }
 }
@@ -80,6 +101,6 @@
     line-height: rem(24px);
     color: #1d273c;
     display: inline-block;
-    border-bottom: 1px solid transparent;
+    //border-bottom: 1px solid transparent;
     transition: .3s;
 }

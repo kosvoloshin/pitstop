@@ -18,6 +18,12 @@
   </head>
   <body>
     <div class="wrapper">
+      <div class="preloader preloader--light">
+        <div class="preloader__spinner">
+          <div class="preloader__animation preloader__animation--light"></div>
+          <div class="preloader__percents preloader__percents--light">0%</div>
+        </div>
+      </div>
       <header class="header header--within">
         <div class="container container--flex">
           <div class="header__l">
@@ -107,6 +113,9 @@
             <h2 class="data__title">Луганська обласна філармонія</h2>
             <div class="data__details">
               <div class="data__desc">Адреса:</div>
+              <svg class="data__desc-icon">
+                <use xlink:href="assets/images/icons/sprite.svg#maps"></use>
+              </svg>
               <div class="data__adress">вул. Шевченка, 3 м. Сєвєродонецьк, Луганська область, 93404</div>
             </div>
             <div class="map" id="map"></div>
@@ -116,19 +125,31 @@
             <div class="data__col">
               <div class="data__row">
                 <div class="data__tel">Тел.:</div>
+                <svg class="data__tel-icon">
+                  <use xlink:href="assets/images/icons/sprite.svg#phone"></use>
+                </svg>
                 <div class="data__numbers"><a class="data__number" href="tel:+380662195580">+38 (066) 219 55 80 </a><a class="data__number" href="tel:+380633266255">+38 (063) 326 62 55</a></div>
               </div>
               <div class="data__row">
                 <div class="data__mail">e-mail:</div>
+                <svg class="data__mail-icon">
+                  <use xlink:href="assets/images/icons/sprite.svg#mail"></use>
+                </svg>
                 <div class="data__adresses"><a class="data__postal" href="mailto:lugansk.philharmonic@i.ua">lugansk.philharmonic@i.ua </a><a class="data__postal" href="mailto:lugansk.philharmonic@gmail.com">lugansk.philharmonic@gmail.com</a></div>
               </div>
             </div>
             <div class="data__col">
               <div class="data__row">
-                <div class="data__social-name">Facebook:</div><a class="data__social" href="https://www.facebook.com/lugansk.philharmonic/" target="blanc">https://www.facebook.com/lugansk.philharmonic/</a>
+                <div class="data__social-name">Facebook:</div>
+                <svg class="data__social-name-icon1">
+                  <use xlink:href="assets/images/icons/sprite.svg#facebook"></use>
+                </svg><a class="data__social" href="https://www.facebook.com/lugansk.philharmonic/" target="blanc">https://www.facebook.com/lugansk.philharmonic/</a>
               </div>
               <div class="data__row">
-                <div class="data__social-name">Youtube:</div><a class="data__social" href="https://www.youtube.com/lugansk.philharmonic/" target="blanc">https://www.youtube.com/lugansk.philharmonic/</a>
+                <div class="data__social-name">Youtube:</div>
+                <svg class="data__social-name-icon2">
+                  <use xlink:href="assets/images/icons/sprite.svg#youtube"></use>
+                </svg><a class="data__social" href="https://www.youtube.com/lugansk.philharmonic/" target="blanc">https://www.youtube.com/lugansk.philharmonic/</a>
               </div>
             </div>
           </div>
