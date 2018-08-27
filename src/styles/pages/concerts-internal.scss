@@ -1,0 +1,75 @@
+.concerts-in {
+    padding-top: rem(50px);
+    padding-bottom: rem(60px);
+    z-index: 1;
+}
+
+.concerts-in__list {
+    margin-top: rem(48px);
+}
+
+.concerts-in__item {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #d4c29a;
+    padding: rem(30px) rem(15px) rem(20px) rem(15px);
+}
+
+.concerts-in__image {
+    max-width: rem(340px);
+}
+
+.concerts-in__desc {
+    padding-left: rem(60px);
+}
+
+.concerts-in__title {
+    font-size: rem(18px);
+    font-weight: 700;
+    color: #0f1a32;
+    line-height: rem(24px);
+    margin-top: rem(-5px);
+}
+
+.concerts-in__subtitle {
+    font-size: rem(16px);
+    font-weight: 700;
+    color: #142241;
+    line-height: rem(24px);
+}
+
+.concerts-in__items {
+    margin-top: rem(5px);
+    line-height: 1.81;
+}
+
+.concerts-in__text {
+    font-size: rem(16px);
+    font-weight: 400;
+    color: #142241;
+    line-height: rem(24px);
+}
+
+.concerts-in__block {
+    border-top: 1px solid #d4c29a;
+    border-bottom: 1px solid #d4c29a;
+    padding: rem(20px) 0;
+}
+
+.concerts-in__excerpt {
+    font-size: rem(16px);
+    font-weight: 400;
+    color: #2b3345;
+    line-height: rem(24px);
+    padding: 0 rem(15px);
+}
+
+.concerts-in__lead {
+    font-size: rem(16px);
+    font-weight: 400;
+    color: #142241;
+    line-height: rem(24px);
+    background-color: #eee2c8;
+    margin: rem(23px) 0;
+    padding: rem(20px) rem(30px);
+}

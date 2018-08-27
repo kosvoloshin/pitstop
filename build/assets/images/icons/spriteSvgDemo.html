@@ -30,6 +30,7 @@ They might well be outsourced to an external stylesheet of course.
 	.svg-search-dims { width: 129px; height: 129px; }
 	.svg-sprite-dims { width: 0px; height: 0px; }
 	.svg-youtube-dims { width: 512px; height: 512px; }
+	.svg-youtube2-dims { width: 90px; height: 90px; }
 </style>
 <!--
 ====================================================================================================
@@ -63,6 +64,7 @@ for further details on how to create this embeddable sprite variant.
 		<symbol viewBox="0 0 129 129" id="search" xmlns="http://www.w3.org/2000/svg"><path d="M51.6 96.7c11 0 21-3.9 28.8-10.5l35 35c.8.8 1.8 1.2 2.9 1.2s2.1-.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-35-35c6.5-7.8 10.5-17.9 10.5-28.8 0-24.9-20.2-45.1-45.1-45.1-24.8 0-45.1 20.3-45.1 45.1 0 24.9 20.3 45.1 45.1 45.1zm0-82c20.4 0 36.9 16.6 36.9 36.9C88.5 72 72 88.5 51.6 88.5S14.7 71.9 14.7 51.6c0-20.3 16.6-36.9 36.9-36.9z"/></symbol>
 		<symbol viewBox="0 0 0 0" id="sprite" xmlns="http://www.w3.org/2000/svg"/>
 		<symbol viewBox="0 0 512 512" id="youtube" xmlns="http://www.w3.org/2000/svg"><path d="M490.24 113.92c-13.888-24.704-28.96-29.248-59.648-30.976C399.936 80.864 322.848 80 256.064 80c-66.912 0-144.032.864-174.656 2.912-30.624 1.76-45.728 6.272-59.744 31.008C7.36 138.592 0 181.088 0 255.904v.256c0 74.496 7.36 117.312 21.664 141.728 14.016 24.704 29.088 29.184 59.712 31.264C112.032 430.944 189.152 432 256.064 432c66.784 0 143.872-1.056 174.56-2.816 30.688-2.08 45.76-6.56 59.648-31.264C504.704 373.504 512 330.688 512 256.192v-.256c0-74.848-7.296-117.344-21.76-142.016zM192 352V160l160 96-160 96z"/></symbol>
+		<symbol viewBox="0 0 90 90" id="youtube2" xmlns="http://www.w3.org/2000/svg"><path d="M90 26.958C90 19.525 83.979 13.5 76.55 13.5h-63.1C6.021 13.5 0 19.525 0 26.958v36.084C0 70.475 6.021 76.5 13.45 76.5h63.1C83.979 76.5 90 70.475 90 63.042V26.958zM36 60.225V26.33l25.702 16.947L36 60.225z"/></symbol>
 </svg>
 
 <!--
@@ -213,6 +215,17 @@ embedded above. They may be styled via CSS.
 					</div>
 					<h2>youtube</h2>
 				</li>
+				<li title="youtube2">
+					<div class="icon-box">
+						
+						<!-- youtube2 -->
+						<svg class="svg-youtube2-dims">
+							<use xlink:href="#youtube2"></use>
+						</svg>
+						
+					</div>
+					<h2>youtube2</h2>
+				</li>
 			</ul>
 
 <!--
@@ -355,6 +368,17 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					</div>
 					<h2>youtube</h2>
 				</li>
+				<li title="youtube2">
+					<div class="icon-box">
+						
+						<!-- youtube2 -->
+						<svg class="svg-youtube2-dims">
+							<use xlink:href="sprite.svg#youtube2"></use>
+						</svg>
+						
+					</div>
+					<h2>youtube2</h2>
+				</li>
 			</ul>
 
 <!--
@@ -363,7 +387,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 
 		</section>
 		<footer>
-			<p>Generated at Sun, 26 Aug 2018 09:36:23 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+			<p>Generated at Mon, 27 Aug 2018 17:02:42 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
 		</footer>
 	</body>
 </html>

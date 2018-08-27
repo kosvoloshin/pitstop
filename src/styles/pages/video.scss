@@ -1,0 +1,33 @@
+.video {
+    padding-top: rem(50px);
+    padding-bottom: rem(60px);
+    z-index: 1;
+}
+
+.video__content {
+    border-top: 1px solid #d4c29a;
+    border-bottom: 1px solid #d4c29a;
+    padding: 0 rem(15px);
+    margin-top: rem(49px);
+    padding-top: rem(30px);
+}
+
+.video__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: rem(64px);
+}
+
+.video__block iframe {
+    width: rem(540px);
+    height: rem(304px);
+}
+
+.video__title {
+    font-size: rem(18px);
+    font-weight: 700;
+    color: #2b3345;
+    line-height: rem(24px);
+    margin-top: rem(35px);
+}

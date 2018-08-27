@@ -1,0 +1,49 @@
+extends ../template
+
+block variables
+    - var title = 'Відео'
+
+block content
+    .wrapper
+        .preloader.preloader--light
+            .preloader__spinner
+                .preloader__animation.preloader__animation--light
+                .preloader__percents.preloader__percents--light 0%
+        include ../common/header--within.pug
+        .crumbs
+            .container
+                ul.crumbs__list
+                    li.crumbs__item
+                        a.crumbs__link(href="index.html") Головна
+                    li.crumbs__item
+                        a.crumbs__link(href="#") Галерея
+                    li.crumbs__item
+                        .crumbs__link.crumbs__link--active Відео
+        section.section.video
+            .container
+                .section__title-wrap
+                    h1.section__title Відео
+                .video__content
+                    ul.video__list
+                        li.video__item
+                            .video__block
+                                iframe(width='560', height='315', src='https://www.youtube.com/embed/3yhuMyKOiz0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+                                h2.video__title Чайковський. Скажи, о чём в тени ветвей. Наталія Лановенко та академічний камерний оркестр АРКАТА
+                            .video__block
+                                iframe(width='560', height='315', src='https://www.youtube.com/embed/XIsonjCqUow', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+                                h2.video__title П.І. Чайковський. Вальс квітів. Симфонічний оркестр Вінницької філармонії
+                        li.video__item
+                            .video__block
+                                iframe(width='560', height='315', src='https://www.youtube.com/embed/UYK7GJJwLAs', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+                                h2.video__title Віктор Косенко. Концерт C-moll для ф-но з оркестром. ч.3
+                            .video__block
+                                iframe(width='560', height='315', src='https://www.youtube.com/embed/LnAKS6UK0Tg', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+                                h2.video__title Й. Гайдн. Дивертисмент C-dur. Квартет ГАЛЬЯРДА
+                        li.video__item
+                            .video__block
+                                iframe(width='560', height='315', src='https://www.youtube.com/embed/RLaUai2NBlQ', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+                                h2.video__title Бетховен. Квінтет Es-dur. 1ч. Квартет ГАЛЬЯРДА
+                            .video__block
+                                iframe(width='560', height='315', src='https://www.youtube.com/embed/ZZRyBb8m-hE', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+                                h2.video__title I Will Survive. Наталія Бурмістрова
+        include ../common/footer--within.pug
