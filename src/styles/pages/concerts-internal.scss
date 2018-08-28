@@ -13,14 +13,43 @@
     flex-direction: row;
     border-top: 1px solid #d4c29a;
     padding: rem(30px) rem(15px) rem(20px) rem(15px);
+
+    @include phones-large {
+        flex-direction: column;
+    }
 }
 
 .concerts-in__image {
     max-width: rem(340px);
+
+    @include phones-large {
+        max-width: 100%;
+    }
+}
+
+.concerts-in__pic {
+    max-width: rem(340px);
+
+    @include phones-large {
+        max-width: 100%;
+    }
 }
 
 .concerts-in__desc {
     padding-left: rem(60px);
+
+    @include laptop {
+        padding-left: rem(50px);
+    }
+
+    @include tablets {
+        padding-left: rem(35px);
+    }
+
+    @include phones-large {
+        padding-top: rem(15px);
+        padding-left: 0;
+    }
 }
 
 .concerts-in__title {
@@ -29,6 +58,19 @@
     color: #0f1a32;
     line-height: rem(24px);
     margin-top: rem(-5px);
+
+    @include phones-large {
+        display: none;
+    }
+}
+
+.concerts-in__title--hiden {
+    display: none;
+    margin-bottom: rem(15px);
+
+    @include phones-large {
+        display: block;
+    }
 }
 
 .concerts-in__subtitle {

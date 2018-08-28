@@ -1,0 +1,158 @@
+extends ../template
+
+block variables
+    - var title = 'Колективи'
+
+block content
+    .wrapper
+        .preloader.preloader--light
+            .preloader__spinner
+                .preloader__animation.preloader__animation--light
+                .preloader__percents.preloader__percents--light 0%
+        include ../common/header--within.pug
+        .crumbs
+            .container
+                ul.crumbs__list
+                    li.crumbs__item
+                        a.crumbs__link(href="index.html") Головна
+                    li.crumbs__item
+                        a.crumbs__link(href="#") Галерея
+                    li.crumbs__item
+                        a.crumbs__link(href="#") Фотоальбоми
+                    li.crumbs__item
+                        .crumbs__link.crumbs__link--active Колективи
+        section.section.groups-in
+            .container
+                .section__title-wrap
+                    h1.section__title Колективи
+                ul.groups-in__list
+                    li.groups-in__item
+                        .groups-in__block
+                            a.groups-in__link(href="gallery.html")
+                                .groups-in__image
+                                    img.groups-in__pic(src="./assets/images/slides/slide-four.jpg" alt="collectives")
+                                    .image-wrap.image-wrap--gallery
+                                h3.groups-in__subtitle Ансамбль пісні і танцю «Радани»
+                        .groups-in__block
+                            a.groups-in__link(href="gallery.html")
+                                .groups-in__image
+                                    img.groups-in__pic(src="./assets/images/photo/photo-one.jpg" alt="collectives")
+                                    .image-wrap.image-wrap--gallery
+                                h3.groups-in__subtitle Академічний симфонічний оркестр
+                        .groups-in__block
+                            a.groups-in__link(href="gallery.html")
+                                .groups-in__image
+                                    img.groups-in__pic(src="./assets/images/photo/photo-six.jpg" alt="collectives")
+                                    .image-wrap.image-wrap--gallery
+                                h3.groups-in__subtitle Гурт «БеZМеЖ»
+                    li.groups-in__item
+                        .groups-in__block
+                            a.groups-in__link(href="gallery.html")
+                                .groups-in__image
+                                    img.groups-in__pic(src="./assets/images/slides/slide-four.jpg" alt="collectives")
+                                    .image-wrap.image-wrap--gallery
+                                h3.groups-in__subtitle Максимально розраховане на чотири рядки в мобільній версії при адаптації це буде видно
+                        .groups-in__block
+                            a.groups-in__link(href="gallery.html")
+                                .groups-in__image
+                                    img.groups-in__pic(src="./assets/images/photo/photo-one.jpg" alt="collectives")
+                                    .image-wrap.image-wrap--gallery
+                                h3.groups-in__subtitle Академічний ансамбль пісні і танцю "Поділля"
+                .section__title-wrap
+                    h2.section__title Інші фотоальбоми
+                .carousel
+                    .carousel__wrap
+                        ul.carousel__list#lightSlider
+                            li.carousel__item
+                                a.carousel__link(href="gallery.html")
+                                    .carousel__image(style="background-image: url(./assets/images/carousel/carousel-one.jpg)")
+                                        .image-wrap.image-wrap--gallery
+                                    h3.carousel__subtitle Академічний ансамбль пісні і танцю "Поділля" та ще якийсь текст на одну строку
+                            li.carousel__item
+                                a.carousel__link(href="gallery.html")
+                                    .carousel__image(style="background-image: url(./assets/images/carousel/carousel-two.jpg)")
+                                        .image-wrap.image-wrap--gallery
+                                    h3.carousel__subtitle День Перемоги!
+                            li.carousel__item
+                                a.carousel__link(href="gallery.html")
+                                    .carousel__image(style="background-image: url(./assets/images/carousel/carousel-three.jpg)")
+                                        .image-wrap.image-wrap--gallery
+                                    h3.carousel__subtitle Фестиваль украЇнськоЇ народноЇ рашки сто три...
+                            li.carousel__item
+                                a.carousel__link(href="gallery.html")
+                                    .carousel__image(style="background-image: url(./assets/images/carousel/carousel-four.jpg)")
+                                        .image-wrap.image-wrap--gallery
+                                    h3.carousel__subtitle Концерт “Луганщина - це УкраЇна!”
+                            li.carousel__item
+                                a.carousel__link(href="gallery.html")
+                                    .carousel__image(style="background-image: url(./assets/images/carousel/carousel-one.jpg)")
+                                        .image-wrap.image-wrap--gallery
+                                    h3.carousel__subtitle Lorem ipsum dolor sit amet 
+                            li.carousel__item
+                                a.carousel__link(href="gallery.html")
+                                    .carousel__image(style="background-image: url(./assets/images/carousel/carousel-two.jpg)")
+                                        .image-wrap.image-wrap--gallery
+                                    h3.carousel__subtitle Lorem ipsum dolor sit amet 
+                        .carousel__buttons.lSAction
+                            button.carousel__control.carousel__control-prev.lSPrev#goToPrevSlide(type="button")
+                                svg.carousel__icon.carousel__icon--rotate: use(xlink:href="assets/images/icons/sprite.svg#arrow1")
+                            button.carousel__control.carousel__control-next.lSNext#goToNextSlide(type="button")
+                                svg.carousel__icon: use(xlink:href="assets/images/icons/sprite.svg#arrow1")
+                script.
+                    $(document).ready(function() {
+                        var slider = $('#lightSlider').lightSlider({
+                        item:6,
+                        loop:false,
+                        slideMove:2,
+                        easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+                        speed:600,
+                            responsive : [
+                            {
+                            breakpoint:1800,
+                            settings: {
+                            item:4,
+                            slideMove:1,
+                            slideMargin:30,
+                            }
+                            },
+                            {
+                            breakpoint:1200,
+                            settings: {
+                            item:3,
+                            slideMove:1,
+                            slideMargin:30,
+                            }
+                            },
+                            {
+                            breakpoint:992,
+                            settings: {
+                            item:3,
+                            slideMove:1,
+                            slideMargin:15,
+                            }
+                            },
+                            {
+                            breakpoint:768,
+                            settings: {
+                            item:2,
+                            slideMove:1,
+                            slideMargin:15,
+                            }
+                            },
+                            {
+                            breakpoint:480,
+                            settings: {
+                            item:1,
+                            slideMove:1
+                            }
+                            }
+                            ]
+                            });
+                        $('#goToPrevSlide').click(function(){
+                            slider.goToPrevSlide();
+                        });
+                        $('#goToNextSlide').click(function(){
+                            slider.goToNextSlide();
+                        });
+                    });
+        include ../common/footer--within.pug

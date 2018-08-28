@@ -10,6 +10,8 @@ require('./common/animate');
 
 require('./common/calendar');
 
+require('./common/carousel');
+
 import preloader from './common/preloader';
 
 $(document).ready(() => {
