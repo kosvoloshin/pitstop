@@ -8,6 +8,11 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    @include phones {
+        align-content: stretch;
+        flex-flow: row wrap;
+    }
 }
 
 .crumbs__item {

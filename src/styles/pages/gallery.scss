@@ -24,6 +24,10 @@
     &:last-child {
         margin-bottom: 0;
     }
+
+    @include phones {
+        flex-direction: column;
+    }
 }
 
 .gallery__block {
@@ -34,9 +38,47 @@
     &:last-child {
         margin-right: 0;
     }
+
+    @include desktop {
+        margin-right: rem(40px);
+        width: rem(464px);
+        height: auto;
+    }
+
+    @include laptop {
+        width: rem(400px);
+        margin-right: rem(25px);
+        height: auto;
+    }
+
+    @include tablets {
+        width: 48%;
+    }
+
+    @include phones {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: rem(30px);
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .gallery__pic {
     width: rem(540px);
     height: rem(360px);
+
+    @include desktop {
+        width: rem(464px);
+        height: auto;
+    }
+
+    @include laptop {
+        width: rem(400px);
+    }
+
+    @include tablets {
+        width: 100%;
+    }
 }

@@ -531,6 +531,31 @@
     @include tablets {
         padding: rem(11px) 0;
     }
+
+    /*&:hover {
+        .drop-down {
+            display: block;
+        }
+
+        .menu__link--drop:before {
+            transform: rotate(180deg) translate(50%, 0);
+        }
+
+        .menu__link--drop::after {
+            opacity: 1;
+            color: #fcfaf5;
+        }
+    }*/
+        /*.drop-down {
+            display: block;
+        }
+        .menu__link--drop:before {
+            transform: rotate(180deg) translate(50%, 0);
+        }
+        .menu__link--drop::after {
+            opacity: 1;
+            color: #fcfaf5;
+        }*/
 }
 
 .menu__link {
@@ -641,18 +666,23 @@
     width: 100%;
     top: rem(124px);
     background: #2a2d33;
-    z-index: -1;
-    left: 9999px;
+    z-index: 1;
     padding-top: rem(38px);
     padding-bottom: rem(38px);
-    opacity: .8;
+    display: none;
+    opacity: 0.8;
+    transition: .3s;
 
     &:before {
         content: '';
         width: 100%;
-        height: 10px;
+        height: 25px;
         position: absolute;
-        top: -8px;
+        top: -18px;
+
+        @include tablets {
+            display: none;
+        }
     }
 
     @include desktop {
@@ -671,6 +701,7 @@
         left: initial;
         transition: .3s;
         padding: 0;
+        display: block;
 
         &.active {
             z-index: 3;

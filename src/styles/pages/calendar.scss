@@ -144,6 +144,9 @@
 
     &:hover {
         color: rgba($color: $text, $alpha: 1.0); 
+        .tooltip--hide {
+            transform: translate(-50%, 0) scale(1);
+        }
     }
 
     &.active {
@@ -166,11 +169,11 @@
             }
         }
 
-        /*&:hover {
+        &:hover {
             &:after {
                 transform: translate(-50%, 0) rotate(180deg); 
             }
-        }*/
+        }
     }
 }
 
@@ -199,6 +202,20 @@
 
     &.scale {
         transform: scale(1);
+    }
+}
+
+.tooltip--hide {
+    transform: translate(-50%, 0) scale(0);
+    bottom: calc(100% + 64px);
+    left: 50%;
+    
+    .tooltip__wrap:after {
+        left: 50%;
+    }
+
+    @include desktop {
+        display: none;
     }
 }
 

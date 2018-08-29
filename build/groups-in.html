@@ -205,6 +205,14 @@
                 speed:600,
                     responsive : [
                     {
+                    breakpoint:2400,
+                    settings: {
+                    item:4,
+                    slideMove:1,
+                    slideMargin:30,
+                    }
+                    },
+                    {
                     breakpoint:1800,
                     settings: {
                     item:4,
@@ -215,9 +223,9 @@
                     {
                     breakpoint:1200,
                     settings: {
-                    item:3,
+                    item:4,
                     slideMove:1,
-                    slideMargin:30,
+                    slideMargin:15,
                     }
                     },
                     {
@@ -233,7 +241,15 @@
                     settings: {
                     item:2,
                     slideMove:1,
-                    slideMargin:15,
+                    slideMargin:50,
+                    }
+                    },
+                    {
+                    breakpoint:640,
+                    settings: {
+                    item:1,
+                    slideMove:1,
+                    slideMargin:20,
                     }
                     },
                     {
@@ -259,7 +275,7 @@
         <div class="calendar">
           <div class="container">
             <div class="calendar__row calendar__row--hiden">
-              <div class="tooltip">
+              <div class="tooltip tooltip--laptop">
                 <div class="tooltip__wrap">
                   <div class="tooltip__heading">“Вечори з аркатою”</div>
                   <div class="tooltip__content">
@@ -292,12 +308,13 @@
                   <div class="calendar__day">пн</div>
                 </li>
                 <li class="calendar__item"><a class="calendar__date active" href="#">02
-                    <!--.tooltip
-                    .tooltip__wrap
-                        .tooltip__heading “Вечори з аркатою”
-                        .tooltip__content
-                        p Мистецькі проекти 79-го концертного сезону Вінницької обласної філармонії  (2015-16 рр.)
-                    --></a>
+                    <div class="tooltip tooltip--hide">
+                      <div class="tooltip__wrap">
+                        <div class="tooltip__heading">“Вечори з аркатою”</div>
+                        <div class="tooltip__content"></div>
+                        <p>Мистецькі проекти 79-го концертного сезону Вінницької обласної філармонії  (2015-16 рр.)</p>
+                      </div>
+                    </div></a>
                   <div class="calendar__day">вт</div>
                 </li>
                 <li class="calendar__item"><a class="calendar__date" href="#">03</a>
@@ -316,12 +333,13 @@
                   <div class="calendar__day">вс</div>
                 </li>
                 <li class="calendar__item"><a class="calendar__date active" href="#">08
-                    <!--.tooltip
-                    .tooltip__wrap
-                        .tooltip__heading “Вечори з аркатою”
-                        .tooltip__content
-                        p Мистецькі проекти 79-го концертного сезону Вінницької обласної філармонії  (2015-16 рр.)
-                    --></a>
+                    <div class="tooltip tooltip--hide">
+                      <div class="tooltip__wrap">
+                        <div class="tooltip__heading">“Вечори з аркатою”</div>
+                        <div class="tooltip__content"></div>
+                        <p>Мистецькі проекти 79-го концертного сезону Вінницької обласної філармонії  (2015-16 рр.)</p>
+                      </div>
+                    </div></a>
                   <div class="calendar__day">пн</div>
                 </li>
                 <li class="calendar__item"><a class="calendar__date" href="#">09</a>
