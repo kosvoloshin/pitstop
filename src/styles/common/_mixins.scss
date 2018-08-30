@@ -35,7 +35,7 @@
 }
 
 @function rem($px) {
-    @return $px / 16px+0rem;
+    @return $px / 14px+0rem;
 }
 
 // Media for height
