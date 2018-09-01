@@ -1,11 +1,8 @@
-.info  {
-
-}
-
 .info__wrap {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-top: rem(21px);
 }
 
 .info__col-l {

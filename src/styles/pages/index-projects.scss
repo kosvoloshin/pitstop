@@ -205,30 +205,7 @@
 .projects__item {
     width: 33.33%;
     height: 50%;
-
-    &:nth-child(1) .gallery__front {
-        background-image: url('../images/gallery/gallery-1.jpg');
-    }
-
-    &:nth-child(2) .gallery__front {
-        background-image: url('../images/gallery/gallery-2.jpg');
-    }
-
-    &:nth-child(3) .gallery__front {
-        background-image: url('../images/gallery/gallery-3.jpg');
-    }
-
-    &:nth-child(4) {
-        background-image: url('../images/gallery/gallery-6.jpg');
-    }
-
-    &:nth-child(5) .gallery__front {
-        background-image: url('../images/gallery/gallery-4.jpg');
-    }
-
-    &:nth-child(6) .gallery__front {
-        background-image: url('../images/gallery/gallery-5.jpg');
-    }
+    position: relative;
 }
 
 .gallery {
@@ -240,12 +217,36 @@
     transform-style: preserve-3d;
     height: 100%;
     width: 100%;
+    transition: .7s;
+    top: 0;
+    left: 0;
 
     &:hover .gallery__wrap {
         -webkit-transform: rotateY(180deg);
         -moz-transform: rotateY(180deg);
         -ms-transform: rotateY(180deg);
         transform: rotateY(180deg);
+    }
+}
+
+.gallery--visible {
+    z-index: 1;
+    opacity: 1;
+    position: absolute;
+
+    &.hide {
+        z-index: -1;
+        opacity: 0;
+    }
+}
+
+.gallery--hide {
+    z-index: -1;
+    opacity: 0;
+
+    &.visible {
+        z-index: 1;
+        opacity: 1;
     }
 }
 

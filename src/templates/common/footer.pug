@@ -1,7 +1,7 @@
 footer.footer
     .container
         .footer__wrap
-            .footer__row
+            .footer__row.footer__row--main
                 .footer__contacts
                     .footer__logo
                         a.footer__link(href="index.html")
@@ -9,7 +9,9 @@ footer.footer
                     .footer__phone  
                         a.footer__call(href="tel:") 8 (926) 289-42-23
                     .footer__adress
-                        .footer__desk Россия, Москва ул. Перерва д. 45 офис 8 
+                        .footer__desk Россия, Москва
+                            br 
+                            | ул. Перерва д. 45 офис 8 
                         .footer__metro
                             .footer__metro-icon
                             .footer__metro-name Братиславская
@@ -67,8 +69,12 @@ footer.footer
                             li.social__item
                                 a.social__link.social__link--fb(href="#" target="blanc") Facebook
                             li.social__item.social__item--with-label
-                                .social__label создание и продвижение
-                                a.social__link.social__link--seo(href="#" target="blanc") Умные SEO технологии
+                                .social__label создание
+                                    br
+                                    | и продвижение
+                                a.social__link.social__link--seo(href="#" target="blanc") Умные SEO
+                                    br 
+                                    | технологии
             .footer__row
                 .footer__info
                     .footer__info-col
