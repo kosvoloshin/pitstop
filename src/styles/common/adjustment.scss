@@ -3,7 +3,6 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    //overflow-x: hidden;
 }
 
 .section {
@@ -13,10 +12,9 @@
 
 .container {
     width: 100%;
-    max-width: 1170px;
+    max-width: 1280px;
     margin: 0 auto;
     position: relative;
-    //z-index: 10;
 
     @include desktop {
         max-width: 940px;
