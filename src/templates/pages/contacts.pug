@@ -1,0 +1,96 @@
+extends ../template
+
+block variables
+    - var title = 'Контакты'
+
+block content
+    .wrapper
+        include ../common/header.pug
+        section.section
+            .section__under.section__under--contacts
+                .section__under-img.section__under-img--contacts
+                    .section__image-wrap.section__image-wrap--darken
+            .hero
+                .container
+                    .hero__wrap.hero__wrap--fullwidth
+                        h1.section__title Обратная связь
+                        .hero__desk
+                            p Мы с удовольствием ответим на любые вопросы
+                                br
+                                | связанным с заказом, оформлением, доставкой и монтажом
+            .contacts
+                .container
+                    .contacts__wrap
+                        .contacts__col-l
+                            .contacts__row
+                                .details
+                                    .block-title
+                                        .block-title__number 01.
+                                        h2.block-title__text контакты
+                                    .details__wrap
+                                        ul.details__list
+                                            li.details__item
+                                                .details__subtitle Адрес:
+                                                .details__text
+                                                    p г. Москва, м. Братиславская 
+                                                        br 
+                                                        | ул.Перерва д. 45, офис 8
+                                            li.details__item
+                                                .details__subtitle Email:
+                                                a.details__mail(href="mailto:info@sclad-zaborov.ru") info@sclad-zaborov.ru
+                                            li.details__item
+                                                .details__subtitle Телефон:
+                                                a.details__phone(href="tel:") 8 (499) 390-25-43
+                                                a.details__phone(href="tel:") 8 (926) 289-42-23
+                                        .details__social
+                                            a.details__action(href="#" target="blanc")
+                                                svg.details__icon-w: use(xlink:href="assets/images/icons/sprite.svg#whatsapp")
+                                            a.details__action(href="#" target="blanc")
+                                                svg.details__icon-v: use(xlink:href="assets/images/icons/sprite.svg#viber")
+                            .contacts__row
+                                .shedule
+                                    .block-title
+                                        .block-title__number.block-title__number--light 03.
+                                        h2.block-title__text.block-title__text--light график
+                                            br 
+                                            | работы
+                                    ul.shedule__list
+                                        li.shedule__item
+                                            .shedule__day Понедельник-пятница:
+                                            .shedule__time 10:00 - 18:00
+                                        li.shedule__item
+                                            .shedule__day Суббота: 
+                                            .shedule__time 11:00 - 17:00
+                                        li.shedule__item
+                                            .shedule__day Воскресенье: 
+                                            .shedule__time 11:00 - 17:00
+                        .contacts__col-r
+                            form.form.form--green
+                                .form__wrap
+                                    .block-title
+                                        .block-title__number.block-title__number--light 02.
+                                        h2.block-title__text.block-title__text--light форма
+                                            br 
+                                            | обратной связи
+                                    .form__desk
+                                        p По любым вопросам, связанным с заказом, оформлением,
+                                         br 
+                                         | доставкой и монтажом вы можете использовать форму обратной связи.
+                                    .form__column
+                                        .form__row.form__row--with-margin
+                                            label.form__block
+                                                input(type="text" name="user-name" placeholder="Имя" required).form__input
+                                            label.form__block
+                                                input(type="text" name="user-mail" placeholder="E-mail" required).form__input
+                                        .form__row.form__row--with-margin
+                                            label.form__block
+                                                input(type="text" name="subject" placeholder="Тема сообщения" required).form__input
+                                        .form__row.form__row--with-margin
+                                            label.form__block
+                                                textarea(name="message" cols="30" rows="5" placeholder="Сообщение" required).form__textarea
+                                    a.form__link.form__link--second(href="#")
+                                        .form__btn-text отправить
+                                        svg.form__btn-icon: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
+            .map.container#map
+            script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBedBDOwDkXi5dlBT1B2VmOGHShZWbiVqg&callback=initMap')    
+        include ../common/footer.pug 

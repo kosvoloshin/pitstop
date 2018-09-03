@@ -28,57 +28,57 @@ block content
                                 svg.slider__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
                         ul.slider__list
                             li.slider__item
-                                a.flipper(href="#")
+                                .flipper
                                     .flipper__wrap
-                                        .flipper__front
+                                        a.flipper__front(href="#")
                                             img.flipper__icon(src="./assets/images/icons/front-1.png" alt="icon")
                                             .flipper__text Заборы из профнастила
-                                        .flipper__back
+                                        a.flipper__back(href="#")
                                             img.flipper__icon(src="./assets/images/icons/back-1.png" alt="icon")
                                             .flipper__text Навесы и беседки из поликарбоната
                             li.slider__item
-                                a.flipper(href="#")
+                                .flipper
                                     .flipper__wrap
-                                        .flipper__front
+                                        a.flipper__front(href="#")
                                             img.flipper__icon(src="./assets/images/icons/front-2.png" alt="icon")
                                             .flipper__text Заборы из сетки рабицы
-                                        .flipper__back
+                                        a.flipper__back(href="#")
                                             img.flipper__icon(src="./assets/images/icons/back-2.png" alt="icon")
                                             .flipper__text Теплицы из поликарбоната
                             li.slider__item
-                                a.flipper(href="#")
+                                .flipper
                                     .flipper__wrap
-                                        .flipper__front
+                                        a.flipper__front(href="#")
                                             img.flipper__icon(src="./assets/images/icons/front-3.png" alt="icon")
                                             .flipper__text Заборы из дерева
-                                        .flipper__back
+                                        a.flipper__back(href="#")
                                             img.flipper__icon(src="./assets/images/icons/back-3.png" alt="icon")
                                             .flipper__text Откатные ворота
                             li.slider__item
-                                a.flipper(href="#")
+                                .flipper
                                     .flipper__wrap
-                                        .flipper__front
+                                        a.flipper__front(href="#")
                                             img.flipper__icon(src="./assets/images/icons/front-4.png" alt="icon")
                                             .flipper__text Заборы из евроштакетника
-                                        .flipper__back
+                                        a.flipper__back(href="#")
                                             img.flipper__icon(src="./assets/images/icons/back-4.png" alt="icon")
                                             .flipper__text Ворота и калитки
                             li.slider__item
-                                a.flipper(href="#")
+                                .flipper
                                     .flipper__wrap
-                                        .flipper__front
+                                        a.flipper__front(href="#")
                                             img.flipper__icon(src="./assets/images/icons/front-5.png" alt="icon")
                                             .flipper__text Заборы из монолита
-                                        .flipper__back
+                                        a.flipper__back(href="#")
                                             //img.flipper__icon(src="./assets/images/icons/back-4.png" alt="icon")
                                             //.flipper__text Ворота и калитки
                             li.slider__item
-                                a.flipper(href="#")
+                                .flipper
                                     .flipper__wrap
-                                        .flipper__front
+                                        a.flipper__front(href="#")
                                             img.flipper__icon(src="./assets/images/icons/front-6.png" alt="icon")
                                             .flipper__text Заборы из 3D сетки
-                                        .flipper__back
+                                        a.flipper__back(href="#")
                                             //img.flipper__icon(src="./assets/images/icons/back-4.png" alt="icon")
                                             //.flipper__text Ворота и калитки
             .info 
@@ -144,7 +144,7 @@ block content
                                         .form__box
                                             label.form__block
                                                 .form__subtitle Длина забора:
-                                                input(type="text" name="length" required).form__input
+                                                input(type="text" name="length" required).form__input.form__input--short
                                         .form__box
                                             label.form__block.form__block--flex
                                                 .form__subtitle.form__subtitle--radio Метры -

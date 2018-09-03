@@ -5,6 +5,10 @@
     top: 0;
 }
 
+.section__under--contacts {
+    height: rem(491px);
+}
+
 .section__under-img {
     height: 100%;
     width: 100%;
@@ -14,6 +18,10 @@
     position: relative;
 }
 
+.section__under-img--contacts {
+    background-image: url('../images/bg-two.jpg');
+}
+
 .section__image-wrap {
     position: absolute;
     top: 0;
@@ -21,4 +29,8 @@
     left: 0;
     right: 0;
     background: rgba($color: $blue, $alpha: 0.2)
+}
+
+.section__image-wrap--darken {
+    background-color: rgba(59, 68, 78, 0.5);
 }

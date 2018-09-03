@@ -1,4 +1,4 @@
-const $ = require('jquery');
+/*const $ = require('jquery');
 
 $(document).ready(function() {
     if($('#slider').length) {
@@ -6,4 +6,4 @@ $(document).ready(function() {
             $('.flipper').toggleClass('active');
         });
     };
-});
+});*/

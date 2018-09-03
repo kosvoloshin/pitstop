@@ -284,6 +284,24 @@
     color: $b;
     border: 1px solid $w;
     outline: none;
+    padding: rem(17px) rem(25px);
+    font-family: $m-r;
+    font-size: rem(16px);
+    letter-spacing: normal;
+    transition: .3s;
+    width: 100%;
+
+    &:hover,
+    &:focus {
+        border: 1px solid $blue;
+    }
+}
+
+.form__input--short {
+    background-color: $w;
+    color: $b;
+    border: 1px solid $w;
+    outline: none;
     width: rem(225px);
     padding: rem(17px) rem(25px);
     font-family: $m-r;
@@ -472,6 +490,10 @@
             fill: $green;
         }
     }
+}
+
+.form__link--second {
+    bottom: rem(50px);
 }
 
 .form__btn-text {

@@ -1,0 +1,242 @@
+.contacts__wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: rem(130px);
+    padding-bottom: rem(20px);
+}
+
+.contacts__col-l {
+    width: rem(516px);
+    height: rem(663px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.details {
+    background-color: $grey;
+    padding: rem(22px) rem(53px) rem(33px) rem(52px);
+    width: 100%;
+    height: rem(418px);
+}
+
+.details__wrap {
+    padding-top: rem(33px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.details__item {
+    margin-bottom: rem(31px);
+}
+
+.details__subtitle {
+    font-family: $m-r;
+    font-size: rem(14px);
+    line-height: rem(18px);
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #7d888e;
+    margin-bottom: rem(13px);   
+}
+
+.details__text {
+    font-family: $m-r;
+    font-size: rem(16px);
+    line-height: rem(18px);
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: $b; 
+}
+
+.details__mail {
+    font-family: "Montserrat-Regular";
+    font-size: rem(16px);
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: $green;
+    transition: .3s;
+    text-decoration: underline;
+
+    &:hover {
+        color: $blue;
+    }
+}
+
+.details__phone {
+    font-family: $m-s;
+    font-size: rem(16px);
+    line-height: rem(18px);
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: $b;
+    transition: .3s;
+    display: block;
+    margin-bottom: rem(10px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        color: $green;
+    }
+}
+
+.details__social {
+    padding-top: rem(34px);
+}
+
+.details__action {
+    display: block;
+    margin-bottom: rem(8px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.details__icon-w {
+    height: rem(37px);
+    width: rem(37px);
+    fill: $green;
+    transition: .3s;
+
+    &:hover {
+        fill: darken($green, 10%);
+    }
+}
+
+.details__icon-v {
+    height: rem(37px);
+    width: rem(37px);
+    fill: #7f4da0;
+    transition: .3s;
+
+    &:hover {
+        fill: darken(#7f4da0, 10%);
+    }
+} 
+
+.shedule {
+    background-color: $blue;
+    padding: rem(22px) rem(53px) rem(33px) rem(52px);
+    width: 100%;
+    height: rem(225px);
+}
+
+.shedule__list {
+    padding-top: rem(30px);
+}
+
+.shedule__item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: rem(2px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.shedule__day {
+    font-family: $m-r;
+    font-size: rem(16px);
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: $w;
+    margin-right: rem(5px);
+}
+
+.shedule__time {
+    font-family: $m-s;
+    font-size: rem(16px);
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: $w;
+}
+
+.contacts__col-r {
+    width: rem(744px);
+    height: rem(663px);
+}
+
+.form__desk {
+    font-family: $m-r;
+    font-size: rem(14px);
+    line-height: rem(22px);
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: $w;
+    margin-top: rem(32px);
+    margin-bottom: rem(52px);
+}
+
+.form__column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form__row {
+    display: flex;
+    justify-content: center;
+}
+
+.form__row--with-margin {
+    margin-bottom: rem(27px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.form__block {
+    display: block;
+    flex: 1;
+    margin-right: rem(20px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.form__textarea {
+    background-color: $w;
+    color: $b;
+    border: 1px solid $w;
+    outline: none;
+    padding: rem(17px) rem(25px);
+    font-family: $m-r;
+    font-size: rem(16px);
+    letter-spacing: normal;
+    transition: .3s;
+    width: 100%;
+    resize: none;
+
+    &:hover,
+    &:focus {
+        border: 1px solid $blue;
+    }
+}
+
+.map {
+    width: 100%;
+    height: rem(440px);
+}

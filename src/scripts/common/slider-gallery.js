@@ -1,4 +1,4 @@
-const $ = require('jquery');
+/*const $ = require('jquery');
 
 $(document).ready(function() {
     if($('.gallery').length){
@@ -7,4 +7,4 @@ $(document).ready(function() {
             $('.gallery--hide').toggleClass('visible');
         });
     };
-});
+});*/

@@ -43,17 +43,8 @@
             color: $green;
         }
 
-        .drop-btn {
-            border-color: $green;
-        }
-
-        .drop-btn__box {
-            background-color: $green;
-        }
-
-        .drop-btn__box:before,
-        .drop-btn__box:after {
-            background-color: $green;
+        .menu__link--dropdown:before {
+            opacity: 1;
         }
     }
 }
@@ -73,54 +64,28 @@
     position: relative;
 }
 
-.drop-btn {
-    background: none;
-    height: rem(24px);
-    width: rem(30px);
-    border: 1px solid $grey;
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    bottom: calc( 100% + 9px );
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: .3s;
-}
-
-.drop-btn__box {
-    height: rem(2px);
-    width: rem(14px);
-    background-color: $grey;
-    position: relative;
-    transition: .3s;
-
-    &::before {
+.menu__link--dropdown {
+    &:before {
         content: '';
-        height: rem(2px);
-        width: rem(14px);
-        background-color: $grey;
+        background-image: url('../images/icons/menu-icon.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: rem(24px);
+        width: rem(30px);
+        opacity: 0.3;
+        transition: .5s;
         position: absolute;
-        left: 0;
-        bottom: calc(100% + 3px);
-        transition: .3s;
-    }
-
-    &:after {
-        content: '';
-        height: rem(2px);
-        width: rem(14px);
-        background-color: $grey;
-        position: absolute;
-        left: 0;
-        top: calc(100% + 3px);
-        transition: .3s;
+        bottom: 100%;
+        bottom: calc( 100% + 8px );
+        left: 50%;
+        transform: translate(-50%, 0);
     }
 }
 
 .dropdown {
+    display: flex;
+    flex-direction: column;
     background-color: $w;
     border: 1px solid $green;
     padding: rem(40px);
@@ -134,17 +99,12 @@
 
     &:before {
         content: '';
-        height: rem(44px);
+        height: rem(22px);
         width: rem(90px);
         position: absolute;
         bottom: 100%;
         left: 0;
     }
-}
-
-.dropdown__list {
-    display: flex;
-    flex-direction: column;
 }
 
 .dropdown__item {
