@@ -142,7 +142,7 @@ block content
                                             | стоимости
                                     .form__row.form__row--flex
                                         .form__box
-                                            label.form__block
+                                            label.form__block.form__block--no-flex
                                                 .form__subtitle Длина забора:
                                                 input(type="text" name="length" required).form__input.form__input--short
                                         .form__box
@@ -155,7 +155,7 @@ block content
                                                 input(type="radio" name="options" value="сотки").form__radio.visuallyhidden
                                                 .form__radio-fake
                                     .form__row
-                                        label.form__block
+                                        label.form__block.form__block--no-flex
                                             .form__subtitle.form__subtitle--no-margin Тип забора:
                                             label.form__select(for='select')
                                                 input#bg(type='radio', name='list', value='not_changed', checked='')
@@ -212,7 +212,7 @@ block content
                                         button(type="button").controls.slider__next
                                             svg.slider__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
                         .projects__col-r
-                            ul.projects__list
+                            ul.projects__list.selected
                                 li.projects__item
                                     .gallery.gallery--visible
                                         .gallery__wrap

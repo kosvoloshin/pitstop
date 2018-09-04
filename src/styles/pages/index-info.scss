@@ -224,6 +224,14 @@
     background-color: $green;
 }
 
+.form--grey {
+    background-color: $grey;
+}
+
+.form--calc {
+    padding-bottom: rem(50px);
+}
+
 .block-title__number--light {
     color: rgba($color: $grey, $alpha: 0.4)
 }
@@ -250,11 +258,16 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    margin: 0;
 
     &:last-child {
         margin-bottom: rem(2px);
         margin-top: rem(8px);
     }
+}
+
+.form__block--no-flex {
+    display: block;
 }
 
 .form__subtitle {
@@ -274,9 +287,19 @@
     margin-bottom: rem(-4px);
 }
 
+.form__subtitle--dark {
+    color: #9dacb4;
+}
+
 .form__subtitle--radio {
     margin-bottom: 0;
     margin-right: rem(8px);
+}
+
+.form__subtitle--margin-left {
+    margin-left: rem(8px);
+    margin-bottom: 0;
+    color: $b;
 }
 
 .form__input {
@@ -336,6 +359,19 @@
     width: rem(12px);
     height: rem(12px);
     background-color: $blue;
+    border-radius: 50%;
+    display: none;
+}
+
+.form__radio-fake--green:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: rem(12px);
+    height: rem(12px);
+    background-color: $green;
     border-radius: 50%;
     display: none;
 }
@@ -409,15 +445,27 @@
 .items label
 {
   display: none;
-  padding: rem(10px) rem(15px);
+  padding: rem(17px) rem(24px);
   padding-right: rem(45px);
   background: white;
+  color: $b;
+  border-bottom: 1px solid $grey;
+  font-family: $m-s;
+
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .items label:hover
 {
-  background: #eee;
+  background: $grey;
   cursor: pointer;
+}
+
+.items label.green:hover {
+    background-color: $green;
+    color: $w;
 }
 
 #select:checked ~ .items
@@ -435,7 +483,6 @@
   display: block!important;
   border: none;
   background: white;
-  line-height: rem(32px);
 }
 
 #select:checked ~ .bg
@@ -458,6 +505,16 @@
     letter-spacing: normal;
     text-align: left;
     color: #ffffff;
+}
+
+.form__text--dark {
+    color: $b;
+    margin-top: rem(44px);
+    margin-bottom: rem(29px);
+}
+
+.form__text--90 {
+    width: 90%;
 }
 
 .form__text--margin {
@@ -492,7 +549,63 @@
     }
 }
 
+.form__button {
+    width: intrinsic;         
+    width: -moz-max-content;  
+    width: -webkit-max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $w;
+    transition: .3s;
+    position: absolute;
+    bottom: rem(34px);
+    padding: rem(15px);
+    background: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $w;
+        border-color: $w;
+
+        .form__btn-text {
+            color: $green;
+        }
+
+        .form__btn-icon {
+            fill: $green;
+        }
+    }
+}
+
+.form__button--calc {
+    padding: rem(10px) rem(15px);
+    bottom: rem(61px);
+}
+
+.form__button--dark {
+    border: 1px solid $b;
+
+    &:hover {
+        background-color: $green;
+        border-color: $green;
+
+        .form__btn-text--dark {
+            color: $w;
+        }
+
+        .form__btn-icon--dark {
+            fill: $w;
+        }
+    }
+}
+
 .form__link--second {
+    bottom: rem(50px);
+}
+
+.form__button--second {
     bottom: rem(50px);
 }
 
@@ -509,10 +622,22 @@
     transition: .3s;
 }
 
+.form__btn-text--dark {
+    color: $b;
+}
+
+.form__btn-text--bold {
+    font-family: $m-b;
+}
+
 .form__btn-icon {
     width: rem(35px);
     height: rem(19px);
     fill: $w;
     transition: .3s;
+}
+
+.form__btn-icon--dark {
+    fill: $b;
 }
 

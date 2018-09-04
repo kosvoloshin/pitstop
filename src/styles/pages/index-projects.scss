@@ -200,6 +200,11 @@
     display: flex;
     flex-flow: row wrap;
     align-content: stretch;
+    display: none;
+
+    &.selected {
+        display: flex;
+    }
 }
 
 .projects__item {
