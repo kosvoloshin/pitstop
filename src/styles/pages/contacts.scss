@@ -236,6 +236,26 @@
     }
 }
 
+.wpcf7-form-control.wpcf7-textarea {
+    background-color: $w;
+    color: $b;
+    border: 1px solid $w;
+    outline: none;
+    padding: rem(17px) rem(25px);
+    font-family: $m-r;
+    font-size: rem(16px);
+    letter-spacing: normal;
+    transition: .3s;
+    width: 100%;
+    resize: none;
+    max-height: rem(131px);
+
+    &:hover,
+    &:focus {
+        border: 1px solid $blue;
+    }
+}
+
 .map {
     width: 100%;
     height: rem(440px);

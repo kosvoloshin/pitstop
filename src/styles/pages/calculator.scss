@@ -30,7 +30,7 @@
     padding: rem(4px) 0;
     transition: .3s;
 
-    &.active {
+    &.selected {
         background-color: $green;
 
         .tabs__obj {
@@ -42,7 +42,7 @@
         }
     }
 
-    &:hover:not(.tabs__link--result) {
+    &.active {
         background-color: $blue;
 
         .tabs__obj {
@@ -53,6 +53,22 @@
             fill: $w;
         }
     }
+
+    &:hover:not(.selected) {
+        background-color: $blue;
+
+        .tabs__obj {
+            color: $w;
+        }
+
+        .tabs__icon {
+            fill: $w;
+        }
+    }
+}
+
+.tabs__link.tabs__link--result:hover {
+    background-color: $w;
 }
 
 .tabs__link--result {
@@ -87,6 +103,7 @@
     letter-spacing: normal;
     color: $b;
     margin-right: rem(4px);
+    transition: .3s;
 }
 
 .tabs__value {
@@ -97,6 +114,7 @@
     font-stretch: normal;
     letter-spacing: normal;
     color: $green;
+    transition: .3s;
 }
 
 .form__columns {
@@ -110,9 +128,17 @@
     width: rem(342px);
 }
 
+.form__col-l--resize {
+    width: rem(281px);
+}
+
 .form__col-r {
     width: rem(776px);
     padding-top: rem(31px);
+}
+
+.form__col-r--resize {
+    width: rem(829px);
 }
 
 .form__image {
@@ -121,6 +147,33 @@
     background-size: cover;
     background-position: center center;
     position: relative;
+}
+
+.form__image--resize {
+    height: rem(161px);
+    width: rem(829px);
+    position: relative;
+}
+
+.form__obj-one {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-40%, -50%);
+    background: $green;
+    min-width: rem(47px);
+    min-height: rem(24px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: rem(2px) rem(15px);
+    color: $w;
+    font-family: $m-r;
+    font-size: rem(14px);
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
 }
 
 .form__caption {

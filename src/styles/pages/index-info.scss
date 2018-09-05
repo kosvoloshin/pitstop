@@ -320,6 +320,24 @@
     }
 }
 
+.wpcf7-form-control.wpcf7-text {
+    background-color: $w;
+    color: $b;
+    border: 1px solid $w;
+    outline: none;
+    padding: rem(17px) rem(25px);
+    font-family: $m-r;
+    font-size: rem(16px);
+    letter-spacing: normal;
+    transition: .3s;
+    width: 100%;
+
+    &:hover,
+    &:focus {
+        border: 1px solid $blue;
+    }
+}
+
 .form__input--short {
     background-color: $w;
     color: $b;
@@ -514,11 +532,15 @@
 }
 
 .form__text--90 {
-    width: 90%;
+    padding-right: rem(90px);
 }
 
 .form__text--margin {
     margin-top: rem(97px);
+}
+
+.form__text--resize {
+    padding-left: rem(52px);
 }
 
 .form__link {
@@ -577,6 +599,61 @@
             fill: $green;
         }
     }
+}
+
+.wpcf7-form-control.wpcf7-submit {
+    width: intrinsic;         
+    width: -moz-max-content;  
+    width: -webkit-max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $w;
+    position: absolute;
+    bottom: rem(34px);
+    padding: rem(15px);
+    background: none;
+    cursor: pointer;
+    font-family: $m-r;
+    font-size: rem(12px);
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: left;
+    color: $w;
+    transition: .3s;
+
+    &:hover {
+        background-color: $w;
+        border-color: $w;
+        color: $green;
+    }
+}
+
+.wpcf7 form .wpcf7-not-valid-tip {
+    display: none;
+}
+
+.wpcf7 form .wpcf7-not-valid {
+    border: 1px solid #F81111 !important;
+}
+
+.action_wrap div.wpcf7-response-output{
+    margin-top: 85px !important;
+}
+
+div.wpcf7-response-output {
+    font: 16px 'OpenSans';
+    position: absolute;
+    margin: 0 !important;
+    background: #fff;
+}
+
+div.wpcf7 img.ajax-loader {
+    position: absolute;
 }
 
 .form__button--calc {

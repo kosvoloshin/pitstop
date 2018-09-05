@@ -22,6 +22,16 @@
     font-family: $m-b;
 }
 
+.section__title--blue {
+    color: $blue;
+    border-bottom: 4px solid $blue; 
+}
+
+.section__title--red {
+    color: #f54a4a;
+    border-bottom: 4px solid #f54a4a; 
+}
+
 .hero__desk {
     font-family: $m-r;
     font-size: rem(25px);
