@@ -217,6 +217,10 @@
     }
 }
 
+.form__block--flex-0 {
+    flex: 0;
+}
+
 .form__textarea {
     background-color: $w;
     color: $b;

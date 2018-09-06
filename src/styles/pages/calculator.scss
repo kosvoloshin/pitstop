@@ -71,6 +71,18 @@
     background-color: $w;
 }
 
+.tabs__link.tabs__link--result.selected {
+    background-color: $green;
+
+    .tabs__result {
+        color: $w;
+    }
+
+    .tabs__value {
+        color: $w;
+    }
+}
+
 .tabs__link--result {
     border: 2px solid $b;
 }
@@ -144,13 +156,22 @@
 .form__image {
     height: rem(139px);
     width: rem(776px);
-    background-size: cover;
-    background-position: center center;
     position: relative;
+}
+
+.form__pic {
+    height: 100%;
+    width: 100%;
 }
 
 .form__image--resize {
     height: rem(161px);
+    width: rem(829px);
+    position: relative;
+}
+
+.form__image--resize-2 {
+    height: rem(209px);
     width: rem(829px);
     position: relative;
 }
@@ -161,6 +182,75 @@
     top: 50%;
     transform: translate(-40%, -50%);
     background: $green;
+    min-width: rem(47px);
+    min-height: rem(24px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: rem(2px) rem(15px);
+    color: $w;
+    font-family: $m-r;
+    font-size: rem(14px);
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+}
+
+.form__image--resize-2 .form__obj-one {
+    top: 50%;
+    top: calc(50% - 23px);
+}
+
+.form__obj-two {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    top: calc(50% - 23px);
+    left: 325px;
+    background: $blue;
+    min-width: rem(47px);
+    min-height: rem(24px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: rem(2px) rem(15px);
+    color: $w;
+    font-family: $m-r;
+    font-size: rem(14px);
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+}
+
+.form__obj-three {
+    position: absolute;
+    left: rem(325px);
+    bottom: rem(-21px);
+    transform: translate(-50%, -50%);
+    background: $green;
+    min-width: rem(47px);
+    min-height: rem(24px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: rem(2px) rem(15px);
+    color: $w;
+    font-family: $m-r;
+    font-size: rem(14px);
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+}
+
+.form__obj-four {
+    position: absolute;
+    left: rem(642px);
+    top: calc(50% - 23px);
+    transform: translate(-50%, -50%);
+    background: $blue;
     min-width: rem(47px);
     min-height: rem(24px);
     display: flex;
@@ -212,4 +302,141 @@
     &:hover {
         color: $blue;
     }
+}
+
+.form__result {
+    padding-top: rem(30px);
+}
+
+.form-table {
+    margin-bottom: rem(30px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.form-table__title {
+    font-family: $m-s;
+    font-size: rem(18px);
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    color: $b;
+    margin-bottom: rem(12px);
+}
+
+
+.form-table__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-table__item {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid $grey;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.form-table__item--title {
+    border-bottom: 2px solid $grey;
+}
+
+.form-table__left {
+    width: rem(535px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $w;
+    padding: rem(18px) rem(26px) rem(14px) rem(26px);
+    border-right: 1px solid $grey;
+}
+
+.form-table__text {
+    font-family: $m-r;
+    font-size: rem(14px);
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    color: #3b444e;
+}
+
+.form-table__text--title {
+    font-family: $m-s;
+}
+
+.form-table__text--total {
+    font-family: $m-s;
+    color: $green;
+}
+
+.form-table__info {
+    height: rem(19px);
+    width: rem(19px);
+    line-height: rem(19px);
+    text-align: center;
+    background-color: $blue;
+    color: $w;
+    font-family: $m-r;
+    font-size: rem(14px);
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    border-radius: 50%;
+}
+
+.form-table__right {
+    width: rem(258px);
+    background-color: $w;
+    padding: rem(18px) rem(26px) rem(14px) rem(26px);
+}
+
+// test price
+.slider {
+    width:230px;
+    height:11px;
+    background:#eee;
+    position:relative;
+    margin:0 auto;
+    padding:0 10px;
+}
+     
+.ui-slider-handle {
+    width:24px;
+    height:24px;
+    position:absolute;
+    top:-7px;
+    margin-left:-12px;
+    z-index:200;
+    background:#fc0;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+}
+     
+.ui-widget-header {
+    background:#f00;
+    height:8px;
+    left:1px;
+    top:1px;
+    position:absolute;
+}
+#slider-result {
+    text-align:center;
+    position:absolute;
+    top:27px;
+    left:-8px;
+    background:#eee;
+    color:#000;
+    font: 16px sans-serif;
+    padding:5px 0;
+    width:40px;
 }

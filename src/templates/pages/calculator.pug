@@ -79,7 +79,8 @@ block content
                                         .form__btn-text.form__btn-text--dark.form__btn-text--bold продолжить расчет
                                         svg.form__btn-icon.form__btn-icon--dark: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
                                 .form__col-r
-                                    .form__image(style="background-image: url(./assets/images/pic/calc-one.jpg)")
+                                    .form__image
+                                        img.form__pic(src="./assets/images/pic/calc-one.jpg" alt="picture")
                                     .form__caption Вы можете указать интересующий вид профнастила
                                     .form__row
                                         label.form__block
@@ -151,10 +152,337 @@ block content
                                         .form__btn-text.form__btn-text--dark.form__btn-text--bold продолжить расчет
                                         svg.form__btn-icon.form__btn-icon--dark: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
                                 .form__col-r.form__col-r--resize
-                                    .form__image.form__image--resize(style="background-image: url(./assets/images/pic/calc-two.png)")
+                                    .form__image.form__image--resize
+                                        img.form__pic(src="./assets/images/pic/calc-two.png" alt="picture")
                                         span.form__obj-one 1.5м
                                     .form__text.form__text--dark.form__text--90.form__text--resize
                                         p Lorem ipsum dolor sit amet consecteturlor sit amet co adipisicing elit. Ducimus deleniti ut nulla aut totam. Nulla maxime repellendus fugit tenetur provident in. Beatae, aliquid. Quo, ea veritatis sint odio labore cum.
+            // третий шаг калькулятора (меняются '.tabs' и содержимое '.form__columns')
+            .calc
+                .container
+                    .calc__wrap
+                        form.form.form--grey.form--calc
+                            .block-title
+                                .block-title__number 01.
+                                h2.block-title__text расчет 
+                                    br 
+                                    | стоимости
+                            .form__tabs
+                                .tabs
+                                    ul.tabs__list
+                                        li.tabs__item
+                                            a.tabs__link.active(href="#")
+                                                .tabs__obj Выбор покрытия
+                                                svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        li.tabs__item
+                                            a.tabs__link.active(href="#")
+                                                .tabs__obj Высота забора
+                                                svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        li.tabs__item
+                                            a.tabs__link.selected(href="#")
+                                                .tabs__obj Кол-во горизонталей (лаг)
+                                                svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        li.tabs__item
+                                            a.tabs__link(href="#")
+                                                .tabs__obj Кол-во ворот
+                                                svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        li.tabs__item
+                                            a.tabs__link(href="#")
+                                                .tabs__obj Кол-во калиток
+                                                svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        li.tabs__item
+                                            a.tabs__link.tabs__link--result(href="#")
+                                                .tabs__result Результат:
+                                                .tabs__value 265000 р
+                            .form__columns      
+                                .form__col-l.form__col-l--resize
+                                    .form__row
+                                        label.form__block.form__block--no-flex
+                                            .form__subtitle.form__subtitle--dark Кол-во горизонталей (лаг)
+                                    .form__row.form__row--flex-start
+                                        label.form__block.form__block--flex-0
+                                            input(type="radio" name="options" value="количество").form__radio.visuallyhidden
+                                            .form__radio-fake.form__radio-fake--square 2
+                                        label.form__block.form__block--flex-0
+                                            input(type="radio" name="options" value="количество").form__radio.visuallyhidden
+                                            .form__radio-fake.form__radio-fake--square 3
+                                    button(type="submit").form__button.form__button--dark.form__button--calc
+                                        .form__btn-text.form__btn-text--dark.form__btn-text--bold продолжить расчет
+                                        svg.form__btn-icon.form__btn-icon--dark: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
+                                .form__col-r.form__col-r--resize
+                                    .form__image.form__image--resize
+                                        img.form__pic(src="./assets/images/pic/calc-three.png" alt="picture")
+                                        span.form__obj-one 1.5м
+                                    .form__text.form__text--dark.form__text--90.form__text--resize
+                                        p Lorem ipsum dolor sit amet consecteturlor sit amet co adipisicing elit. Ducimus deleniti ut nulla aut totam. Nulla maxime repellendus fugit tenetur provident in. Beatae, aliquid. Quo, ea veritatis sint odio labore cum.
+            // четвертый шаг калькулятора (меняются '.tabs' и содержимое '.form__columns')
+            .calc
+                .container
+                    .calc__wrap
+                        form.form.form--grey.form--calc
+                            .block-title
+                                .block-title__number 01.
+                                h2.block-title__text расчет 
+                                    br 
+                                    | стоимости
+                            .form__tabs
+                                .tabs
+                                    ul.tabs__list
+                                        li.tabs__item
+                                            a.tabs__link.active(href="#")
+                                                .tabs__obj Выбор покрытия
+                                                svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        li.tabs__item
+                                            a.tabs__link.active(href="#")
+                                                .tabs__obj Высота забора
+                                                svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        li.tabs__item
+                                            a.tabs__link.active(href="#")
+                                                .tabs__obj Кол-во горизонталей (лаг)
+                                                svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        li.tabs__item
+                                            a.tabs__link.selected(href="#")
+                                                .tabs__obj Кол-во ворот
+                                                svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        li.tabs__item
+                                            a.tabs__link(href="#")
+                                                .tabs__obj Кол-во калиток
+                                                svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        li.tabs__item
+                                            a.tabs__link.tabs__link--result(href="#")
+                                                .tabs__result Результат:
+                                                .tabs__value 265000 р
+                            .form__columns      
+                                .form__col-l.form__col-l--resize
+                                    .form__row.form__row--selects
+                                        label.form__block.form__block--no-flex
+                                            .form__subtitle.form__subtitle--no-margin.form__subtitle--dark Количество ворот
+                                            label.form__select(for='select')
+                                                input#bg(type='radio', name='list', value='not_changed', checked='')
+                                                input#select(type='radio', name='list', value='not_changed')
+                                                label.bg(for='bg')
+                                                .items
+                                                    input(type='radio', name='list', value='first_value', id='list[0]')
+                                                    label.green(for='list[0]') 1
+                                                    input(type='radio', name='list', value='second_value', id='list[1]')
+                                                    label.green(for='list[1]') 2
+                                                    input(type='radio', name='list', value='third_value', id='list[2]')
+                                                    label.green(for='list[2]') 3
+                                                    input(type='radio', name='list', value='fourth_value', id='list[3]')
+                                                    label.green(for='list[3]') 4
+                                    .form__row.form__row--selects
+                                        label.form__block.form__block--no-flex
+                                            .form__subtitle.form__subtitle--no-margin.form__subtitle--dark Ширина ворот
+                                            label.form__select(for='select')
+                                                input#bg(type='radio', name='list', value='not_changed', checked='')
+                                                input#select(type='radio', name='list', value='not_changed')
+                                                label.bg(for='bg')
+                                                .items
+                                                    input(type='radio', name='list', value='first_value', id='list[0]')
+                                                    label.green(for='list[0]') 2м
+                                                    input(type='radio', name='list', value='second_value', id='list[1]')
+                                                    label.green(for='list[1]') 3м
+                                                    input(type='radio', name='list', value='third_value', id='list[2]')
+                                                    label.green(for='list[2]') 4м
+                                                    input(type='radio', name='list', value='fourth_value', id='list[3]')
+                                                    label.green(for='list[3]') 5м
+                                    button(type="submit").form__button.form__button--dark.form__button--calc
+                                        .form__btn-text.form__btn-text--dark.form__btn-text--bold продолжить расчет
+                                        svg.form__btn-icon.form__btn-icon--dark: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
+                                .form__col-r.form__col-r--resize
+                                    .form__image.form__image--resize-2
+                                        img.form__pic(src="./assets/images/pic/calc-four.png" alt="picture")
+                                        span.form__obj-one 1.5м
+                                        span.form__obj-two 2
+                                        span.form__obj-three 3м
+                                    .form__text.form__text--dark.form__text--90.form__text--resize
+                                        p Lorem ipsum dolor sit amet consecteturlor sit amet co adipisicing elit. Ducimus deleniti ut nulla aut totam. Nulla maxime repellendus fugit tenetur provident in. Beatae, aliquid. Quo, ea veritatis sint odio labore cum.
+            // пятый шаг калькулятора (меняются '.tabs' и содержимое '.form__columns')
+            .calc
+                .container
+                    .calc__wrap
+                        form.form.form--grey.form--calc
+                            .block-title
+                                .block-title__number 01.
+                                h2.block-title__text расчет 
+                                    br 
+                                    | стоимости
+                            .form__tabs
+                                .tabs
+                                    ul.tabs__list
+                                        li.tabs__item
+                                            a.tabs__link.active(href="#")
+                                                .tabs__obj Выбор покрытия
+                                                svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        li.tabs__item
+                                            a.tabs__link.active(href="#")
+                                                .tabs__obj Высота забора
+                                                svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        li.tabs__item
+                                            a.tabs__link.active(href="#")
+                                                .tabs__obj Кол-во горизонталей (лаг)
+                                                svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        li.tabs__item
+                                            a.tabs__link.active(href="#")
+                                                .tabs__obj Кол-во ворот
+                                                svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        li.tabs__item
+                                            a.tabs__link.selected(href="#")
+                                                .tabs__obj Кол-во калиток
+                                                svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        li.tabs__item
+                                            a.tabs__link.tabs__link--result(href="#")
+                                                .tabs__result Результат:
+                                                .tabs__value 265000 р
+                            .form__columns      
+                                .form__col-l.form__col-l--resize
+                                    .form__row.form__row--selects
+                                        label.form__block.form__block--no-flex
+                                            .form__subtitle.form__subtitle--no-margin.form__subtitle--dark Количество калиток
+                                            label.form__select(for='select')
+                                                input#bg(type='radio', name='list', value='not_changed', checked='')
+                                                input#select(type='radio', name='list', value='not_changed')
+                                                label.bg(for='bg')
+                                                .items
+                                                    input(type='radio', name='list', value='first_value', id='list[0]')
+                                                    label.green(for='list[0]') 1
+                                                    input(type='radio', name='list', value='second_value', id='list[1]')
+                                                    label.green(for='list[1]') 2
+                                                    input(type='radio', name='list', value='third_value', id='list[2]')
+                                                    label.green(for='list[2]') 3
+                                                    input(type='radio', name='list', value='fourth_value', id='list[3]')
+                                                    label.green(for='list[3]') 4
+                                    button(type="submit").form__button.form__button--dark.form__button--calc
+                                        .form__btn-text.form__btn-text--dark.form__btn-text--bold продолжить расчет
+                                        svg.form__btn-icon.form__btn-icon--dark: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
+                                .form__col-r.form__col-r--resize
+                                    .form__image.form__image--resize-2
+                                        img.form__pic(src="./assets/images/pic/calc-five.png" alt="picture")
+                                        span.form__obj-one 1.5м
+                                        span.form__obj-two 2
+                                        span.form__obj-three 3м
+                                        span.form__obj-four 2
+                                    .form__text.form__text--dark.form__text--90.form__text--resize
+                                        p Lorem ipsum dolor sit amet consecteturlor sit amet co adipisicing elit. Ducimus deleniti ut nulla aut totam. Nulla maxime repellendus fugit tenetur provident in. Beatae, aliquid. Quo, ea veritatis sint odio labore cum.
+            .calc
+                .container
+                    .calc__wrap
+                        form.form.form--grey.form--calc
+                            .block-title
+                                .block-title__number 01.
+                                h2.block-title__text расчет 
+                                    br 
+                                    | стоимости
+                            .form__tabs
+                                .tabs
+                                    ul.tabs__list
+                                        li.tabs__item
+                                            a.tabs__link.active(href="#")
+                                                .tabs__obj Выбор покрытия
+                                                svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        li.tabs__item
+                                            a.tabs__link.active(href="#")
+                                                .tabs__obj Высота забора
+                                                svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        li.tabs__item
+                                            a.tabs__link.active(href="#")
+                                                .tabs__obj Кол-во горизонталей (лаг)
+                                                svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        li.tabs__item
+                                            a.tabs__link.active(href="#")
+                                                .tabs__obj Кол-во ворот
+                                                svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        li.tabs__item
+                                            a.tabs__link.active(href="#")
+                                                .tabs__obj Кол-во калиток
+                                                svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        li.tabs__item
+                                            a.tabs__link.tabs__link--result.selected(href="#")
+                                                .tabs__result Результат:
+                                                .tabs__value 265000 р
+                            .form__result
+                                .form-table
+                                    h2.form-table__title Детальный расчет
+                                    ul.form-table__list
+                                        li.form-table__item.form-table__item--title
+                                            .form-table__left
+                                                span.form-table__text.form-table__text--title Материалы
+                                            .form-table__right
+                                                span.form-table__text.form-table__text--title Цена
+                                        li.form-table__item
+                                            .form-table__left
+                                                span.form-table__text Столб проф. труба 60х60 мм h=2700 мм
+                                                span.form-table__info i
+                                            .form-table__right
+                                                span.form-table__text 37 шт / 19 610 руб
+                                        li.form-table__item
+                                            .form-table__left
+                                                span.form-table__text Лаги проф. труба 40х20 мм (в 2 ряда)
+                                            .form-table__right
+                                                span.form-table__text 186 п.м / 15 066 руб
+                                        li.form-table__item
+                                            .form-table__left
+                                                span.form-table__text Грунтовка металл ГФ032 корич
+                                            .form-table__right
+                                                span.form-table__text 386 п.м / 4 632 руб
+                                        li.form-table__item
+                                            .form-table__left
+                                                span.form-table__text Профлист полимерный, 0,5мм
+                                            .form-table__right
+                                                span.form-table__text 88 лист / 57 802 руб
+                                        li.form-table__item
+                                            .form-table__left
+                                                span.form-table__text Ворота распашные Эконом, ш=3.5м
+                                            .form-table__right
+                                                span.form-table__text 2 шт / 9 850 руб
+                                        li.form-table__item
+                                            .form-table__left
+                                                span.form-table__text Калитка Эконом, ш=1.2м
+                                                span.form-table__info i
+                                            .form-table__right
+                                                span.form-table__text 1 шт / 2 335 руб
+                                        li.form-table__item
+                                            .form-table__left
+                                                span.form-table__text.form-table__text--total Общая стоимость материалов:
+                                            .form-table__right
+                                                span.form-table__text.form-table__text--total 109 295 руб
+                                .form-table
+                                    ul.form-table__list
+                                        li.form-table__item.form-table__item--title
+                                            .form-table__left
+                                                span.form-table__text.form-table__text--title Наименование работ
+                                            .form-table__right
+                                                span.form-table__text.form-table__text--title Цена
+                                        li.form-table__item
+                                            .form-table__left
+                                                span.form-table__text Столб проф. труба 60х60 мм h=2700 мм
+                                            .form-table__right
+                                                span.form-table__text 37 шт / 19 610 руб
+                                        li.form-table__item
+                                            .form-table__left
+                                                span.form-table__text Лаги проф. труба 40х20 мм (в 2 ряда)
+                                            .form-table__right
+                                                span.form-table__text 186 п.м / 15 066 руб
+                                        li.form-table__item
+                                            .form-table__left
+                                                span.form-table__text Грунтовка металл ГФ032 корич
+                                            .form-table__right
+                                                span.form-table__text 386 п.м / 4 632 руб
+                                        li.form-table__item
+                                            .form-table__left
+                                                span.form-table__text.form-table__text--total Общая стоимость работ:
+                                            .form-table__right
+                                                span.form-table__text.form-table__text--total 30 015 руб
+                                .form-price
+                                    .form-price__text Расстояние от МКАД
+                                    .form-price__slider
+                                        .rail
+                                    .form-price__icon
+                                        // svg icon
+                                    .form-price__text стоимость доставки 
+                                    .form-price__input
+                                        // input
+                                    .form-price__text руб
             //
             .content
                 .container
