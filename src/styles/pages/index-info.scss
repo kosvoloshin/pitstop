@@ -261,6 +261,11 @@
     }
 }
 
+.form__row--application {
+    padding-right: rem(252px);
+    position: relative;
+}
+
 .form__box {
     padding-top: rem(31px);
     display: inline-block;
@@ -312,6 +317,11 @@
     margin-left: rem(8px);
     margin-bottom: 0;
     color: $b;
+}
+
+.form__subtitle--application {
+    color: $b;
+    font-size: rem(16px);
 }
 
 .form__input {
@@ -434,7 +444,7 @@
 .form__radio:checked + .form__radio-fake:after {
     display: block;
 }
-
+// select fence-type
 .form__select input {
   display: none;
 }
@@ -460,12 +470,12 @@
   cursor: pointer;
 }
 
-.form__select input[name="list"]:not(:checked) ~ #text {
+.form__select input[name="fence-type"]:not(:checked) ~ #text {
   color: black;
   background: white;
 }
 
-.form__select input[name="list"]:checked ~ #text {
+.form__select input[name="fence-type"]:checked ~ #text {
   background: transparent;
   color: transparent;
   z-index: 2;
@@ -508,11 +518,6 @@
   cursor: pointer;
 }
 
-.items label.green:hover {
-    background-color: $green;
-    color: $w;
-}
-
 #select:checked ~ .items {
   padding-top: rem(52px);
 }
@@ -535,6 +540,7 @@
   right: 0;
   z-index: 0;
 }
+// select fence-type end
 
 .form__text {
     font-family: $m-r;
@@ -624,6 +630,36 @@
     }
 }
 
+.lenght__button {
+    width: intrinsic;         
+    width: -moz-max-content;  
+    width: -webkit-max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $w;
+    transition: .3s;
+    position: absolute;
+    bottom: rem(34px);
+    padding: rem(10px) rem(17px);
+    background: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $w;
+        border-color: $w;
+
+        .lenght__btn-text {
+            color: $blue;
+        }
+
+        .lenght__btn-icon {
+            fill: $blue;
+        }
+    }
+}
+
 .wpcf7-form-control.wpcf7-submit {
     width: intrinsic;         
     width: -moz-max-content;  
@@ -709,7 +745,40 @@ div.wpcf7 img.ajax-loader {
     bottom: rem(50px);
 }
 
+.form__button--application {
+    right: 0;
+    bottom: 0;
+    border: 1px solid $b;
+    padding: rem(17px) rem(23px);
+
+    &:hover {
+        background-color: $green;
+        border-color: $green;
+
+        .form__btn-text--dark {
+            color: $w;
+        }
+
+        .form__btn-icon--dark {
+            fill: $w;
+        }
+    }
+}
+
 .form__btn-text {
+    font-family: $m-r;
+    font-size: rem(12px);
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: left;
+    color: $w;
+    transition: .3s;
+}
+
+.lenght__btn-text {
     font-family: $m-r;
     font-size: rem(12px);
     font-weight: normal;
@@ -731,6 +800,13 @@ div.wpcf7 img.ajax-loader {
 }
 
 .form__btn-icon {
+    width: rem(35px);
+    height: rem(19px);
+    fill: $w;
+    transition: .3s;
+}
+
+.lenght__btn-icon {
     width: rem(35px);
     height: rem(19px);
     fill: $w;

@@ -65,10 +65,12 @@
 .carousel__item {
     height: 100%;
     width: 100%;
-    background-image: url('../images/slide-one.jpg');
-    background-size: cover;
-    background-position: center center;
     position: relative;
+}
+
+.carousel__image {
+    height: 100%;
+    width: 100%;
 }
 
 .carousel__image-wrap {

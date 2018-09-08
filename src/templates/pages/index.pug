@@ -158,13 +158,13 @@ block content
                                         label.form__block.form__block--no-flex
                                             .form__subtitle.form__subtitle--no-margin Тип забора:
                                             label.form__select(for='select')
-                                                input#bg(type='radio', name='list', value='not_changed', checked='')
-                                                input#select(type='radio', name='list', value='not_changed')
+                                                input#bg(type='radio', name='fence-type', value='not_changed', checked='')
+                                                input#select(type='radio', name='fence-type', value='not_changed')
                                                 label.bg(for='bg')
                                                 .items
-                                                    input(type='radio', name='list', value='first_value', id='list[0]')
+                                                    input(type='radio', name='fence-type', value='first_value', id='list[0]')
                                                     label(for='list[0]') Заборы из профнастила
-                                                    input(type='radio', name='list', value='second_value', id='list[1]')
+                                                    input(type='radio', name='fence-type', value='second_value', id='list[1]')
                                                     label(for='list[1]') Заборы из дерева
                                     .form__text.form__text--margin
                                         p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
@@ -193,6 +193,7 @@ block content
                                 .carousel
                                     ul.carousel__list
                                         li.carousel__item
+                                            img.carousel__image(src="./assets/images/slide-one.jpg" alt="stock")
                                             .carousel__image-wrap
                                                 .carousel__heading
                                                     .carousel__question Хотите окраску
@@ -524,7 +525,7 @@ block content
                                         svg.slider__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
                             .reviews__desk
                                 .reviews__image
-                                    .reviews__avatar
+                                    img.reviews__avatar(src="./assets/images/pic/avatar.jpg" alt="avatar")
                                 .reviews__content
                                     .reviews__name Михаил
                                         br
