@@ -15,6 +15,12 @@
     transform: rotate(90deg);
 }
 
+.slider__buttons--photo {
+    position: absolute;
+    bottom: rem(34px);
+    right: rem(43px);
+}
+
 .controls {
     background: none;
     cursor: pointer;

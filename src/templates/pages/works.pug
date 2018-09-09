@@ -1,0 +1,89 @@
+extends ../template
+
+block variables
+    - var title = 'Наши работы'
+
+block content
+    .wrapper
+        include ../common/header-border.pug
+        section.section.section--works
+            .container
+                .categories
+                    .container
+                        .categories__wrap
+                            .block-title
+                                .block-title__number.block-title__number--light 01.
+                                h2.block-title__text.block-title__text--light фотогалерея
+                                    br
+                                    | выполненых работ
+                            .categories__row
+                                ul.categories__list
+                                    li.categories__item
+                                        a(href="#").categories__link.active Заборы из профнастила
+                                    li.categories__item
+                                        a(href="#").categories__link Заборы из сетки рабицы
+                                    li.categories__item
+                                        a(href="#").categories__link Заборы из дерева
+                                    li.categories__item
+                                        a(href="#").categories__link Заборы из евроштакетника
+                                    li.categories__item
+                                        a(href="#").categories__link Монолитные заборы
+                                    li.categories__item
+                                        a(href="#").categories__link Ворота и калитки
+                                    li.categories__item
+                                        a(href="#").categories__link Откатные ворота
+                                    li.categories__item
+                                        a(href="#").categories__link Теплицы из поликарбоната
+                                    li.categories__item
+                                        a(href="#").categories__link Навесы и беседки из поликарбоната
+                                    li.categories__item
+                                        a(href="#").categories__link Заборы из 3D сетки
+                .works
+                    - var x = 9;
+                    ul.works__list
+                        - for (var i=1; i<=x; i++) {
+                            li.works__item
+                                a.photo__anchor(href="#")
+                                .photo
+                                    .photo__columns
+                                        .photo__col-l
+                                            .photo__image(style="background-image: url(./assets/images/gallery/fence-1.jpg)")
+                                                .photo__image-wrap
+                                                    .photo__content
+                                                        h2.photo__title галерея заборов 
+                                                            br 
+                                                            | из профнастила
+                                                        .photo__obj Страница 1 из 3
+                                                        .slider__buttons.slider__buttons--second.slider__buttons--photo
+                                                            button(type="button").controls.slider__prev.controls--second
+                                                                svg.slider__icon.slider__icon--second: use(xlink:href="assets/images/icons/sprite.svg#left")
+                                                            button(type="button").controls.slider__next.controls--second
+                                                                svg.slider__icon.slider__icon--second: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        .photo__col-r
+                                            ul.photo__list
+                                                li.photo__item
+                                                    a.photo__link(href="#")
+                                                        .photo__pic.photo__pic--more(style="background-image: url(./assets/images/gallery/fence-2.jpg)")
+                                                        svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                                                li.photo__item
+                                                    a.photo__link(href="#")
+                                                        .photo__pic.photo__pic--more(style="background-image: url(./assets/images/gallery/fence-3.jpg)")
+                                                        svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                                                li.photo__item
+                                                    a.photo__link(href="#")
+                                                        .photo__pic(style="background-image: url(./assets/images/gallery/fence-4.jpg)")
+                                                        svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                                                li.photo__item
+                                                    a.photo__link(href="#")
+                                                        .photo__pic(style="background-image: url(./assets/images/gallery/fence-5.jpg)")
+                                                        svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                                                li.photo__item
+                                                    a.photo__link(href="#")
+                                                        .photo__pic.photo__pic--more(style="background-image: url(./assets/images/gallery/fence-6.jpg)")
+                                                        svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                                                li.photo__item
+                                                    a.photo__link(href="#")
+                                                        .photo__pic(style="background-image: url(./assets/images/gallery/fence-7.jpg)")
+                                                        svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                        - }
+        include ../common/footer.pug 

@@ -560,6 +560,107 @@
 }
 // select fence-view end
 
+// select fence-height
+.form-calc-height input {
+    display: none;
+}
+
+.form-calc-height {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+
+.form-calc-height:before {
+    content: "";
+    background-image: url('../images/icons/select-icon.png');
+    display: inline-block;
+    position: absolute;
+    top: rem(6px);
+    right: rem(6px);
+    z-index: 2;
+    width: rem(39px);
+    height: rem(39px);
+    text-align: center;
+    line-height: rem(39px);
+    cursor: pointer;
+}
+
+.form-calc-height input[name="height-of-gates"]:not(:checked) ~ #text {
+    color: black;
+    background: white;
+}
+
+.form-calc-height input[name="height-of-gates"]:checked ~ #text {
+    background: transparent;
+    color: transparent;
+    z-index: 2;
+}
+
+#select-height:disabled ~ .items-calc-height #text {
+    background: #eee;
+}
+
+.items-calc-height {
+    display: block;
+    min-height: rem(30px);
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    cursor: pointer;
+    background: $w;
+    z-index: 1;
+}
+
+#select-height:not(:checked) ~ .items-calc-height {
+    height: rem(52px);
+}
+
+.items-calc-height label {
+    display: none;
+    padding: rem(17px) rem(24px);
+    padding-right: rem(45px);
+    background: white;
+    color: $b;
+    border-bottom: 1px solid $grey;
+    font-family: $m-s;
+    cursor: pointer;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.items-calc-height label:hover {
+    background-color: $green;
+    color: $w;
+}
+
+#select-height:checked ~ .items-calc-height {
+    padding-top: rem(52px);
+}
+
+#select-height:checked ~ .items-calc-height label {
+    display: block;
+}
+
+.items-calc-height input:checked + label {
+    display: block!important;
+    border: none;
+    background: white;
+    color: $b;
+}
+
+#select-height:checked ~ .bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+}
+// select fence-height end
+
 // select number-of-gates 
 .form-calc-number input {
     display: none;
