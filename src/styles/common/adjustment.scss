@@ -47,3 +47,26 @@
 .footer {
     flex: 0 0 auto;
 }
+
+// Custom ScrollBar
+
+.custom-scroll {
+           
+    &::-webkit-scrollbar-track {
+        background-color: darken($grey, 10%);;
+    }
+        
+    &::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 0;
+        border-radius: 0px;
+        background-color: #9dacb4;
+    }
+        
+    &::-webkit-scrollbar-thumb:hover{
+        background-color: darken(#9dacb4, 10%);
+    }
+        
+    &::-webkit-scrollbar{
+        width: 5px;
+    }
+}

@@ -76,6 +76,10 @@
     }
 }
 
+.photo--with-padding {
+    padding-top: rem(53px);
+}
+
 .photo__columns {
     display: flex;
     flex-direction: row;

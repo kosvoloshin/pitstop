@@ -12,18 +12,9 @@
 .section__under-img {
     height: 100%;
     width: 100%;
-    background-image: url('../images/bg-one.jpg');
     background-size: cover;
     background-position: center center;
     position: relative;
-}
-
-.section__under-img--contacts {
-    background-image: url('../images/bg-two.jpg');
-}
-
-.section__under-img--calc {
-    background-image: url('../images/bg-three.jpg');
 }
 
 .section__image-wrap {

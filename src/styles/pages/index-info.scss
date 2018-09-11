@@ -493,6 +493,7 @@
   width: 100%;
   cursor: pointer;
   background: $w;
+  z-index: 1;
 }
 
 #select:not(:checked) ~ .items {
@@ -513,6 +514,18 @@
   }
 }
 
+.text {
+  padding: rem(17px) rem(24px);
+  padding-right: rem(45px);
+  background: white;
+  color: $b;
+  font-family: $m-s;
+  position: absolute;
+  width: 100%;
+  display: block;
+  top: 0;
+}
+
 .items label:hover {
   background: $grey;
   cursor: pointer;
@@ -520,6 +533,8 @@
 
 #select:checked ~ .items {
   padding-top: rem(52px);
+  max-height: rem(320px);
+  overflow: auto;
 }
 
 #select:checked ~ .items label {

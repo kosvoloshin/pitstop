@@ -90,6 +90,14 @@
     justify-content: space-between;
 }
 
+.reviews__item {
+    display: none;
+
+    &.selected {
+        display: block;
+    }
+}
+
 .reviews__desk {
     display: flex;
     flex-direction: row;
@@ -100,6 +108,12 @@
 
 .reviews__image {
     margin-right: rem(22px);
+    height: rem(107px);
+    width: rem(107px);
+    border-radius: 50%;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
 }
 
 .reviews__avatar {
@@ -172,6 +186,35 @@
     }
 }
 
+.feedback__link {
+    width: intrinsic;         
+    width: -moz-max-content;  
+    width: -webkit-max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $b;
+    transition: .3s;
+    padding: rem(10px) rem(13px) rem(10px) rem(22px);
+    //position: absolute;
+    //bottom: rem(34px);
+    margin-top: rem(32px);
+
+    &:hover {
+        background-color: $green;
+        border-color: $green;
+
+        .feedback__btn-text {
+            color: $w;
+        }
+
+        .feedback__btn-icon {
+            fill: $w;
+        }
+    }
+}
+
 .reviews__btn-text {
     font-family: $m-r;
     font-size: rem(12px);
@@ -185,9 +228,29 @@
     transition: .3s;
 }
 
+.feedback__btn-text {
+    font-family: $m-r;
+    font-size: rem(12px);
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: left;
+    color: $b;
+    transition: .3s;
+}
+
 .reviews__btn-icon {
     width: rem(35px);
     height: rem(19px);
     fill: $w;
+    transition: .3s;
+}
+
+.feedback__btn-icon {
+    width: rem(35px);
+    height: rem(19px);
+    fill: $b;
     transition: .3s;
 }

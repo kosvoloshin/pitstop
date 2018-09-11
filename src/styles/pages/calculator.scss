@@ -31,7 +31,7 @@
     transition: .3s;
 
     &.selected {
-        background-color: $green;
+        background-color: $green!important;
 
         .tabs__obj {
             color: $w;
@@ -486,18 +486,18 @@
     cursor: pointer;
 }
 
-.form-calc input[name="fence-type"]:not(:checked) ~ #text {
+.form-calc input[name="list"]:not(:checked) ~ #text-select {
     color: black;
     background: white;
 }
 
-.form-calc input[name="fence-type"]:checked ~ #text {
+.form-calc input[name="list"]:checked ~ #text-select {
     background: transparent;
     color: transparent;
     z-index: 2;
 }
 
-#select:disabled ~ .items-calc #text {
+#select:disabled ~ .items-calc #text-select {
     background: #eee;
 }
 
@@ -509,6 +509,19 @@
     width: 100%;
     cursor: pointer;
     background: $w;
+    z-index: 1;
+}
+
+.text-select {
+    padding: rem(17px) rem(24px);
+    padding-right: rem(45px);
+    background: white;
+    color: $b;
+    font-family: $m-s;
+    position: absolute;
+    width: 100%;
+    display: block;
+    top: 0;
 }
 
 #select:not(:checked) ~ .items-calc {
@@ -537,6 +550,8 @@
 
 #select:checked ~ .items-calc {
     padding-top: rem(52px);
+    max-height: rem(320px);
+    overflow: auto;
 }
 
 #select:checked ~ .items-calc label {
@@ -586,18 +601,18 @@
     cursor: pointer;
 }
 
-.form-calc-height input[name="height-of-gates"]:not(:checked) ~ #text {
+.form-calc-height input[name="height-of-gates"]:not(:checked) ~ #text-height {
     color: black;
     background: white;
 }
 
-.form-calc-height input[name="height-of-gates"]:checked ~ #text {
+.form-calc-height input[name="height-of-gates"]:checked ~ #text-height {
     background: transparent;
     color: transparent;
     z-index: 2;
 }
 
-#select-height:disabled ~ .items-calc-height #text {
+#select-height:disabled ~ .items-calc-height #text-height {
     background: #eee;
 }
 
@@ -610,6 +625,18 @@
     cursor: pointer;
     background: $w;
     z-index: 1;
+}
+
+.text-height {
+    padding: rem(17px) rem(24px);
+    padding-right: rem(45px);
+    background: white;
+    color: $b;
+    font-family: $m-s;
+    position: absolute;
+    width: 100%;
+    display: block;
+    top: 0;
 }
 
 #select-height:not(:checked) ~ .items-calc-height {
@@ -638,6 +665,8 @@
 
 #select-height:checked ~ .items-calc-height {
     padding-top: rem(52px);
+    max-height: rem(320px);
+    overflow: auto;
 }
 
 #select-height:checked ~ .items-calc-height label {
@@ -651,7 +680,7 @@
     color: $b;
 }
 
-#select-height:checked ~ .bg {
+#select-height:checked ~ .bg-height {
     position: fixed;
     top: 0;
     left: 0;
@@ -687,18 +716,18 @@
     cursor: pointer;
 }
 
-.form-calc-number input[name="number-of-gates"]:not(:checked) ~ #text {
+.form-calc-number input[name="number-of-gates"]:not(:checked) ~ #text-number {
     color: black;
     background: white;
 }
 
-.form-calc-number input[name="number-of-gates"]:checked ~ #text {
+.form-calc-number input[name="number-of-gates"]:checked ~ #text-number {
     background: transparent;
     color: transparent;
     z-index: 2;
 }
 
-#select-number:disabled ~ .items-calc-number #text {
+#select-number:disabled ~ .items-calc-number #text-number {
     background: #eee;
 }
 
@@ -710,6 +739,7 @@
     width: 100%;
     cursor: pointer;
     background: $w;
+    z-index: 1;
 }
 
 #select-number:not(:checked) ~ .items-calc-number {
@@ -730,6 +760,18 @@
     }
 }
 
+.text-number {
+    padding: rem(17px) rem(24px);
+    padding-right: rem(45px);
+    background: white;
+    color: $b;
+    font-family: $m-s;
+    position: absolute;
+    width: 100%;
+    display: block;
+    top: 0;
+}
+
 .items-calc-number label:hover {
     background-color: $green;
     color: $w;
@@ -738,6 +780,8 @@
 #select-number:checked ~ .items-calc-number {
     padding-top: rem(52px);
     z-index: 3;
+    max-height: rem(320px);
+    overflow: auto;
 }
 
 #select-number:checked ~ .items-calc-number label {
@@ -751,7 +795,7 @@
     color: $b;
 }
 
-#select-number:checked ~ .bg-two {
+#select-number:checked ~ .bg-number {
     position: fixed;
     top: 0;
     left: 0;
@@ -787,18 +831,18 @@
     cursor: pointer;
 }
 
-.form-calc-width input[name="number-of-gates"]:not(:checked) ~ #text {
+.form-calc-width input[name="fence-width"]:not(:checked) ~ #text-width {
     color: black;
     background: white;
 }
 
-.form-calc-width input[name="number-of-gates"]:checked ~ #text {
+.form-calc-width input[name="fence-width"]:checked ~ #text-width {
     background: transparent;
     color: transparent;
     z-index: 2;
 }
 
-#select-width:disabled ~ .items-calc-width #text {
+#select-width:disabled ~ .items-calc-width #text-width {
     background: #eee;
 }
 
@@ -830,6 +874,18 @@
     }
 }
 
+.text-width {
+    padding: rem(17px) rem(24px);
+    padding-right: rem(45px);
+    background: white;
+    color: $b;
+    font-family: $m-s;
+    position: absolute;
+    width: 100%;
+    display: block;
+    top: 0;
+}
+
 .items-calc-width label:hover {
     background-color: $green;
     color: $w;
@@ -838,6 +894,8 @@
 #select-width:checked ~ .items-calc-width {
     padding-top: rem(52px);
     z-index: 1;
+    max-height: rem(320px);
+    overflow: auto;
 }
 
 #select-width:checked ~ .items-calc-width label {
@@ -859,7 +917,7 @@
     right: 0;
     z-index: 0;
 }
-// select fence-view end
+// select fence-width end
 
 // select number-of-door
 .form-calc-door input {
@@ -887,18 +945,18 @@
     cursor: pointer;
 }
 
-.form-calc-door input[name="number-of-gates"]:not(:checked) ~ #text {
+.form-calc-door input[name="number-of-door"]:not(:checked) ~ #text-door {
     color: black;
     background: white;
 }
 
-.form-calc-door input[name="number-of-gates"]:checked ~ #text {
+.form-calc-door input[name="number-of-door"]:checked ~ #text-door {
     background: transparent;
     color: transparent;
     z-index: 2;
 }
 
-#select-door:disabled ~ .items-calc-door #text {
+#select-door:disabled ~ .items-calc-door #text-door {
     background: #eee;
 }
 
@@ -930,14 +988,29 @@
     }
 }
 
+.text-door {
+    padding: rem(17px) rem(24px);
+    padding-right: rem(45px);
+    background: white;
+    color: $b;
+    font-family: $m-s;
+    position: absolute;
+    width: 100%;
+    display: block;
+    top: 0;
+}
+
 .items-calc-door label:hover {
     background-color: $green;
     color: $w;
+    z-index: 1;
 }
 
 #select-door:checked ~ .items-calc-door {
     padding-top: rem(52px);
     z-index: 1;
+    max-height: rem(320px);
+    overflow: auto;
 }
 
 #select-door:checked ~ .items-calc-door label {
@@ -998,22 +1071,19 @@
     width: rem(91px);
 }
 
-.form-price__input {
+.form-price__input-fake {
     background-color: $w;
     color: $b;
     border: 1px solid $w;
     outline: none;
-    padding: rem(17px) rem(25px);
+    padding: rem(17px) 0;
+    text-align: center;
     font-family: $m-s;
     font-size: rem(16px);
     letter-spacing: normal;
     transition: .3s;
     width: 100%;
-
-    &:hover,
-    &:focus {
-        border: 1px solid $blue;
-    }
+    min-height: rem(58px);
 }
 
 .rail {

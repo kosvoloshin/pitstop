@@ -8,7 +8,7 @@ block content
         include ../common/header.pug
         section.section
             .section__under
-                .section__under-img
+                .section__under-img(style="background-image: url(./assets/images/bg-one.jpg)")
                     .section__image-wrap
             .hero
                 .container
@@ -69,7 +69,7 @@ block content
                                         a.flipper__front(href="#")
                                             img.flipper__icon(src="./assets/images/icons/front-5.png" alt="icon")
                                             .flipper__text Заборы из монолита
-                                        a.flipper__back(href="#")
+                                        .flipper__back(href="#")
                                             //img.flipper__icon(src="./assets/images/icons/back-4.png" alt="icon")
                                             //.flipper__text Ворота и калитки
                             li.slider__item
@@ -78,7 +78,7 @@ block content
                                         a.flipper__front(href="#")
                                             img.flipper__icon(src="./assets/images/icons/front-6.png" alt="icon")
                                             .flipper__text Заборы из 3D сетки
-                                        a.flipper__back(href="#")
+                                        .flipper__back(href="#")
                                             //img.flipper__icon(src="./assets/images/icons/back-4.png" alt="icon")
                                             //.flipper__text Ворота и калитки
             .info 
@@ -161,11 +161,20 @@ block content
                                                 input#bg(type='radio', name='fence-type', value='not_changed', checked='')
                                                 input#select(type='radio', name='fence-type', value='not_changed')
                                                 label.bg(for='bg')
-                                                .items
+                                                .items.custom-scroll
                                                     input(type='radio', name='fence-type', value='first_value', id='list[0]')
                                                     label(for='list[0]') Заборы из профнастила
                                                     input(type='radio', name='fence-type', value='second_value', id='list[1]')
                                                     label(for='list[1]') Заборы из дерева
+                                                    input(type='radio', name='fence-type', value='second_value', id='list[2]')
+                                                    label(for='list[2]') Заборы из сетки рабицы
+                                                    input(type='radio', name='fence-type', value='second_value', id='list[3]')
+                                                    label(for='list[3]') Заборы из евроштакетника
+                                                    input(type='radio', name='fence-type', value='second_value', id='list[4]')
+                                                    label(for='list[4]') Монолитные заборы
+                                                    input(type='radio', name='fence-type', value='second_value', id='list[5]')
+                                                    label(for='list[5]') Откатные ворота
+                                                    span.text#text Заборы из профнастила
                                     .form__text.form__text--margin
                                         p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
                                     a.form__link(href="#")
@@ -192,8 +201,9 @@ block content
                             .projects__box.projects__box--no-padings
                                 .carousel
                                     ul.carousel__list
-                                        li.carousel__item
-                                            img.carousel__image(src="./assets/images/slide-one.jpg" alt="stock")
+                                        // по дефолту li display:none; | при добавлении класса 'selected' - display:block; 
+                                        li.carousel__item.selected
+                                            .carousel__image(style="background-image: url(./assets/images/slide-one.jpg)")
                                             .carousel__image-wrap
                                                 .carousel__heading
                                                     .carousel__question Хотите окраску
@@ -523,16 +533,18 @@ block content
                                         svg.slider__icon: use(xlink:href="assets/images/icons/sprite.svg#left")
                                     button(type="button").controls.slider__next
                                         svg.slider__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
-                            .reviews__desk
-                                .reviews__image
-                                    img.reviews__avatar(src="./assets/images/pic/avatar.jpg" alt="avatar")
-                                .reviews__content
-                                    .reviews__name Михаил
-                                        br
-                                        | Добкин
-                                    .reviews__position г. Мытищи
-                            .reviews__text
-                                p В прошлом месяце заказывал забор для дачного участка. Огораживались с соседями, поэтому ограничились сеткой-рабицей. По бригаде ничего плохого сказать не могу. Монтажники работящие...
+                            ul.reviews__list
+                                // по дефолту li display:none; | при добавлении класса 'selected' - display:block;
+                                li.reviews__item.selected
+                                    .reviews__desk
+                                        .reviews__image(style="background-image: url(./assets/images/pic/avatar.jpg)")
+                                        .reviews__content
+                                            .reviews__name Михаил
+                                                br
+                                                | Добкин
+                                            .reviews__position г. Мытищи
+                                    .reviews__text
+                                        p В прошлом месяце заказывал забор для дачного участка. Огораживались с соседями, поэтому ограничились сеткой-рабицей. По бригаде ничего плохого сказать не могу. Монтажники работящие...
                             a.reviews__link(href="#")
                                 .reviews__btn-text оставить отзыв
                                 svg.reviews__btn-icon: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")

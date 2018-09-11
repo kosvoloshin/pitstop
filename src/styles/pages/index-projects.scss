@@ -66,11 +66,18 @@
     height: 100%;
     width: 100%;
     position: relative;
+    display: none;
+
+    &.selected {
+        display: block;
+    }
 }
 
 .carousel__image {
     height: 100%;
     width: 100%;
+    background-size: cover;
+    background-position: center center;
 }
 
 .carousel__image-wrap {

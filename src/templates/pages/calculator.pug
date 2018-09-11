@@ -8,7 +8,7 @@ block content
         include ../common/header.pug
         section.section
             .section__under.section__under--contacts
-                .section__under-img.section__under-img--calc
+                .section__under-img(style="background-image: url(./assets/images/bg-three.jpg)")
                     .section__image-wrap.section__image-wrap--darken
             .hero
                 .container
@@ -100,7 +100,7 @@ block content
                                                 .tabs__value 265000 р
                             ul.form__list
                                 // по умолчанию все li.form__item - display: none; | при добавлении класса 'visible'-display: block;
-                                li.form__item
+                                li.form__item.visible
                                     .form__columns      
                                         .form__col-l
                                             .form__row
@@ -110,7 +110,7 @@ block content
                                                         input#bg(type='radio', name='list', value='not_changed', checked='')
                                                         input#select(type='radio', name='list', value='not_changed')
                                                         label.bg(for='bg')
-                                                        .items-calc
+                                                        .items-calc.custom-scroll
                                                             input(type='radio', name='list', value='first_value', id='list[0]')
                                                             label.green(for='list[0]') Нет
                                                             input(type='radio', name='list', value='second_value', id='list[1]')
@@ -119,6 +119,15 @@ block content
                                                             label.green(for='list[2]') 2
                                                             input(type='radio', name='list', value='fourth_value', id='list[3]')
                                                             label.green(for='list[3]') 3
+                                                            input(type='radio', name='list', value='fifth_value', id='list[4]')
+                                                            label.green(for='list[4]') 4
+                                                            input(type='radio', name='list', value='sixth_value', id='list[5]')
+                                                            label.green(for='list[5]') 5
+                                                            input(type='radio', name='list', value='seventh_value', id='list[6]')
+                                                            label.green(for='list[6]') 6
+                                                            input(type='radio', name='list', value='eighth_value', id='list[7]')
+                                                            label.green(for='list[7]') 7
+                                                            span.text-select#text-select 1
                                             button(type="submit").form__button.form__button--dark.form__button--calc
                                                 .form__btn-text.form__btn-text--dark.form__btn-text--bold продолжить расчет
                                                 svg.form__btn-icon.form__btn-icon--dark: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
@@ -149,7 +158,7 @@ block content
                                                 p Цветовая палитра содержит все 
                                                     a.form__colors-link(href="#" target="blanc") цвета стандарта RAL 
                                                     | - 213 вариантов.
-                                li.form__item.visible
+                                li.form__item
                                     .form__columns      
                                         .form__col-l.form__col-l--resize
                                             .form__row
@@ -159,7 +168,7 @@ block content
                                                         input#bg-height(type='radio', name='height-of-gates', value='not_changed', checked='')
                                                         input#select-height(type='radio', name='height-of-gates', value='not_changed')
                                                         label.bg-height(for='bg-height')
-                                                        .items-calc-height
+                                                        .items-calc-height.custom-scroll
                                                             input(type='radio', name='height-of-gates', value='first_value', id='height-of-gates[0]')
                                                             label.green(for='height-of-gates[0]') 1.5м
                                                             input(type='radio', name='height-of-gates', value='second_value', id='height-of-gates[1]')
@@ -167,7 +176,8 @@ block content
                                                             input(type='radio', name='height-of-gates', value='third_value', id='height-of-gates[2]')
                                                             label.green(for='height-of-gates[2]') 1.8м
                                                             input(type='radio', name='height-of-gates', value='fourth_value', id='height-of-gates[3]')
-                                                            label.green(for='height-of-gates[3]') 2m
+                                                            label.green(for='height-of-gates[3]') 2м
+                                                            span.text-height#text-height 1.5м
                                             button(type="submit").form__button.form__button--dark.form__button--calc
                                                 .form__btn-text.form__btn-text--dark.form__btn-text--bold продолжить расчет
                                                 svg.form__btn-icon.form__btn-icon--dark: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
@@ -218,6 +228,7 @@ block content
                                                             label.green(for='number-of-gates[2]') 3
                                                             input(type='radio', name='number-of-gates', value='fourth_value', id='number-of-gates[3]')
                                                             label.green(for='number-of-gates[3]') 4
+                                                            span.text-number#text-number 1
                                             .form__row.form__row--selects
                                                 label.form__block.form__block--no-flex
                                                     .form__subtitle.form__subtitle--no-margin.form__subtitle--dark Ширина ворот
@@ -234,6 +245,7 @@ block content
                                                             label.green(for='fence-width[2]') 4м
                                                             input(type='radio', name='fence-width', value='fourth_value', id='fence-width[3]')
                                                             label.green(for='fence-width[3]') 5м
+                                                            span.text-width#text-width 2м
                                             button(type="submit").form__button.form__button--dark.form__button--calc
                                                 .form__btn-text.form__btn-text--dark.form__btn-text--bold продолжить расчет
                                                 svg.form__btn-icon.form__btn-icon--dark: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
@@ -264,6 +276,7 @@ block content
                                                             label.green(for='number-of-door[2]') 3
                                                             input(type='radio', name='number-of-door', value='fourth_value', id='number-of-door[3]')
                                                             label.green(for='number-of-door[3]') 4
+                                                            span.text-door#text-door 1
                                             button(type="submit").form__button.form__button--dark.form__button--calc
                                                 .form__btn-text.form__btn-text--dark.form__btn-text--bold продолжить расчет
                                                 svg.form__btn-icon.form__btn-icon--dark: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
@@ -380,7 +393,7 @@ block content
                                                 svg.form-price__pic: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
                                             .form-price__text стоимость доставки 
                                             .form-price__field
-                                                 input(type="text" name="price" required).form-price__input
+                                                .form-price__input-fake 
                                             .form-price__text руб
                                         .form-total
                                             .form-total__col-l
@@ -401,6 +414,49 @@ block content
                                                 button(type="submit").form__button.form__button--application
                                                     .form__btn-text.form__btn-text--dark отправить
                                                     svg.form__btn-icon.form__btn-icon--dark: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
+            .content
+                .container
+                    .photo.photo--with-padding
+                        .photo__columns
+                            .photo__col-l
+                                .photo__image(style="background-image: url(./assets/images/gallery/fence-1.jpg)")
+                                    .photo__image-wrap
+                                        .photo__content
+                                            h2.photo__title галерея заборов 
+                                                br 
+                                                | из профнастила
+                                            .photo__obj Страница 1 из 3
+                                            .slider__buttons.slider__buttons--second.slider__buttons--photo
+                                                button(type="button").controls.slider__prev.controls--second
+                                                    svg.slider__icon.slider__icon--second: use(xlink:href="assets/images/icons/sprite.svg#left")
+                                                button(type="button").controls.slider__next.controls--second
+                                                    svg.slider__icon.slider__icon--second: use(xlink:href="assets/images/icons/sprite.svg#right")
+                            .photo__col-r
+                                ul.photo__list
+                                    li.photo__item
+                                        a.photo__link(href="#")
+                                            .photo__pic.photo__pic--more(style="background-image: url(./assets/images/gallery/fence-2.jpg)")
+                                            svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                                    li.photo__item
+                                        a.photo__link(href="#")
+                                            .photo__pic.photo__pic--more(style="background-image: url(./assets/images/gallery/fence-3.jpg)")
+                                            svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                                    li.photo__item
+                                        a.photo__link(href="#")
+                                            .photo__pic(style="background-image: url(./assets/images/gallery/fence-4.jpg)")
+                                            svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                                    li.photo__item
+                                        a.photo__link(href="#")
+                                            .photo__pic(style="background-image: url(./assets/images/gallery/fence-5.jpg)")
+                                            svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                                    li.photo__item
+                                        a.photo__link(href="#")
+                                            .photo__pic.photo__pic--more(style="background-image: url(./assets/images/gallery/fence-6.jpg)")
+                                            svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                                    li.photo__item
+                                        a.photo__link(href="#")
+                                            .photo__pic(style="background-image: url(./assets/images/gallery/fence-7.jpg)")
+                                            svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
             .content
                 .container
                     .content__wrap
