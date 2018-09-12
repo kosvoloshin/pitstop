@@ -3,20 +3,20 @@
 }
 
 .feedback__list {
-    -moz-column-count: 5;
-    -webkit-column-count: 5;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
     column-count: 2;
 }
 
 .feedback__item {
     background-color: $grey;
-    padding: rem(34px) rem(28px) rem(37px) rem(56px);
+    padding: rem(34px) rem(80px) rem(37px) rem(56px);
     width: rem(630px);
     position: relative;
     margin: 0 0 rem(20px);
     display: inline-block;
 
-    &.feedback__item--blue {
+    &:nth-child(even) {
         background-color: $blue;
 
         .feedback__name {
@@ -30,7 +30,36 @@
         .feedback__text {
             color: $w;
         }
+
+        .feedback__link {
+            border-color: $w;
+
+            &:hover {
+                background-color: $w;
+
+                .feedback__btn-text {
+                    color: $blue;
+                }
+        
+                .feedback__btn-icon {
+                    fill: $blue;
+                }
+            }
+        }
+
+        .feedback__btn-text {
+            color: $w;
+        }
+
+        .feedback__btn-icon {
+            fill: $w;
+        }
     }
+}
+
+.feedback__item--with-form {
+    background-color: none;
+    padding: 0;
 }
 
 .feedback__columns {

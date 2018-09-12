@@ -30,6 +30,10 @@
     align-items: center;
 }
 
+.block-title--with-margin {
+    margin-bottom: rem(50px);
+}
+
 .block-title__number {
     font-family: $m-r;
     font-size: rem(40px);
@@ -40,6 +44,10 @@
     text-align: left;
     color: #c5cccd;   
     margin-right: rem(15px);
+
+    &:empty {
+        margin-right: 0;
+    }
 }
 
 .block-title__text {
@@ -232,6 +240,11 @@
     padding-bottom: rem(50px);
 }
 
+.form--feedback {
+    padding: rem(33px) rem(54px);
+    padding-bottom: rem(133px);
+}
+
 .block-title__number--light {
     color: rgba($color: $grey, $alpha: 0.4)
 }
@@ -340,6 +353,11 @@
     &:focus {
         border: 1px solid $blue;
     }
+}
+
+.form__input--feedback {
+    font-size: rem(13px);
+    padding: rem(14px) rem(17px);
 }
 
 .wpcf7-form-control.wpcf7-text {
@@ -758,6 +776,10 @@ div.wpcf7 img.ajax-loader {
 
 .form__button--second {
     bottom: rem(50px);
+}
+
+.form__button--feedback {
+    bottom: rem(42px);
 }
 
 .form__button--application {

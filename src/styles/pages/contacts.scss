@@ -207,6 +207,14 @@
     }
 }
 
+.form__row--feedback {
+    margin-bottom: rem(15px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
 .form__block {
     display: flex;
     flex: 1;
@@ -238,6 +246,11 @@
     &:focus {
         border: 1px solid $blue;
     }
+}
+
+.form__textarea--feedback {
+    font-size: rem(13px);
+    min-height: rem(130px);
 }
 
 .wpcf7-form-control.wpcf7-textarea {
