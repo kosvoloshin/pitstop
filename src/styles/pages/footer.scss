@@ -6,14 +6,93 @@
 .footer__row--main {
     display: flex;
     flex-direction: row;
+
+    @include laptop {
+        flex-flow: column wrap;
+        align-content: stretch;
+        height: 475px;
+    }
+
+    @include tablets {
+        height: initial;
+        flex-flow: initial;
+        align-content: initial;
+    }
+}
+
+.footer__row--hide {
+    display: none;
+
+    @include tablets {
+        display: flex;
+        margin-bottom: rem(25px);
+        padding-bottom: rem(25px);
+        border-bottom: 1px solid $grey;
+    }
 }
 
 .footer__contacts {
     width: 25%;
+
+    @include laptop {
+        width: 50%;
+        height: 50%;
+        order: -1;
+    }
+}
+
+.footer__link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .footer__pic {
-    max-height: rem(82px);
+    height: rem(82px);
+    width: rem(102px);
+    background-image: url('../images/icons/logo-st.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    @include desktop {
+        height: rem(77px);
+        width: rem(97px);
+    }
+}
+
+.footer__pic-text {
+    display: flex;
+    flex-direction: column;
+    padding-left: rem(20px);
+
+    @include desktop {
+        padding-left: rem(17px);
+    }
+}
+
+.footer__pic-text1 {
+    text-transform: uppercase;
+    font-family: $gopro;
+    color: #3b444e;
+    font-size: rem(26px);
+    line-height: rem(24px);
+
+    @include desktop {
+        font-size: rem(24px);
+    }
+}
+
+.footer__pic-text2 {
+    text-transform: uppercase;
+    font-family: $goprob;    
+    color: $green;
+    font-size: rem(26px);
+    line-height: rem(24px);
+
+    @include desktop {
+        font-size: rem(24px);
+    }
 }
 
 .footer__phone {
@@ -86,10 +165,45 @@
     width: 60%;
     justify-content: space-between;
     padding-left: rem(42px);
+
+    @include desktop {
+        padding-left: rem(30px);
+    }
+
+    @include laptop {
+        width: 50%;
+        height: 100%;
+        flex-direction: column;
+        flex-flow: column wrap;
+        align-content: stretch;
+        justify-content: space-between;
+        padding-left: 0;
+        padding-top: 0;
+    }
+
+    @include tablets {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+.footer__menu--hide {
+    @include phones {
+        display: none;
+    }
 }
 
 .footer__col {
     max-width: rem(210px);
+
+    @include laptop {
+        max-width: 50%;
+    }
+
+    @include tablets {
+        max-width: 33.3%;
+    }
 }
 
 .footer__subtitle {
@@ -110,6 +224,10 @@
     &:last-child {
         margin-bottom: 0;
     }
+
+    @include desktop {
+        margin-bottom: rem(10px);
+    }
 }
 
 .footer__action {
@@ -127,14 +245,28 @@
         color: $green;
         text-decoration: underline;
     }
+
+    @include desktop {
+        font-size: rem(12px);
+    }
 }
 
 .footer__socials {
     width: 15%;
+
+    @include laptop {
+        width: 50%;
+        height: 50%;
+        order: -1;
+    }
 }
 
 .social__list {
     padding-top: rem(33px);
+
+    @include tablets {
+        padding-top: 0;
+    }
 }
 
 .social__item {
@@ -145,6 +277,14 @@
     &:last-child {
         margin-bottom: 0;
     }
+
+    @include laptop {
+        justify-content: flex-start;
+    }
+
+    @include tablets {
+        justify-content: flex-end;
+    }
 }
 
 .social__item--with-label {
@@ -152,6 +292,14 @@
     float: right;
     display: block;
     margin-top: rem(10px);
+
+    @include laptop {
+        float: left;
+    }
+
+    @include tablets {
+        float: right;
+    }
 }
 
 .social__label {
@@ -229,10 +377,31 @@
     margin-top: rem(24px);
     padding-top: rem(29px);
     padding-bottom: rem(29px);
+
+    @include desktop {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: rem(20px);
+        padding-bottom: rem(20px);
+    }
 }
 
 .footer__info-col {
     width: 33.3%;
+
+    @include desktop {
+        width: initial;
+
+        &:nth-child(3) {
+            order: -2;
+        }
+    
+        &:nth-child(2) {
+            order: -1;
+            margin: rem(5px) 0;
+        }
+    }
 }
 
 .footer__copy {
@@ -243,6 +412,10 @@
     letter-spacing: normal;
     text-align: left;
     color: #b1b7ba;
+
+    @include desktop {
+        text-align: center;
+    }
 }
 
 .footer__policy {
@@ -276,5 +449,9 @@
     &:hover {
         color: $green;
         text-decoration: underline;
+    }
+
+    @include desktop {
+        justify-content: center;
     }
 }

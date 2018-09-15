@@ -225,6 +225,14 @@
     }
 }
 
+.form__block--abs {
+    margin-right: rem(5px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
 .form__block--flex-0 {
     flex: 0;
 }

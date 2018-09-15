@@ -3,6 +3,18 @@
     height: rem(688px);
     position: absolute;
     top: 0;
+
+    @include desktop {
+        height: rem(600px);
+    }
+
+    @include laptop {
+        height: rem(440px);
+    }
+
+    @include phones {
+        height: rem(380px);
+    }
 }
 
 .section__under--contacts {

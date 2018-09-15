@@ -1,17 +1,47 @@
-.projects {
-
-}
-
 .projects__wrap {
     display: flex;
     flex-direction: row;
     margin-top: rem(54px);
     height: rem(496px);
+
+    @include desktop {
+        height: rem(400px);
+    }
+
+    @include laptop {
+        margin-top: rem(35px);
+        flex-direction: column;
+        height: initial;
+    }
+
+    @include phones {
+        margin-top: 0;
+    }
 }
 
 .projects__col-l {
     width: rem(530px);
     height: 100%;
+
+    @include desktop {
+        width: rem(389px);
+    }
+
+    @include laptop {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        height: rem(250px);
+    }
+
+    @include tablets {
+        flex-direction: column;
+        height: rem(480px);
+    }
+
+    @include phones {
+        height: initial ;
+    }
 }
 
 .projects__box {
@@ -20,14 +50,53 @@
     padding-right: rem(26px);
     padding-bottom: rem(22px);
     height: 50%;
+
+    @include desktop {
+        padding-left: rem(40px);
+        padding-right: rem(20px);
+    }
+
+    @include laptop {
+        width: 50%;
+        height: 100%;
+    }
+
+    @include tablets {
+        width: 100%;
+        height: 50%;
+        padding-right: rem(40px);
+    }
+
+    @include phones {
+        padding: rem(22px) rem(20px) rem(27px) rem(30px);
+    }
 }
 
 .projects__box--blue {
     background-color: $blue;
+    position: relative;
 }
 
 .projects__box--no-padings {
     padding: 0;
+
+    @include tablets {
+        order: -1;
+    }
+
+    @include phones {
+        display: none;
+    }
+}
+
+.projects__box--mobile {
+    display: none;
+    height: rem(283px);
+    width: 100%;
+
+    @include phones {
+        display: block;
+    }
 }
 
 .projects__box-head {
@@ -49,6 +118,23 @@
     color: #ffffff;
     padding-right: rem(83px);
     margin-top: rem(30px);
+
+    @include desktop {
+        padding-right: 0;
+        margin-top: rem(25px);
+    }
+
+    @include laptop {
+        margin-top: rem(35px);
+    }
+
+    @include tablets {
+        padding-right: rem(83px);
+    }
+
+    @include phones {
+        padding-right: 0;
+    }
 }
 
 .carousel {
@@ -88,6 +174,19 @@
     right: 0;
     background-color: rgba(59, 68, 78, 0.55);
     padding: rem(28px) rem(25px) rem(20px) rem(53px);
+
+    @include desktop {
+        padding-left: rem(40px);
+        padding-right: rem(20px);
+    }
+
+    @include tablets {
+        padding-right: rem(40px);
+    }
+
+    @include phones {
+        padding: rem(23px) rem(24px) rem(25px) rem(30px);
+    }
 }
 
 .carousel__heading {
@@ -95,6 +194,18 @@
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: rem(33px);
+
+    @include desktop {
+        margin-bottom: rem(20px);
+    }
+
+    @include laptop {
+        margin-bottom: rem(40px);
+    }
+
+    @include phones {
+        margin-bottom: rem(51px);
+    }
 }
 
 .carousel__question {
@@ -108,15 +219,15 @@
     text-align: left;
     color: #ffffff;
     padding-top: rem(10px);
+
+    @include desktop {
+        padding-top: 0;
+    }
 }
 
 .carousel__question-color {
     color: $green;
     font-weight: 600;
-}
-
-.carousel__sticky-inner {
-
 }
 
 .carousel__sticky-inner {
@@ -144,16 +255,28 @@
     text-align: left;
     color: #ffffff;
     text-transform: uppercase;
+
+    @include desktop {
+        font-size: rem(21px);
+    }
+
+    @include phones {
+        font-size: rem(23px);
+    }
 }
 
 .carousel__title-color {
     color: $green;
+
+    @include phones {
+        display: block;
+    }
 }
 
 .carousel__link {
-    width: intrinsic;         
-    width: -moz-max-content;  
-    width: -webkit-max-content;
+    //width: intrinsic;         
+    //width: -moz-max-content;  
+    //width: -webkit-max-content;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -175,6 +298,18 @@
         .carousel__btn-icon {
             fill: $w;
         }
+    }
+
+    @include desktop {
+        bottom: rem(21px);
+    }
+
+    @include laptop {
+        bottom: rem(29px);
+    }
+
+    @include phones {
+        bottom: rem(35px);
     }
 }
 
@@ -201,6 +336,27 @@
 .projects__col-r {
     width: rem(750px);
     height: 100%;
+
+    @include desktop {
+        width: rem(581px);
+    }
+
+    @include laptop {
+        width: 100%;
+    }
+
+    @include tablets {
+        width: 100%;
+        height: 394px;
+    }
+
+    @include phones-large {
+        height: calc(235px * 3);
+    }
+
+    @include phones {
+        height: initial;
+    }
 }
 
 .projects__list {
@@ -214,12 +370,55 @@
     &.selected {
         display: flex;
     }
+
+    @include phones {
+        flex-direction: column;
+    }
 }
 
 .projects__item {
-    width: 33.33%;
+    width: 33.33333%;
     height: 50%;
     position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @include laptop {
+        width: rem(250px);
+        height: rem(250px);
+    }
+
+    @include tablets {
+        width: 33.3333%;
+        height: 50%;
+    }
+
+    @include phones-large {
+        width: 50%;
+        height: 33.3333%;
+    }
+
+    @include phones {
+        width: 100%;
+        height: rem(325px);
+    }
+}
+
+.projects__item--hide {
+
+    @include phones {
+        display: none;
+        &:nth-child(1) {
+            display: block;
+        }
+    }
+}
+
+.projects__item--inst {
+    @include phones {
+        height: rem(118px);
+    }
 }
 
 .gallery {
@@ -240,6 +439,25 @@
         -moz-transform: rotateY(180deg);
         -ms-transform: rotateY(180deg);
         transform: rotateY(180deg);
+
+        @include tablets {
+            transform: none;
+        }
+    }
+
+    @include tablets {
+        &.active .gallery__wrap {
+            -webkit-transform: rotateY(180deg);
+            -moz-transform: rotateY(180deg);
+            -ms-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+        }
+    }
+
+    @include phones {
+        &.active .gallery__wrap {
+            transform: none;
+        }
     }
 }
 
@@ -282,6 +500,11 @@
         background: transparent;
         border: 1px solid #fff;
         transition: .3s;
+
+        @include phones {
+            width: rem(300px);
+            height: rem(88px);
+        }
     }
 
     &:hover { 
@@ -296,11 +519,24 @@
             fill: #fbf200;
         }
     }
+
+    @include desktop {
+        padding: rem(20px) rem(20px);
+    }
+
+    @include phones {
+        flex-direction: row;
+        justify-content: flex-start;
+
+    }
 }
 
 .gallery__wrap {
     height: 100%;
     width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     position: relative;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
@@ -334,6 +570,10 @@
     background-size: cover;
     background-position: center center;
     position: relative;
+
+    @include desktop {
+        padding: rem(20px);
+    }
 }
 
 .gallery__back {
@@ -355,16 +595,51 @@
     align-items: center;
     padding: rem(29px) rem(35px);
     background: #3b444e;
+
+    @include desktop {
+        padding: rem(20px);
+    }
 }
 
 .gallery__pic {
     text-align: center;
+
+    @include laptop {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .gallery__icon {
     height: rem(63px);
     width: rem(60px);
     fill: #7d888e;
+
+    @include desktop {
+        height: rem(45px);
+    }
+
+    @include laptop {
+        height: rem(63px);
+        width: rem(60px);
+    }
+
+    @include tablets {
+        height: rem(45px);
+    }
+
+    @include phones-large {
+        height: rem(60px);
+        width: rem(70px);
+    }
+}
+
+.gallery__icon--front {
+    display: none;
+
+    @include phones {
+        display: block;
+    }
 }
 
 .gallery__icon--instagram {
@@ -373,6 +648,19 @@
     margin-bottom: rem(15px);
     fill: $w;
     transition: .3s;
+
+    @include desktop {
+        height: rem(45px);
+        width: rem(45px); 
+    }
+
+    @include phones {
+        margin-bottom: 0;
+        height: rem(50px);
+        width: rem(50px);
+        margin-bottom: 0;
+        margin-left: rem(10px);
+    }
 }
 
 .gallery__text {
@@ -385,6 +673,23 @@
     letter-spacing: normal;
     text-align: left;
     color: #ffffff;
+
+    @include desktop {
+        font-size: rem(12px);
+    }
+
+    @include laptop {
+        font-size: rem(14px);
+        text-align: center;
+    }
+
+    @include tablets {
+        font-size: rem(12px);
+    }
+
+    @include phones-large {
+        font-size: rem(14px);
+    }
 }
 
 .gallery__text--instagram {
@@ -394,6 +699,16 @@
     font-weight: 500;
     line-height: 1.25;
     transition: .3s;
+
+    @include desktop {
+        font-size: rem(15px);
+    }
+
+    @include phones {
+        text-align: left;
+        font-size: rem(17px);
+        padding-left: rem(19px);
+    }
 }
 
 .gallery__meta {
@@ -401,6 +716,26 @@
     flex-direction: row;
     position: absolute;
     bottom: rem(38px);
+
+    @include desktop {
+        bottom: rem(24px);
+        flex-direction: column;
+        align-items: center;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    @include laptop {
+        bottom: rem(35px)
+    }
+
+    @include tablets {
+        bottom: rem(21px);
+    }
+
+    @include phones-large {
+        bottom: rem(30px);
+    }
 }
 
 .gallery__object {
@@ -414,12 +749,21 @@
     text-align: left;
     color: #7d888e;
     margin-right: rem(22px);
+
+    @include desktop {
+        margin-right: 0;
+        margin-bottom: rem(4px);
+    }
+
+    @include laptop {
+        margin-bottom: 0;
+    }
 }
 
 .gallery__view {
-    width: intrinsic;         
-    width: -moz-max-content;  
-    width: -webkit-max-content;
+    //width: intrinsic;         
+    //width: -moz-max-content;  
+    //width: -webkit-max-content;
     display: flex;
     flex-direction: row;
     justify-content: center;

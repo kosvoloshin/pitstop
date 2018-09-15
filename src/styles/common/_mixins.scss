@@ -4,7 +4,7 @@
     }
 }
 
-@mixin desktop { // 1200px
+@mixin desktop { // 1300px
     @media screen and (max-width: $desktop) {
         @content;
     }
@@ -22,7 +22,7 @@
     }
 }
 
-@mixin phones-large { // 640px
+@mixin phones-large { // 600px
     @media screen and (max-width: $phones-large) {
         @content;
     }
@@ -36,24 +36,4 @@
 
 @function rem($px) {
     @return $px / 14px+0rem;
-}
-
-// Media for height
-
-@mixin small { // 750px
-    @media screen and (max-height: $small) {
-        @content;
-    }
-}
-
-@mixin small2 { // 650px
-    @media screen and (max-height: $small2) {
-        @content;
-    }
-}
-
-@mixin small3 { // 550px
-    @media screen and (max-height: $small3) {
-        @content;
-    }
 }

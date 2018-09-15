@@ -1,11 +1,58 @@
 footer.footer
     .container
         .footer__wrap
+            .footer__row.footer__row--hide
+                .footer__menu
+                    .footer__col
+                        .footer__subtitle разделы
+                        ul.footer__list
+                            li.footer__item
+                                a.footer__action(href="index.html") главная
+                            li.footer__item
+                                a.footer__action(href="works.html") галерея работ
+                            li.footer__item
+                                a.footer__action(href="#") стоимость
+                            li.footer__item
+                                a.footer__action(href="calculator.html") калькулятор
+                            li.footer__item
+                                a.footer__action(href="feedback.html") отзывы
+                            li.footer__item
+                                a.footer__action(href="contacts.html") контакты
+                    .footer__col
+                        .footer__subtitle услуги
+                        ul.footer__list
+                            li.footer__item
+                                a.footer__action(href="#") Заборы из профнастила
+                            li.footer__item
+                                a.footer__action(href="#") Заборы из сетки рабицы
+                            li.footer__item
+                                a.footer__action(href="#") Заборы из дерева
+                            li.footer__item
+                                a.footer__action(href="#") Заборы из евроштакетника
+                            li.footer__item
+                                a.footer__action(href="#") Заборы из 3D сетки
+                    .footer__col
+                        .footer__subtitle услуги
+                        ul.footer__list
+                            li.footer__item
+                                a.footer__action(href="#") Монолитные заборы    
+                            li.footer__item
+                                a.footer__action(href="#") Ворота и калитки
+                            li.footer__item
+                                a.footer__action(href="#") Откатные ворота
+                            li.footer__item
+                                a.footer__action(href="#") Теплицы из поликарбоната
+                            li.footer__item
+                                a.footer__action(href="#") Навесы и беседки из поликарбоната
             .footer__row.footer__row--main
                 .footer__contacts
                     .footer__logo
                         a.footer__link(href="index.html")
-                            img.footer__pic(src="./assets/images/icons/Logo.png" alt="logo")
+                            //img.footer__pic(src="./assets/images/icons/logo-retina.png" alt="logo")
+                            .footer__pic
+                            .footer__pic-text
+                                .footer__pic-text1 склад
+                                .footer__pic-text2 заборов
                     .footer__phone  
                         a.footer__call(href="tel:") 8 (926) 289-42-23
                     .footer__adress
@@ -15,7 +62,7 @@ footer.footer
                         .footer__metro
                             .footer__metro-icon
                             .footer__metro-name Братиславская
-                .footer__menu
+                .footer__menu.footer__menu--hide
                     .footer__col
                         .footer__subtitle разделы
                         ul.footer__list

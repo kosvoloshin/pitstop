@@ -1,5 +1,6 @@
 .header {
     background-color: $w;
+    position: relative;
 }
 
 .header__wrap {
@@ -8,6 +9,14 @@
     align-items: center;
     padding-top: rem(23px);
     padding-bottom: rem(10px);
+
+    @include tablets {
+        justify-content: space-between;
+    }
+
+    @include phones {
+        padding-bottom: rem(37px);
+    }
 }
 
 .header__wrap--border {
@@ -17,21 +26,127 @@
 
 .header__logo {
     width: 25%;
+
+    @include desktop {
+        width: 30%;
+    }
+
+    @include laptop {
+        width: 33%;
+    }
+
+    @include tablets {
+        width: initial;
+    }
+}
+
+.header__link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .header__pic {
-    max-height: rem(82px);
+    height: rem(82px);
+    width: rem(102px);
+    background-image: url('../images/icons/logo-st.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    @include desktop {
+        height: rem(77px);
+        width: rem(97px);
+    }
+
+    @include phones {
+        height: rem(57px);
+        width: rem(70px);
+    }
+}
+
+.header__pic-text {
+    display: flex;
+    flex-direction: column;
+    padding-left: rem(20px);
+
+    @include desktop {
+        padding-left: rem(17px);
+    }
+
+    @include phones {
+        padding-left: rem(15px);
+    }
+}
+
+.header__pic-text1 {
+    text-transform: uppercase;
+    font-family: $gopro;
+    color: #3b444e;
+    font-size: rem(26px);
+    line-height: rem(24px);
+
+    @include desktop {
+        font-size: rem(24px);
+    }
+
+    @include phones {
+        font-size: rem(18px);
+        line-height: rem(17px);
+    }
+}
+
+.header__pic-text2 {
+    text-transform: uppercase;
+    font-family: $goprob;    
+    color: $green;
+    font-size: rem(26px);
+    line-height: rem(24px);
+
+    @include desktop {
+        font-size: rem(24px);
+    }
+
+    @include phones {
+        font-size: rem(18px);
+        line-height: rem(17px);
+    }
 }
 
 .header__menu {
     width: 50%;
     padding-top: rem(25px);
+
+    @include desktop {
+        width: 45%;
+    }
+
+    @include laptop {
+        width: 67%;
+    }
+
+    @include tablets {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        display: none;
+    }
 }
 
 .menu {
     display: flex;
     flex-direction: row;
     justify-content: center;
+
+    @include laptop {
+        justify-content: flex-end;
+    }
+
+    @include tablets {
+        justify-content: center;
+        flex-direction: column;
+        padding: rem(22px) rem(43px);
+    }
 }
 
 .menu__item {
@@ -52,12 +167,16 @@
             height: rem(24px);
             width: rem(30px);
             opacity: 0.3;
-            transition: .5s;
+            transition: .3s;
             position: absolute;
             bottom: 100%;
             bottom: calc( 100% + 8px );
             left: 50%;
             transform: translate(-50%, 0);
+
+            @include tablets {
+                content: none;
+            }
         }
     }
 
@@ -77,6 +196,19 @@
             }
         }
     }
+
+    @include desktop {
+        margin-right: rem(35px);
+    }
+
+    @include tablets {
+        margin-right: 0;
+        margin-bottom: rem(17px);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .menu__link {
@@ -92,6 +224,10 @@
     transition: .3s;
     text-transform: uppercase;
     position: relative;
+
+    @include desktop {
+        font-size: rem(13px);
+    }
 }
 
 .dropdown {
@@ -116,10 +252,56 @@
         bottom: 100%;
         left: 0;
     }
+
+    @include desktop {
+        padding: rem(35px);
+        width: rem(282px);
+
+        &:before {
+            height: rem(20px);
+        }
+    }
+
+    @include laptop {
+        padding: rem(25px);
+        width: rem(260px);
+    }
+
+    @include tablets {
+        position: initial;
+        border: none;
+        z-index: 10;
+        opacity: 1;
+        height: 0;
+        overflow: hidden;
+        padding: 0;
+        transition: .4s;
+
+        &.active {
+            height: rem(338px);
+            padding: rem(14px) rem(20px);
+        }
+
+        &:before {
+            content: none;
+        }
+    }
 }
 
 .dropdown__item {
     margin-bottom: rem(15px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include tablets {
+        margin-bottom: rem(10px);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .dropdown__link {
@@ -144,6 +326,15 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+
+    @include laptop {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        top: calc(100% + 39px);
+        width: initial;
+        z-index: 1;
+    }
 }
 
 .header__call {
@@ -170,6 +361,14 @@
     fill: $green;
     transition: .3s;
     margin-right: rem(22px);
+
+    @include desktop {
+        margin-right: rem(20px);
+    }
+
+    @include phones {
+        margin-right: rem(10px);
+    }
 }
 
 .header__phone {
@@ -186,6 +385,19 @@
     letter-spacing: normal;
     text-align: left;
     color: #000000;
+
+    @include desktop {
+        font-size: rem(18px);
+    }
+
+    @include laptop {
+        color: $w;  
+    }
+
+    @include phones {
+        font-weight: 400;
+        margin-bottom: rem(9px);
+    }
 }
 
 .header__text {
@@ -199,4 +411,12 @@
     text-align: left;
     color: #40c36b;
     transition: .3s;
+
+    @include laptop {
+        color: $w;  
+    }
+
+    @include phones {
+        text-decoration: underline;
+    }
 }

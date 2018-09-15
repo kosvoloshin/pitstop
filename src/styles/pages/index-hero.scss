@@ -1,5 +1,21 @@
 .hero__wrap {
     width: 50%;
+
+    @include laptop {
+        width: 60%;
+    }
+
+    @include tablets {
+        width: 80%;
+    }
+
+    @include phones-large {
+        width: 100%;
+    }
+
+    @include phones {
+        padding-top: rem(18px);
+    }
 }
 
 .hero__wrap--fullwidth {
@@ -16,6 +32,18 @@
     letter-spacing: normal;
     text-align: left;
     color: #ffffff;
+
+    @include desktop {
+        font-size: rem(48px);
+    }
+
+    @include laptop {
+        font-size: rem(42px);
+    }
+
+    @include phones {
+        font-size: rem(33px);
+    }
 }
 
 .section__title--bold {
@@ -304,4 +332,19 @@
     text-align: left;
     color: #ffffff;
     margin-top: rem(49px);
+
+    @include desktop {
+        font-size: rem(19px);
+        margin-top: rem(39px);
+    }
+
+    @include laptop {
+        font-size: rem(17px);
+        margin-top: rem(30px);
+    }
+
+    @include phones {
+        margin-top: rem(45px);
+        padding-right: rem(10px);
+    }
 }

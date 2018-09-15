@@ -23,7 +23,7 @@
     position: relative;
 
     @include desktop {
-        max-width: 940px;
+        max-width: 970px;
     }
 
     @include laptop {
@@ -31,7 +31,15 @@
     }
 
     @include tablets {
-        max-width: 90%;
+        max-width: 590px;
+    }
+
+    @include phones-large {
+        max-width: 470px;
+    }
+
+    @include phones {
+        max-width: 330px;
     }
 }
 

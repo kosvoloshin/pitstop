@@ -3,6 +3,14 @@
     flex-direction: row;
     justify-content: space-between;
     padding-top: rem(54px);
+
+    @include laptop {
+        flex-direction: column;
+    }
+
+    @include tablets {
+        padding-top: rem(35px);
+    }
 }
 
 .regions {
@@ -10,12 +18,34 @@
     height: rem(498px);
     background-color: $grey;
     padding: rem(22px) rem(53px);
+
+    @include desktop {
+        padding: rem(22px) rem(40px);
+        height: rem(450px);
+    }
+
+    @include laptop {
+        width: 100%;
+        margin-bottom: rem(35px);
+        height: initial;
+    }
 }
 
 .regions__columns {
     display: flex;
     flex-direction: row;
     margin-top: rem(30px);
+
+    @include desktop {
+        margin-top: rem(8px);
+    }
+
+    @include phones-large {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+        display: inline-block;
+    }
 }
 
 .regions__col {
@@ -26,12 +56,21 @@
     &:nth-child(1) {
         justify-content: flex-start;
     }
+
+    @include phones-large {
+        display: inline-block;
+        width: 50%;
+    }
 }
 
 .regions__item {
     display: flex;
     flex-direction: row;
     margin-bottom: rem(12px);
+
+    @include desktop {
+        margin-bottom: rem(10px);
+    }
 }
 
 .regions__letter {
@@ -66,9 +105,9 @@
     color: #000000;
     border-bottom: 1px solid transparent;
     transition: .3s;
-    width: intrinsic;
-    width: -moz-max-content;
-    width: -webkit-max-content;
+    //width: intrinsic;
+    //width: -moz-max-content;
+    //width: -webkit-max-content;
 
     &:hover {
         color: $green;
@@ -81,6 +120,17 @@
     height: rem(498px);
     background-color: $blue;
     padding: rem(21px) rem(28px) rem(85px) rem(55px);
+
+    @include desktop {
+        padding: rem(21px) rem(28px) rem(85px) rem(40px);
+        height: rem(450px);
+    }
+
+    @include laptop {
+        width: 100%;
+        height: initial;
+        padding-bottom: rem(100px);
+    }
 }
 
 .reviews__heading {
@@ -92,9 +142,20 @@
 
 .reviews__item {
     display: none;
+    flex-direction: column;
 
     &.selected {
-        display: block;
+        display: flex;
+    }
+
+    @include laptop {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    @include phones-large {
+        flex-direction: column;
     }
 }
 
@@ -104,6 +165,29 @@
     align-items: center;
     margin-top: rem(35px);
     margin-bottom: rem(35px);
+
+    @include desktop {
+        margin-top: rem(15px);
+        margin-bottom: rem(15px);
+    }
+
+    @include laptop {
+        order: 1;
+        width: 32%;
+        margin-top: rem(25px);
+        margin-bottom: rem(25px);
+    }
+
+    @include tablets {
+        width: 40%;
+    }
+
+    @include phones-large {
+        order: 0;
+        width: 100%;
+        margin-top: rem(35px);
+        margin-bottom: rem(35px);
+    }
 }
 
 .reviews__image {
@@ -156,12 +240,32 @@
     text-align: left;
     color: #ffffff;
     padding-right: rem(25px);
+
+    @include desktop {
+        padding-right: 0;
+    }
+
+    @include laptop {
+        width: 68%;
+        padding-right: rem(50px);
+    }
+
+    @include tablets {
+        width: 60%;
+        padding-right: rem(35px);
+        padding-top: rem(15px);
+    }
+
+    @include phones-large {
+        width: 100%;
+        padding-top: 0;
+    }
 }
 
 .reviews__link {
-    width: intrinsic;         
-    width: -moz-max-content;  
-    width: -webkit-max-content;
+    //width: intrinsic;         
+    //width: -moz-max-content;  
+    //width: -webkit-max-content;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -187,9 +291,9 @@
 }
 
 .feedback__link {
-    width: intrinsic;         
-    width: -moz-max-content;  
-    width: -webkit-max-content;
+    //width: intrinsic;         
+    //width: -moz-max-content;  
+    //width: -webkit-max-content;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -197,10 +301,10 @@
     border: 1px solid $b;
     transition: .3s;
     padding: rem(10px) rem(13px) rem(10px) rem(22px);
-    //position: absolute;
-    //bottom: rem(34px);
     margin-top: rem(32px);
-
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    
     &:hover {
         background-color: $green;
         border-color: $green;

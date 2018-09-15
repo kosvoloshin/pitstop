@@ -3,7 +3,11 @@ header.header
         .header__wrap
             .header__logo
                 a.header__link(href="index.html")
-                    img.header__pic(src="./assets/images/icons/Logo.png" alt="logo")
+                    //img.header__pic(src="./assets/images/icons/logo-st.png" alt="logo")
+                    .header__pic
+                    .header__pic-text
+                        .header__pic-text1 склад
+                        .header__pic-text2 заборов
             .header__menu
                 ul.menu
                     li.menu__item
@@ -42,4 +46,37 @@ header.header
                     .header__phone
                         .header__number 8 (926) 289-42-23
                         .header__text перезвонить мне
-            
+            button(type="button").hamburger#openFull
+                .hamburger__menu
+    .header__mob-menu
+        .container
+            ul.menu
+                li.menu__item
+                    a.menu__link(href="index.html") главная 
+                li.menu__item#openDrop
+                    a.menu__link(href="calculator.html") услуги
+                    ul.dropdown
+                        li.dropdown__item
+                            a.dropdown__link(href="calculator.html") Заборы из профнастила
+                        li.dropdown__item
+                            a.dropdown__link(href="#") Заборы из сетки рабицы
+                        li.dropdown__item
+                            a.dropdown__link(href="#") Заборы из дерева
+                        li.dropdown__item
+                            a.dropdown__link(href="#") Заборы из евроштакетника
+                        li.dropdown__item
+                            a.dropdown__link(href="#") Заборы из евроштакетника
+                        li.dropdown__item
+                            a.dropdown__link(href="#") Монолитные заборы
+                        li.dropdown__item
+                            a.dropdown__link(href="#") Ворота и калитки
+                        li.dropdown__item
+                            a.dropdown__link(href="#") Откатные ворота
+                        li.dropdown__item
+                            a.dropdown__link(href="#") Теплицы из поликарбоната
+                        li.dropdown__item
+                            a.dropdown__link(href="#") Навесы и беседки из поликарбоната
+                li.menu__item
+                    a.menu__link(href="works.html") наши работы 
+                li.menu__item
+                    a.menu__link(href="contacts.html") контакты

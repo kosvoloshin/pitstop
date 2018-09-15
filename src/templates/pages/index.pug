@@ -9,7 +9,7 @@ block content
         section.section
             .section__under
                 .section__under-img(style="background-image: url(./assets/images/bg-one.jpg)")
-                    .section__image-wrap
+                    .section__image-wrap.section__image-wrap--darken
             .hero
                 .container
                     .hero__wrap
@@ -87,11 +87,16 @@ block content
                         .info__col-l
                             .info__row
                                 .info__desk
-                                    .block-title
+                                    .block-title.block-title--visible
                                         .block-title__number 01.
                                         h2.block-title__text информация 
                                             br
                                             | о компании 
+                                    .block-title.block-title--hide
+                                        .block-title__number 02.
+                                        h2.block-title__text информация 
+                                            br
+                                            | о компании
                                     .info__text
                                         p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
                                     a.info__link(href="#")
@@ -135,17 +140,22 @@ block content
                         .info__col-r
                             form.form.form--green
                                 .form__wrap
-                                    .block-title
+                                    .block-title.block-title--visible
                                         .block-title__number.block-title__number--light 02.
                                         h2.block-title__text.block-title__text--light расчет
                                             br
                                             | стоимости
+                                    .block-title.block-title--hide
+                                        .block-title__number.block-title__number--light 01.
+                                        h2.block-title__text.block-title__text--light расчет
+                                            br
+                                            | стоимости
                                     .form__row.form__row--flex
-                                        .form__box
+                                        .form__box.form__box--100
                                             label.form__block.form__block--no-flex
                                                 .form__subtitle Длина забора:
                                                 input(type="text" name="length" required).form__input.form__input--short
-                                        .form__box
+                                        .form__box.form__box--hide
                                             label.form__block.form__block--flex
                                                 .form__subtitle.form__subtitle--radio Метры -
                                                 input(type="radio" name="options" value="метры").form__radio.visuallyhidden
@@ -154,6 +164,13 @@ block content
                                                 .form__subtitle.form__subtitle--radio Сотки -
                                                 input(type="radio" name="options" value="сотки").form__radio.visuallyhidden
                                                 .form__radio-fake
+                                        .form__box.form__box--abs
+                                            label.form__block.form__block--abs
+                                                input(type="radio" name="options" value="метры").form__radio.visuallyhidden
+                                                .form__radio-fake.form__radio-fake--abs ар
+                                            label.form__block.form__block--abs
+                                                input(type="radio" name="options" value="сотки").form__radio.visuallyhidden
+                                                .form__radio-fake.form__radio-fake--abs2 м
                                     .form__row
                                         label.form__block.form__block--no-flex
                                             .form__subtitle.form__subtitle--no-margin Тип забора:
@@ -224,10 +241,11 @@ block content
                                             svg.slider__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
                         .projects__col-r
                             ul.projects__list.selected
-                                li.projects__item
+                                li.projects__item.projects__item--hide
                                     .gallery.gallery--visible
                                         .gallery__wrap
-                                            .gallery__front(style="background-image: url(./assets/images/gallery/gallery-1.jpg)")
+                                            .gallery__front(style="background-image: url(./assets/images/gallery/gallery-2.jpg)")
+                                                svg.gallery__icon.gallery__icon--front: use(xlink:href="assets/images/icons/sprite.svg#eye")
                                             .gallery__back
                                                 .gallery__desk
                                                     .gallery__pic
@@ -241,7 +259,7 @@ block content
                                                             svg.gallery__btn-icon: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
                                     .gallery.gallery--hide
                                         .gallery__wrap
-                                            .gallery__front(style="background-image: url(./assets/images/gallery/gallery-2.jpg)")
+                                            .gallery__front(style="background-image: url(./assets/images/gallery/gallery-1.jpg)")
                                             .gallery__back
                                                 .gallery__desk
                                                     .gallery__pic
@@ -253,9 +271,9 @@ block content
                                                         a.gallery__view
                                                             .gallery__btn-text смотреть 
                                                             svg.gallery__btn-icon: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
-                                li.projects__item
+                                li.projects__item.projects__item--hide
                                     .gallery.gallery--visible
-                                        .gallery__wrap(style="background-image: url(./assets/images/gallery/gallery-2.jpg)")
+                                        .gallery__wrap(style="background-image: url(./assets/images/gallery/gallery-1.jpg)")
                                             .gallery__front
                                             .gallery__back
                                                 .gallery__desk
@@ -282,7 +300,7 @@ block content
                                                         a.gallery__view
                                                             .gallery__btn-text смотреть 
                                                             svg.gallery__btn-icon: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
-                                li.projects__item
+                                li.projects__item.projects__item--hide
                                     .gallery.gallery--visible
                                         .gallery__wrap
                                             .gallery__front(style="background-image: url(./assets/images/gallery/gallery-3.jpg)")
@@ -311,13 +329,13 @@ block content
                                                         a.gallery__view
                                                             .gallery__btn-text смотреть 
                                                             svg.gallery__btn-icon: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
-                                li.projects__item(style="background-image: url(./assets/images/gallery/gallery-6.jpg)")
+                                li.projects__item.projects__item--inst(style="background-image: url(./assets/images/gallery/gallery-6.jpg)")
                                     a.gallery.gallery--instagram(href="#" target="blanc")
                                         svg.gallery__icon.gallery__icon--instagram: use(xlink:href="assets/images/icons/sprite.svg#instagram")
                                         .gallery__text.gallery__text--instagram Еще больше
                                             br
                                             | работ в instagram
-                                li.projects__item
+                                li.projects__item.projects__item--hide
                                     .gallery.gallery--visible
                                         .gallery__wrap(style="background-image: url(./assets/images/gallery/gallery-4.jpg)")
                                             .gallery__front
@@ -346,7 +364,7 @@ block content
                                                         a.gallery__view
                                                             .gallery__btn-text смотреть 
                                                             svg.gallery__btn-icon: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
-                                li.projects__item
+                                li.projects__item.projects__item--hide
                                     .gallery.gallery--visible
                                         .gallery__wrap
                                             .gallery__front(style="background-image: url(./assets/images/gallery/gallery-5.jpg)")
@@ -375,6 +393,30 @@ block content
                                                         a.gallery__view
                                                             .gallery__btn-text смотреть 
                                                             svg.gallery__btn-icon: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
+                            .projects__box.projects__box--no-padings.projects__box--mobile
+                                .carousel
+                                    ul.carousel__list
+                                        // по дефолту li display:none; | при добавлении класса 'selected' - display:block; 
+                                        li.carousel__item.selected
+                                            .carousel__image(style="background-image: url(./assets/images/slide-one.jpg)")
+                                            .carousel__image-wrap
+                                                .carousel__heading
+                                                    .carousel__question Хотите окраску
+                                                        br
+                                                        | забора 
+                                                        span.carousel__question-color в подарок?
+                                                    .carousel__sticky
+                                                        .carousel__sticky-inner акция
+                                                .carousel__title промокод 
+                                                    span.carousel__title-color "лето"
+                                                a.carousel__link(href="#") 
+                                                    .carousel__btn-text подробнее
+                                                    svg.carousel__btn-icon: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
+                                    .slider__buttons.slider__buttons--rotate
+                                        button(type="button").controls.slider__prev.controls--second
+                                            svg.slider__icon.slider__icon--second: use(xlink:href="assets/images/icons/sprite.svg#left")
+                                        button(type="button").controls.slider__next.controls--second
+                                            svg.slider__icon.slider__icon--second: use(xlink:href="assets/images/icons/sprite.svg#right")
             .content
                 .container
                     .content__wrap
