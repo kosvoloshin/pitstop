@@ -1,0 +1,611 @@
+extends ../template
+
+block variables
+    - var title = 'Калькулятор'
+
+block content
+    .wrapper
+        include ../common/header.pug
+        section.section
+            .section__under.section__under--contacts
+                .section__under-img(style="background-image: url(./assets/images/bg-wood.jpg)")
+                    .section__image-wrap.section__image-wrap--darken
+            .hero
+                .container
+                    .hero__wrap.hero__wrap--fullwidth
+                        h1.section__title.section__title--bold Расчет стоимости забора 
+                            br 
+                            | из 
+                            .section__title--blue дерева
+                                // если заменить класс на - '.section__title--red' получишь красный цвет
+                                ul.type
+                                    //убрать класс 'visible' и скроется
+                                    button(type="button").type__btn
+                                        svg.type__icon: use(xlink:href="assets/images/icons/sprite.svg#close")
+                                    li.type__item
+                                        a.type__link(href="#") Сетка рабица
+                                    li.type__item
+                                        a.type__link(href="#") Дерево
+                                    li.type__item
+                                        a.type__link(href="#") Евроштакетник
+                                    li.type__item
+                                        a.type__link(href="#") 3D сетка
+                                    li.type__item
+                                        a.type__link(href="#") Рабица в рамке
+                            |  длиной 
+                            .section__title--blue
+                                span.section__title--number 100
+                                span.section__title--length м
+                                .tooltip.visible
+                                    p Пожалуйста, введите длину
+                                        br 
+                                        | забора, чтобы продолжить расчет 
+                                form.lenght
+                                    .lenght__row   
+                                        .lenght__text
+                                            .lenght__text-line Необходимая
+                                            .lenght__text-line длина забора
+                                        .lenght__box
+                                            input(type="text" name="length").lenght__input
+                                        .lenght__box
+                                            label.lenght__block
+                                                input(type="radio" name="options" value="метры").lenght__radio.visuallyhidden
+                                                .lenght__radio-fake
+                                                .lenght__subtitle Метров
+                                            label.lenght__block
+                                                input(type="radio" name="options" value="сотки").lenght__radio.visuallyhidden
+                                                .lenght__radio-fake
+                                                .lenght__subtitle Соток
+                                        button(type="button").lenght__btn
+                                            svg.lenght__icon: use(xlink:href="assets/images/icons/sprite.svg#close")
+                                    .lenght__row
+                                        button(type="button").lenght__button
+                                            .lenght__btn-text подтвердить
+                                            svg.lenght__btn-icon: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
+            .calc
+                .container
+                    .calc__wrap
+                        form.form.form--grey.form--calc
+                            .block-title
+                                .block-title__number 01.
+                                h2.block-title__text расчет 
+                                    br 
+                                    | стоимости
+                            .form__tabs
+                                .tabs
+                                    ul.tabs__list
+                                        // a.tabs__link - класс 'selected' - подсвечивает зеленым
+                                        // a.tabs__link - класс 'active' - подсвечивает синим
+                                        li.tabs__item
+                                            a.tabs__link.selected(href="#")
+                                                .tabs__obj Высота забора
+                                                svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        li.tabs__item
+                                            a.tabs__link(href="#")
+                                                .tabs__obj Выбор покрытия
+                                                svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        li.tabs__item
+                                            a.tabs__link(href="#")
+                                                .tabs__obj Пропитка
+                                                svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        li.tabs__item
+                                            a.tabs__link(href="#")
+                                                .tabs__obj Кол-во ворот
+                                                svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        li.tabs__item
+                                            a.tabs__link(href="#")
+                                                .tabs__obj Кол-во калиток
+                                                svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                                        li.tabs__item
+                                            a.tabs__link.tabs__link--result(href="#")
+                                                .tabs__result Результат:
+                                                .tabs__value 265000 р
+                            ul.form__list
+                                // по умолчанию все li.form__item - display: none; | при добавлении класса 'visible'-display: block;
+                                li.form__item.visible
+                                    .form__columns      
+                                        .form__col-l.form__col-l--resize
+                                            .form__row
+                                                label.form__block.form__block--no-flex
+                                                    .form__subtitle.form__subtitle--dark Высота забора:
+                                                    label.form-calc-height(for='select-height')
+                                                        input#bg-height(type='radio', name='height-of-gates', value='not_changed', checked='')
+                                                        input#select-height(type='radio', name='height-of-gates', value='not_changed')
+                                                        label.bg-height(for='bg-height')
+                                                        .items-calc-height.custom-scroll
+                                                            input(type='radio', name='height-of-gates', value='first_value', id='height-of-gates[0]')
+                                                            label.green(for='height-of-gates[0]') 1.5м
+                                                            input(type='radio', name='height-of-gates', value='second_value', id='height-of-gates[1]')
+                                                            label.green(for='height-of-gates[1]') 1.7м
+                                                            input(type='radio', name='height-of-gates', value='third_value', id='height-of-gates[2]')
+                                                            label.green(for='height-of-gates[2]') 1.8м
+                                                            input(type='radio', name='height-of-gates', value='fourth_value', id='height-of-gates[3]')
+                                                            label.green(for='height-of-gates[3]') 2м
+                                                            span.text-height#text-height 1.5м
+                                            button(type="submit").form__button.form__button--dark.form__button--calc
+                                                .form__btn-text.form__btn-text--dark.form__btn-text--bold продолжить расчет
+                                                svg.form__btn-icon.form__btn-icon--dark: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
+                                        .form__col-r.form__col-r--resize
+                                            .form__image.form__image--resize
+                                                img.form__pic(src="./assets/images/pic/calcwood/2/calc-one.png" alt="picture")
+                                                span.form__obj-one 1.5м
+                                            .form__text.form__text--dark.form__text--90.form__text--resize
+                                                p Lorem ipsum dolor sit amet consecteturlor sit amet co adipisicing elit. Ducimus deleniti ut nulla aut totam. Nulla maxime repellendus fugit tenetur provident in. Beatae, aliquid. Quo, ea veritatis sint odio labore cum.
+                                li.form__item
+                                    .form__columns      
+                                        .form__col-l.form__col-l--resize
+                                            .form__row
+                                                label.form__block.form__block--no-flex
+                                                    .form__subtitle.form__subtitle--dark Зазор
+                                                    label.form-calc-gap(for='select-gap')
+                                                        input#bg-gap(type='radio', name='gap-of-gates', value='not_changed', checked='')
+                                                        input#select-gap(type='radio', name='gap-of-gates', value='not_changed')
+                                                        label.bg-gap(for='bg-gap')
+                                                        .items-calc-gap.custom-scroll
+                                                            input(type='radio', name='gap-of-gates', value='first_value', id='gap-of-gates[0]')
+                                                            label.green(for='gap-of-gates[0]') 2см
+                                                            input(type='radio', name='gap-of-gates', value='second_value', id='gap-of-gates[1]')
+                                                            label.green(for='gap-of-gates[1]') 3см
+                                                            input(type='radio', name='gap-of-gates', value='third_value', id='gap-of-gates[2]')
+                                                            label.green(for='gap-of-gates[2]') 4см
+                                                            span.text-gap#text-gap 2см
+                                            button(type="submit").form__button.form__button--dark.form__button--calc
+                                                .form__btn-text.form__btn-text--dark.form__btn-text--bold продолжить расчет
+                                                svg.form__btn-icon.form__btn-icon--dark: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
+                                        .form__col-r.form__col-r--resize
+                                            .form__image.form__image--resize-2
+                                                img.form__pic(src="./assets/images/pic/calcwood/2/calc-two.png" alt="picture")
+                                                span.form__obj-one 1.5м
+                                                span.form__obj-five 2см
+                                            .form__text.form__text--dark.form__text--90.form__text--resize
+                                                p Lorem ipsum dolor sit amet consecteturlor sit amet co adipisicing elit. Ducimus deleniti ut nulla aut totam. Nulla maxime repellendus fugit tenetur provident in. Beatae, aliquid. Quo, ea veritatis sint odio labore cum.
+                                li.form__item
+                                    .form__columns      
+                                        .form__col-l.form__col-l--resize
+                                            .form__row
+                                                label.form__block.form__block--no-flex
+                                                    .form__subtitle.form__subtitle--dark Пропитка
+                                                    label.form-calc-coating(for='select-coating')
+                                                        input#bg-coating(type='radio', name='coating-of-gates', value='not_changed', checked='')
+                                                        input#select-coating(type='radio', name='coating-of-gates', value='not_changed')
+                                                        label.bg-coating(for='bg-coating')
+                                                        .items-calc-coating.custom-scroll
+                                                            input(type='radio', name='coating-of-gates', value='first_value', id='coating-of-gates[0]')
+                                                            label.green(for='coating-of-gates[0]') Нет
+                                                            input(type='radio', name='coating-of-gates', value='second_value', id='coating-of-gates[1]')
+                                                            label.green(for='coating-of-gates[1]') 1 слой
+                                                            input(type='radio', name='coating-of-gates', value='third_value', id='coating-of-gates[2]')
+                                                            label.green(for='coating-of-gates[2]') 2 слоя
+                                                            span.text-coating#text-coating 2 слоя
+                                            button(type="submit").form__button.form__button--dark.form__button--calc
+                                                .form__btn-text.form__btn-text--dark.form__btn-text--bold продолжить расчет
+                                                svg.form__btn-icon.form__btn-icon--dark: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
+                                        .form__col-r.form__col-r--resize
+                                            .form__image.form__image--resize-2
+                                                img.form__pic(src="./assets/images/pic/calcwood/2/calc-three.png" alt="picture")
+                                                span.form__obj-one 1.5м
+                                                span.form__obj-five 2см
+                                            .form__text.form__text--dark.form__text--90.form__text--resize
+                                                p Lorem ipsum dolor sit amet consecteturlor sit amet co adipisicing elit. Ducimus deleniti ut nulla aut totam. Nulla maxime repellendus fugit tenetur provident in. Beatae, aliquid. Quo, ea veritatis sint odio labore cum.
+                                li.form__item
+                                    .form__columns      
+                                        .form__col-l.form__col-l--resize
+                                            .form__row.form__row--selects
+                                                label.form__block.form__block--no-flex
+                                                    .form__subtitle.form__subtitle--no-margin.form__subtitle--dark Количество ворот
+                                                    label.form-calc-number(for='select-number')
+                                                        input#bg-number(type='radio', name='number-of-gates', value='not_changed', checked='')
+                                                        input#select-number(type='radio', name='number-of-gates', value='not_changed')
+                                                        label.bg-number(for='bg-number')
+                                                        .items-calc-number
+                                                            input(type='radio', name='number-of-gates', value='first_value', id='number-of-gates[0]')
+                                                            label.green(for='number-of-gates[0]') 1
+                                                            input(type='radio', name='number-of-gates', value='second_value', id='number-of-gates[1]')
+                                                            label.green(for='number-of-gates[1]') 2
+                                                            input(type='radio', name='number-of-gates', value='third_value', id='number-of-gates[2]')
+                                                            label.green(for='number-of-gates[2]') 3
+                                                            input(type='radio', name='number-of-gates', value='fourth_value', id='number-of-gates[3]')
+                                                            label.green(for='number-of-gates[3]') 4
+                                                            span.text-number#text-number 1
+                                            .form__row.form__row--selects
+                                                label.form__block.form__block--no-flex
+                                                    .form__subtitle.form__subtitle--no-margin.form__subtitle--dark Ширина ворот
+                                                    label.form-calc-width(for='select-width')
+                                                        input#bg-width(type='radio', name='fence-width', value='not_changed', checked='')
+                                                        input#select-width(type='radio', name='fence-width', value='not_changed')
+                                                        label.bg-width(for='bg-width')
+                                                        .items-calc-width
+                                                            input(type='radio', name='fence-width', value='first_value', id='fence-width[0]')
+                                                            label.green(for='fence-width[0]') 2м
+                                                            input(type='radio', name='fence-width', value='second_value', id='fence-width[1]')
+                                                            label.green(for='fence-width[1]') 3м
+                                                            input(type='radio', name='fence-width', value='third_value', id='fence-width[2]')
+                                                            label.green(for='fence-width[2]') 4м
+                                                            input(type='radio', name='fence-width', value='fourth_value', id='fence-width[3]')
+                                                            label.green(for='fence-width[3]') 5м
+                                                            span.text-width#text-width 2м
+                                            button(type="submit").form__button.form__button--dark.form__button--calc
+                                                .form__btn-text.form__btn-text--dark.form__btn-text--bold продолжить расчет
+                                                svg.form__btn-icon.form__btn-icon--dark: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
+                                        .form__col-r.form__col-r--resize
+                                            .form__image.form__image--resize-2
+                                                img.form__pic(src="./assets/images/pic/calcwood/1/calc-four.png" alt="picture")
+                                                span.form__obj-one 1.5м
+                                                span.form__obj-two 2
+                                                span.form__obj-three 3м
+                                                span.form__obj-five.form__obj-five--resize 2см
+                                            .form__text.form__text--dark.form__text--90.form__text--resize
+                                                p Lorem ipsum dolor sit amet consecteturlor sit amet co adipisicing elit. Ducimus deleniti ut nulla aut totam. Nulla maxime repellendus fugit tenetur provident in. Beatae, aliquid. Quo, ea veritatis sint odio labore cum.
+                                li.form__item
+                                    .form__columns      
+                                        .form__col-l.form__col-l--resize
+                                            .form__row.form__row--selects
+                                                label.form__block.form__block--no-flex
+                                                    .form__subtitle.form__subtitle--no-margin.form__subtitle--dark Количество калиток
+                                                    label.form-calc-door(for='select-door')
+                                                        input#bg-door(type='radio', name='number-of-door', value='not_changed', checked='')
+                                                        input#select-door(type='radio', name='number-of-door', value='not_changed')
+                                                        label.bg-door(for='bg-door')
+                                                        .items-calc-door
+                                                            input(type='radio', name='number-of-door', value='first_value', id='number-of-door[0]')
+                                                            label.green(for='number-of-door[0]') 1
+                                                            input(type='radio', name='number-of-door', value='second_value', id='number-of-door[1]')
+                                                            label.green(for='number-of-door[1]') 2
+                                                            input(type='radio', name='number-of-door', value='third_value', id='number-of-door[2]')
+                                                            label.green(for='number-of-door[2]') 3
+                                                            input(type='radio', name='number-of-door', value='fourth_value', id='number-of-door[3]')
+                                                            label.green(for='number-of-door[3]') 4
+                                                            span.text-door#text-door 1
+                                            button(type="submit").form__button.form__button--dark.form__button--calc
+                                                .form__btn-text.form__btn-text--dark.form__btn-text--bold продолжить расчет
+                                                svg.form__btn-icon.form__btn-icon--dark: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
+                                        .form__col-r.form__col-r--resize
+                                            .form__image.form__image--resize-2
+                                                img.form__pic(src="./assets/images/pic/calcwood/2/calc-five.png" alt="picture")
+                                                span.form__obj-one 1.5м
+                                                span.form__obj-two 2
+                                                span.form__obj-three 3м
+                                                span.form__obj-four 2
+                                                span.form__obj-five.form__obj-five--resize 2см
+                                            .form__text.form__text--dark.form__text--90.form__text--resize
+                                                p Lorem ipsum dolor sit amet consecteturlor sit amet co adipisicing elit. Ducimus deleniti ut nulla aut totam. Nulla maxime repellendus fugit tenetur provident in. Beatae, aliquid. Quo, ea veritatis sint odio labore cum.
+                                li.form__item
+                                    .form__result
+                                        .form-table
+                                            h2.form-table__title Детальный расчет
+                                            ul.form-table__list
+                                                li.form-table__item.form-table__item--title
+                                                    .form-table__left
+                                                        span.form-table__text.form-table__text--title Материалы
+                                                    .form-table__right
+                                                        span.form-table__text.form-table__text--title Цена
+                                                li.form-table__item
+                                                    .form-table__left
+                                                        span.form-table__text Столб проф. труба 60х60 мм h=2700 мм
+                                                        span.form-table__info(data-tooltip="Подробности уточняйте у менеджера по телефону") i
+                                                    .form-table__right
+                                                        span.form-table__text 37 шт / 19 610 руб
+                                                li.form-table__item
+                                                    .form-table__left
+                                                        span.form-table__text Лаги проф. труба 40х20 мм (в 2 ряда)
+                                                    .form-table__right
+                                                        span.form-table__text 186 п.м / 15 066 руб
+                                                li.form-table__item
+                                                    .form-table__left
+                                                        span.form-table__text Грунтовка металл ГФ032 корич
+                                                    .form-table__right
+                                                        span.form-table__text 386 п.м / 4 632 руб
+                                                li.form-table__item
+                                                    .form-table__left
+                                                        span.form-table__text Профлист полимерный, 0,5мм
+                                                    .form-table__right
+                                                        span.form-table__text 88 лист / 57 802 руб
+                                                li.form-table__item
+                                                    .form-table__left
+                                                        span.form-table__text Ворота распашные Эконом, ш=3.5м
+                                                    .form-table__right
+                                                        span.form-table__text 2 шт / 9 850 руб
+                                                li.form-table__item
+                                                    .form-table__left
+                                                        span.form-table__text Калитка Эконом, ш=1.2м
+                                                        span.form-table__info(data-tooltip="Подробности уточняйте у менеджера по телефону") i
+                                                    .form-table__right
+                                                        span.form-table__text 1 шт / 2 335 руб
+                                                li.form-table__item
+                                                    .form-table__left
+                                                        span.form-table__text.form-table__text--total Общая стоимость материалов:
+                                                    .form-table__right
+                                                        span.form-table__text.form-table__text--total 109 295 руб
+                                        .form-table
+                                            ul.form-table__list
+                                                li.form-table__item.form-table__item--title
+                                                    .form-table__left
+                                                        span.form-table__text.form-table__text--title Наименование работ
+                                                    .form-table__right
+                                                        span.form-table__text.form-table__text--title Цена
+                                                li.form-table__item
+                                                    .form-table__left
+                                                        span.form-table__text Столб проф. труба 60х60 мм h=2700 мм
+                                                    .form-table__right
+                                                        span.form-table__text 37 шт / 19 610 руб
+                                                li.form-table__item
+                                                    .form-table__left
+                                                        span.form-table__text Лаги проф. труба 40х20 мм (в 2 ряда)
+                                                    .form-table__right
+                                                        span.form-table__text 186 п.м / 15 066 руб
+                                                li.form-table__item
+                                                    .form-table__left
+                                                        span.form-table__text Грунтовка металл ГФ032 корич
+                                                    .form-table__right
+                                                        span.form-table__text 386 п.м / 4 632 руб
+                                                li.form-table__item
+                                                    .form-table__left
+                                                        span.form-table__text.form-table__text--total Общая стоимость работ:
+                                                    .form-table__right
+                                                        span.form-table__text.form-table__text--total 30 015 руб
+                                        .form-price
+                                            .form-price__text Расстояние от МКАД
+                                            .form-price__slider
+                                                .rail
+                                                    a.ui-slider-handle(href='#')
+                                                        #rail-result 0
+                                                    input#value(name='znch', type='hidden')
+                                                    span.rail__value-start 0
+                                                    span.rail__value-end 100
+                                            script(type='text/javascript').
+                                                $(document).ready(function(){
+                                                    $( ".rail" ).slider({
+                                                        animate: true,
+                                                        range: "min",
+                                                        value: 0,
+                                                        min: 1,
+                                                        max: 100,
+                                                        step: 1,
+                                                        slide: function( event, ui ) {
+                                                            $( "#rail-result" ).html(ui.value);
+                                                        },
+                                                        change: function(event, ui) {
+                                                            $('#value').attr('value', ui.value);
+                                                        }
+                                                    });
+                                                });
+                                            .form-price__icon
+                                                svg.form-price__pic: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
+                                            .form-price__text стоимость доставки 
+                                            .form-price__field
+                                                .form-price__input-fake 
+                                            .form-price__text руб
+                                        .form-total
+                                            .form-total__col-l
+                                                .form-total__text Итоговая сумма:
+                                                    span.form-total__text-value 137 124 РУБ
+                                            .form-total__col-r
+                                                a.form-total__action(href="#")
+                                                    svg.form-total__icon: use(xlink:href="assets/images/icons/sprite.svg#download")
+                                                a.form-total__action(href="#")
+                                                    svg.form-total__icon: use(xlink:href="assets/images/icons/sprite.svg#print")
+                                        .form__application
+                                            .form__subtitle.form__subtitle--application Отправить заявку для детального расчета
+                                            .form__row.form__row--application
+                                                label.form__block
+                                                    input(type="text" name="user-name" placeholder="Имя").form__input
+                                                label.form__block
+                                                    input(type="text" name="user-mail" placeholder="Телефон или Email" required).form__input
+                                                button(type="submit").form__button.form__button--application
+                                                    .form__btn-text.form__btn-text--dark отправить
+                                                    svg.form__btn-icon.form__btn-icon--dark: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
+            .content
+                .container
+                    .photo.photo--with-padding
+                        .photo__columns
+                            .photo__col-l
+                                .photo__image(style="background-image: url(./assets/images/gallery/fence-1.jpg)")
+                                    .photo__image-wrap
+                                        .photo__content
+                                            h2.photo__title галерея заборов 
+                                                br 
+                                                | из профнастила
+                                            .photo__obj Страница 1 из 3
+                                            .slider__buttons.slider__buttons--second.slider__buttons--photo
+                                                button(type="button").controls.slider__prev.controls--second
+                                                    svg.slider__icon.slider__icon--second: use(xlink:href="assets/images/icons/sprite.svg#left")
+                                                button(type="button").controls.slider__next.controls--second
+                                                    svg.slider__icon.slider__icon--second: use(xlink:href="assets/images/icons/sprite.svg#right")
+                            .photo__col-r
+                                ul.photo__list
+                                    li.photo__item
+                                        a.photo__link(href="#")
+                                            .photo__pic.photo__pic--more(style="background-image: url(./assets/images/gallery/fence-2.jpg)")
+                                            svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                                    li.photo__item
+                                        a.photo__link(href="#")
+                                            .photo__pic.photo__pic--more(style="background-image: url(./assets/images/gallery/fence-3.jpg)")
+                                            svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                                    li.photo__item
+                                        a.photo__link(href="#")
+                                            .photo__pic(style="background-image: url(./assets/images/gallery/fence-4.jpg)")
+                                            svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                                    li.photo__item
+                                        a.photo__link(href="#")
+                                            .photo__pic(style="background-image: url(./assets/images/gallery/fence-5.jpg)")
+                                            svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                                    li.photo__item
+                                        a.photo__link(href="#")
+                                            .photo__pic.photo__pic--more(style="background-image: url(./assets/images/gallery/fence-6.jpg)")
+                                            svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                                    li.photo__item
+                                        a.photo__link(href="#")
+                                            .photo__pic(style="background-image: url(./assets/images/gallery/fence-7.jpg)")
+                                            svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+            .content
+                .container
+                    .content__wrap
+                        .regions
+                            .block-title
+                                .block-title__number 04.
+                                h2.block-title__text география
+                                    br
+                                    | работы
+                            ul.regions__columns
+                                li.regions__col
+                                    ul.regions__list
+                                        li.regions__item
+                                            .regions__letter а.
+                                            .regions__city
+                                                a.regions__object(href="#") Апрелевка
+                                        li.regions__item
+                                            .regions__letter б.
+                                            .regions__city
+                                                a.regions__object(href="#") Балашиха
+                                                a.regions__object(href="#") Бронницы
+                                        li.regions__item
+                                            .regions__letter в.
+                                            .regions__city
+                                                a.regions__object(href="#") Верея
+                                                a.regions__object(href="#") Волоколамск
+                                                a.regions__object(href="#") Воскресенск
+                                                a.regions__object(href="#") Высоковск
+                                        li.regions__item
+                                            .regions__letter г.
+                                            .regions__city
+                                                a.regions__object(href="#") Голицино
+                                        li.regions__item
+                                            .regions__letter д.
+                                            .regions__city
+                                                a.regions__object(href="#") Дедовск
+                                                a.regions__object(href="#") Дзержинский
+                                                a.regions__object(href="#") Дмитров
+                                                a.regions__object(href="#") Долгопрудный
+                                                a.regions__object(href="#") Домодедово
+                                        li.regions__item
+                                            .regions__letter е.
+                                            .regions__city
+                                                a.regions__object(href="#") Егорьевск
+                                li.regions__col
+                                    ul.regions__list
+                                        li.regions__item
+                                            .regions__letter а.
+                                            .regions__city
+                                                a.regions__object(href="#") Апрелевка
+                                        li.regions__item
+                                            .regions__letter б.
+                                            .regions__city
+                                                a.regions__object(href="#") Балашиха
+                                                a.regions__object(href="#") Бронницы
+                                        li.regions__item
+                                            .regions__letter в.
+                                            .regions__city
+                                                a.regions__object(href="#") Верея
+                                                a.regions__object(href="#") Волоколамск
+                                                a.regions__object(href="#") Воскресенск
+                                                a.regions__object(href="#") Высоковск
+                                        li.regions__item
+                                            .regions__letter г.
+                                            .regions__city
+                                                a.regions__object(href="#") Голицино
+                                        li.regions__item
+                                            .regions__letter д.
+                                            .regions__city
+                                                a.regions__object(href="#") Дедовск
+                                                a.regions__object(href="#") Дзержинский
+                                                a.regions__object(href="#") Дмитров
+                                                a.regions__object(href="#") Долгопрудный
+                                                a.regions__object(href="#") Домодедово
+                                        li.regions__item
+                                            .regions__letter е.
+                                            .regions__city
+                                                a.regions__object(href="#") Егорьевск
+                                li.regions__col
+                                    ul.regions__list
+                                        li.regions__item
+                                            .regions__letter а.
+                                            .regions__city
+                                                a.regions__object(href="#") Апрелевка
+                                        li.regions__item
+                                            .regions__letter б.
+                                            .regions__city
+                                                a.regions__object(href="#") Балашиха
+                                                a.regions__object(href="#") Бронницы
+                                        li.regions__item
+                                            .regions__letter в.
+                                            .regions__city
+                                                a.regions__object(href="#") Верея
+                                                a.regions__object(href="#") Волоколамск
+                                                a.regions__object(href="#") Воскресенск
+                                                a.regions__object(href="#") Высоковск
+                                        li.regions__item
+                                            .regions__letter г.
+                                            .regions__city
+                                                a.regions__object(href="#") Голицино
+                                        li.regions__item
+                                            .regions__letter д.
+                                            .regions__city
+                                                a.regions__object(href="#") Дедовск
+                                                a.regions__object(href="#") Дзержинский
+                                                a.regions__object(href="#") Дмитров
+                                                a.regions__object(href="#") Долгопрудный
+                                                a.regions__object(href="#") Домодедово
+                                        li.regions__item
+                                            .regions__letter е.
+                                            .regions__city
+                                                a.regions__object(href="#") Егорьевск
+                                li.regions__col
+                                    ul.regions__list
+                                        li.regions__item
+                                            .regions__letter а.
+                                            .regions__city
+                                                a.regions__object(href="#") Апрелевка
+                                        li.regions__item
+                                            .regions__letter б.
+                                            .regions__city
+                                                a.regions__object(href="#") Балашиха
+                                                a.regions__object(href="#") Бронницы
+                                        li.regions__item
+                                            .regions__letter в.
+                                            .regions__city
+                                                a.regions__object(href="#") Верея
+                                                a.regions__object(href="#") Волоколамск
+                                                a.regions__object(href="#") Воскресенск
+                                                a.regions__object(href="#") Высоковск
+                                        li.regions__item
+                                            .regions__letter г.
+                                            .regions__city
+                                                a.regions__object(href="#") Голицино
+                                        li.regions__item
+                                            .regions__letter д.
+                                            .regions__city
+                                                a.regions__object(href="#") Дедовск
+                                                a.regions__object(href="#") Дзержинский
+                                                a.regions__object(href="#") Дмитров
+                                                a.regions__object(href="#") Долгопрудный
+                                                a.regions__object(href="#") Домодедово
+                                        li.regions__item
+                                            .regions__letter е.
+                                            .regions__city
+                                                a.regions__object(href="#") Егорьевск
+                        .reviews
+                            .reviews__heading
+                                .block-title
+                                    .block-title__number.block-title__number--light 05.
+                                    h2.block-title__text.block-title__text--light отзывы 
+                                        br 
+                                        | клиентов
+                                .slider__buttons
+                                    button(type="button").controls.slider__prev
+                                        svg.slider__icon: use(xlink:href="assets/images/icons/sprite.svg#left")
+                                    button(type="button").controls.slider__next
+                                        svg.slider__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
+                            .reviews__desk
+                                .reviews__image
+                                    img.reviews__avatar(src="./assets/images/pic/avatar.jpg" alt="avatar")
+                                .reviews__content
+                                    .reviews__name Михаил
+                                        br
+                                        | Добкин
+                                    .reviews__position г. Мытищи
+                            .reviews__text
+                                p В прошлом месяце заказывал забор для дачного участка. Огораживались с соседями, поэтому ограничились сеткой-рабицей. По бригаде ничего плохого сказать не могу. Монтажники работящие...
+                            a.reviews__link(href="#")
+                                .reviews__btn-text оставить отзыв
+                                svg.reviews__btn-icon: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
+        include ../common/footer.pug

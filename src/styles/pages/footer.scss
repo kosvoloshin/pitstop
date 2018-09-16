@@ -1,6 +1,10 @@
 .footer__wrap {
     border-top: 2px solid #e3ebed;
     padding-top: rem(60px);
+
+    @include phones {
+        padding-top: rem(29px);
+    }
 }
 
 .footer__row--main {
@@ -18,6 +22,10 @@
         flex-flow: initial;
         align-content: initial;
     }
+
+    @include phones {
+        padding-top: rem(35px);
+    }
 }
 
 .footer__row--hide {
@@ -29,6 +37,21 @@
         padding-bottom: rem(25px);
         border-bottom: 1px solid $grey;
     }
+
+    @include phones {
+        display: none;
+    }
+}
+
+.footer__row--mobile {
+    display: none;
+
+    @include phones {
+        display: block;
+
+        border-bottom: 1px solid $grey;
+        padding: 0 rem(28px) rem(6px) rem(28px);
+    }
 }
 
 .footer__contacts {
@@ -38,6 +61,11 @@
         width: 50%;
         height: 50%;
         order: -1;
+    }
+
+    @include phones {
+        height: initial;
+        width: 55%;
     }
 }
 
@@ -58,6 +86,11 @@
     @include desktop {
         height: rem(77px);
         width: rem(97px);
+    }
+
+    @include phones {
+        height: rem(41px);
+        width: rem(52px);
     }
 }
 
@@ -81,6 +114,11 @@
     @include desktop {
         font-size: rem(24px);
     }
+
+    @include phones {
+        font-size: rem(16px);
+        line-height: rem(18px);
+    }
 }
 
 .footer__pic-text2 {
@@ -93,10 +131,19 @@
     @include desktop {
         font-size: rem(24px);
     }
+
+    @include phones {
+        font-size: rem(16px);
+        line-height: rem(18px);
+    }    
 }
 
 .footer__phone {
     margin-top: rem(8px);
+
+    @include phones {
+        margin-top: rem(28px);
+    }
 }
 
 .footer__call {
@@ -113,10 +160,18 @@
     &:hover {
         color: $green;
     }
+
+    @include phones {
+        font-size: rem(16px);
+    }
 }
 
 .footer__adress {
     margin-top: rem(5px);
+
+    @include phones {
+        margin-top: rem(22px);
+    }
 }
 
 .footer__desk {
@@ -128,6 +183,11 @@
     letter-spacing: normal;
     text-align: left;
     color: #000000;
+
+    @include phones {
+        font-size: rem(12px);
+        font-weight: 600;
+    }
 }
 
 .footer__metro {
@@ -135,6 +195,10 @@
     flex-direction: row;
     align-items: baseline;
     margin-top: rem(22px);
+
+    @include phones {
+        margin-top: rem(26px);
+    }
 }
 
 .footer__metro-icon {
@@ -156,6 +220,10 @@
     text-align: left;
     color: #000000;
     margin-left: rem(8px);
+
+    @include phones {
+        font-size: rem(12px);
+    }
 }
 
 .footer__menu {
@@ -186,6 +254,10 @@
         width: 100%;
         justify-content: space-between;
     }
+
+    @include phones {
+        flex-direction: column;
+    }
 }
 
 .footer__menu--hide {
@@ -204,6 +276,20 @@
     @include tablets {
         max-width: 33.3%;
     }
+
+    @include phones {
+        max-width: 100%;
+
+        &.active .footer__subtitle-icon {
+            transform: rotate(270deg);
+        }
+
+        &:nth-child(2) {
+            .footer__subtitle-icon {
+                margin-left: rem(23px);
+            }
+        }
+    }
 }
 
 .footer__subtitle {
@@ -216,6 +302,39 @@
     color: $b;
     text-transform: uppercase;
     margin-bottom: rem(22px);
+
+    @include phones {
+        font-size: rem(15px);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: rem(2px);
+        display: inline-block;
+        cursor: pointer;
+    }
+}
+
+.footer__subtitle-icon {
+    @include phones {
+        height: rem(23px);
+        width: rem(20px);
+        display: inline-block;
+        transform: rotate(90deg);
+        margin-left: rem(40px);
+        transition: .5s;
+        vertical-align: middle;
+    }
+}
+
+.footer__list {
+    @include phones {
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s;
+        width: 59%;
+        margin-top: rem(10px);
+        margin-bottom: rem(10px);
+    }
 }
 
 .footer__item {
@@ -249,6 +368,10 @@
     @include desktop {
         font-size: rem(12px);
     }
+
+    @include phones {
+        text-transform: inherit;
+    }
 }
 
 .footer__socials {
@@ -258,6 +381,14 @@
         width: 50%;
         height: 50%;
         order: -1;
+    }
+
+    @include phones {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        height: initial;
+        width: 45%;
     }
 }
 
@@ -285,6 +416,11 @@
     @include tablets {
         justify-content: flex-end;
     }
+
+    @include phones {
+        margin-bottom: 0;
+        margin-top: rem(19px);
+    }
 }
 
 .social__item--with-label {
@@ -299,6 +435,17 @@
 
     @include tablets {
         float: right;
+    }
+
+    @include phones {
+        float: left;
+        margin-top: rem(48px);
+    }
+}
+
+.social__item--hide {
+    @include phones {
+        display: none;
     }
 }
 
@@ -385,6 +532,11 @@
         padding-top: rem(20px);
         padding-bottom: rem(20px);
     }
+
+    @include phones {
+        margin-top: rem(40px);
+        padding-top: rem(27px);
+    }
 }
 
 .footer__info-col {
@@ -402,6 +554,22 @@
             margin: rem(5px) 0;
         }
     }
+
+    @include phones {
+        width: 100%;
+
+        &:nth-child(3) {
+            order: -1;
+        }
+    }
+}
+
+.footer__info-col--mobile {
+    display: none;
+
+    @include phones {
+        display: block;
+    }
 }
 
 .footer__copy {
@@ -416,6 +584,11 @@
     @include desktop {
         text-align: center;
     }
+
+    @include phones {
+        text-align: left;
+        padding-right: rem(85px);
+    }
 }
 
 .footer__policy {
@@ -424,7 +597,7 @@
     font-style: normal;
     font-stretch: normal;
     letter-spacing: normal;
-    color: #b1b7ba;
+    color: #a6cadb;
     transition: .3s;
     display: flex;
     justify-content: center;
@@ -432,6 +605,11 @@
     &:hover {
         color: $green;
         text-decoration: underline;
+    }
+
+    @include phones {
+        justify-content: flex-start;
+        margin-bottom: rem(7px);
     }
 }
 
@@ -453,5 +631,10 @@
 
     @include desktop {
         justify-content: center;
+    }
+
+    @include phones {
+        justify-content: flex-start;
+        margin-bottom: rem(51px);
     }
 }

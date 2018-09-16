@@ -131,6 +131,10 @@
         height: initial;
         padding-bottom: rem(100px);
     }
+
+    @include phones {
+        padding: rem(23px) rem(26px) rem(100px) rem(28px);
+    }
 }
 
 .reviews__heading {
@@ -187,6 +191,10 @@
         width: 100%;
         margin-top: rem(35px);
         margin-bottom: rem(35px);
+    }
+
+    @include phones {
+        margin-bottom: rem(27px);
     }
 }
 
@@ -259,6 +267,10 @@
     @include phones-large {
         width: 100%;
         padding-top: 0;
+    }
+
+    @include phones {
+        line-height: 1.715;
     }
 }
 

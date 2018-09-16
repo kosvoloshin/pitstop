@@ -64,6 +64,12 @@
     right: rem(43px);
 }
 
+.slider__buttons--reviews {
+    @include phones {
+        margin-bottom: 0;
+    }
+}
+
 .controls {
     background: none;
     cursor: pointer;

@@ -18,7 +18,7 @@ block content
                             | из 
                             .section__title--blue профнастила
                                 // если заменить класс на - '.section__title--red' получишь красный цвет
-                                ul.type.visible
+                                ul.type
                                     //убрать класс 'visible' и скроется
                                     button(type="button").type__btn
                                         svg.type__icon: use(xlink:href="assets/images/icons/sprite.svg#close")
@@ -33,12 +33,14 @@ block content
                                     li.type__item
                                         a.type__link(href="#") Рабица в рамке
                             |  длиной 
-                            .section__title--blue 100м
+                            .section__title--blue
+                                span.section__title--number 100
+                                span.section__title--length м
                                 .tooltip.visible
                                     p Пожалуйста, введите длину
                                         br 
                                         | забора, чтобы продолжить расчет 
-                                form.lenght.visible
+                                form.lenght
                                     .lenght__row   
                                         .lenght__text
                                             .lenght__text-line Необходимая
@@ -133,7 +135,7 @@ block content
                                                 svg.form__btn-icon.form__btn-icon--dark: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
                                         .form__col-r
                                             .form__image
-                                                img.form__pic(src="./assets/images/pic/calc-one.jpg" alt="picture")
+                                                img.form__pic(src="./assets/images/pic/calcprof/2/calc-one.jpg" alt="picture")
                                             .form__caption Вы можете указать интересующий вид профнастила
                                             .form__row
                                                 label.form__block
@@ -183,7 +185,7 @@ block content
                                                 svg.form__btn-icon.form__btn-icon--dark: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
                                         .form__col-r.form__col-r--resize
                                             .form__image.form__image--resize
-                                                img.form__pic(src="./assets/images/pic/calc-two.png" alt="picture")
+                                                img.form__pic(src="./assets/images/pic/calcprof/2/calc-two.png" alt="picture")
                                                 span.form__obj-one 1.5м
                                             .form__text.form__text--dark.form__text--90.form__text--resize
                                                 p Lorem ipsum dolor sit amet consecteturlor sit amet co adipisicing elit. Ducimus deleniti ut nulla aut totam. Nulla maxime repellendus fugit tenetur provident in. Beatae, aliquid. Quo, ea veritatis sint odio labore cum.
@@ -205,7 +207,7 @@ block content
                                                 svg.form__btn-icon.form__btn-icon--dark: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
                                         .form__col-r.form__col-r--resize
                                             .form__image.form__image--resize
-                                                img.form__pic(src="./assets/images/pic/calc-three.png" alt="picture")
+                                                img.form__pic(src="./assets/images/pic/calcprof/2/calc-three.png" alt="picture")
                                                 span.form__obj-one 1.5м
                                             .form__text.form__text--dark.form__text--90.form__text--resize
                                                 p Lorem ipsum dolor sit amet consecteturlor sit amet co adipisicing elit. Ducimus deleniti ut nulla aut totam. Nulla maxime repellendus fugit tenetur provident in. Beatae, aliquid. Quo, ea veritatis sint odio labore cum.
@@ -251,7 +253,7 @@ block content
                                                 svg.form__btn-icon.form__btn-icon--dark: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
                                         .form__col-r.form__col-r--resize
                                             .form__image.form__image--resize-2
-                                                img.form__pic(src="./assets/images/pic/calc-four.png" alt="picture")
+                                                img.form__pic(src="./assets/images/pic/calcprof/2/calc-four.png" alt="picture")
                                                 span.form__obj-one 1.5м
                                                 span.form__obj-two 2
                                                 span.form__obj-three 3м
@@ -282,7 +284,7 @@ block content
                                                 svg.form__btn-icon.form__btn-icon--dark: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
                                         .form__col-r.form__col-r--resize
                                             .form__image.form__image--resize-2
-                                                img.form__pic(src="./assets/images/pic/calc-five.png" alt="picture")
+                                                img.form__pic(src="./assets/images/pic/calcprof/2/calc-five.png" alt="picture")
                                                 span.form__obj-one 1.5м
                                                 span.form__obj-two 2
                                                 span.form__obj-three 3м

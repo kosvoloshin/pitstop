@@ -274,6 +274,31 @@
     letter-spacing: normal;
 }
 
+.form__obj-five {
+    position: absolute;
+    left: rem(95px);
+    bottom: rem(-38px);
+    transform: translate(-40%, -50%);
+    background: $green;
+    min-width: rem(47px);
+    min-height: rem(24px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: rem(2px) rem(15px);
+    color: $w;
+    font-family: $m-r;
+    font-size: rem(14px);
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+}
+
+.form__obj-five--resize {
+    bottom: rem(-20px);
+}
+
 .form__caption {
     font-family: $m-b;
     font-size: rem(14px);
@@ -1239,3 +1264,345 @@
     max-width: rem(793px);
     margin-top: rem(36px);
 }
+
+// select fence-gap
+.form-calc-gap input {
+    display: none;
+}
+
+.form-calc-gap {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+
+.form-calc-gap:before {
+    content: "";
+    background-image: url('../images/icons/select-icon.png');
+    display: inline-block;
+    position: absolute;
+    top: rem(6px);
+    right: rem(6px);
+    z-index: 2;
+    width: rem(39px);
+    height: rem(39px);
+    text-align: center;
+    line-height: rem(39px);
+    cursor: pointer;
+}
+
+.form-calc-gap input[name="fence-gap"]:not(:checked) ~ #text-gap {
+    color: black;
+    background: white;
+}
+
+.form-calc-gap input[name="fence-gap"]:checked ~ #text-gap {
+    background: transparent;
+    color: transparent;
+    z-index: 2;
+}
+
+#select-gap:disabled ~ .items-calc-gap #text-gap {
+    background: #eee;
+}
+
+.items-calc-gap {
+    display: block;
+    min-height: rem(30px);
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    cursor: pointer;
+    background: $w;
+}
+
+#select-gap:not(:checked) ~ .items-calc-gap {
+    height: rem(52px);
+}
+
+.items-calc-gap label {
+    display: none;
+    padding: rem(17px) rem(24px);
+    padding-right: rem(45px);
+    background: white;
+    color: $b;
+    border-bottom: 1px solid $grey;
+    font-family: $m-s;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.text-gap {
+    padding: rem(17px) rem(24px);
+    padding-right: rem(45px);
+    background: white;
+    color: $b;
+    font-family: $m-s;
+    position: absolute;
+    width: 100%;
+    display: block;
+    top: 0;
+}
+
+.items-calc-gap label:hover {
+    background-color: $green;
+    color: $w;
+}
+
+#select-gap:checked ~ .items-calc-gap {
+    padding-top: rem(52px);
+    z-index: 1;
+    max-height: rem(320px);
+    overflow: auto;
+}
+
+#select-gap:checked ~ .items-calc-gap label {
+    display: block;
+}
+
+.items-calc-gap input:checked + label {
+    display: block!important;
+    border: none;
+    background: white;
+    color: $b;
+}
+
+#select-gap:checked ~ .bg-gap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+}
+// select fence-gap end
+
+// select fence-coating
+.form-calc-coating input {
+    display: none;
+}
+
+.form-calc-coating {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+
+.form-calc-coating:before {
+    content: "";
+    background-image: url('../images/icons/select-icon.png');
+    display: inline-block;
+    position: absolute;
+    top: rem(6px);
+    right: rem(6px);
+    z-index: 2;
+    width: rem(39px);
+    height: rem(39px);
+    text-align: center;
+    line-height: rem(39px);
+    cursor: pointer;
+}
+
+.form-calc-coating input[name="fence-coating"]:not(:checked) ~ #text-coating {
+    color: black;
+    background: white;
+}
+
+.form-calc-coating input[name="fence-coating"]:checked ~ #text-coating {
+    background: transparent;
+    color: transparent;
+    z-index: 2;
+}
+
+#select-coating:disabled ~ .items-calc-coating #text-coating {
+    background: #eee;
+}
+
+.items-calc-coating {
+    display: block;
+    min-height: rem(30px);
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    cursor: pointer;
+    background: $w;
+}
+
+#select-coating:not(:checked) ~ .items-calc-coating {
+    height: rem(52px);
+}
+
+.items-calc-coating label {
+    display: none;
+    padding: rem(17px) rem(24px);
+    padding-right: rem(45px);
+    background: white;
+    color: $b;
+    border-bottom: 1px solid $grey;
+    font-family: $m-s;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.text-coating {
+    padding: rem(17px) rem(24px);
+    padding-right: rem(45px);
+    background: white;
+    color: $b;
+    font-family: $m-s;
+    position: absolute;
+    width: 100%;
+    display: block;
+    top: 0;
+}
+
+.items-calc-coating label:hover {
+    background-color: $green;
+    color: $w;
+}
+
+#select-coating:checked ~ .items-calc-coating {
+    padding-top: rem(52px);
+    z-index: 1;
+    max-height: rem(320px);
+    overflow: auto;
+}
+
+#select-coating:checked ~ .items-calc-coating label {
+    display: block;
+}
+
+.items-calc-coating input:checked + label {
+    display: block!important;
+    border: none;
+    background: white;
+    color: $b;
+}
+
+#select-coating:checked ~ .bg-coating {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+}
+// select fence-coating end
+
+// select fence-panel
+.form-calc-panel input {
+    display: none;
+}
+
+.form-calc-panel {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+
+.form-calc-panel:before {
+    content: "";
+    background-image: url('../images/icons/select-icon.png');
+    display: inline-block;
+    position: absolute;
+    top: rem(6px);
+    right: rem(6px);
+    z-index: 2;
+    width: rem(39px);
+    height: rem(39px);
+    text-align: center;
+    line-height: rem(39px);
+    cursor: pointer;
+}
+
+.form-calc-panel input[name="fence-panel"]:not(:checked) ~ #text-panel {
+    color: black;
+    background: white;
+}
+
+.form-calc-panel input[name="fence-panel"]:checked ~ #text-panel {
+    background: transparent;
+    color: transparent;
+    z-index: 2;
+}
+
+#select-panel:disabled ~ .items-calc-panel #text-panel {
+    background: #eee;
+}
+
+.items-calc-panel {
+    display: block;
+    min-height: rem(30px);
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    cursor: pointer;
+    background: $w;
+}
+
+#select-panel:not(:checked) ~ .items-calc-panel {
+    height: rem(52px);
+}
+
+.items-calc-panel label {
+    display: none;
+    padding: rem(17px) rem(24px);
+    padding-right: rem(45px);
+    background: white;
+    color: $b;
+    border-bottom: 1px solid $grey;
+    font-family: $m-s;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.text-panel {
+    padding: rem(17px) rem(24px);
+    padding-right: rem(45px);
+    background: white;
+    color: $b;
+    font-family: $m-s;
+    position: absolute;
+    width: 100%;
+    display: block;
+    top: 0;
+}
+
+.items-calc-panel label:hover {
+    background-color: $green;
+    color: $w;
+}
+
+#select-panel:checked ~ .items-calc-panel {
+    padding-top: rem(52px);
+    z-index: 1;
+    max-height: rem(320px);
+    overflow: auto;
+}
+
+#select-panel:checked ~ .items-calc-panel label {
+    display: block;
+}
+
+.items-calc-panel input:checked + label {
+    display: block!important;
+    border: none;
+    background: white;
+    color: $b;
+}
+
+#select-panel:checked ~ .bg-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+}
+// select fence-panel end
