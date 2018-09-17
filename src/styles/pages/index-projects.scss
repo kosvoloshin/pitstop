@@ -764,12 +764,16 @@
     //width: intrinsic;         
     //width: -moz-max-content;  
     //width: -webkit-max-content;
-    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     transition: .3s;
     cursor: pointer;
+    display: none;
+
+    &:first-child {
+        display: flex;
+    }
 
     &:hover {
         border-color: $blue;

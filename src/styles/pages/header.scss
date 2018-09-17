@@ -60,10 +60,16 @@
     }
 
     @include phones {
-        height: rem(57px);
+        height: rem(58px);
         width: rem(70px);
     }
 }
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5){
+    .header__pic  {
+        background-image: url('../images/icons/logo-retina.png');
+    }
+} 
 
 .header__pic-text {
     display: flex;

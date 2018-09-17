@@ -19,6 +19,10 @@
 
 .section__under--contacts {
     height: rem(491px);
+
+    @include phones {
+        height: rem(381px);
+    }
 }
 
 .section__under-img {

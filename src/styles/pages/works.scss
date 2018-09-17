@@ -172,6 +172,14 @@
     position: relative;
 }
 
+.photo__sub-item {
+    display: none;
+
+    &.visible {
+        display: block;
+    }
+}
+
 .photo__link {
     &:hover {
         .photo__icon {

@@ -14,7 +14,11 @@
 .tabs__item {
     display: flex;
     justify-content: center;
-    flex: 1 auto;
+    flex: 1 0 auto;
+
+    &:last-child {
+        flex: 0 auto;
+    }
 }
 
 .tabs__link {
@@ -23,12 +27,14 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    justify-content: center;
+    justify-content: space-between;
     border-top: 1px solid #9dacb4;
     border-bottom: 1px solid #9dacb4;
     border-left: 1px solid #9dacb4;
     padding: rem(4px) 0;
     transition: .3s;
+    padding-left: rem(21px);
+    padding-right: rem(17px);
 
     &.selected {
         background-color: $green!important;
@@ -85,6 +91,11 @@
 
 .tabs__link--result {
     border: 2px solid $b;
+    justify-content: center;
+    min-width: max-content;
+    width: intrinsic;         
+    width: -moz-max-content;  
+    width: -webkit-max-content;
 }
 
 .tabs__obj {
@@ -95,7 +106,6 @@
     font-stretch: normal;
     letter-spacing: normal;
     color: #9dacb4;
-    margin-right: rem(7px);
     transition: .3s;
 }
 
@@ -293,6 +303,15 @@
     font-style: normal;
     font-stretch: normal;
     letter-spacing: normal;
+}
+
+.form__obj-five--euro {
+    left: rem(120px);
+}
+
+.form__obj-five--euro2 {
+    left: rem(120px);
+    bottom: rem(-20px);
 }
 
 .form__obj-five--resize {
@@ -1606,3 +1625,117 @@
     z-index: 0;
 }
 // select fence-panel end
+
+// select fence-armature
+.form-calc-armature input {
+    display: none;
+}
+
+.form-calc-armature {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+
+.form-calc-armature:before {
+    content: "";
+    background-image: url('../images/icons/select-icon.png');
+    display: inline-block;
+    position: absolute;
+    top: rem(6px);
+    right: rem(6px);
+    z-index: 2;
+    width: rem(39px);
+    height: rem(39px);
+    text-align: center;
+    line-height: rem(39px);
+    cursor: pointer;
+}
+
+.form-calc-armature input[name="fence-armature"]:not(:checked) ~ #text-armature {
+    color: black;
+    background: white;
+}
+
+.form-calc-armature input[name="fence-armature"]:checked ~ #text-armature {
+    background: transparent;
+    color: transparent;
+    z-index: 2;
+}
+
+#select-armature:disabled ~ .items-calc-armature #text-armature {
+    background: #eee;
+}
+
+.items-calc-armature {
+    display: block;
+    min-height: rem(30px);
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    cursor: pointer;
+    background: $w;
+}
+
+#select-armature:not(:checked) ~ .items-calc-armature {
+    height: rem(52px);
+}
+
+.items-calc-armature label {
+    display: none;
+    padding: rem(17px) rem(24px);
+    padding-right: rem(45px);
+    background: white;
+    color: $b;
+    border-bottom: 1px solid $grey;
+    font-family: $m-s;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.text-armature {
+    padding: rem(17px) rem(24px);
+    padding-right: rem(45px);
+    background: white;
+    color: $b;
+    font-family: $m-s;
+    position: absolute;
+    width: 100%;
+    display: block;
+    top: 0;
+}
+
+.items-calc-armature label:hover {
+    background-color: $green;
+    color: $w;
+}
+
+#select-armature:checked ~ .items-calc-armature {
+    padding-top: rem(52px);
+    z-index: 1;
+    max-height: rem(320px);
+    overflow: auto;
+}
+
+#select-armature:checked ~ .items-calc-armature label {
+    display: block;
+}
+
+.items-calc-armature input:checked + label {
+    display: block!important;
+    border: none;
+    background: white;
+    color: $b;
+}
+
+#select-armature:checked ~ .bg-armature {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+}
+// select fence-armature end

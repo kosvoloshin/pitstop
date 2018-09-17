@@ -281,13 +281,31 @@
 }
 
 .flipper__icon {
+    width: rem(80px);
+
     @include desktop {
         height: rem(60px);
         width: auto;
     }
 
     @include laptop {
-        height: initial;
+        width: rem(90px);
+        height: auto;
+    }
+
+    @include tablets {
+        width: rem(80px);
+        height: auto;
+    }
+
+    @include phones-large {
+        height: auto;
+        width: rem(90px);
+    }
+
+    @include phones {
+        height: auto;
+        width: rem(80px);
     }
 }
 

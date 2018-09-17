@@ -418,47 +418,7 @@ block content
                                                     svg.form__btn-icon.form__btn-icon--dark: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
             .content
                 .container
-                    .photo.photo--with-padding
-                        .photo__columns
-                            .photo__col-l
-                                .photo__image(style="background-image: url(./assets/images/gallery/fence-1.jpg)")
-                                    .photo__image-wrap
-                                        .photo__content
-                                            h2.photo__title галерея заборов 
-                                                br 
-                                                | из профнастила
-                                            .photo__obj Страница 1 из 3
-                                            .slider__buttons.slider__buttons--second.slider__buttons--photo
-                                                button(type="button").controls.slider__prev.controls--second
-                                                    svg.slider__icon.slider__icon--second: use(xlink:href="assets/images/icons/sprite.svg#left")
-                                                button(type="button").controls.slider__next.controls--second
-                                                    svg.slider__icon.slider__icon--second: use(xlink:href="assets/images/icons/sprite.svg#right")
-                            .photo__col-r
-                                ul.photo__list
-                                    li.photo__item
-                                        a.photo__link(href="#")
-                                            .photo__pic.photo__pic--more(style="background-image: url(./assets/images/gallery/fence-2.jpg)")
-                                            svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
-                                    li.photo__item
-                                        a.photo__link(href="#")
-                                            .photo__pic.photo__pic--more(style="background-image: url(./assets/images/gallery/fence-3.jpg)")
-                                            svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
-                                    li.photo__item
-                                        a.photo__link(href="#")
-                                            .photo__pic(style="background-image: url(./assets/images/gallery/fence-4.jpg)")
-                                            svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
-                                    li.photo__item
-                                        a.photo__link(href="#")
-                                            .photo__pic(style="background-image: url(./assets/images/gallery/fence-5.jpg)")
-                                            svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
-                                    li.photo__item
-                                        a.photo__link(href="#")
-                                            .photo__pic.photo__pic--more(style="background-image: url(./assets/images/gallery/fence-6.jpg)")
-                                            svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
-                                    li.photo__item
-                                        a.photo__link(href="#")
-                                            .photo__pic(style="background-image: url(./assets/images/gallery/fence-7.jpg)")
-                                            svg.photo__icon: use(xlink:href="assets/images/icons/sprite.svg#eye")
+                    include ../common/gallery-row.pug    
             .content
                 .container
                     .content__wrap

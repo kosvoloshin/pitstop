@@ -5,6 +5,10 @@
 
 .pagination__wrap {
     padding-top: rem(17px);
+
+    @include phones {
+        padding-top: 0;
+    }
 }
 
 .pagination__list {

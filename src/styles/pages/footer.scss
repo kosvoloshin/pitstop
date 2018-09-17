@@ -48,9 +48,8 @@
 
     @include phones {
         display: block;
-
         border-bottom: 1px solid $grey;
-        padding: 0 rem(28px) rem(6px) rem(28px);
+        padding: 0 rem(28px) rem(27px) rem(28px);
     }
 }
 
@@ -89,10 +88,16 @@
     }
 
     @include phones {
-        height: rem(41px);
+        height: rem(43px);
         width: rem(52px);
     }
 }
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5){
+    .footer__pic  {
+        background-image: url('../images/icons/logo-retina.png');
+    }
+} 
 
 .footer__pic-text {
     display: flex;
@@ -210,6 +215,12 @@
     width: rem(31px);
 }
 
+@media all and (-webkit-min-device-pixel-ratio: 1.5){
+    .footer__metro-icon  {
+        background-image: url('../images/icons/metro-retina.png');
+    }
+} 
+
 .footer__metro-name {
     font-family: $m-s;
     font-size: rem(14px);
@@ -261,7 +272,7 @@
 }
 
 .footer__menu--hide {
-    @include phones {
+    @include tablets {
         display: none;
     }
 }
@@ -292,6 +303,22 @@
     }
 }
 
+.acco__item {
+    margin-bottom: rem(10px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.acco__item.active {
+    .footer__list {
+        margin-top: rem(10px);
+        margin-bottom: rem(10px);
+        opacity: 1;
+    }
+}
+
 .footer__subtitle {
     font-family: $m-b;
     font-size: rem(13px);
@@ -309,7 +336,6 @@
         flex-direction: row;
         align-items: center;
         margin-bottom: rem(2px);
-        display: inline-block;
         cursor: pointer;
     }
 }
@@ -332,8 +358,9 @@
         overflow: hidden;
         transition: height 0.5s;
         width: 59%;
-        margin-top: rem(10px);
-        margin-bottom: rem(10px);
+        margin: 0;
+        transition: .5s;
+        opacity: 0;
     }
 }
 

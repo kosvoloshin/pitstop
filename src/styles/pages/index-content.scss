@@ -105,9 +105,9 @@
     color: #000000;
     border-bottom: 1px solid transparent;
     transition: .3s;
-    //width: intrinsic;
-    //width: -moz-max-content;
-    //width: -webkit-max-content;
+    width: intrinsic;
+    width: -moz-max-content;
+    width: -webkit-max-content;
 
     &:hover {
         color: $green;
@@ -328,6 +328,10 @@
         .feedback__btn-icon {
             fill: $w;
         }
+    }
+
+    @include phones {
+        margin-top: rem(42px);
     }
 }
 

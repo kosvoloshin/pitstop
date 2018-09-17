@@ -106,6 +106,14 @@
 
 .block-title--with-margin {
     margin-bottom: rem(50px);
+
+    @include desktop {
+        margin-bottom: rem(30px);
+    }
+
+    @include phones {
+        margin-bottom: rem(50px);
+    }
 }
 
 .block-title__number {
@@ -347,8 +355,16 @@
 }
 
 .advantage__icon {
+    height: rem(92px);
+    width: auto;
+
     @include desktop {
-        height: rem(80px);
+        height: rem(92px);
+        width: auto;
+    }
+
+    @include tablets {
+        height: rem(75px);
         width: auto;
     }
 
@@ -357,7 +373,8 @@
     }
 
     @include phones {
-        height: initial;
+        height: rem(92px);
+        width: auto;
     }
 }
 
@@ -388,6 +405,10 @@
 
     @include phones-large {
         padding: rem(12px);
+    }
+
+    @include phones {
+        padding: rem(30px);
     }
 }
 
@@ -483,6 +504,14 @@
 .form--feedback {
     padding: rem(33px) rem(54px);
     padding-bottom: rem(133px);
+
+    @include desktop {
+        padding: rem(30px) rem(40px) rem(110px) rem(40px);
+    }
+
+    @include phones {
+        padding: rem(34px) rem(25px) rem(123px) rem(28px);
+    }
 }
 
 .block-title__number--light {
@@ -664,6 +693,10 @@
 .form__input--feedback {
     font-size: rem(13px);
     padding: rem(14px) rem(17px);
+
+    @include phones {
+        font-size: rem(15px);
+    }
 }
 
 .wpcf7-form-control.wpcf7-text {
@@ -1087,6 +1120,14 @@
         .form__btn-icon {
             fill: $green;
         }
+    }
+
+    @include desktop {
+        padding: rem(10px) rem(17px);
+    }
+
+    @include phones {
+        padding: rem(14px) rem(14px);
     }
 }
 

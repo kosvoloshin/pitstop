@@ -213,6 +213,15 @@
     &:last-child {
         margin-bottom: 0;
     }
+
+    @include phones {
+        margin-bottom: rem(23px);
+        flex-direction: column;
+
+        .form__block {
+            margin-right: 0;
+        }
+    }
 }
 
 .form__block {
@@ -223,10 +232,19 @@
     &:last-child {
         margin-right: 0;
     }
+
+    @include phones {
+        margin-bottom: rem(23px);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .form__block--abs {
     margin-right: rem(5px);
+    margin-bottom: 0;
 
     &:last-child {
         margin-right: 0;
@@ -249,6 +267,7 @@
     transition: .3s;
     width: 100%;
     resize: none;
+    border-radius: 0;
 
     &:hover,
     &:focus {
@@ -259,6 +278,11 @@
 .form__textarea--feedback {
     font-size: rem(13px);
     min-height: rem(130px);
+    padding: rem(14px) rem(17px);
+
+    @include phones {
+        font-size: rem(15px);
+    }
 }
 
 .wpcf7-form-control.wpcf7-textarea {
