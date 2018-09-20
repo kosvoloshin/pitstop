@@ -22,7 +22,7 @@
     width: 100%;
     padding-top: rem(57px);
 
-    .hero__desk {
+    .hero__desk--feed {
         width: 45%;
 
         @include tablets {
@@ -57,6 +57,10 @@
 
 .section__title--bold {
     font-family: $m-b;
+
+    @include desktop {
+        font-size: rem(42px);
+    }
 }
 
 .section__title--blue {
@@ -94,6 +98,11 @@
     &.visible {
         opacity: 1;
         visibility: visible;
+    }
+
+    @include desktop {
+        width: rem(380px);
+        padding: rem(20px) rem(107px) rem(20px) rem(33px);
     }
 }
 
@@ -143,6 +152,10 @@
         background-color: $w;
         color: $green;
     }
+
+    @include desktop {
+        padding: rem(11px) rem(20px);
+    }
 }
 
 .tooltip {
@@ -185,6 +198,19 @@
         opacity: 1;
         visibility: visible;
     }
+
+    @include desktop {
+        left: 50%;
+        top: initial;
+        transform: translate(-50%, 0%);
+        bottom: calc(100% + 50px);
+
+        &:after {
+            transform: translate(0, 0) rotate(-90deg);
+            right: 50%;
+            top: calc(100% - 7px);
+        }
+    }
 }
 
 .lenght {
@@ -221,6 +247,12 @@
         visibility: visible;
         opacity: 1;
     }
+
+    @include desktop {
+        width: rem(320px);
+        height: initial;
+        padding: rem(36px) rem(50px) rem(97px) rem(30px);
+    }
 }
 
 .lenght__row {
@@ -228,6 +260,17 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+    @include desktop {
+        flex-flow: row wrap;
+    }
+}
+
+.lenght__text {
+    @include desktop {
+        width: 100%;
+        margin-bottom: rem(15px);
+    } 
 }
 
 .lenght__text-line {
@@ -256,6 +299,10 @@
     &:hover,
     &:focus {
         border: 1px solid $green;
+    }
+
+    @include desktop {
+        width: rem(110px);
     }
 }
 
