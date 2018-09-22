@@ -1143,6 +1143,10 @@
     @include laptop {
         padding-left: 0;
     }
+
+    @include phones {
+        display: none;
+    }
 }
 
 .form__link {
