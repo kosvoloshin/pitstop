@@ -499,6 +499,23 @@
 
 .form--calc {
     padding-bottom: rem(50px);
+
+    @include desktop {
+        padding: rem(21px) rem(30px) rem(40px) rem(30px); 
+    }
+
+    @include laptop {
+        padding-bottom: rem(106px);
+    }
+
+    @include tablets {
+        padding-bottom: rem(90px);
+    }
+
+    @include phones {
+        padding-right: rem(25px);
+        padding-bottom: rem(110px);
+    }
 }
 
 .form--feedback {
@@ -558,6 +575,51 @@
 .form__row--application {
     padding-right: rem(252px);
     position: relative;
+
+    @include laptop {
+        padding-right: 0;
+
+        .form__block:nth-child(2) {
+            margin-right: 0;
+        }
+    }
+
+    @include phones-large {
+        flex-direction: column;
+
+        .form__block {
+            margin-bottom: rem(15px);
+            margin-right: 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }    
+}
+
+.form__row--check {
+
+    @include phones-large {
+        flex-flow: row wrap;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .form__block {
+            width: 35%;
+            flex: initial;
+            margin-right: 0;
+            margin-bottom: rem(30px);
+        }
+    }
+
+    @include phones {
+        .form__block {
+            width: 45%;
+        }
+    }
+        
 }
 
 .form__box {
@@ -669,6 +731,16 @@
 .form__subtitle--application {
     color: $b;
     font-size: rem(16px);
+
+    @include phones {
+        font-size: rem(15px);
+    }
+}
+
+.form__subtitle--hide-mobile {
+    @include phones-large {
+        display: none;
+    }
 }
 
 .form__input {
@@ -1013,16 +1085,35 @@
     letter-spacing: normal;
     text-align: left;
     color: #ffffff;
+
+
 }
 
 .form__text--dark {
     color: $b;
     margin-top: rem(44px);
     margin-bottom: rem(29px);
+
+    @include desktop {
+        margin-top: rem(30px);
+        margin-bottom: rem(29px);
+    }
 }
 
 .form__text--90 {
     padding-right: rem(90px);
+
+    @include desktop {
+        padding-right: 0;
+    }
+
+    @include phones-large {
+        margin-top: 0;
+    }
+
+    @include phones {
+        font-size: rem(15px);
+    }
 }
 
 .form__text--margin {
@@ -1044,6 +1135,14 @@
 
 .form__text--resize {
     padding-left: rem(52px);
+
+    @include desktop {
+        padding-left: rem(40px);
+    }
+
+    @include laptop {
+        padding-left: 0;
+    }
 }
 
 .form__link {
@@ -1159,6 +1258,10 @@
             fill: $blue;
         }
     }
+
+    @include phones {
+        bottom: rem(40px);
+    }
 }
 
 .wpcf7-form-control.wpcf7-submit {
@@ -1219,6 +1322,10 @@ div.wpcf7 img.ajax-loader {
 .form__button--calc {
     padding: rem(10px) rem(15px);
     bottom: rem(61px);
+
+    @include laptop {
+        bottom: rem(41px);
+    }
 }
 
 .form__button--dark {
@@ -1267,6 +1374,20 @@ div.wpcf7 img.ajax-loader {
         .form__btn-icon--dark {
             fill: $w;
         }
+    }
+
+    @include laptop {
+        bottom: rem(-70px);
+    }
+
+    @include tablets {
+        padding: rem(12px) rem(23px);
+        bottom: rem(-60px);
+    }
+
+    @include phones-large {
+        right: initial;
+        left: 0;
     }
 }
 

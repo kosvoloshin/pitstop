@@ -78,17 +78,55 @@
 
 .photo--with-padding {
     padding-top: rem(53px);
+
+    @include phones {
+        padding-top: rem(19px);
+    }
 }
 
 .photo__columns {
     display: flex;
     flex-direction: row;
     height: rem(496px);
+
+    @include desktop {
+        height: rem(400px);
+    }
+
+    @include laptop {
+        height: rem(375px);
+    }
+
+    @include laptop {
+        height: rem(295px);
+    }
+
+    @include phones-large {
+        height: initial;
+        flex-direction: column;
+    }
 }
 
 .photo__col-l {
     width: rem(530px);
     height: 100%;
+
+    @include desktop {
+        width: rem(388px);
+    }
+
+    @include laptop {
+        width: 50%;
+    }
+
+    @include phones-large {
+        width: 100%;
+        height: rem(470px);
+    }
+
+    @include phones {
+        height: rem(310px);
+    }
 }
 
 .photo__image {
@@ -127,6 +165,22 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
+    @include desktop {
+        padding: rem(20px) rem(33px) rem(20px) rem(33px);
+    }
+
+    @include tablets {
+        padding: rem(20px) rem(25px) rem(20px) rem(25px);
+    }
+
+    @include phones-large {
+        padding: rem(20px) rem(43px) rem(20px) rem(52px);  
+    }
+
+    @include phones {
+        padding: rem(20px) rem(28px) rem(20px) rem(28px);   
+    }
 }
 
 .photo__title {
@@ -138,6 +192,22 @@
     font-style: normal;
     font-stretch: normal;
     text-align: left;
+
+    @include desktop {
+        font-size: rem(25px);
+    }
+
+    @include tablets {
+        font-size: rem(18px);
+    }
+
+    @include phones-large {
+        font-size: rem(30px);
+    }
+
+    @include phones {
+        font-size: rem(21px);
+    }
 }
 
 .photo__obj {
@@ -151,11 +221,47 @@
     position: absolute;
     bottom: rem(53px);
     left: rem(55px);
+
+    @include desktop {
+        left: rem(33px);
+    }
+
+    @include tablets {
+        font-size: rem(13px);
+        left: rem(25px);
+    }
+
+    @include phones-large {
+        font-size: rem(14px);
+        left: rem(55px);
+    }
+
+    @include phones {
+        left: rem(28px);
+        bottom: rem(39px);
+    }
 }
 
 .photo__col-r {
     width: rem(750px);
     height: 100%;
+
+    @include desktop {
+        width: rem(582px);
+    }
+
+    @include laptop {
+        width: 50%;
+    }
+
+    @include phones-large {
+        width: 100%;
+        height: rem(470px);
+    }
+
+    @include phones {
+        height: rem(330px);
+    }
 }
 
 .photo__list {
@@ -170,10 +276,28 @@
     width: 33.3333%;
     height: 50%;
     position: relative;
+
+    @include laptop {
+        width: 50%;
+
+        &:nth-child(5) {
+            display: none;
+        }
+        &:nth-child(6) {
+            display: none;
+        }
+    }
+}
+
+.photo__sub-list {
+    height: 100%;
+    width: 100%;
 }
 
 .photo__sub-item {
     display: none;
+    height: 100%;
+    width: 100%;
 
     &.visible {
         display: block;
@@ -208,6 +332,23 @@
         right: rem(26px);
         width: rem(28px);
         height: rem(27px);
+
+        @include tablets {
+            width: rem(22px);
+            height: rem(20px); 
+        }
+
+        @include phones {
+            bottom: rem(23px);
+            right: rem(19px);
+        }
+    }
+}
+
+.photo__img {
+    @include desktop {
+        height: 100%;
+        width: 100%;
     }
 }
 
@@ -221,4 +362,9 @@
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: .3s;
+
+    @include tablets {
+        height: rem(54px);
+        width: rem(67px);
+    }
 }

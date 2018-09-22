@@ -62,6 +62,25 @@
     position: absolute;
     bottom: rem(34px);
     right: rem(43px);
+
+    @include desktop {
+        right: rem(33px);
+    }
+
+
+    @include tablets {
+        right: rem(25px);
+    }
+
+    @include phones-large {
+        right: rem(43px);
+    }
+
+    @include phones {
+        top: initial;
+        bottom: rem(12px);
+        right: rem(27px);
+    }
 }
 
 .slider__buttons--reviews {

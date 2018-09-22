@@ -1,14 +1,30 @@
 .calc__wrap {
     padding-top: rem(164px);
+
+    @include tablets {
+        padding-top: rem(104px);
+    }
+
+    @include phones {
+        padding-top: rem(122px);
+    }
 }
 
 .tabs {
     padding-top: rem(36px);
+
+    @include tablets {
+        padding-top: rem(26px);
+    }
 }
 
 .tabs__list {
     display: flex;
     flex-direction: row;
+
+    @include desktop {
+        flex-flow: row wrap;
+    }
 }
 
 .tabs__item {
@@ -18,6 +34,18 @@
 
     &:last-child {
         flex: 0 auto;
+    }
+
+    @include desktop {
+        margin-right: rem(10px);
+        margin-bottom: rem(10px);
+        flex: initial;
+    }
+}
+
+.tabs__item--hide-mobile {
+    @include phones-large {
+        display: none;
     }
 }
 
@@ -71,6 +99,20 @@
             fill: $w;
         }
     }
+
+    @include desktop {
+        border-right: 1px solid #9dacb4;
+        padding: rem(10px) rem(20px);
+        justify-content: center;
+    }
+
+    @include tablets {
+        padding: rem(10px) rem(10px);
+    }
+
+    @include phones-large {
+        border: none;
+    }
 }
 
 .tabs__link.tabs__link--result:hover {
@@ -107,6 +149,25 @@
     letter-spacing: normal;
     color: #9dacb4;
     transition: .3s;
+
+    @include phones-large {
+        display: none;
+    }
+}
+
+.tabs__obj-mobile {
+    font-family: $m-r;
+    font-size: rem(14px);
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    color: $w;
+    display: none;
+
+    @include phones-large {
+        display: flex;
+    }
 }
 
 .tabs__icon {
@@ -114,6 +175,10 @@
     width: rem(25px);
     fill: #9dacb4;
     transition: .3s;
+
+    @include desktop {
+        display: none;
+    }
 }
 
 .tabs__result {
@@ -139,6 +204,10 @@
     transition: .3s;
 }
 
+.form__list {
+    padding-top: rem(10px);
+}
+
 .form__item {
     display: none;
 
@@ -152,29 +221,114 @@
     flex-direction: row;
     justify-content: space-between;
     padding-top: rem(31px);
+
+    @include desktop {
+        padding-top: rem(25px);
+    }
+
+    @include laptop {
+        flex-direction: column;
+    }
+
+    @include phones-large {
+        padding-top: 0;
+    }
 }
 
 .form__col-l {
     width: rem(342px);
+
+    @include desktop {
+        width: rem(290px);
+    }
+
+    @include laptop {
+        width: rem(342px);
+        padding-bottom: rem(60px);
+    }
+
+    @include phones-large {
+        width: 100%;
+    }
 }
 
 .form__col-l--resize {
     width: rem(281px);
+
+    @include desktop {
+        width: rem(280px);
+    }
+
+    @include phones-large {
+        width: 100%;
+    }
+}
+
+.form__col-l--no-gap {
+    @include laptop {
+        padding-bottom: rem(10px);
+    }
 }
 
 .form__col-r {
     width: rem(776px);
     padding-top: rem(31px);
+
+    @include desktop {
+        width: rem(580px);
+    }
+
+    @include laptop {
+        width: 100%;
+    }
+
+    @include phones {
+        padding-top: 0;
+    }
 }
 
 .form__col-r--resize {
     width: rem(829px);
+
+    @include desktop {
+        width: rem(580px);
+    }
+
+    @include laptop {
+        width: 100%;
+    }
 }
 
 .form__image {
     height: rem(139px);
     width: rem(776px);
     position: relative;
+
+    @include desktop {
+        height: rem(125px);
+        width: rem(580px);
+    }
+
+    @include laptop {
+        width: 100%;
+        height: rem(141px);
+    }
+
+    @include tablets {
+        height: rem(121px);
+    }
+
+    @include phones-large {
+        display: none;
+    }
+}
+
+.form__image--visible {
+    display: block;
+
+    @include phones-large {
+        height: rem(65px);
+    }
 }
 
 .form__pic {
@@ -182,16 +336,62 @@
     width: 100%;
 }
 
+.form__pic--hide-mobile {
+    @include phones-large {
+        display: none;
+    }
+}
+
+.form__pic--retina {
+    display: none;
+
+    @include phones-large {
+        display: block;
+    }
+}
+
 .form__image--resize {
     height: rem(161px);
     width: rem(829px);
     position: relative;
+
+    @include desktop {
+        height: rem(121px);
+        width: rem(580px);
+    }
+
+    @include laptop {
+        height: rem(141px);
+        width: 100%;
+        width: calc(100% - 20px);
+        margin-left: auto;
+    }
+
+    @include tablets {
+        height: rem(111px);
+    }
 }
 
 .form__image--resize-2 {
     height: rem(209px);
     width: rem(829px);
     position: relative;
+
+    @include desktop {
+        height: rem(161px);
+        width: rem(580px);
+    }
+
+    @include laptop {
+        height: rem(171px);
+        width: 100%;
+        width: calc(100% - 20px);
+        margin-left: auto;
+    }
+
+    @include tablets {
+        height: rem(141px);
+    }
 }
 
 .form__obj-one {
@@ -213,11 +413,19 @@
     font-style: normal;
     font-stretch: normal;
     letter-spacing: normal;
+
+    @include desktop {
+        padding: rem(2px) rem(10px);
+    }
 }
 
 .form__image--resize-2 .form__obj-one {
     top: 50%;
     top: calc(50% - 23px);
+
+    @include desktop {
+        top: calc(50% - 15px);
+    }
 }
 
 .form__obj-two {
@@ -225,7 +433,7 @@
     transform: translate(-50%, -50%);
     top: 50%;
     top: calc(50% - 23px);
-    left: 325px;
+    left: rem(325px);
     background: $blue;
     min-width: rem(47px);
     min-height: rem(24px);
@@ -240,6 +448,20 @@
     font-style: normal;
     font-stretch: normal;
     letter-spacing: normal;
+
+    @include desktop {
+        padding: rem(2px) rem(10px);
+        top: calc(50% - 15px);
+        left: rem(228px);
+    }
+
+    @include laptop {
+        left: rem(263px);
+    }
+
+    @include tablets {
+        left: rem(200px);
+    }
 }
 
 .form__obj-three {
@@ -261,6 +483,19 @@
     font-style: normal;
     font-stretch: normal;
     letter-spacing: normal;
+
+    @include desktop {
+        padding: rem(2px) rem(10px);
+        left: rem(228px);
+    }
+
+    @include laptop {
+        left: rem(263px);
+    }
+
+    @include tablets {
+        left: rem(200px);
+    }
 }
 
 .form__obj-four {
@@ -282,6 +517,20 @@
     font-style: normal;
     font-stretch: normal;
     letter-spacing: normal;
+
+    @include desktop {
+        padding: rem(2px) rem(10px);
+        left: rem(450px);
+        top: calc(50% - 15px);
+    }
+
+    @include laptop {
+        left: rem(519px);
+    }
+
+    @include tablets {
+        left: rem(395px);
+    }
 }
 
 .form__obj-five {
@@ -303,15 +552,27 @@
     font-style: normal;
     font-stretch: normal;
     letter-spacing: normal;
+    
+    @include desktop {
+        padding: rem(2px) rem(10px);
+    }
 }
 
 .form__obj-five--euro {
     left: rem(120px);
+
+    @include desktop {
+        padding: rem(2px) rem(10px);
+    }
 }
 
 .form__obj-five--euro2 {
     left: rem(120px);
     bottom: rem(-20px);
+
+    @include desktop {
+        padding: rem(2px) rem(10px);
+    }
 }
 
 .form__obj-five--resize {
@@ -328,6 +589,30 @@
     color: $b;
     margin-top: rem(25px);
     margin-bottom: rem(26px);
+
+    @include desktop {
+        margin-top: rem(20px);
+        margin-bottom: rem(20px);
+    }
+
+    @include laptop {
+        margin-top: rem(25px);
+        margin-bottom: rem(26px); 
+    }
+
+    @include phones {
+        margin-top: rem(22px);
+        margin-bottom: rem(40px);  
+    }
+}
+
+.form__caption--label {
+    display: none; 
+
+    @include phones-large {
+        display: block;
+        margin: 0;
+    }
 }
 
 .form__colors {
@@ -338,6 +623,15 @@
     font-stretch: normal;
     letter-spacing: normal;
     color: $b;
+
+    @include phones-large {
+        padding-right: rem(115px);
+        margin-bottom: rem(20px);
+    }
+
+    @include phones {
+        padding-right: 0;
+    }
 }
 
 .form__colors-link {
@@ -367,6 +661,10 @@
     &:last-child {
         margin-bottom: 0;
     }
+
+    @include phones-large {
+        display: none;
+    }
 }
 
 .form-table__title {
@@ -378,8 +676,44 @@
     letter-spacing: normal;
     color: $b;
     margin-bottom: rem(12px);
+
+    @include phones-large {
+        display: none;
+    }
 }
 
+.nav {
+    width: 100%;
+    display: none; 
+
+    @include phones-large {
+        display: block;
+    }
+}
+
+.nav__row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: rem(20px);
+
+    &:last-child {
+        margin-bottom: rem(2px);
+    }
+}
+
+.nav__button {
+    background-color: $w;
+    font-family: $m-s;
+    font-size: rem(14px);
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    color: $b;
+    border: initial;
+    width: 50%;
+    padding: rem(16px) 0;
+}
 
 .form-table__list {
     display: flex;
@@ -398,6 +732,10 @@
 
 .form-table__item--title {
     border-bottom: 2px solid $grey;
+
+    @include phones-large {
+        display: none;
+    }
 }
 
 .form-table__left {
@@ -409,6 +747,16 @@
     background-color: $w;
     padding: rem(18px) rem(26px) rem(14px) rem(26px);
     border-right: 1px solid $grey;
+
+    @include tablets {
+        padding: rem(15px) rem(15px);
+    }
+
+    @include phones-large {
+        width: 100%;
+        //justify-content: center;
+        border-right: none;
+    }
 }
 
 .form-table__text {
@@ -419,6 +767,10 @@
     font-stretch: normal;
     letter-spacing: normal;
     color: #3b444e;
+
+    @include tablets {
+        font-size: rem(13px);
+    }
 }
 
 .form-table__text--title {
@@ -461,6 +813,10 @@
         opacity: 0;
         visibility: hidden;
         transition: .3s;
+
+        @include tablets {
+            left: calc(100% + 9px); 
+        }
     }
 
     &:after {
@@ -483,6 +839,11 @@
         background-color: $blue;
         width: rem(194px);
         padding: rem(20px) rem(15px);
+
+        @include tablets {
+            left: calc(100% + 20px);
+            padding: rem(13px) rem(10px);
+        }
     }
 
     &:hover {
@@ -496,12 +857,21 @@
             visibility: visible;
         }
     }
+
+    @include phones-large {
+        display: none;
+    }
 }
 
 .form-table__right {
     width: rem(258px);
     background-color: $w;
     padding: rem(18px) rem(26px) rem(14px) rem(26px);
+
+    @include phones-large {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 // select fence-view
@@ -940,6 +1310,14 @@
     z-index: 1;
     max-height: rem(320px);
     overflow: auto;
+
+    @include desktop {
+        max-height: rem(200px);
+    }
+
+    @include laptop {
+        max-height: rem(320px);
+    }
 }
 
 #select-width:checked ~ .items-calc-width label {
@@ -1086,6 +1464,16 @@
     justify-content: space-between;
     max-width: rem(793px);
     padding-top: rem(7px);
+
+    @include tablets {
+        flex-flow: row wrap;
+        justify-content: initial;
+    }
+
+    @include phones-large {
+        //flex-flow: initial;
+        //align-items: flex-start;
+    }
 }
 
 .form-price__text {
@@ -1096,12 +1484,61 @@
     font-stretch: normal;
     text-align: left;
     color: $b;
+
+    @include laptop {
+        font-size: rem(15px);
+    }
+
+    @include tablets {
+        width: 33.3%;
+
+        &:first-child {
+            width: 50%;
+            margin-bottom: rem(25px);
+        }
+    }
+
+    @include phones-large {
+        width: 100%;
+
+        &:first-child {
+            width: 100%;
+            margin-bottom: rem(60px);
+        }
+
+        &:last-child {
+            width: 75%;
+            margin-top: rem(15px);
+            padding-left: rem(15px);
+        }
+    }
+
+    @include phones {
+        &:last-child {
+            width: 60%;
+        }
+    }
+}
+
+.form-price__slider {
+    @include tablets {
+        width: 50%;
+        margin-bottom: rem(25px);   
+    }
+
+    @include phones-large {
+        width: 100%;
+    }
 }
 
 .form-price__icon {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include tablets {
+        display: none;
+    }
 }
 
 .form-price__pic {
@@ -1109,10 +1546,22 @@
     height: rem(19px);
     fill: $b;
     transition: .3s;
+
+    @include laptop {
+        width: rem(20px);
+    }
 }
 
 .form-price__field {
     width: rem(91px);
+
+    @include tablets {
+        margin: 0 rem(20px);
+    }
+
+    @include phones-large {
+        margin: rem(15px) 0 0 0;
+    }
 }
 
 .form-price__input-fake {
@@ -1120,7 +1569,6 @@
     color: $b;
     border: 1px solid $w;
     outline: none;
-    padding: rem(17px) 0;
     text-align: center;
     font-family: $m-s;
     font-size: rem(16px);
@@ -1128,6 +1576,13 @@
     transition: .3s;
     width: 100%;
     min-height: rem(58px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include laptop {
+        min-height: rem(48px);
+    }
 }
 
 .rail {
@@ -1137,6 +1592,18 @@
     position:relative;
     margin:0 auto;
     padding:0 10px;
+
+    @include laptop {
+        width: rem(160px);
+    }
+
+    @include tablets {
+        width: calc(100% - 20px);
+    }
+
+    @include phones-large {
+        width: calc(100% - 50px);
+    }
 }
      
 .ui-slider-handle {
@@ -1232,6 +1699,14 @@
     align-items: center;
     justify-content: flex-start;
     width: 50%;
+
+    @include tablets {
+        width: 80%;
+    }
+
+    @include phones {
+        width: 100%;
+    }
 }
 
 .form-total__text {
@@ -1242,6 +1717,10 @@
     letter-spacing: normal;
     text-align: left;
     color: $b;
+
+    @include phones {
+        font-size: rem(18px);
+    }
 }
 
 .form-total__text-value {
@@ -1254,6 +1733,14 @@
     align-items: center;
     justify-content: flex-end;
     width: 50%;
+
+    @include tablets {
+        width: 20%;
+    }
+
+    @include phones-large {
+        display: none;
+    }
 }
 
 .form-total__action {
