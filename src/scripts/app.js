@@ -12,4 +12,6 @@ require('./common/hover-gallery');
 
 require('./common/accordeon.js');
 
+require('./common/contacts-resp.js');
+
 require('./common/regions-acco.js');

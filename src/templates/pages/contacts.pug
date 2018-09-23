@@ -12,17 +12,17 @@ block content
                     .section__image-wrap.section__image-wrap--darken
             .hero
                 .container
-                    .hero__wrap.hero__wrap--fullwidth
+                    .hero__wrap.hero__wrap--fullwidth.hero__wrap--with-desc
                         h1.section__title Обратная связь
                         .hero__desk
                             p Мы с удовольствием ответим на любые вопросы
                                 br
                                 | связанным с заказом, оформлением, доставкой и монтажом
-            .contacts
+            .contacts#append
                 .container
                     .contacts__wrap
-                        .contacts__col-l
-                            .contacts__row
+                        .contacts__col-l#one
+                            .contacts__row.contacts__row--first
                                 .details
                                     .block-title
                                         .block-title__number 01.
@@ -65,7 +65,7 @@ block content
                                             .shedule__day Воскресенье: 
                                             .shedule__time 11:00 - 17:00
                         .contacts__col-r
-                            form.form.form--green
+                            form.form.form--green.form--cont#two
                                 .form__wrap
                                     .block-title
                                         .block-title__number.block-title__number--light 02.
@@ -77,7 +77,7 @@ block content
                                          br 
                                          | доставкой и монтажом вы можете использовать форму обратной связи.
                                     .form__column
-                                        .form__row.form__row--with-margin
+                                        .form__row.form__row--with-margin.form__row--resp
                                             label.form__block
                                                 input(type="text" name="user-name" placeholder="Имя" required).form__input
                                             label.form__block

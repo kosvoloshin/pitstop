@@ -22,6 +22,11 @@
 .header__wrap--border {
     padding-bottom: rem(23px);
     border-bottom: 2px solid $grey;
+
+    @include phones {
+        border-bottom: none;
+        padding-bottom: rem(4px);
+    }
 }
 
 .header__logo {
@@ -340,6 +345,38 @@
         top: calc(100% + 39px);
         width: initial;
         z-index: 1;
+    }
+}
+
+.header__wrap--border {
+    @include laptop {
+        .header__contacts {
+            left: initial;
+            right: rem(40px);
+            top: calc(100% + 50px);
+        }
+    
+        .header__icon-phone {
+            fill: #fff;
+        }
+    
+        .header__call {
+            &:hover {
+                .header__icon-phone {
+                    fill: $w;
+                }
+    
+                .header__text {
+                    color: $w;
+                }
+            }
+        }
+    }
+
+    @include phones-large {
+        .header__contacts {
+            display: none;
+        }
     }
 }
 

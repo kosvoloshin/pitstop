@@ -38,6 +38,28 @@ block content
                                         a(href="#").categories__link Навесы и беседки из поликарбоната
                                     li.categories__item
                                         a(href="#").categories__link Заборы из 3D сетки
+                                .cat-mobile
+                                    .cat-mobile__title Категория работ:
+                                    label.form-calc-photo(for='select-photo')
+                                        input#bg-photo(type='radio', name='photo-of-gates', value='not_changed', checked='')
+                                        input#select-photo(type='radio', name='photo-of-gates', value='not_changed')
+                                        label.bg-photo(for='bg-photo')
+                                        .items-calc-photo.custom-scroll
+                                            input(type='radio', name='photo-of-gates', value='first_value', id='photo-of-gates[0]')
+                                            label.green(for='photo-of-gates[0]') Все категории
+                                            input(type='radio', name='photo-of-gates', value='second_value', id='photo-of-gates[1]')
+                                            label.green(for='photo-of-gates[1]') Заборы из профнастила
+                                            input(type='radio', name='photo-of-gates', value='third_value', id='photo-of-gates[2]')
+                                            label.green(for='photo-of-gates[2]') Заборы из сетки рабицы
+                                            input(type='radio', name='photo-of-gates', value='fourth_value', id='photo-of-gates[3]')
+                                            label.green(for='photo-of-gates[3]') Заборы из дерева
+                                            input(type='radio', name='photo-of-gates', value='fourth_value', id='photo-of-gates[4]')
+                                            label.green(for='photo-of-gates[4]') Заборы из 3D
+                                            input(type='radio', name='photo-of-gates', value='fourth_value', id='photo-of-gates[5]')
+                                            label.green(for='photo-of-gates[5]') Ворота и калитки
+                                            input(type='radio', name='photo-of-gates', value='fourth_value', id='photo-of-gates[6]')
+                                            label.green(for='photo-of-gates[6]') Откатные ворота
+                                            span.text-photo#text-photo Все категории
                 .works
                     - var x = 9;
                     ul.works__list

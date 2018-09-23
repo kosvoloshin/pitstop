@@ -42,6 +42,22 @@
     }
 }
 
+.hero__wrap--with-desc {
+    padding-top: rem(15px);
+
+    .hero__desk--feed {
+        width: 45%;
+
+        @include tablets {
+            width: 100%;
+        }
+    }
+
+    @include phones {
+        padding-top: rem(30px);
+    }
+}
+
 .section__title {
     font-family: $m-r;
     font-size: rem(50px);

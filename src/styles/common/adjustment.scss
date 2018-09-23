@@ -19,6 +19,10 @@
 
 .section--works {
     padding-top: rem(53px);
+
+    @include desktop {
+        padding-top: rem(33px);
+    }
 }
 
 .container {

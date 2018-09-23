@@ -493,6 +493,13 @@
     background-color: $green;
 }
 
+.form--cont {
+    @include laptop {
+        margin-bottom: rem(20px);
+        padding-bottom: rem(130px);
+    }
+}
+
 .form--grey {
     background-color: $grey;
 }
