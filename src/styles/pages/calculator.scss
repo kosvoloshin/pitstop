@@ -6,7 +6,7 @@
     }
 
     @include phones {
-        padding-top: rem(122px);
+        padding-top: rem(20px);
     }
 }
 
@@ -555,6 +555,15 @@
     
     @include desktop {
         padding: rem(2px) rem(10px);
+        left: rem(67px);
+    }
+
+    @include laptop {
+        left: rem(77px); 
+    }
+
+    @include tablets {
+        left: rem(57px); 
     }
 }
 
@@ -563,6 +572,15 @@
 
     @include desktop {
         padding: rem(2px) rem(10px);
+        left: rem(83px);
+    }
+
+    @include laptop {
+        left: rem(96px); 
+    }
+
+    @include tablets {
+        left: rem(72px); 
     }
 }
 
@@ -572,11 +590,25 @@
 
     @include desktop {
         padding: rem(2px) rem(10px);
+        left: rem(83px);
+        bottom: rem(-25px);
+    }
+
+    @include laptop {
+        left: rem(96px); 
+    }
+
+    @include tablets {
+        left: rem(72px); 
     }
 }
 
 .form__obj-five--resize {
     bottom: rem(-20px);
+
+    @include desktop {
+        bottom: rem(-25px);
+    }
 }
 
 .form__caption {

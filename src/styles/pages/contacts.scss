@@ -224,6 +224,10 @@
     }
 }
 
+.form__row--feedback:nth-last-of-type(1) {
+    margin-bottom: 0;
+}
+
 .form__block {
     display: flex;
     flex: 1;
@@ -283,6 +287,10 @@
     @include phones {
         font-size: rem(15px);
     }
+}
+
+.wpcf7-form-control-wrap {
+    width: 100%;
 }
 
 .wpcf7-form-control.wpcf7-textarea {

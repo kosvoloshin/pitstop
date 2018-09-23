@@ -531,6 +531,10 @@
     }
 }
 
+.form--feedback p {
+    margin: 0;
+}
+
 .block-title__number--light {
     color: rgba($color: $grey, $alpha: 0.4)
 }

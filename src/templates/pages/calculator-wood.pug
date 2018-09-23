@@ -13,7 +13,7 @@ block content
             .hero
                 .container
                     .hero__wrap.hero__wrap--fullwidth
-                        h1.section__title.section__title--bold Расчет стоимости забора 
+                        h1.section__title.section__title--bold.section__title--wood Расчет стоимости забора 
                             br 
                             | из 
                             .section__title--blue дерева
@@ -76,30 +76,35 @@ block content
                                     ul.tabs__list
                                         // a.tabs__link - класс 'selected' - подсвечивает зеленым
                                         // a.tabs__link - класс 'active' - подсвечивает синим
-                                        li.tabs__item
+                                        li.tabs__item.tabs__item--hide-mobile
                                             a.tabs__link.selected(href="#")
-                                                .tabs__obj Высота забора
+                                                span.tabs__obj-mobile 
+                                                span.tabs__obj Высота забора
                                                 svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
-                                        li.tabs__item
+                                        li.tabs__item.tabs__item--hide-mobile
                                             a.tabs__link(href="#")
-                                                .tabs__obj Выбор покрытия
+                                                span.tabs__obj-mobile 
+                                                span.tabs__obj Выбор покрытия
                                                 svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
-                                        li.tabs__item
+                                        li.tabs__item.tabs__item--hide-mobile
                                             a.tabs__link(href="#")
-                                                .tabs__obj Пропитка
+                                                span.tabs__obj-mobile 
+                                                span.tabs__obj Пропитка
                                                 svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
-                                        li.tabs__item
+                                        li.tabs__item.tabs__item--hide-mobile
                                             a.tabs__link(href="#")
-                                                .tabs__obj Кол-во ворот
+                                                span.tabs__obj-mobile 
+                                                span.tabs__obj Кол-во ворот
                                                 svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
-                                        li.tabs__item
+                                        li.tabs__item.tabs__item--hide-mobile
                                             a.tabs__link(href="#")
-                                                .tabs__obj Кол-во калиток
+                                                span.tabs__obj-mobile 
+                                                span.tabs__obj Кол-во калиток
                                                 svg.tabs__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
-                                        li.tabs__item
+                                        li.tabs__item.tabs__item--hide-mobile
                                             a.tabs__link.tabs__link--result(href="#")
-                                                .tabs__result Результат:
-                                                .tabs__value 265000 р
+                                                span.tabs__result Результат:
+                                                span.tabs__value 265000 р
                             ul.form__list
                                 // по умолчанию все li.form__item - display: none; | при добавлении класса 'visible'-display: block;
                                 li.form__item.visible
@@ -189,7 +194,7 @@ block content
                                                 p Lorem ipsum dolor sit amet consecteturlor sit amet co adipisicing elit. Ducimus deleniti ut nulla aut totam. Nulla maxime repellendus fugit tenetur provident in. Beatae, aliquid. Quo, ea veritatis sint odio labore cum.
                                 li.form__item
                                     .form__columns      
-                                        .form__col-l.form__col-l--resize
+                                        .form__col-l.form__col-l--resize.form__col-l--no-gap
                                             .form__row.form__row--selects
                                                 label.form__block.form__block--no-flex
                                                     .form__subtitle.form__subtitle--no-margin.form__subtitle--dark Количество ворот
@@ -238,7 +243,7 @@ block content
                                                 p Lorem ipsum dolor sit amet consecteturlor sit amet co adipisicing elit. Ducimus deleniti ut nulla aut totam. Nulla maxime repellendus fugit tenetur provident in. Beatae, aliquid. Quo, ea veritatis sint odio labore cum.
                                 li.form__item
                                     .form__columns      
-                                        .form__col-l.form__col-l--resize
+                                        .form__col-l.form__col-l--resize.form__col-l--no-gap
                                             .form__row.form__row--selects
                                                 label.form__block.form__block--no-flex
                                                     .form__subtitle.form__subtitle--no-margin.form__subtitle--dark Количество калиток
@@ -271,7 +276,14 @@ block content
                                                 p Lorem ipsum dolor sit amet consecteturlor sit amet co adipisicing elit. Ducimus deleniti ut nulla aut totam. Nulla maxime repellendus fugit tenetur provident in. Beatae, aliquid. Quo, ea veritatis sint odio labore cum.
                                 li.form__item
                                     .form__result
-                                        .form-table
+                                        .nav
+                                            .nav__row
+                                                button(type="button").nav__button Материал
+                                                button(type="button").nav__button Работа
+                                            .nav__row
+                                                button(type="button").nav__button Материал
+                                                button(type="button").nav__button Цена
+                                        .form-table.form-table--one
                                             h2.form-table__title Детальный расчет
                                             ul.form-table__list
                                                 li.form-table__item.form-table__item--title
@@ -316,7 +328,7 @@ block content
                                                         span.form-table__text.form-table__text--total Общая стоимость материалов:
                                                     .form-table__right
                                                         span.form-table__text.form-table__text--total 109 295 руб
-                                        .form-table
+                                        .form-table.form-table--two
                                             ul.form-table__list
                                                 li.form-table__item.form-table__item--title
                                                     .form-table__left
@@ -399,173 +411,5 @@ block content
                     include ../common/gallery-row.pug  
             .content
                 .container
-                    .content__wrap
-                        .regions
-                            .block-title
-                                .block-title__number 04.
-                                h2.block-title__text география
-                                    br
-                                    | работы
-                            ul.regions__columns
-                                li.regions__col
-                                    ul.regions__list
-                                        li.regions__item
-                                            .regions__letter а.
-                                            .regions__city
-                                                a.regions__object(href="#") Апрелевка
-                                        li.regions__item
-                                            .regions__letter б.
-                                            .regions__city
-                                                a.regions__object(href="#") Балашиха
-                                                a.regions__object(href="#") Бронницы
-                                        li.regions__item
-                                            .regions__letter в.
-                                            .regions__city
-                                                a.regions__object(href="#") Верея
-                                                a.regions__object(href="#") Волоколамск
-                                                a.regions__object(href="#") Воскресенск
-                                                a.regions__object(href="#") Высоковск
-                                        li.regions__item
-                                            .regions__letter г.
-                                            .regions__city
-                                                a.regions__object(href="#") Голицино
-                                        li.regions__item
-                                            .regions__letter д.
-                                            .regions__city
-                                                a.regions__object(href="#") Дедовск
-                                                a.regions__object(href="#") Дзержинский
-                                                a.regions__object(href="#") Дмитров
-                                                a.regions__object(href="#") Долгопрудный
-                                                a.regions__object(href="#") Домодедово
-                                        li.regions__item
-                                            .regions__letter е.
-                                            .regions__city
-                                                a.regions__object(href="#") Егорьевск
-                                li.regions__col
-                                    ul.regions__list
-                                        li.regions__item
-                                            .regions__letter а.
-                                            .regions__city
-                                                a.regions__object(href="#") Апрелевка
-                                        li.regions__item
-                                            .regions__letter б.
-                                            .regions__city
-                                                a.regions__object(href="#") Балашиха
-                                                a.regions__object(href="#") Бронницы
-                                        li.regions__item
-                                            .regions__letter в.
-                                            .regions__city
-                                                a.regions__object(href="#") Верея
-                                                a.regions__object(href="#") Волоколамск
-                                                a.regions__object(href="#") Воскресенск
-                                                a.regions__object(href="#") Высоковск
-                                        li.regions__item
-                                            .regions__letter г.
-                                            .regions__city
-                                                a.regions__object(href="#") Голицино
-                                        li.regions__item
-                                            .regions__letter д.
-                                            .regions__city
-                                                a.regions__object(href="#") Дедовск
-                                                a.regions__object(href="#") Дзержинский
-                                                a.regions__object(href="#") Дмитров
-                                                a.regions__object(href="#") Долгопрудный
-                                                a.regions__object(href="#") Домодедово
-                                        li.regions__item
-                                            .regions__letter е.
-                                            .regions__city
-                                                a.regions__object(href="#") Егорьевск
-                                li.regions__col
-                                    ul.regions__list
-                                        li.regions__item
-                                            .regions__letter а.
-                                            .regions__city
-                                                a.regions__object(href="#") Апрелевка
-                                        li.regions__item
-                                            .regions__letter б.
-                                            .regions__city
-                                                a.regions__object(href="#") Балашиха
-                                                a.regions__object(href="#") Бронницы
-                                        li.regions__item
-                                            .regions__letter в.
-                                            .regions__city
-                                                a.regions__object(href="#") Верея
-                                                a.regions__object(href="#") Волоколамск
-                                                a.regions__object(href="#") Воскресенск
-                                                a.regions__object(href="#") Высоковск
-                                        li.regions__item
-                                            .regions__letter г.
-                                            .regions__city
-                                                a.regions__object(href="#") Голицино
-                                        li.regions__item
-                                            .regions__letter д.
-                                            .regions__city
-                                                a.regions__object(href="#") Дедовск
-                                                a.regions__object(href="#") Дзержинский
-                                                a.regions__object(href="#") Дмитров
-                                                a.regions__object(href="#") Долгопрудный
-                                                a.regions__object(href="#") Домодедово
-                                        li.regions__item
-                                            .regions__letter е.
-                                            .regions__city
-                                                a.regions__object(href="#") Егорьевск
-                                li.regions__col
-                                    ul.regions__list
-                                        li.regions__item
-                                            .regions__letter а.
-                                            .regions__city
-                                                a.regions__object(href="#") Апрелевка
-                                        li.regions__item
-                                            .regions__letter б.
-                                            .regions__city
-                                                a.regions__object(href="#") Балашиха
-                                                a.regions__object(href="#") Бронницы
-                                        li.regions__item
-                                            .regions__letter в.
-                                            .regions__city
-                                                a.regions__object(href="#") Верея
-                                                a.regions__object(href="#") Волоколамск
-                                                a.regions__object(href="#") Воскресенск
-                                                a.regions__object(href="#") Высоковск
-                                        li.regions__item
-                                            .regions__letter г.
-                                            .regions__city
-                                                a.regions__object(href="#") Голицино
-                                        li.regions__item
-                                            .regions__letter д.
-                                            .regions__city
-                                                a.regions__object(href="#") Дедовск
-                                                a.regions__object(href="#") Дзержинский
-                                                a.regions__object(href="#") Дмитров
-                                                a.regions__object(href="#") Долгопрудный
-                                                a.regions__object(href="#") Домодедово
-                                        li.regions__item
-                                            .regions__letter е.
-                                            .regions__city
-                                                a.regions__object(href="#") Егорьевск
-                        .reviews
-                            .reviews__heading
-                                .block-title
-                                    .block-title__number.block-title__number--light 05.
-                                    h2.block-title__text.block-title__text--light отзывы 
-                                        br 
-                                        | клиентов
-                                .slider__buttons
-                                    button(type="button").controls.slider__prev
-                                        svg.slider__icon: use(xlink:href="assets/images/icons/sprite.svg#left")
-                                    button(type="button").controls.slider__next
-                                        svg.slider__icon: use(xlink:href="assets/images/icons/sprite.svg#right")
-                            .reviews__desk
-                                .reviews__image
-                                    img.reviews__avatar(src="./assets/images/pic/avatar.jpg" alt="avatar")
-                                .reviews__content
-                                    .reviews__name Михаил
-                                        br
-                                        | Добкин
-                                    .reviews__position г. Мытищи
-                            .reviews__text
-                                p В прошлом месяце заказывал забор для дачного участка. Огораживались с соседями, поэтому ограничились сеткой-рабицей. По бригаде ничего плохого сказать не могу. Монтажники работящие...
-                            a.reviews__link(href="#")
-                                .reviews__btn-text оставить отзыв
-                                svg.reviews__btn-icon: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
+                    include ../common/reg+rev.pug 
         include ../common/footer.pug

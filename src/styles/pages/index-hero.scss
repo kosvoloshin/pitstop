@@ -1,3 +1,10 @@
+.hero {
+    @include phones {
+        height: rem(381px);
+        padding-top: rem(113px);
+    }
+}
+
 .hero__wrap {
     width: 50%;
 
@@ -81,6 +88,82 @@
     @include phones {
         font-size: rem(33px);
         position: relative;
+    }
+}
+
+.section__title--wood {
+    @include phones-large {
+        font-size: rem(44px);
+
+        .lenght {
+            left: 0;
+            right: initial;
+            transform: translate(0%, 0);
+
+            &:after {
+                left: rem(30px);
+                transform: translate(-50%, 0);
+            }
+        }
+    }
+
+    @include phones {
+        font-size: rem(33px);
+
+        .tooltip {
+            left: 0;
+            transform: translate(0, 0);
+
+            &::after {
+                left: rem(20px);
+                right: initial;
+            }
+        }
+    }
+}
+
+.section__title--short {
+    @include phones-large {
+        .lenght {
+            left: 0;
+            right: initial;
+            transform: translate(0%, 0);
+
+            &:after {
+                left: rem(165px);
+                transform: translate(-50%, 0);
+            }
+        }
+    }
+
+    @include phones {
+        .tooltip {
+            left: 0;
+            transform: translate(0, 0);
+
+            &::after {
+                left: rem(165px);
+                right: initial;
+            }
+        }
+    }
+}
+
+.section__title--long {
+    @include laptop {
+        font-size: rem(39px);
+    }
+
+    @include tablets {
+        font-size: rem(31px);
+    }
+
+    @include phones-large {
+        font-size: rem(40px);
+    }
+
+    @include phones {
+        font-size: rem(33px);
     }
 }
 
@@ -239,7 +322,7 @@
         left: 50%;
         top: initial;
         transform: translate(-50%, 0%);
-        bottom: calc(100% + 50px);
+        bottom: calc(100% + 15px);
 
         &:after {
             transform: translate(0, 0) rotate(-90deg);
@@ -281,6 +364,7 @@
         left: 50%;
         transform: translate(-50%, 0);
         top: calc(100% + 17px);
+        width: rem(250px);
 
         &:after {
             left: initial;
@@ -413,6 +497,7 @@
     letter-spacing: normal;
     transition: .3s;
     width: rem(118px);
+    border-radius: 0;
 
     &:hover,
     &:focus {

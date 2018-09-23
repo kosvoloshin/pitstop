@@ -1,9 +1,6 @@
 .pagination {
     display: flex;
     justify-content: center;
-}
-
-.pagination__wrap {
     padding-top: rem(17px);
 
     @include phones {
@@ -68,5 +65,41 @@
     &.active {
         background: transparent;
         color: $b;
+    }
+}
+
+// WP
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-numbers {
+    font-family: $m-r;
+    font-size: rem(14px);
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    color: $b;
+    background-color: $grey;
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        background-color: $green;
+        color: $w;
+    }
+
+    &.current {
+        background-color: $green;
+        color: $w;
     }
 }

@@ -272,6 +272,11 @@
     align-content: stretch;
 }
 
+.photo__fake-list {
+    width: 100%;
+    height: 100%;
+}
+
 .photo__item {
     width: 33.3333%;
     height: 50%;
@@ -287,6 +292,11 @@
             display: none;
         }
     }
+}
+
+.photo__fake-item {
+    width: 100%;
+    height: 100%;
 }
 
 .photo__sub-list {
