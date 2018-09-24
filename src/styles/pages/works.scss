@@ -360,6 +360,11 @@
     display: flex;
     flex-flow: row wrap;
     align-content: stretch;
+    display: none;
+
+    &.selected {
+        display: flex;
+    }
 }
 
 .photo__fake-list {
