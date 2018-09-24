@@ -493,6 +493,10 @@
     background-color: $green;
 }
 
+.form--blue {
+    background-color: $blue;
+}
+
 .form--cont {
     @include laptop {
         margin-bottom: rem(20px);
@@ -538,6 +542,32 @@
     }
 }
 
+.form--callback {
+    padding: rem(33px) rem(54px);
+    padding-bottom: rem(133px);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: rem(745px);
+    height: rem(400px);
+    padding-top: rem(50px);
+    display: none;
+}
+
+.form--ques {
+    padding: rem(33px) rem(54px);
+    padding-bottom: rem(133px);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: rem(745px);
+    height: rem(527px);
+    padding-top: rem(50px);
+    display: none;
+}
+
 .form--feedback p {
     margin: 0;
 }
@@ -551,8 +581,30 @@
     font-family: $m-r;
 }
 
+.form__columns--ques {
+    padding-top: rem(50px);
+}
+
+.form__column--left {
+    width: rem(240px);
+    margin-right: rem(20px);
+}
+
+.form__column--right {
+    width: rem(383px);
+}
+
 .form__row {
     position: relative;
+}
+
+.form__row--ques {
+    margin-bottom: rem(20px);
+    height: 100%;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .form__row--flex {
@@ -631,6 +683,14 @@
         }
     }
         
+}
+
+.form__row--callback {
+    margin-bottom: rem(15px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .form__box {
@@ -1277,6 +1337,14 @@
     @include phones {
         bottom: rem(40px);
     }
+}
+
+.form__button--callback {
+    bottom: rem(55px);
+}
+
+.form__button--ques {
+    bottom: rem(55px);
 }
 
 .wpcf7-form-control.wpcf7-submit {

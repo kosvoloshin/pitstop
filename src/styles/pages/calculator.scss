@@ -699,6 +699,18 @@
     }
 }
 
+.form-table--one {
+    &.visible {
+        display: block;
+    }
+}
+
+.form-table--two {
+    &.visible {
+        display: block;
+    }
+}
+
 .form-table__title {
     font-family: $m-s;
     font-size: rem(18px);
@@ -745,6 +757,12 @@
     border: initial;
     width: 50%;
     padding: rem(16px) 0;
+    outline: none;
+
+    &.active {
+        background-color: $green;
+        color: $w;
+    }
 }
 
 .form-table__list {
@@ -786,8 +804,12 @@
 
     @include phones-large {
         width: 100%;
-        //justify-content: center;
         border-right: none;
+        display: none;
+
+        &.visible {
+            display: flex;
+        }
     }
 }
 
@@ -903,6 +925,11 @@
     @include phones-large {
         width: 100%;
         text-align: center;
+        display: none;
+
+        &.visible {
+            display: flex;
+        }
     }
 }
 

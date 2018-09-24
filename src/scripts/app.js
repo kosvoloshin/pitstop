@@ -14,4 +14,6 @@ require('./common/accordeon.js');
 
 require('./common/contacts-resp.js');
 
+require('./common/nav-button.js');
+
 require('./common/regions-acco.js');

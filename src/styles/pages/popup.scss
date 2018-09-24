@@ -1,0 +1,28 @@
+.callback__btn {
+    position: absolute;
+    background: none;
+    border: initial;
+    padding: 0;
+    outline: none;
+    right: rem(20px);
+    top: rem(20px);
+    cursor: pointer;
+
+    &:hover {
+        .type__icon {
+            opacity: .6;
+        }
+    }
+}
+
+.callback__icon {
+    height: rem(28px);
+    width: rem(28px);
+    fill: $w;
+    transition: .3s;
+}
+
+.form__callback-select {
+    width: 100%;
+    height: 100%;
+}

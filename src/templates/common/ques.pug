@@ -1,0 +1,27 @@
+form.form.form--blue.form--ques
+    .form__wrap
+        button(type="button").callback__btn
+            svg.callback__icon: use(xlink:href="assets/images/icons/sprite.svg#close")
+        .block-title
+            .block-title__number.block-title__number--light
+            h2.block-title__text.block-title__text--light задать
+                br 
+                | вопрос
+        .form__columns.form__columns--ques
+            .form__column.form__column--left
+                .form__row.form__row--ques
+                    label.form__block
+                        input(type="text" name="user-name" placeholder="Имя" required).form__input
+                .form__row.form__row--ques
+                    label.form__block
+                        input(type="text" name="user-number" placeholder="Телефон" required).form__input
+                .form__row.form__row--ques
+                    label.form__block
+                        input(type="text" name="user-mail" placeholder="E-mail" required).form__input
+            .form__column.form__column--right
+                .form__row.form__row--ques
+                    label.form__block
+                        textarea(name="message" cols="30" rows="5" placeholder="Сообщение" required).form__textarea
+        button(type="submit").form__button.form__button--ques
+            .form__btn-text отправить
+            svg.form__btn-icon: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
