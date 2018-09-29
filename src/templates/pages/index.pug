@@ -174,12 +174,11 @@ block content
                                     .form__row
                                         label.form__block.form__block--no-flex
                                             .form__subtitle.form__subtitle--no-margin Тип забора:
-                                            label.form__select(for='select')
+                                            label.form__select.select-pseudo(for='select')
                                                 input#bg(type='radio', name='fence-type', value='not_changed', checked='')
                                                 input#select(type='radio', name='fence-type', value='not_changed')
                                                 label.bg(for='bg')
-                                                //.custom-scroll
-                                                .items
+                                                .items.custom-scroll
                                                     input(type='radio', name='fence-type', value='first_value', id='list[0]')
                                                     label(for='list[0]') Заборы из профнастила
                                                     input(type='radio', name='fence-type', value='second_value', id='list[1]')

@@ -1015,6 +1015,18 @@
   display: none;
 }
 
+.select-pseudo:after {
+    content: '';
+    height: rem(49px);
+    width: rem(49px);
+    background: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    border-bottom-left-radius: rem(5px);
+}
+
 .form__select {
   display: inline-block;
   width: 100%;
