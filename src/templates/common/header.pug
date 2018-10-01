@@ -39,12 +39,12 @@ header.header
                     li.menu__item
                         a.menu__link(href="contacts.html") контакты
             .header__contacts
-                a.header__call(href="tel:")
+                .header__call
                     .header__icon
                         svg.header__icon-phone: use(xlink:href="assets/images/icons/sprite.svg#phone")
                     .header__phone
-                        .header__number 8 (926) 289-42-23
-                        .header__text перезвонить мне
+                        a(href="tel:89262894223").header__number 8 (926) 289-42-23
+                        a(href="#").header__text перезвонить мне
             button(type="button").hamburger#openFull
                 .hamburger__menu
     .header__mob-menu

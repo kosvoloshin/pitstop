@@ -164,6 +164,10 @@
             margin-bottom: 0;
         } 
     }
+
+    &.works__item--hide {
+        display: none;
+    }
 }
 
 .photo--with-padding {
@@ -346,11 +350,11 @@
 
     @include phones-large {
         width: 100%;
-        height: rem(470px);
+        height: initial;
     }
 
     @include phones {
-        height: rem(330px);
+        height: initial;
     }
 }
 
@@ -379,6 +383,30 @@
 
     @include laptop {
         width: 50%;
+
+        &:nth-child(5) {
+            display: none;
+        }
+        &:nth-child(6) {
+            display: none;
+        }
+    }
+
+    @include phones-large {
+        width: 50%;
+        height: rem(235px);
+
+        &:nth-child(5) {
+            display: none;
+        }
+        &:nth-child(6) {
+            display: none;
+        }
+    }
+
+    @include phones {
+        width: 50%;
+        height: rem(165px);
 
         &:nth-child(5) {
             display: none;

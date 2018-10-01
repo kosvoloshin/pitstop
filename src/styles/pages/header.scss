@@ -359,17 +359,13 @@
         .header__icon-phone {
             fill: #fff;
         }
-    
-        .header__call {
-            &:hover {
-                .header__icon-phone {
-                    fill: $w;
-                }
-    
-                .header__text {
-                    color: $w;
-                }
-            }
+
+        .header__number:hover {
+            color: $b;
+        }
+
+        .header__text:hover {
+            color: $b;
         }
     }
 
@@ -385,16 +381,6 @@
     flex-flow: row;
     align-content: flex-end;
     max-height: rem(50px);
-
-    &:hover {
-        .header__icon-phone {
-            fill: $blue;
-        }
-
-        .header__text {
-            color: $blue;
-        }
-    }
 }
 
 .header__icon-phone {
@@ -428,6 +414,11 @@
     letter-spacing: normal;
     text-align: left;
     color: #000000;
+    transition: .3s;
+
+    &:hover {
+        color: $green;
+    }
 
     @include desktop {
         font-size: rem(18px);
@@ -454,6 +445,10 @@
     text-align: left;
     color: #40c36b;
     transition: .3s;
+
+    &:hover {
+        color: $blue;
+    }
 
     @include laptop {
         color: $w;  

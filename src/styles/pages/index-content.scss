@@ -279,7 +279,6 @@
     }
 
     @include laptop {
-        display: flex;
         flex-direction: row;
         align-items: center;
     }
@@ -303,7 +302,7 @@
 
     @include laptop {
         order: 1;
-        width: 32%;
+        width: 40%;
         margin-top: rem(25px);
         margin-bottom: rem(25px);
     }
