@@ -1,14 +1,18 @@
 .popup_call {
-    padding: rem(33px) rem(54px);
-    padding-bottom: rem(133px);
-    width: rem(745px);
-    height: rem(400px);
-    padding-top: rem(50px);
-    background-color: $green;
+    padding: rem(33px) rem(54px)!important;
+    padding-bottom: rem(133px)!important;
+    width: rem(745px)!important;
+    height: rem(400px)!important;
+    padding-top: rem(50px)!important;
+    background-color: $green!important;
 
-    form {
-        padding: 0;
+    .form {
+        padding: 0!important; 
     }
+    .wpcf7-form-control.wpcf7-submit {
+        bottom: 0;
+    }
+
 }
 
 .title {
@@ -21,6 +25,7 @@
     text-transform: uppercase;
     color: #ffffff;
     font-family: "Montserrat-Regular";
+    margin-bottom: 3.57143rem;
 }
 
 .popup_close_call {
@@ -43,26 +48,41 @@
 }
 
 .popup_wrapper_feedback {
-    form {
+    .form {
         margin: 0;
         padding: 0;
     }
 }
 
 .popup_feedback {
-    display: block;
-    top: 971px;
-    opacity: 1;
-    padding: 2.35714rem 3.85714rem;
-    padding-bottom: 9.5rem;
-    width: 53.21429rem;
-    height: 37.64286rem;
-    padding-top: 3.57143rem;
+    padding: 2.35714rem 3.85714rem!important;
+    padding-bottom: 9.5rem!important;
+    width: 53.21429rem!important;
+    height: 37.64286rem!important;
+    padding-top: 3.57143rem!important;
     background-color: #49b7ef;
 
     .wpcf7-form-control.wpcf7-textarea {
         max-height: initial;
     }
+    .form__columns--ques {
+        padding-top: 0;
+    }
+    .wpcf7-form-control.wpcf7-submit {
+        bottom: 0;
+    }
+}
+
+.popup_close_feedback {
+    position: absolute;
+    top: rem(21px);
+    right: rem(21px);
+    cursor: pointer;
+    height: rem(30px);
+    width: rem(30px);
+    background-image: url(../images/icons/close-icon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .form__row--application {
