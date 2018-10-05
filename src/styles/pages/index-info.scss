@@ -539,6 +539,10 @@
 
     @include phones {
         padding: rem(34px) rem(25px) rem(123px) rem(28px);
+
+        .form__block {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -1158,6 +1162,13 @@
 }
 // select fence-type end
 
+.form__text-item {
+    display: none;
+    &.selected {
+        display: block;
+    }
+}
+
 .form__text {
     font-family: $m-r;
     font-size: rem(14px);
@@ -1168,8 +1179,6 @@
     letter-spacing: normal;
     text-align: left;
     color: #ffffff;
-
-
 }
 
 .form__text--dark {

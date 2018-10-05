@@ -65,7 +65,7 @@
     flex-flow: row wrap;
     align-content: stretch;
 
-    @include tablets {
+    @include phones-large {
         display: none;
     }
 }
@@ -73,7 +73,7 @@
 .cat-mobile {
     display: none;
 
-    @include tablets {
+    @include phones-large {
         display: block;
         padding-bottom: rem(55px);
         width: rem(590px);
