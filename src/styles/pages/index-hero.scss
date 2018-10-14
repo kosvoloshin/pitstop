@@ -610,6 +610,10 @@
     border-bottom: 3px solid #f54a4a; 
     position: relative;
     display: inline-block;
+
+    @include phones {
+        position: initial;
+    }
 }
 
 .hero__desk {
