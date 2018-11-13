@@ -4,24 +4,11 @@ html, body {
     margin: 0;
     padding: 0;
     font-size: 14px;
-    font-family: $m-r;
+    font-family: $gopro;
     line-height: 1.42;
     background-color: $w;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
-    /*@include desktop {
-        font-size: 15px;
-    }
-    @include laptop {
-        font-size: 14px;
-    }
-    @include tablets {
-        font-size: 13px;
-    }
-    @include phones {
-        font-size: 12px;
-    }*/
 }
 
 *, *::before, *::after {
@@ -39,10 +26,6 @@ ul {
 
 a {
     text-decoration: none;
-}
-
-p {
-    margin: rem(5px) 0;
 }
 
 .visuallyhidden {
