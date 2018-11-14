@@ -12,6 +12,274 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
   <body>
-    <div class="wrapper"></div>
+    <aside class="sidebar">
+      <div class="logo"><a class="logo__link" href="#"><img class="logo__img" src="./assets/images/logo.png" alt="logo"></a></div>
+      <ul class="menu menu--top">
+        <li class="menu__item"><a class="menu__link" href="#">Ремонт ГБЦ</a></li>
+        <li class="menu__item menu__item--sub"><a class="menu__link" href="#">Ремонт БЦ</a>
+          <div class="sub-menu">
+            <div class="sub-menu__title">иномарки:</div>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Иномарки легковые</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Иномарки грузовые (объем ДВС до 3,5л)</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Иномарки грузовые (объем ДВС свыше 3,5л)</a></li>
+            </ul>
+            <div class="sub-menu__title">отечественные:</div>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Отечественные легковые</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Отечественные грузовые (объем ДВС до 3,5л)</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Отечественные грузовые (объем ДВС свыше 3,5л)</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="menu__item"><a class="menu__link" href="#">Ремонт КВ</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Ремонт шатунов и поршней</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Нестандартный и сложный ремонт</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Ремонт других деталей</a></li>
+      </ul>
+      <ul class="menu menu--bottom">
+        <li class="menu__item"><a class="menu__link" href="#">Капитальный ремонт ДВС</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Прайс-лист </a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Акции и скидки</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Договор по безналу</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Наше оборудование</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Выездная приемка</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+      </ul>
+    </aside>
+    <div class="wrapper">
+      <div class="container">
+        <header class="header">
+          <div class="header__nav">
+            <div class="address">
+              <div class="address__caption">Москва</div>
+              <div class="address__line">ул. Южнопортовая, д.9, стр.2</div>
+            </div>
+            <div class="calc"><a class="calc__caption" href="#">Калькулятор</a>
+              <div class="calc__line">расчитать стоимость</div>
+            </div>
+            <div class="call"><a class="call__caption" href="tel:84994903804">8 (499) 490-38-04</a><a class="call__line" href="#">перезвонить мне</a></div>
+          </div>
+          <div class="header__letter"></div>
+        </header>
+        <section class="section service">
+          <h1 class="section__title visuallyhidden">service</h1>
+          <div class="service__video"></div>
+          <ul class="service__list">
+            <li class="service__item"></li>
+            <li class="service__item"><a class="service__link" href="#"><img class="service__image" src="./assets/images/icons/service-1.png" alt="service">
+                <div class="service__desk">Проточка дисков барабанов, маховиков</div></a></li>
+            <li class="service__item"><a class="service__link" href="#"><img class="service__image" src="./assets/images/icons/service-2.png" alt="service">
+                <div class="service__desk">Ремонт резьб шпилек, отверстий</div></a></li>
+            <li class="service__item"><a class="service__link" href="#"><img class="service__image" src="./assets/images/icons/service-3.png" alt="service">
+                <div class="service__desk">Опрессовка двигателя</div></a></li>
+            <li class="service__item"><a class="service__link" href="#"><img class="service__image" src="./assets/images/icons/service-4.png" alt="service">
+                <div class="service__desk">Фрезерные работы</div></a></li>
+            <li class="service__item"><a class="service__link" href="#"><img class="service__image" src="./assets/images/icons/service-5.png" alt="service">
+                <div class="service__desk">Расточка гильзовка</div></a></li>
+            <li class="service__item"><a class="service__link" href="#"><img class="service__image" src="./assets/images/icons/service-6.png" alt="service">
+                <div class="service__desk">Ремонт клапанного механизма</div></a></li>
+            <li class="service__item"><a class="service__link" href="#"><img class="service__image" src="./assets/images/icons/service-7.png" alt="service">
+                <div class="service__desk">Сварка аргоном</div></a></li>
+          </ul>
+        </section>
+        <section class="section main">
+          <h1 class="section__title visuallyhidden">main</h1>
+          <div class="promo">
+            <ul class="promo__list">
+              <li class="promo__item" style="background-image: url(./assets/images/promo-1.jpg);">
+                <div class="promo__content">
+                  <div class="sticky">для новых организаций</div>
+                  <div class="promo__line-top">первые 3 работы выполним</div>
+                  <div class="title">абсолютно <span class="title__blue-text">бесплатно </span></div>
+                </div>
+              </li>
+              <li class="promo__item" style="background-image: url(./assets/images/promo-2.jpg);">
+                <div class="promo__content">
+                  <div class="sticky">для новых организаций</div>
+                  <div class="promo__line-top">первые 3 работы выполним</div>
+                  <div class="title">абсолютно <span class="title__blue-text">бесплатно </span></div>
+                </div>
+              </li>
+              <li class="promo__item" style="background-image: url(./assets/images/promo-1.jpg);">
+                <div class="promo__content">
+                  <div class="sticky">для новых организаций</div>
+                  <div class="promo__line-top">первые 3 работы выполним</div>
+                  <div class="title">абсолютно <span class="title__blue-text">бесплатно</span></div>
+                </div>
+              </li>
+            </ul>
+            <div class="controls"></div>
+          </div>
+          <div class="desc">
+            <div class="title">  
+              <div class="title__line-top">низкие цены!</div>
+              <div class="title__line-bottom">быстрый ремонт!</div>
+            </div>
+            <div class="desc__text">
+              <p>Компания «Pit-Stop Motor» занимает одно из лидирующих мест на рынке услуг в области механической обработки деталей двигателей внутреннего сгорания. Мы выполняем такие виды работ, как – расточка и ремонт головки блока цилиндров, мойка деталей, их опрессовка, фрезеровка, шлифовка, проточка, гильзовка, хонинговка, а также многие другие виды работ.</p>
+            </div><a class="more" href="#">узнать больше</a>
+          </div>
+          <div class="numbers">
+            <ul class="numbers__list">
+              <li class="numbers__item">
+                <div class="numbers__value">9</div>
+                <div class="numbers__subject">лет на рынке</div>
+                <div class="numbers__text">За это время мы выполнили более 8000 заказов</div>
+              </li>
+              <li class="numbers__item">
+                <div class="numbers__value">30 <span class="numbers__sub">%</span></div>
+                <div class="numbers__subject">дешевле чем у конкурентов</div>
+                <div class="numbers__text">У нас самые низкие цены на рынке. Если вы нашли дешевле, мы сделаем вам скидку</div>
+              </li>
+              <li class="numbers__item">
+                <div class="numbers__value">3<span class="numbers__grove"></span>0</div>
+                <div class="numbers__subject">заказов выполняем ежемесячно</div>
+                <div class="numbers__text">Более 80% заказов специалисты нашей компании выполняют в течении 1 дня</div>
+              </li>
+              <li class="numbers__item">
+                <div class="numbers__value">99%</div>
+                <div class="numbers__subject">довольных клиентов</div>
+                <div class="numbers__text">Вероятность брака в нашей работе менее чем 1%</div>
+              </li>
+            </ul>
+          </div>
+          <div class="repair">
+            <div class="repair__video"></div>
+            <div class="repair__sticky">услуга</div>
+            <div class="title"> 
+              <div class="title__line-top">срочный</div>
+              <div class="title__line-bottom title__red-text">ремонт</div>
+            </div>
+            <div class="repair__text">
+              <p>У вас совсем нет времени ждать? Не беда, наша компания предлагает Вам услугу «срочный ремонт».  Мы вполним ваш заказ в течении 4х часов с момента приема детали и заключения договора. </p>
+            </div>
+            <div class="repair__subject">Экономия до 70% времени</div>
+            <div class="repair__subject">Доплата всего 20%</div><a class="more" href="#">подать заявку</a>
+          </div>
+          <div class="ques" style="background-image: url(./assets/images/steel.jpg);">
+            <div class="title title__blue-text">вопрос? <span class="title__black-text">ответ</span></div>
+            <ul class="ques__list">
+              <li class="ques__item">
+                <div class="ques__heading">
+                  <div class="ques__date">27 сентября 2018</div>
+                  <div class="ques__ans">Отвечает: главный инженер компании PitStop Motors</div>
+                </div>
+                <div class="ques__text">
+                  <p>Гильзовка блока цилиндров или замена на новый двигатель («шорт-блок», блок цилиндров)?</p>
+                </div>
+              </li>
+              <li class="ques__item">
+                <div class="ques__heading">
+                  <div class="ques__date">20 сентября 2018</div>
+                  <div class="ques__ans">Отвечает: мастер приемщик Денис</div>
+                </div>
+                <div class="ques__text">
+                  <p>Можно немножко подробнее о том, что такое «алюсил»?</p>
+                </div>
+              </li>
+              <li class="ques__item">
+                <div class="ques__heading">
+                  <div class="ques__date">15 сентября 2018</div>
+                  <div class="ques__ans">Отвечает: мастер приемщик Денис</div>
+                </div>
+                <div class="ques__text">
+                  <p>Для расточки блока под поршни сами поршни к вам привозить обязательно?</p>
+                </div>
+              </li>
+            </ul>
+            <div class="ques__buttons"><a class="more" href="#">задать вопрос</a><a class="more" href="#">все темы</a></div>
+          </div>
+          <div class="banners">
+            <ul class="banners__list">
+              <li class="bunners__item pitstop" style="background-image: url(./assets/images/pitstop.png);">
+                <div class="title">pitstop <span class="title__red-text">parts</span></div>
+                <div class="pitstop__desc">Магазин автозапчастей</div>
+                <div class="pitstop__text">Любые запчасти для двигателя и автомобиля по самым низким ценам</div>
+              </li>
+              <li class="bunners__item equipment">
+                <div class="title title__white-text">
+                  <div class="title__line-top">наше</div>
+                  <div class="title__line-bottom">оборудование</div>
+                </div>
+                <div class="equipment__desc">В работе мы используем оборудование итальянской фирмы COMEC</div>
+                <div class="equipment__text"> 
+                  <p>Это современные автоматизированные станки, которые отличаются высокой скоростью работы, филигранной точностью, многие функции автоматизированы, что позволяет производить работы быстро и качественно</p>
+                </div>
+              </li>
+              <li class="bunners__item outbound" style="background-image: url(./assets/images/outbound.jpg);">
+                <div class="title title__white-text">
+                  <div class="title__line-top">наше</div>
+                  <div class="title__line-bottom">оборудование</div>
+                </div>
+                <div class="outbound__desc">Мы заберем вашу деталь в любой части Москвы, и сэкономим вам уйму времени</div><a class="more" href="#">подробнее</a>
+              </li>
+              <li class="bunners__item reviews">
+                <ul class="reviews__list">
+                  <li class="reviews__item">
+                    <div class="reviews__logo"><img class="reviews__image" src="./assets/images/logo-areol.png" alt="logo"></div>
+                    <div class="reviews__text">
+                      <p>От лица нашей компании выражаем искреннюю благодарность «Pit-stop Motor» за профессионализм, качество и оперативность при выполнении работ. Хочется отметить высокое качество оборудования и квалифицированный персонал компании. </p>
+                    </div>
+                    <div class="reviews__name">Анатолий <span class="reviews__dark-text">Матюшин</span></div>
+                    <div class="reviews__desc">Старший механик компании «Areol»</div>
+                  </li>
+                </ul>
+                <div class="controls"></div>
+              </li>
+            </ul>
+          </div>
+          <div class="request">
+            <form class="form">
+              <div class="title">оставить заявку</div>
+              <div class="form__column">
+                <div class="form__row">
+                  <label class="form__block">
+                    <input class="form__input" type="text" name="user-name" placeholder="Имя" required>
+                  </label>
+                  <label class="form__block">
+                    <input class="form__input" type="text" name="telephone" placeholder="Номер телефона" required>
+                  </label>
+                </div>
+                <div class="form__row">
+                  <label class="form__block">
+                    <input class="form__input" type="text" name="email" placeholder="Email" required>
+                  </label>
+                  <label class="form__block">
+                    <input class="form__input" type="text" name="request" placeholder="Тема обращения" required>
+                  </label>
+                </div>
+                <div class="form__row">
+                  <label class="form__block">
+                    <textarea class="form__textarea" name="message" placeholder="Ваше сообщение" cols="30" rows="5" required></textarea>
+                  </label>
+                </div>
+              </div>
+              <button class="more" type="submit">отправить</button>
+            </form>
+          </div>
+          <div class="map"></div>
+        </section>
+        <footer class="footer">
+          <div class="footer__nav">
+            <div class="slogan">
+              <div class="slogan__text">Расточка головки блока цилиндров в Москве ремонт ГБЦ по самым низким ценами</div>
+            </div>
+            <div class="address">
+              <div class="address__caption">ул. Южнопортовая, д.9, стр.2</div>
+              <div class="address__line">время работы: с 8:00 до 20:00</div>
+            </div>
+            <div class="call"><a class="call__caption" href="tel:84994903804">8 (499) 490-38-04</a><a class="call__line" href="#">перезвонить мне</a></div>
+            <div class="socials"> <a class="socials__link socials__link--viber" href="#" target="blanc"></a><a class="socials__link socials__link--whatsapp" href="#" target="blanc"></a></div>
+            <div class="create">
+              <div class="create__sub">создание <br>и продвижение</div><a class="create__link" href="#" target="blanc">умные <span class="create__bold">seo</span><br>технологии</a>
+            </div>
+          </div>
+          <div class="footer__line">
+            <div class="footer__copy">Pit-Stop Motor © 2008-2018 Все права защищены.</div><a class="footer__policy" href="#" target="blanc">Политика обработки персональных данных</a><a class="footer__mail" href="mailto:info@pitstopmotor.ru">info@pitstopmotor.ru</a>
+          </div>
+        </footer>
+      </div>
+    </div>
   </body>
 </html>
