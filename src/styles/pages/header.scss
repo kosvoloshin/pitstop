@@ -1,0 +1,146 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: rem(105px);
+}
+
+.header__nav {
+    display: flex;
+    flex-direction: row;
+    padding-top: rem(38px);
+    padding-left: rem(118px);
+    padding-right: rem(64px);
+    justify-content: space-between;
+    flex: 1;
+}
+
+.address {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding-left: rem(34px);
+
+    &:before {
+        content: '\e804';
+        font-family: $f;
+        color: #168ce3;
+        position: absolute;
+        left: rem(2px);
+        font-size: rem(33px);
+        top: rem(-10px);
+    }
+}
+
+.address--footer {
+    flex-direction: column;
+}
+
+.address__caption {
+    color: $b;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.address__wrap {
+    padding-left: rem(75px);
+}
+
+.address__line--top {
+    color: $b;
+}
+
+.address__line {
+    color: #919191;
+    letter-spacing: 0.05em;
+}
+
+.calc {
+    position: relative;
+    padding-left: rem(33px);
+
+    &:before {
+        content: '\f1ec';
+        font-family: $f;
+        color: #168ce3;
+        position: absolute;
+        left: 0;
+        top: rem(-5px);
+        font-size: rem(26px);
+    }
+}
+
+.calc__caption {
+    color: $b;
+    text-decoration: underline;
+    transition: .35s;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+
+    &:hover {
+        color: #168ce3;
+    }
+}
+
+.calc__line {
+    color: #919191;
+    letter-spacing: 0.05em;
+}
+
+.call {
+    padding-left: 40px;
+    position: relative;
+
+    &:before {
+        content: '\e805';
+        font-family: $f;
+        color: #168ce3;
+        position: absolute;
+        left: rem(3px);
+        font-size: rem(31px);
+        top: rem(-10px);
+    }
+}
+
+.call__caption {
+    display: block;
+    color: $b;
+    transition: .35s;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+
+    &:hover {
+        color: #168ce3;
+    }
+}
+
+.call__line {
+    display: block;
+    color: #168ce3;
+    transition: .35s;
+    letter-spacing: 0.05em;
+
+    &:hover {
+        color: $b;
+    }
+}
+
+.header__letter {
+    width: rem(105px);
+    background-color: #168ce3;
+    border: initial;
+    outline: none;
+    transition: .35s;
+    cursor: pointer;
+
+    &:before {
+        content: '\e803';
+        font-family: $f;
+        color: $w;
+        font-size: rem(50px);
+    }
+
+    &:hover {
+        background-color: darken(#168ce3, 10%);
+    }
+}

@@ -1,0 +1,146 @@
+.footer {
+    padding-right: rem(65px);
+    padding-top: rem(127px);
+    padding-left: rem(20px);
+}
+
+.footer__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer__item--last {
+    display: flex;
+}
+
+.slogan {
+    position: relative;
+    padding-left: rem(42px);
+
+    &:before {
+        content: '\e809';
+        font-family: $f;
+        position: absolute;
+        top: rem(-7px);
+        left: 0;
+        color: $blue;
+        font-size: rem(30px);
+    }
+}
+
+.slogan__text {
+    font-family: $goprom;
+    font-size: rem(15px);
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    padding: 0 rem(50px);
+    margin-top: rem(-10px);
+}
+
+.socials__link {
+    margin-right: rem(35px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.socials__link--viber {
+    transform: rotateY(180deg);
+
+    &:after {
+        content: '\e805';
+        font-family: $f;
+        color: #919191;
+        transition: .35s;
+        font-size: rem(48px);
+    }
+
+    &:hover:after {
+        color: #7f4da0;
+    }
+}
+
+.socials__link--whatsapp {
+    &:after {
+        content: '\f232';
+        font-family: $f;
+        color: #919191;
+        transition: .35s;
+        font-size: rem(50px);
+    }
+
+    &:hover:after {
+        color: #40c36b;
+    }
+}
+
+.create {
+    transform: translate(0,-30%);
+}
+
+.create__sub {
+    font-size: rem(14px);
+    font-family: $gopro;
+    color: #afafaf;
+    margin-bottom: rem(3px);
+}
+
+.create__link {
+    padding: rem(2px) 0;
+    width: rem(126px);
+    border: 2px solid #3b444e;
+    color: #3b444e;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    transition: .35s;
+
+    &:hover {
+        background-color: #3b444e;
+        color: $w;
+    }
+}
+
+.create__bold {
+    font-family: $goprob;
+}
+
+.footer__line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #ababb4;
+    margin-top: rem(50px);
+    padding-top: rem(28px);
+    padding-bottom: rem(28px);
+}
+
+.footer__copy {
+    color: #676767;
+}
+
+.footer__policy {
+    text-decoration: underline;
+    color: #676767;
+    transition: .35s;
+
+    &:hover {
+        color: #232323;
+    }
+}
+
+.footer__mail {
+    text-decoration: underline;
+    color: $blue;
+    transition: .35s;
+
+    &:hover {
+        color: #232323;
+    }
+}

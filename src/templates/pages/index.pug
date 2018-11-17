@@ -60,77 +60,96 @@ block content
                 .header__nav
                     .address
                         .address__caption Москва
-                        .address__line ул. Южнопортовая, д.9, стр.2
+                        .address__wrap
+                            .address__line.address__line--top ул. Южнопортовая, д.9, стр.2
+                            .address__line время работы с 8:00 до 20:00
                     .calc
                         a(href="#").calc__caption Калькулятор
                         .calc__line расчитать стоимость
                     .call
                         a(href="tel:84994903804").call__caption 8 (499) 490-38-04
                         a(href="#").call__line перезвонить мне
-                .header__letter
+                button(type="button").header__letter
             section.section.service
                 h1.section__title.visuallyhidden service
                 .service__video
                 ul.service__list
-                    li.service__item
+                    li.service__item.service__item--empty
                     li.service__item
                         a(href="#").service__link
                             img(src="./assets/images/icons/service-1.png" alt="service").service__image
-                            .service__desk Проточка дисков барабанов, маховиков
+                            .service__desk Проточка дисков 
+                                br 
+                                | барабанов, маховиков
                     li.service__item
                         a(href="#").service__link
                             img(src="./assets/images/icons/service-2.png" alt="service").service__image
-                            .service__desk Ремонт резьб шпилек, отверстий
+                            .service__desk Ремонт резьб 
+                                br
+                                | шпилек, отверстий
                     li.service__item
                         a(href="#").service__link
                             img(src="./assets/images/icons/service-3.png" alt="service").service__image
-                            .service__desk Опрессовка двигателя
+                            .service__desk Опрессовка 
+                                br
+                                | двигателя
                     li.service__item
                         a(href="#").service__link
                             img(src="./assets/images/icons/service-4.png" alt="service").service__image
-                            .service__desk Фрезерные работы
+                            .service__desk Фрезерные 
+                                br
+                                | работы
                     li.service__item
                         a(href="#").service__link
                             img(src="./assets/images/icons/service-5.png" alt="service").service__image
-                            .service__desk Расточка гильзовка
+                            .service__desk Расточка 
+                                br
+                                | гильзовка
                     li.service__item
                         a(href="#").service__link
                             img(src="./assets/images/icons/service-6.png" alt="service").service__image
-                            .service__desk Ремонт клапанного механизма
+                            .service__desk Ремонт клапанного 
+                                br
+                                | механизма
                     li.service__item
                         a(href="#").service__link
                             img(src="./assets/images/icons/service-7.png" alt="service").service__image
-                            .service__desk Сварка аргоном
+                            .service__desk Сварка 
+                                br
+                                | аргоном
             section.section.main
                 h1.section__title.visuallyhidden main
-                .promo
-                    ul.promo__list
-                        li.promo__item(style="background-image: url(./assets/images/promo-1.jpg)")
-                            .promo__content
-                                .sticky для новых организаций
-                                .promo__line-top первые 3 работы выполним
-                                .title абсолютно 
-                                    span.title__blue-text бесплатно 
-                        li.promo__item(style="background-image: url(./assets/images/promo-2.jpg)")
-                            .promo__content
-                                .sticky для новых организаций
-                                .promo__line-top первые 3 работы выполним
-                                .title абсолютно 
-                                    span.title__blue-text бесплатно 
-                        li.promo__item(style="background-image: url(./assets/images/promo-1.jpg)")
-                            .promo__content
-                                .sticky для новых организаций
-                                .promo__line-top первые 3 работы выполним
-                                .title абсолютно 
-                                    span.title__blue-text бесплатно
-                    .controls
-                .desc
-                    .title   
-                        .title__line-top низкие цены!
-                        .title__line-bottom быстрый ремонт!
-                    .desc__text
-                        p Компания «Pit-Stop Motor» занимает одно из лидирующих мест на рынке услуг в области механической обработки деталей двигателей внутреннего сгорания. Мы выполняем такие виды работ, как – расточка и ремонт головки блока цилиндров, мойка деталей, их опрессовка, фрезеровка, шлифовка, проточка, гильзовка, хонинговка, а также многие другие виды работ.
-                    a(href="#").more узнать больше
+                .main__line-promo-desc
+                    .promo
+                        ul.promo__list
+                            li.promo__item.visible(style="background-image: url(./assets/images/promo-1.jpg)")
+                                .promo__content
+                                    .promo__sticky для новых организаций
+                                    .promo__line-top первые 3 работы выполним
+                                    .title абсолютно 
+                                        span.title__blue-text бесплатно 
+                            li.promo__item(style="background-image: url(./assets/images/promo-2.jpg)")
+                                .promo__content
+                                    .promo__sticky для новых организаций
+                                    .promo__line-top первые 3 работы выполним
+                                    .title абсолютно 
+                                        span.title__blue-text бесплатно 
+                            li.promo__item(style="background-image: url(./assets/images/promo-1.jpg)")
+                                .promo__content
+                                    .promo__sticky для новых организаций
+                                    .promo__line-top первые 3 работы выполним
+                                    .title абсолютно 
+                                        span.title__blue-text бесплатно
+                        .controls
+                            button(type="button").controls__btn.controls__prev 
+                            button(type="button").controls__btn.controls__next
+                    .desc
+                        .title   
+                            .title__line-top низкие цены!
+                            .title__line-bottom быстрый ремонт!
+                        .desc__text
+                            p Компания «Pit-Stop Motor» занимает одно из лидирующих мест на рынке услуг в области механической обработки деталей двигателей внутреннего сгорания. Мы выполняем такие виды работ, как – расточка и ремонт головки блока цилиндров, мойка деталей, их опрессовка, фрезеровка, шлифовка, проточка, гильзовка, хонинговка, а также многие другие виды работ.
+                        a(href="#").more узнать больше
                 .numbers
                     ul.numbers__list
                         li.numbers__item
@@ -138,59 +157,62 @@ block content
                             .numbers__subject лет на рынке
                             .numbers__text За это время мы выполнили более 8000 заказов
                         li.numbers__item
-                            .numbers__value 30 
+                            .numbers__value 30
                                 span.numbers__sub %
                             .numbers__subject дешевле чем у конкурентов
                             .numbers__text У нас самые низкие цены на рынке. Если вы нашли дешевле, мы сделаем вам скидку
+                        li.numbers__item
+                            .numbers__value 99%
+                            .numbers__subject довольных клиентов
+                            .numbers__text Вероятность брака в нашей работе менее чем 1%
                         li.numbers__item
                             .numbers__value 3
                                 span.numbers__grove
                                 | 0
                             .numbers__subject заказов выполняем ежемесячно
                             .numbers__text Более 80% заказов специалисты нашей компании выполняют в течении 1 дня
-                        li.numbers__item
-                            .numbers__value 99%
-                            .numbers__subject довольных клиентов
-                            .numbers__text Вероятность брака в нашей работе менее чем 1%
-                .repair
-                    .repair__video
-                    .repair__sticky услуга
-                    .title 
-                        .title__line-top срочный
-                        .title__line-bottom.title__red-text ремонт
-                    .repair__text
-                        p У вас совсем нет времени ждать? Не беда, наша компания предлагает Вам услугу «срочный ремонт».  Мы вполним ваш заказ в течении 4х часов с момента приема детали и заключения договора. 
-                    .repair__subject Экономия до 70% времени
-                    .repair__subject Доплата всего 20%
-                    a(href="#").more подать заявку
-                .ques(style="background-image: url(./assets/images/steel.jpg)")
-                    .title.title__blue-text вопрос? 
-                        span.title__black-text ответ
-                    ul.ques__list
-                        li.ques__item
-                            .ques__heading
-                                .ques__date 27 сентября 2018
-                                .ques__ans Отвечает: главный инженер компании PitStop Motors
-                            .ques__text
-                                p Гильзовка блока цилиндров или замена на новый двигатель («шорт-блок», блок цилиндров)?
-                        li.ques__item
-                            .ques__heading
-                                .ques__date 20 сентября 2018
-                                .ques__ans Отвечает: мастер приемщик Денис
-                            .ques__text
-                                p Можно немножко подробнее о том, что такое «алюсил»?
-                        li.ques__item
-                            .ques__heading
-                                .ques__date 15 сентября 2018
-                                .ques__ans Отвечает: мастер приемщик Денис
-                            .ques__text
-                                p Для расточки блока под поршни сами поршни к вам привозить обязательно?
-                    .ques__buttons
-                        a(href="#").more задать вопрос
-                        a(href="#").more все темы
+                .main__line-repair-ques    
+                    .repair
+                        .repair__video
+                        .repair__content
+                            .repair__sticky услуга
+                            .title.title--white
+                                .title__line-top срочный
+                                .title__line-bottom.title__red-text ремонт
+                            .repair__text
+                                p У вас совсем нет времени ждать? Не беда, наша компания предлагает Вам услугу «срочный ремонт».  Мы вполним ваш заказ в течении 4х часов с момента приема детали и заключения договора. 
+                            .repair__subject Экономия до 70% времени
+                                br
+                                | Доплата всего 20%
+                            a(href="#").more.more--white подать заявку
+                    .ques(style="background-image: url(./assets/images/steel.jpg)")
+                        .title.title__blue-text вопрос? 
+                            span.title__black-text / ответ
+                        ul.ques__list
+                            li.ques__item
+                                .ques__heading
+                                    .ques__date 27 Сентября 2018 | 
+                                    .ques__ans Отвечает: главный инженер компании PitStop Motors
+                                a(href="#").ques__text
+                                    p Гильзовка блока цилиндров или замена на новый двигатель («шорт-блок», блок цилиндров)?
+                            li.ques__item
+                                .ques__heading
+                                    .ques__date 20 Сентября 2018 | 
+                                    .ques__ans Отвечает: мастер приемщик Денис
+                                a(href="#").ques__text
+                                    p Можно немножко подробнее о том, что такое «алюсил»?
+                            li.ques__item
+                                .ques__heading
+                                    .ques__date 15 Сентября 2018 | 
+                                    .ques__ans Отвечает: мастер приемщик Денис
+                                a(href="#").ques__text
+                                    p Для расточки блока под поршни сами поршни к вам привозить обязательно?
+                        .ques__buttons
+                            a(href="#").more задать вопрос
+                            a(href="#").more все темы
                 .banners
                     ul.banners__list
-                        li.bunners__item.pitstop(style="background-image: url(./assets/images/pitstop.png)")
+                        li.bunners__item.pitstop
                             .title pitstop 
                                 span.title__red-text parts
                             .pitstop__desc Магазин автозапчастей
@@ -202,14 +224,31 @@ block content
                             .equipment__desc В работе мы используем оборудование итальянской фирмы COMEC
                             .equipment__text 
                                 p Это современные автоматизированные станки, которые отличаются высокой скоростью работы, филигранной точностью, многие функции автоматизированы, что позволяет производить работы быстро и качественно
-                        li.bunners__item.outbound(style="background-image: url(./assets/images/outbound.jpg)")
-                            .title.title__white-text
-                                .title__line-top наше
-                                .title__line-bottom оборудование
-                            .outbound__desc Мы заберем вашу деталь в любой части Москвы, и сэкономим вам уйму времени
-                            a(href="#").more подробнее
+                        li.bunners__item.outbound
+                            .outbound__wrap
+                                .title.title__white-text
+                                    .title__line-top выездная
+                                    .title__line-bottom приемка
+                                .outbound__desc Мы заберем вашу деталь в любой части Москвы, и сэкономим вам уйму времени
+                                a(href="#").more.more--white подробнее
                         li.bunners__item.reviews
                             ul.reviews__list
+                                li.reviews__item.visible
+                                    .reviews__logo
+                                        img(src="./assets/images/logo-areol.png" alt="logo").reviews__image
+                                    .reviews__text
+                                        p От лица нашей компании выражаем искреннюю благодарность «Pit-stop Motor» за профессионализм, качество и оперативность при выполнении работ. Хочется отметить высокое качество оборудования и квалифицированный персонал компании. 
+                                    .reviews__name Анатолий 
+                                        span.reviews__dark-text Матюшин
+                                    .reviews__desc Старший механик компании «Areol»
+                                li.reviews__item
+                                    .reviews__logo
+                                        img(src="./assets/images/logo-areol.png" alt="logo").reviews__image
+                                    .reviews__text
+                                        p От лица нашей компании выражаем искреннюю благодарность «Pit-stop Motor» за профессионализм, качество и оперативность при выполнении работ. Хочется отметить высокое качество оборудования и квалифицированный персонал компании. 
+                                    .reviews__name Анатолий 
+                                        span.reviews__dark-text Матюшин
+                                    .reviews__desc Старший механик компании «Areol»
                                 li.reviews__item
                                     .reviews__logo
                                         img(src="./assets/images/logo-areol.png" alt="logo").reviews__image
@@ -219,46 +258,56 @@ block content
                                         span.reviews__dark-text Матюшин
                                     .reviews__desc Старший механик компании «Areol»
                             .controls
-                .request
-                    form.form
-                        .title оставить заявку
-                        .form__column
-                            .form__row
-                                label.form__block
-                                    input(type="text" name="user-name" placeholder="Имя" required).form__input
-                                label.form__block
-                                    input(type="text" name="telephone" placeholder="Номер телефона" required).form__input
-                            .form__row
-                                label.form__block
-                                    input(type="text" name="email" placeholder="Email" required).form__input
-                                label.form__block
-                                    input(type="text" name="request" placeholder="Тема обращения" required).form__input
-                            .form__row
-                                label.form__block
-                                    textarea(name="message" placeholder="Ваше сообщение" cols="30" rows="5" required).form__textarea
-                        button(type="submit").more отправить
-                .map
+                                button(type="button").controls__btn.controls__prev 
+                                button(type="button").controls__btn.controls__next
+                .main__line-request-map
+                    .request
+                        form.form
+                            .title оставить заявку
+                            .form__column
+                                .form__row
+                                    label.form__block
+                                        input(type="text" name="user-name" placeholder="Имя" required).form__input.form__input--user
+                                    label.form__block
+                                        input(type="text" name="telephone" placeholder="Номер телефона" required).form__input.form__input--call
+                                .form__row
+                                    label.form__block
+                                        input(type="text" name="email" placeholder="Email" required).form__input.form__input--email
+                                    label.form__block
+                                        input(type="text" name="request" placeholder="Тема обращения" required).form__input.form__input--req
+                                .form__row
+                                    label.form__block
+                                        textarea(name="message" placeholder="Ваше сообщение" cols="30" rows="1" required).form__textarea
+                            button(type="submit").more отправить
+                    .map#map
+                        script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBedBDOwDkXi5dlBT1B2VmOGHShZWbiVqg&callback=initMap')
             footer.footer
-                .footer__nav
-                    .slogan
-                        .slogan__text Расточка головки блока цилиндров в Москве ремонт ГБЦ по самым низким ценами
-                    .address
-                        .address__caption ул. Южнопортовая, д.9, стр.2
-                        .address__line время работы: с 8:00 до 20:00
-                    .call
-                        a(href="tel:84994903804").call__caption 8 (499) 490-38-04
-                        a(href="#").call__line перезвонить мне
-                    .socials 
-                        a(href="#" target="blanc").socials__link.socials__link--viber
-                        a(href="#" target="blanc").socials__link.socials__link--whatsapp
-                    .create
-                        .create__sub создание 
-                            br
-                            | и продвижение
-                        a(href="#" target="blanc").create__link умные 
-                            span.create__bold seo
-                            br
-                            | технологии
+                ul.footer__nav
+                    li.footer__item
+                        .slogan
+                            .slogan__text Расточка головки блока цилиндров в Москве 
+                                br
+                                | ремонт ГБЦ по самым низким ценами
+                    li.footer__item
+                        .address.address--footer
+                            .address__caption ул. Южнопортовая, д.9, стр.2
+                            .address__line время работы: с 8:00 до 20:00
+                    li.footer__item
+                        .call.call--footer
+                            a(href="tel:84994903804").call__caption 8 (499) 490-38-04
+                            a(href="#").call__line перезвонить мне
+                    li.footer__item.footer__item--last
+                        .socials 
+                            a(href="#" target="blanc").socials__link.socials__link--viber
+                            a(href="#" target="blanc").socials__link.socials__link--whatsapp
+                        .create
+                            .create__sub создание 
+                                br
+                                | и продвижение
+                            a(href="#" target="blanc").create__link умные 
+                                span.create__bold seo
+                                br
+                                | технологии
                 .footer__line
                     .footer__copy Pit-Stop Motor © 2008-2018 Все права защищены.
                     a(href="#" target="blanc").footer__policy Политика обработки персональных данных
