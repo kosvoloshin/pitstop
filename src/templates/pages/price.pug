@@ -1,0 +1,491 @@
+extends ../template
+
+block variables
+    - var title = 'Прайс лист'
+
+block content
+    include ../common/sidebar.pug
+    .wrapper
+        .container
+            include ../common/header.pug
+            section.section.price
+                .price__wrap
+                    h1.section__title.visuallyhidden price
+                    .price__heading
+                        .title Прайс лист
+                        .price__type
+                            label.price__btn#our.active
+                                .price__btn-text Отечественные
+                                input(type="radio" name="option").price__check.price__check--our.visuallyhidden
+                            span.price__view
+                            label.price__btn#import
+                                input(type="radio" name="option").price__check.price__check--import.visuallyhidden
+                                .price__btn-text Иномарки
+                    .tabs
+                        ul.tabs__list
+                            li.tabs__item
+                                a(href="#").tabs__link Головка блока цилиндров (ГБЦ)
+                            li.tabs__item
+                                a(href="#").tabs__link Блок цилиндров (БЦ)
+                            li.tabs__item
+                                a(href="#").tabs__link Коленчатый вал (КВ)
+                            li.tabs__item
+                                a(href="#").tabs__link Шатуны, поршни
+                            li.tabs__item
+                                a(href="#").tabs__link Маслонасос
+                            li.tabs__item
+                                a(href="#").tabs__link Поддон
+                            li.tabs__item
+                                a(href="#").tabs__link Коллектор
+                            li.tabs__item
+                                a(href="#").tabs__link Другие детали
+                            li.tabs__item
+                                a(href="#").tabs__link Сварка
+                    .table.active#table-our
+                        .table__heading
+                            .table__name Наименование работ
+                            .table__unit Ед. изм.
+                            .table__cost Стоимость, руб.
+                        .table__block
+                            .table__title Головка блока цилиндров (ГБЦ)
+                            .table__subtitle Предварительные работы
+                            .table__row
+                                .table__name Мойка предварительная (технологическая)
+                                .table__unit ГБЦ
+                                .table__cost 60
+                            .table__row
+                                .table__name Мойка повторная (технологическая) перед сборкой
+                                .table__unit ГБЦ
+                                .table__cost 40
+                            .table__row
+                                .table__name Снятие/установка предкамер (М-В 601 и т.п.)
+                                .table__unit операция
+                                .table__cost 396
+                            .table__row
+                                .table__name Снятие форсунок
+                                .table__unit операция
+                                .table__cost 150
+                            .table__row
+                                .table__name Удаление форсунок (М-В 611 и т.п.)
+                                .table__unit операция
+                                .table__cost 1897
+                            .table__row
+                                .table__name Снятие свечей накаливания
+                                .table__unit операция
+                                .table__cost 150
+                            .table__row
+                                .table__name Разборка от коллектора
+                                .table__unit коллектор
+                                .table__cost 500
+                            .table__row
+                                .table__name Разборка от осей и коромысел или от РВ
+                                .table__unit ось
+                                .table__cost 300
+                            .table__row
+                                .table__name Шарошка каналов
+                                .table__unit канал
+                                .table__cost 1056
+                            .table__subtitle Опрессовка
+                            .table__row
+                                .table__name Опрессовка ГБЦ
+                                .table__unit цилиндр
+                                .table__cost 250
+                            .table__row
+                                .table__name Опрессовка ГБЦ
+                                    .table__sub-name 1-2 цилиндра
+                                .table__unit ГБЦ
+                                .table__cost 500
+                            .table__row
+                                .table__name Опрессовка ГБЦ (повторная)
+                                .table__unit цилиндр
+                                .table__cost 150
+                            .table__subtitle Предварительные работы
+                            .table__row
+                                .table__name Разборка клапана (рассухаривание)
+                                .table__unit клапан
+                                .table__cost 40
+                            .table__row
+                                .table__name Дефектация направляющих втулок и клапанов
+                                .table__unit клапан
+                                .table__cost 21
+                            .table__row
+                                .table__name Чистка клапана
+                                .table__unit клапан
+                                .table__cost 25
+                            .table__row
+                                .table__name Мойка предварительная (технологическая)
+                                .table__unit ГБЦ
+                                .table__cost 60
+                            .table__row
+                                .table__name Мойка повторная (технологическая) перед сборкой
+                                .table__unit ГБЦ
+                                .table__cost 40
+                            .table__row
+                                .table__name Снятие/установка предкамер (М-В 601 и т.п.)
+                                .table__unit операция
+                                .table__cost 396
+                            .table__row
+                                .table__name Снятие форсунок
+                                .table__unit операция
+                                .table__cost 150
+                            .table__row
+                                .table__name Удаление форсунок (М-В 611 и т.п.)
+                                .table__unit операция
+                                .table__cost 1897
+                            .table__row
+                                .table__name Снятие свечей накаливания
+                                .table__unit операция
+                                .table__cost 150
+                            .table__row
+                                .table__name Разборка от коллектора
+                                .table__unit коллектор
+                                .table__cost 500
+                            .table__row
+                                .table__name Разборка от осей и коромысел или от РВ
+                                .table__unit ось
+                                .table__cost 300
+                            .table__row
+                                .table__name Шарошка каналов
+                                .table__unit канал
+                                .table__cost 1056   
+                            .notes
+                                .notes__title примечания:
+                                ol.notes__list
+                                    li.notes__item При работах по одному цилиндру: + 20% к стоимости работ
+                                    li.notes__item Гильзовка при наличии трещины: + 20% к стоимости работ
+                                    li.notes__item Гильзовка блоков с тонкими стенками: + 20% к стоимости работ
+                        .table__block
+                            .table__title блок цилиндров (БЦ)
+                            .table__subtitle Предварительные работы
+                            .table__row
+                                .table__name Мойка предварительная (технологическая)
+                                .table__unit ГБЦ
+                                .table__cost 60
+                            .table__row
+                                .table__name Мойка повторная (технологическая) перед сборкой
+                                .table__unit ГБЦ
+                                .table__cost 40
+                            .table__row
+                                .table__name Снятие/установка предкамер (М-В 601 и т.п.)
+                                .table__unit операция
+                                .table__cost 396
+                            .table__row
+                                .table__name Снятие форсунок
+                                .table__unit операция
+                                .table__cost 150
+                            .table__row
+                                .table__name Удаление форсунок (М-В 611 и т.п.)
+                                .table__unit операция
+                                .table__cost 1897
+                            .table__row
+                                .table__name Снятие свечей накаливания
+                                .table__unit операция
+                                .table__cost 150
+                            .table__row
+                                .table__name Разборка от коллектора
+                                .table__unit коллектор
+                                .table__cost 500
+                            .table__row
+                                .table__name Разборка от осей и коромысел или от РВ
+                                .table__unit ось
+                                .table__cost 300
+                            .table__row
+                                .table__name Шарошка каналов
+                                .table__unit канал
+                                .table__cost 1056
+                            .table__subtitle Опрессовка
+                            .table__row
+                                .table__name Опрессовка ГБЦ
+                                .table__unit цилиндр
+                                .table__cost 250
+                            .table__row
+                                .table__name Опрессовка ГБЦ
+                                    .table__sub-name 1-2 цилиндра
+                                .table__unit ГБЦ
+                                .table__cost 500
+                            .table__row
+                                .table__name Опрессовка ГБЦ (повторная)
+                                .table__unit цилиндр
+                                .table__cost 150
+                            .table__subtitle Предварительные работы
+                            .table__row
+                                .table__name Разборка клапана (рассухаривание)
+                                .table__unit клапан
+                                .table__cost 40
+                            .table__row
+                                .table__name Дефектация направляющих втулок и клапанов
+                                .table__unit клапан
+                                .table__cost 21
+                            .table__row
+                                .table__name Чистка клапана
+                                .table__unit клапан
+                                .table__cost 25
+                            .table__row
+                                .table__name Мойка предварительная (технологическая)
+                                .table__unit ГБЦ
+                                .table__cost 60
+                            .table__row
+                                .table__name Мойка повторная (технологическая) перед сборкой
+                                .table__unit ГБЦ
+                                .table__cost 40
+                            .table__row
+                                .table__name Снятие/установка предкамер (М-В 601 и т.п.)
+                                .table__unit операция
+                                .table__cost 396
+                            .table__row
+                                .table__name Снятие форсунок
+                                .table__unit операция
+                                .table__cost 150
+                            .table__row
+                                .table__name Удаление форсунок (М-В 611 и т.п.)
+                                .table__unit операция
+                                .table__cost 1897
+                            .table__row
+                                .table__name Снятие свечей накаливания
+                                .table__unit операция
+                                .table__cost 150
+                            .table__row
+                                .table__name Разборка от коллектора
+                                .table__unit коллектор
+                                .table__cost 500
+                            .table__row
+                                .table__name Разборка от осей и коромысел или от РВ
+                                .table__unit ось
+                                .table__cost 300
+                            .table__row
+                                .table__name Шарошка каналов
+                                .table__unit канал
+                                .table__cost 1056   
+                            .notes
+                                .notes__title примечания:
+                                ol.notes__list
+                                    li.notes__item При работах по одному цилиндру: + 20% к стоимости работ
+                                    li.notes__item Гильзовка при наличии трещины: + 20% к стоимости работ
+                                    li.notes__item Гильзовка блоков с тонкими стенками: + 20% к стоимости работ
+                    .table#table-import
+                        .table__heading
+                            .table__name Наименование работ
+                            .table__unit Ед. изм.
+                            .table__cost Стоимость, руб.
+                        .table__block
+                            .table__title Головка блока цилиндров (ГБЦ) (иномарки)
+                            .table__subtitle Предварительные работы
+                            .table__row
+                                .table__name Мойка предварительная (технологическая)
+                                .table__unit ГБЦ
+                                .table__cost 60
+                            .table__row
+                                .table__name Мойка повторная (технологическая) перед сборкой
+                                .table__unit ГБЦ
+                                .table__cost 40
+                            .table__row
+                                .table__name Снятие/установка предкамер (М-В 601 и т.п.)
+                                .table__unit операция
+                                .table__cost 396
+                            .table__row
+                                .table__name Снятие форсунок
+                                .table__unit операция
+                                .table__cost 150
+                            .table__row
+                                .table__name Удаление форсунок (М-В 611 и т.п.)
+                                .table__unit операция
+                                .table__cost 1897
+                            .table__row
+                                .table__name Снятие свечей накаливания
+                                .table__unit операция
+                                .table__cost 150
+                            .table__row
+                                .table__name Разборка от коллектора
+                                .table__unit коллектор
+                                .table__cost 500
+                            .table__row
+                                .table__name Разборка от осей и коромысел или от РВ
+                                .table__unit ось
+                                .table__cost 300
+                            .table__row
+                                .table__name Шарошка каналов
+                                .table__unit канал
+                                .table__cost 1056
+                            .table__subtitle Опрессовка
+                            .table__row
+                                .table__name Опрессовка ГБЦ
+                                .table__unit цилиндр
+                                .table__cost 250
+                            .table__row
+                                .table__name Опрессовка ГБЦ
+                                    .table__sub-name 1-2 цилиндра
+                                .table__unit ГБЦ
+                                .table__cost 500
+                            .table__row
+                                .table__name Опрессовка ГБЦ (повторная)
+                                .table__unit цилиндр
+                                .table__cost 150
+                            .table__subtitle Предварительные работы
+                            .table__row
+                                .table__name Разборка клапана (рассухаривание)
+                                .table__unit клапан
+                                .table__cost 40
+                            .table__row
+                                .table__name Дефектация направляющих втулок и клапанов
+                                .table__unit клапан
+                                .table__cost 21
+                            .table__row
+                                .table__name Чистка клапана
+                                .table__unit клапан
+                                .table__cost 25
+                            .table__row
+                                .table__name Мойка предварительная (технологическая)
+                                .table__unit ГБЦ
+                                .table__cost 60
+                            .table__row
+                                .table__name Мойка повторная (технологическая) перед сборкой
+                                .table__unit ГБЦ
+                                .table__cost 40
+                            .table__row
+                                .table__name Снятие/установка предкамер (М-В 601 и т.п.)
+                                .table__unit операция
+                                .table__cost 396
+                            .table__row
+                                .table__name Снятие форсунок
+                                .table__unit операция
+                                .table__cost 150
+                            .table__row
+                                .table__name Удаление форсунок (М-В 611 и т.п.)
+                                .table__unit операция
+                                .table__cost 1897
+                            .table__row
+                                .table__name Снятие свечей накаливания
+                                .table__unit операция
+                                .table__cost 150
+                            .table__row
+                                .table__name Разборка от коллектора
+                                .table__unit коллектор
+                                .table__cost 500
+                            .table__row
+                                .table__name Разборка от осей и коромысел или от РВ
+                                .table__unit ось
+                                .table__cost 300
+                            .table__row
+                                .table__name Шарошка каналов
+                                .table__unit канал
+                                .table__cost 1056   
+                            .notes
+                                .notes__title примечания:
+                                ol.notes__list
+                                    li.notes__item При работах по одному цилиндру: + 20% к стоимости работ
+                                    li.notes__item Гильзовка при наличии трещины: + 20% к стоимости работ
+                                    li.notes__item Гильзовка блоков с тонкими стенками: + 20% к стоимости работ
+                        .table__block
+                            .table__title блок цилиндров (БЦ)
+                            .table__subtitle Предварительные работы
+                            .table__row
+                                .table__name Мойка предварительная (технологическая)
+                                .table__unit ГБЦ
+                                .table__cost 60
+                            .table__row
+                                .table__name Мойка повторная (технологическая) перед сборкой
+                                .table__unit ГБЦ
+                                .table__cost 40
+                            .table__row
+                                .table__name Снятие/установка предкамер (М-В 601 и т.п.)
+                                .table__unit операция
+                                .table__cost 396
+                            .table__row
+                                .table__name Снятие форсунок
+                                .table__unit операция
+                                .table__cost 150
+                            .table__row
+                                .table__name Удаление форсунок (М-В 611 и т.п.)
+                                .table__unit операция
+                                .table__cost 1897
+                            .table__row
+                                .table__name Снятие свечей накаливания
+                                .table__unit операция
+                                .table__cost 150
+                            .table__row
+                                .table__name Разборка от коллектора
+                                .table__unit коллектор
+                                .table__cost 500
+                            .table__row
+                                .table__name Разборка от осей и коромысел или от РВ
+                                .table__unit ось
+                                .table__cost 300
+                            .table__row
+                                .table__name Шарошка каналов
+                                .table__unit канал
+                                .table__cost 1056
+                            .table__subtitle Опрессовка
+                            .table__row
+                                .table__name Опрессовка ГБЦ
+                                .table__unit цилиндр
+                                .table__cost 250
+                            .table__row
+                                .table__name Опрессовка ГБЦ
+                                    .table__sub-name 1-2 цилиндра
+                                .table__unit ГБЦ
+                                .table__cost 500
+                            .table__row
+                                .table__name Опрессовка ГБЦ (повторная)
+                                .table__unit цилиндр
+                                .table__cost 150
+                            .table__subtitle Предварительные работы
+                            .table__row
+                                .table__name Разборка клапана (рассухаривание)
+                                .table__unit клапан
+                                .table__cost 40
+                            .table__row
+                                .table__name Дефектация направляющих втулок и клапанов
+                                .table__unit клапан
+                                .table__cost 21
+                            .table__row
+                                .table__name Чистка клапана
+                                .table__unit клапан
+                                .table__cost 25
+                            .table__row
+                                .table__name Мойка предварительная (технологическая)
+                                .table__unit ГБЦ
+                                .table__cost 60
+                            .table__row
+                                .table__name Мойка повторная (технологическая) перед сборкой
+                                .table__unit ГБЦ
+                                .table__cost 40
+                            .table__row
+                                .table__name Снятие/установка предкамер (М-В 601 и т.п.)
+                                .table__unit операция
+                                .table__cost 396
+                            .table__row
+                                .table__name Снятие форсунок
+                                .table__unit операция
+                                .table__cost 150
+                            .table__row
+                                .table__name Удаление форсунок (М-В 611 и т.п.)
+                                .table__unit операция
+                                .table__cost 1897
+                            .table__row
+                                .table__name Снятие свечей накаливания
+                                .table__unit операция
+                                .table__cost 150
+                            .table__row
+                                .table__name Разборка от коллектора
+                                .table__unit коллектор
+                                .table__cost 500
+                            .table__row
+                                .table__name Разборка от осей и коромысел или от РВ
+                                .table__unit ось
+                                .table__cost 300
+                            .table__row
+                                .table__name Шарошка каналов
+                                .table__unit канал
+                                .table__cost 1056   
+                            .notes
+                                .notes__title примечания:
+                                ol.notes__list
+                                    li.notes__item При работах по одному цилиндру: + 20% к стоимости работ
+                                    li.notes__item Гильзовка при наличии трещины: + 20% к стоимости работ
+                                    li.notes__item Гильзовка блоков с тонкими стенками: + 20% к стоимости работ
+                        a(href="" target="blanc").more.more--download скачать прайс 
+                            span (pdf, 220кб)
+                a(href="" target="blanc").more.more--download.more--desktop скачать прайс 
+                    span (pdf, 220кб)
+                a(href="#top").top вверх
+            include ../common/footer.pug

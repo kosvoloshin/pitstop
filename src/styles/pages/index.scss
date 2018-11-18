@@ -258,6 +258,36 @@
     }
 }
 
+.more--download {
+    position: absolute;
+    right: rem(65px);
+    top: rem(312px);
+    width: max-content;
+    display: none;
+
+    span {
+        text-transform: none;
+    }
+
+    &:after {
+        content: '';
+    }
+
+    &:hover {
+        background-color: $red;
+    }
+}
+.more--download.more--desktop {
+    display: block;
+
+    &.fixed {
+        position: fixed;
+        top: 0;
+        right: rem(65px);
+        transition: top 0s;
+    }
+}
+
 .numbers {
     width: 100%;
     padding: rem(135px) 0;

@@ -4,72 +4,10 @@ block variables
     - var title = 'Главная'
 
 block content
-    aside.sidebar
-        .logo
-            a(href="#").logo__link
-                img(src="./assets/images/logo.png" alt="logo").logo__img
-        ul.menu.menu--top
-            li.menu__item
-                a(href="#").menu__link Ремонт ГБЦ
-            li.menu__item.menu__item--sub
-                a(href="#").menu__link.menu__link--sub Ремонт БЦ
-                    span.icon--arrow
-                .sub-menu
-                    .sub-menu__title иномарки:
-                    ul.sub-menu__list
-                        li.sub-menu__item
-                            a(href="#").sub-menu__link Иномарки легковые
-                        li.sub-menu__item
-                            a(href="#").sub-menu__link Иномарки грузовые (объем ДВС до 3,5л)
-                        li.sub-menu__item
-                            a(href="#").sub-menu__link Иномарки грузовые (объем ДВС свыше 3,5л)
-                    .sub-menu__title отечественные:
-                    ul.sub-menu__list
-                        li.sub-menu__item
-                            a(href="#").sub-menu__link Отечественные легковые
-                        li.sub-menu__item
-                            a(href="#").sub-menu__link Отечественные грузовые (объем ДВС до 3,5л)
-                        li.sub-menu__item
-                            a(href="#").sub-menu__link Отечественные грузовые (объем ДВС свыше 3,5л)
-            li.menu__item
-                a(href="#").menu__link Ремонт КВ
-            li.menu__item
-                a(href="#").menu__link Ремонт шатунов и поршней
-            li.menu__item
-                a(href="#").menu__link Нестандартный и сложный ремонт
-            li.menu__item
-                a(href="#").menu__link Ремонт других деталей
-        ul.menu.menu--bottom
-            li.menu__item
-                a(href="#").menu__link Капитальный ремонт ДВС
-            li.menu__item
-                a(href="#").menu__link Прайс-лист 
-            li.menu__item
-                a(href="#").menu__link Акции и скидки
-            li.menu__item
-                a(href="#").menu__link Договор по безналу
-            li.menu__item
-                a(href="#").menu__link Наше оборудование
-            li.menu__item
-                a(href="#").menu__link Выездная приемка
-            li.menu__item
-                a(href="#").menu__link Контакты
+    include ../common/sidebar.pug
     .wrapper
         .container
-            header.header
-                .header__nav
-                    .address
-                        .address__caption Москва
-                        .address__wrap
-                            .address__line.address__line--top ул. Южнопортовая, д.9, стр.2
-                            .address__line время работы с 8:00 до 20:00
-                    .calc
-                        a(href="#").calc__caption Калькулятор
-                        .calc__line расчитать стоимость
-                    .call
-                        a(href="tel:84994903804").call__caption 8 (499) 490-38-04
-                        a(href="#").call__line перезвонить мне
-                button(type="button").header__letter
+            include ../common/header.pug
             section.section.service
                 h1.section__title.visuallyhidden service
                 .service__video
@@ -281,42 +219,4 @@ block content
                             button(type="submit").more отправить
                     .map#map
                         script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBedBDOwDkXi5dlBT1B2VmOGHShZWbiVqg&callback=initMap')
-            footer.footer
-                ul.footer__nav
-                    li.footer__item
-                        .slogan
-                            .slogan__text Расточка головки блока цилиндров в Москве 
-                                br
-                                | ремонт ГБЦ по самым низким ценами
-                    li.footer__item
-                        .address.address--footer
-                            .address__caption ул. Южнопортовая, д.9, стр.2
-                            .address__line время работы: с 8:00 до 20:00
-                    li.footer__item
-                        .call.call--footer
-                            a(href="tel:84994903804").call__caption 8 (499) 490-38-04
-                            a(href="#").call__line перезвонить мне
-                    li.footer__item.footer__item--last
-                        .socials 
-                            a(href="#" target="blanc").socials__link.socials__link--viber
-                            a(href="#" target="blanc").socials__link.socials__link--whatsapp
-                        .create
-                            .create__sub создание 
-                                br
-                                | и продвижение
-                            a(href="#" target="blanc").create__link умные 
-                                span.create__bold seo
-                                br
-                                | технологии
-                .footer__line
-                    .footer__copy Pit-Stop Motor © 2008-2018 Все права защищены.
-                    a(href="#" target="blanc").footer__policy Политика обработки персональных данных
-                    a(href="mailto:info@pitstopmotor.ru").footer__mail info@pitstopmotor.ru
-
-
-
-
-                    
-                        
-
-
+            include ../common/footer.pug
