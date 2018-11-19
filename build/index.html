@@ -48,6 +48,12 @@
       </ul>
     </aside>
     <div class="wrapper">
+      <div class="preloader">
+        <div class="preloader__spinner">
+          <div class="preloader__animation"></div>
+          <div class="preloader__percents">0%</div>
+        </div>
+      </div>
       <div class="container">
         <header class="header" id="top">
           <div class="header__nav">
@@ -95,27 +101,31 @@
                   <div class="promo__content">
                     <div class="promo__sticky">для новых организаций</div>
                     <div class="promo__line-top">первые 3 работы выполним</div>
-                    <div class="title">абсолютно <span class="title__blue-text">бесплатно </span></div>
+                    <div class="title">абсолютно <span class="title__blue-text">бесплатно (1)</span></div>
                   </div>
                 </li>
                 <li class="promo__item" style="background-image: url(./assets/images/promo-2.jpg);">
                   <div class="promo__content">
                     <div class="promo__sticky">для новых организаций</div>
                     <div class="promo__line-top">первые 3 работы выполним</div>
-                    <div class="title">абсолютно <span class="title__blue-text">бесплатно </span></div>
+                    <div class="title">абсолютно <span class="title__blue-text">бесплатно (2)</span></div>
                   </div>
                 </li>
                 <li class="promo__item" style="background-image: url(./assets/images/promo-1.jpg);">
                   <div class="promo__content">
                     <div class="promo__sticky">для новых организаций</div>
                     <div class="promo__line-top">первые 3 работы выполним</div>
-                    <div class="title">абсолютно <span class="title__blue-text">бесплатно</span></div>
+                    <div class="title">абсолютно <span class="title__blue-text">бесплатно (3)</span></div>
                   </div>
                 </li>
               </ul>
               <div class="controls">
-                <button class="controls__btn controls__prev" type="button"> </button>
-                <button class="controls__btn controls__next" type="button"></button>
+                <button class="controls__btn controls__prev" type="button" id="previous"></button>
+                <button class="controls__btn controls__next" type="button" id="nextSlide"></button>
+                <div class="progress">
+                  <div class="progress-complete"></div>
+                </div>
+                <div class="count"></div>
               </div>
             </div>
             <div class="desc">
@@ -228,7 +238,7 @@
                     <div class="reviews__text">
                       <p>От лица нашей компании выражаем искреннюю благодарность «Pit-stop Motor» за профессионализм, качество и оперативность при выполнении работ. Хочется отметить высокое качество оборудования и квалифицированный персонал компании. </p>
                     </div>
-                    <div class="reviews__name">Анатолий <span class="reviews__dark-text">Матюшин</span></div>
+                    <div class="reviews__name">Анатолий <span class="reviews__dark-text">Матюшин(1)</span></div>
                     <div class="reviews__desc">Старший механик компании «Areol»</div>
                   </li>
                   <li class="reviews__item">
@@ -236,7 +246,7 @@
                     <div class="reviews__text">
                       <p>От лица нашей компании выражаем искреннюю благодарность «Pit-stop Motor» за профессионализм, качество и оперативность при выполнении работ. Хочется отметить высокое качество оборудования и квалифицированный персонал компании. </p>
                     </div>
-                    <div class="reviews__name">Анатолий <span class="reviews__dark-text">Матюшин</span></div>
+                    <div class="reviews__name">Анатолий <span class="reviews__dark-text">Матюшин(2)</span></div>
                     <div class="reviews__desc">Старший механик компании «Areol»</div>
                   </li>
                   <li class="reviews__item">
@@ -244,13 +254,17 @@
                     <div class="reviews__text">
                       <p>От лица нашей компании выражаем искреннюю благодарность «Pit-stop Motor» за профессионализм, качество и оперативность при выполнении работ. Хочется отметить высокое качество оборудования и квалифицированный персонал компании. </p>
                     </div>
-                    <div class="reviews__name">Анатолий <span class="reviews__dark-text">Матюшин</span></div>
+                    <div class="reviews__name">Анатолий <span class="reviews__dark-text">Матюшин(3)</span></div>
                     <div class="reviews__desc">Старший механик компании «Areol»</div>
                   </li>
                 </ul>
-                <div class="controls">
-                  <button class="controls__btn controls__prev" type="button"> </button>
-                  <button class="controls__btn controls__next" type="button"></button>
+                <div class="controls controls--reviews">
+                  <button class="controls__btn controls__prev" type="button" id="prev"></button>
+                  <button class="controls__btn controls__next" type="button" id="next"></button>
+                  <div class="progress-reviews">
+                    <div class="progress-complete-reviews"></div>
+                  </div>
+                  <div class="count-reviews"></div>
                 </div>
               </li>
             </ul>

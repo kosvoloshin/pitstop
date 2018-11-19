@@ -5,4 +5,9 @@ $(document).ready(function() {
     images.each(function(i) {
         $(this).width($(this).width() / 2);
     });
+
+    var images2 = $('.service-tabs__item img');
+    images2.each(function(i) {
+        $(this).width($(this).width() / 2);
+    });
 });

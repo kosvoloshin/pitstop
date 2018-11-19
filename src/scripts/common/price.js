@@ -32,28 +32,60 @@ $(document).ready(function() {
         });
     
           
-        var fix = $('.more--desktop');
-        var head = $('.header').height();
-        
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > head + 315 ) {
-                fix.addClass("fixed");
-            } else {
-                fix.removeClass("fixed");
-            }
-        });
-    
         var fixCat = $('.tabs');
             var scroll = $('.price__heading');
+            var head = $('.header').height();
+            var size10 = $('.price').css('padding-top');
+            var size11 = $('.price__heading').css('height');
+            var size13 = $('.tabs__list').css('padding-top');
+
+            var sizeSum3 = parseInt(head) + parseInt(size10) + parseInt(size11) + parseInt(size13);
            
             $(window).scroll(function () {
-              if ($(this).scrollTop() > head + 131 ) {
+              if ($(this).scrollTop() > sizeSum3 ) {
                 fixCat.addClass("fixed");
                 scroll.addClass("scroll");
               } else {
                 fixCat.removeClass("fixed");
                 scroll.removeClass("scroll");
               }
+        });
+    };
+
+    if($('.price').length){
+        var fix = $('.more--desktop');
+        var head = $('.header').height();
+        var size10 = $('.price').css('padding-top');
+        var size11 = $('.price__heading').css('height');
+        var size12 = $('.tabs').css('height');
+        var sizeSum1 = parseInt(head) + parseInt(size10) + parseInt(size11) + parseInt(size12);
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > sizeSum1 ) {
+                fix.addClass("fixed");
+            } else {
+                fix.removeClass("fixed");
+            }
+        });
+    };
+
+    if($('.type-service__buttons').length){
+        var fix2 = $('.type-service__buttons');
+        var head = $('.header').css('height'); 
+        var size0 = $('.type-service__wrap').css('padding-top');
+        var size1 = $('.title').css('height');
+        var size2 = $('.type-service__col').css('height');
+        var size3 = $('.description').css('height');
+        var size4 = $('.type-service__table').css('padding-top');
+
+        var sizeSum2 = parseInt(head) + parseInt(size0) + parseInt(size1) + parseInt(size2) + parseInt(size3) + parseInt(size4);
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > sizeSum2 ) {
+                fix2.addClass("fixed");
+            } else {
+                fix2.removeClass("fixed");
+            }
         });
     };
 
@@ -67,5 +99,5 @@ $(document).ready(function() {
             $('html, body').animate({scrollTop: dn}, 1000);
             
         });
-    }
+    };
 });

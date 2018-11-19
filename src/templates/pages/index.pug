@@ -6,6 +6,10 @@ block variables
 block content
     include ../common/sidebar.pug
     .wrapper
+        .preloader
+            .preloader__spinner
+                .preloader__animation
+                .preloader__percents 0%
         .container
             include ../common/header.pug
             section.section.service
@@ -65,22 +69,25 @@ block content
                                     .promo__sticky для новых организаций
                                     .promo__line-top первые 3 работы выполним
                                     .title абсолютно 
-                                        span.title__blue-text бесплатно 
+                                        span.title__blue-text бесплатно (1)
                             li.promo__item(style="background-image: url(./assets/images/promo-2.jpg)")
                                 .promo__content
                                     .promo__sticky для новых организаций
                                     .promo__line-top первые 3 работы выполним
                                     .title абсолютно 
-                                        span.title__blue-text бесплатно 
+                                        span.title__blue-text бесплатно (2)
                             li.promo__item(style="background-image: url(./assets/images/promo-1.jpg)")
                                 .promo__content
                                     .promo__sticky для новых организаций
                                     .promo__line-top первые 3 работы выполним
                                     .title абсолютно 
-                                        span.title__blue-text бесплатно
+                                        span.title__blue-text бесплатно (3)
                         .controls
-                            button(type="button").controls__btn.controls__prev 
-                            button(type="button").controls__btn.controls__next
+                            button(type="button").controls__btn.controls__prev#previous
+                            button(type="button").controls__btn.controls__next#nextSlide
+                            .progress
+                                .progress-complete
+                            .count
                     .desc
                         .title   
                             .title__line-top низкие цены!
@@ -177,7 +184,7 @@ block content
                                     .reviews__text
                                         p От лица нашей компании выражаем искреннюю благодарность «Pit-stop Motor» за профессионализм, качество и оперативность при выполнении работ. Хочется отметить высокое качество оборудования и квалифицированный персонал компании. 
                                     .reviews__name Анатолий 
-                                        span.reviews__dark-text Матюшин
+                                        span.reviews__dark-text Матюшин(1)
                                     .reviews__desc Старший механик компании «Areol»
                                 li.reviews__item
                                     .reviews__logo
@@ -185,7 +192,7 @@ block content
                                     .reviews__text
                                         p От лица нашей компании выражаем искреннюю благодарность «Pit-stop Motor» за профессионализм, качество и оперативность при выполнении работ. Хочется отметить высокое качество оборудования и квалифицированный персонал компании. 
                                     .reviews__name Анатолий 
-                                        span.reviews__dark-text Матюшин
+                                        span.reviews__dark-text Матюшин(2)
                                     .reviews__desc Старший механик компании «Areol»
                                 li.reviews__item
                                     .reviews__logo
@@ -193,11 +200,14 @@ block content
                                     .reviews__text
                                         p От лица нашей компании выражаем искреннюю благодарность «Pit-stop Motor» за профессионализм, качество и оперативность при выполнении работ. Хочется отметить высокое качество оборудования и квалифицированный персонал компании. 
                                     .reviews__name Анатолий 
-                                        span.reviews__dark-text Матюшин
+                                        span.reviews__dark-text Матюшин(3)
                                     .reviews__desc Старший механик компании «Areol»
-                            .controls
-                                button(type="button").controls__btn.controls__prev 
-                                button(type="button").controls__btn.controls__next
+                            .controls.controls--reviews
+                                button(type="button").controls__btn.controls__prev#prev
+                                button(type="button").controls__btn.controls__next#next
+                                .progress-reviews
+                                    .progress-complete-reviews
+                                .count-reviews
                 .main__line-request-map
                     .request
                         form.form

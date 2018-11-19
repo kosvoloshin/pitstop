@@ -78,6 +78,7 @@
 .promo__list {
     height: 100%;
     width: 100%;
+    position: relative;
 }
 
 .promo__item {
@@ -86,10 +87,16 @@
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
-    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    transition: .35s;
 
     &.visible {
-        display: block;
+        opacity: 1;
     }
 }
 
@@ -144,6 +151,27 @@
     bottom: rem(27px);
     left: rem(60px);
     display: flex;
+    align-items: center;
+}
+
+.progress,
+.progress-reviews {
+    width: rem(138px);
+    height: 1px;
+    background-color: #ababb4;
+    margin-right: rem(9px);
+}
+
+.progress-complete,
+.progress-complete-reviews {
+    height: 100%;
+    background-color: #252527;
+}
+
+.count,
+.count-reviews {
+    font-family: $goprom;
+    font-size: rem(25px);
 }
 
 .controls__btn {
@@ -160,6 +188,7 @@
     height: rem(38px);
     width: rem(38px);
     margin-right: rem(10px);
+    outline: none;
 
     &:last-child {
         margin-right: 0;
@@ -259,11 +288,9 @@
 }
 
 .more--download {
-    position: absolute;
-    right: rem(65px);
-    top: rem(312px);
     width: max-content;
     display: none;
+    float: right;
 
     span {
         text-transform: none;
@@ -275,7 +302,12 @@
 
     &:hover {
         background-color: $red;
+        border-color: $red;
     }
+}
+
+.more--download.more--service {
+    float: none;
 }
 .more--download.more--desktop {
     display: block;
@@ -283,8 +315,22 @@
     &.fixed {
         position: fixed;
         top: 0;
-        right: rem(65px);
-        transition: top 0s;
+        right: rem(58px);
+    }
+}
+
+.more--service {
+    position: initial;
+    margin-right: 0;
+    margin-bottom: rem(31px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        background-color: $red;
+        border-color: $red;
     }
 }
 
@@ -467,7 +513,7 @@
 }
 
 .bunners__item {
-    width: 25%;
+    width: calc(72% / 3);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -551,6 +597,7 @@
 
 .reviews {
     background-color: #f8f8f8;
+    width: 28%;
 
     .controls {
         left: rem(48px);
@@ -558,11 +605,21 @@
     }
 }
 
+.reviews__list {
+    position: relative;
+}
+
 .reviews__item {
-    display: none;
+    opacity: 0;
+    transition: .35s;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
     &.visible {
-        display: block;
+        opacity: 1;
     }
 }
 
