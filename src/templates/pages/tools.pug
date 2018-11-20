@@ -1,0 +1,23 @@
+extends ../template
+
+block variables
+    - var title = 'Наше Оборудование'
+
+block content
+    include ../common/sidebar.pug
+    .wrapper
+        .container
+            include ../common/header.pug
+            section.section.tools
+                .tools__wrap
+                    h1.section__title.visuallyhidden price
+                    .title Наше Оборудование
+                    ul.tools__list
+                        li.tools__item
+                            ul.tools__sub-list
+                                li.tools__sub-item
+                                li.tools__sub-item
+                                li.tools__sub-item
+                                li.tools__sub-item
+                                li.tools__sub-item
+            include ../common/footer.pug

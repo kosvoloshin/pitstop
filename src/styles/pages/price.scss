@@ -1,6 +1,5 @@
 .price {
     background-color: #eaeaea;
-    padding: rem(56px) rem(58px);
 }
 
 .price__wrap {
@@ -116,7 +115,7 @@
         border-color: $blue
     }
 
-    &:active {
+    &.active {
         color: $w;
         background-color: $blue;
         border-color: $blue

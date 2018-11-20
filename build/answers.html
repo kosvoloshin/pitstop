@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Вопрос / Ответ</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="./assets/styles/app.min.css">
+    <script src="./assets/scripts/bundle.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="logo"><a class="logo__link" href="index.html"><img class="logo__img" src="./assets/images/logo.png" alt="logo"></a></div>
+      <ul class="menu menu--top">
+        <li class="menu__item"><a class="menu__link" href="#">Ремонт ГБЦ</a><span class="icon--arrow"></span>
+          <div class="sub-menu">
+            <div class="sub-menu__title">иномарки:</div>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Иномарки легковые1</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Иномарки грузовые (объем ДВС до 3,5л)</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Иномарки грузовые (объем ДВС свыше 3,5л)</a></li>
+            </ul>
+            <div class="sub-menu__title">отечественные:</div>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Отечественные легковые</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Отечественные грузовые (объем ДВС до 3,5л)</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Отечественные грузовые (объем ДВС свыше 3,5л)</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="menu__item"><a class="menu__link" href="#">Ремонт БЦ</a><span class="icon--arrow"></span>
+          <div class="sub-menu">
+            <div class="sub-menu__title">иномарки:</div>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Иномарки легковые2</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Иномарки грузовые (объем ДВС до 3,5л)</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Иномарки грузовые (объем ДВС свыше 3,5л)</a></li>
+            </ul>
+            <div class="sub-menu__title">отечественные:</div>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Отечественные легковые</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Отечественные грузовые (объем ДВС до 3,5л)</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Отечественные грузовые (объем ДВС свыше 3,5л)</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="menu__item"><a class="menu__link" href="#">Ремонт КВ</a><span class="icon--arrow"></span>
+          <div class="sub-menu">
+            <div class="sub-menu__title">иномарки:</div>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Иномарки легковые3</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Иномарки грузовые (объем ДВС до 3,5л)</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Иномарки грузовые (объем ДВС свыше 3,5л)</a></li>
+            </ul>
+            <div class="sub-menu__title">отечественные:</div>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Отечественные легковые</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Отечественные грузовые (объем ДВС до 3,5л)</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Отечественные грузовые (объем ДВС свыше 3,5л)</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="menu__item"><a class="menu__link" href="#">Ремонт шатунов и поршней</a><span class="icon--arrow"></span>
+          <div class="sub-menu">
+            <div class="sub-menu__title">иномарки:</div>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Иномарки легковые4</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Иномарки грузовые (объем ДВС до 3,5л)</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Иномарки грузовые (объем ДВС свыше 3,5л)</a></li>
+            </ul>
+            <div class="sub-menu__title">отечественные:</div>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Отечественные легковые</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Отечественные грузовые (объем ДВС до 3,5л)</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Отечественные грузовые (объем ДВС свыше 3,5л)</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="menu__item"><a class="menu__link" href="#">Нестандартный и сложный ремонт</a><span class="icon--arrow"></span>
+          <div class="sub-menu">
+            <div class="sub-menu__title">иномарки:</div>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Иномарки легковые5</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Иномарки грузовые (объем ДВС до 3,5л)</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Иномарки грузовые (объем ДВС свыше 3,5л)</a></li>
+            </ul>
+            <div class="sub-menu__title">отечественные:</div>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Отечественные легковые</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Отечественные грузовые (объем ДВС до 3,5л)</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Отечественные грузовые (объем ДВС свыше 3,5л)</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="menu__item"><a class="menu__link" href="#">Ремонт других деталей</a><span class="icon--arrow"></span>
+          <div class="sub-menu">
+            <div class="sub-menu__title">иномарки:</div>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Иномарки легковые6</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Иномарки грузовые (объем ДВС до 3,5л)</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Иномарки грузовые (объем ДВС свыше 3,5л)</a></li>
+            </ul>
+            <div class="sub-menu__title">отечественные:</div>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Отечественные легковые</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Отечественные грузовые (объем ДВС до 3,5л)</a></li>
+              <li class="sub-menu__item"><a class="sub-menu__link" href="#">Отечественные грузовые (объем ДВС свыше 3,5л)</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <ul class="menu menu--bottom">
+        <li class="menu__item"><a class="menu__link" href="#">Капитальный ремонт ДВС</a></li>
+        <li class="menu__item"><a class="menu__link" href="price.html">Прайс-лист </a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Акции и скидки</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Договор по безналу</a></li>
+        <li class="menu__item"><a class="menu__link" href="tools.html">Наше оборудование</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Выездная приемка</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+      </ul>
+    </aside>
+    <div class="wrapper">
+      <div class="preloader">
+        <div class="preloader__spinner">
+          <div class="preloader__animation"></div>
+          <div class="preloader__percents">0%</div>
+        </div>
+      </div>
+      <div class="container">
+        <header class="header" id="top">
+          <div class="header__nav">
+            <div class="address">
+              <div class="address__caption">Москва</div>
+              <div class="address__wrap">
+                <div class="address__line address__line--top">ул. Южнопортовая, д.9, стр.2</div>
+                <div class="address__line">время работы с 8:00 до 20:00</div>
+              </div>
+            </div>
+            <div class="calc"><a class="calc__caption" href="#">Калькулятор</a>
+              <div class="calc__line">расчитать стоимость</div>
+            </div>
+            <div class="call"><a class="call__caption" href="tel:84994903804">8 (499) 490-38-04</a><a class="call__line" href="#">перезвонить мне</a></div>
+          </div>
+          <button class="header__letter" type="button"></button>
+        </header>
+        <section class="section section-wrap answers">
+          <div class="answers__wrap">
+            <h1 class="section__title visuallyhidden">price</h1>
+            <div class="title">Вопрос / Ответ</div>
+            <ul class="answers__list">
+              <li class="answers__item">
+                <div class="answers__content">
+                  <div class="answers__heading">
+                    <div class="answers__meta">27 Сентября 2018</div>
+                    <div class="answers__name">Отвечает: главный инженер компании PitStop Motors</div>
+                  </div>
+                  <div class="answers__title">Гильзовка блока цилиндров или замена на новый двигатель («шорт-блок», блок цилиндров)?</div>
+                  <div class="answers__text">
+                    <p>Часто производитель авто предусматривает расточку блока цилиндров под больший размер поршня в ремонтных целях. Но не всегда такой ремонт возможен. К категории исключений стоит отнести трещины, задиры и глубокие царапины в цилиндре после разрушения поршня, а также его избыточный износ, отсутствие комплекта, необходимого для ремонта или их высокая стоимость. В случае с определёнными двигателями такой ремонт вовсе не предусмотрен. Гильзовка блока цилиндров является альтернативным вариантом ремонта в упомянутых ситуациях.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="answers__item">
+                <div class="answers__content">
+                  <div class="answers__heading">
+                    <div class="answers__meta">20 Сентября 2018</div>
+                    <div class="answers__name">Отвечает: мастер приемщик Денис</div>
+                  </div>
+                  <div class="answers__title">Можно немножко подробнее о том, что такое «алюсил»?</div>
+                  <div class="answers__text">
+                    <p>Алюсил — это заэвтектический алюминиевокремниевый сплав, содержащий около 78 % алюминия и 17 % кремния. Этот сплав был создан Швайцером и Ференбахом и в дальнейшем совершенствовался компанией Kolbenschmidt. Сплав широко используется для создания безгильзовых блоков цилиндров двигателей внутреннего сгорания.При травлении алюсила на поверхности остается прочная пленка кремния, это покрытие достаточно пористое для задерживания масла и в то же время износостойкое. BMW отказалась в пользу алюсила от использования покрытых никасилом цилиндров в 1996 году с целью устранения проблемы коррозии при использовании бензина с высоким содержанием серы.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="answers__item">
+                <div class="answers__content">
+                  <div class="answers__heading">
+                    <div class="answers__meta">15 Сентября 2018</div>
+                    <div class="answers__name">Отвечает: мастер приемщик Денис</div>
+                  </div>
+                  <div class="answers__title">Для расточки блока под поршни сами поршни к вам привозить обязательно?</div>
+                  <div class="answers__text">
+                    <p>Расточка блока – это процесс физической проточки стенок цилиндров двигателя (на специальных станках) для восстановления правильной (почти идеальной) геометрической формы.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="answers__item">
+                <div class="answers__content">
+                  <div class="answers__heading">
+                    <div class="answers__meta">27 Сентября 2018</div>
+                    <div class="answers__name">Отвечает: мастер приемщик Денис</div>
+                  </div>
+                  <div class="answers__title">Гильзовка блока цилиндров или замена на новый двигатель («шорт-блок», блок цилиндров)?</div>
+                  <div class="answers__text">
+                    <p>Часто производитель авто предусматривает расточку блока цилиндров под больший размер поршня в ремонтных целях. Но не всегда такой ремонт возможен. К категории исключений стоит отнести трещины, задиры и глубокие царапины в цилиндре после разрушения поршня, а также его избыточный износ, отсутствие комплекта, необходимого для ремонта или их высокая стоимость. В случае с определёнными двигателями такой ремонт вовсе не предусмотрен. Гильзовка блока цилиндров является альтернативным вариантом ремонта в упомянутых ситуациях.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="answers__item">
+                <div class="answers__content">
+                  <div class="answers__heading">
+                    <div class="answers__meta">20 Сентября 2018</div>
+                    <div class="answers__name">Отвечает: мастер приемщик Денис</div>
+                  </div>
+                  <div class="answers__title">Можно немножко подробнее о том, что такое «алюсил»?</div>
+                  <div class="answers__text">
+                    <p>Алюсил — это заэвтектический алюминиевокремниевый сплав, содержащий около 78 % алюминия и 17 % кремния. Этот сплав был создан Швайцером и Ференбахом и в дальнейшем совершенствовался компанией Kolbenschmidt. Сплав широко используется для создания безгильзовых блоков цилиндров двигателей внутреннего сгорания.При травлении алюсила на поверхности остается прочная пленка кремния, это покрытие достаточно пористое для задерживания масла и в то же время износостойкое. BMW отказалась в пользу алюсила от использования покрытых никасилом цилиндров в 1996 году с целью устранения проблемы коррозии при использовании бензина с высоким содержанием серы.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="answers__item">
+                <div class="answers__content">
+                  <div class="answers__heading">
+                    <div class="answers__meta">20 Сентября 2018</div>
+                    <div class="answers__name">Отвечает: мастер приемщик Денис</div>
+                  </div>
+                  <div class="answers__title">Можно немножко подробнее о том, что такое «алюсил»?</div>
+                  <div class="answers__text">
+                    <p>Алюсил — это заэвтектический алюминиевокремниевый сплав, содержащий около 78 % алюминия и 17 % кремния. Этот сплав был создан Швайцером и Ференбахом и в дальнейшем совершенствовался компанией Kolbenschmidt. Сплав широко используется для создания безгильзовых блоков цилиндров двигателей внутреннего сгорания.При травлении алюсила на поверхности остается прочная пленка кремния, это покрытие достаточно пористое для задерживания масла и в то же время износостойкое. BMW отказалась в пользу алюсила от использования покрытых никасилом цилиндров в 1996 году с целью устранения проблемы коррозии при использовании бензина с высоким содержанием серы.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="answers__item">
+                <div class="answers__content">
+                  <div class="answers__heading">
+                    <div class="answers__meta">20 Сентября 2018</div>
+                    <div class="answers__name">Отвечает: мастер приемщик Денис</div>
+                  </div>
+                  <div class="answers__title">Можно немножко подробнее о том, что такое «алюсил»?</div>
+                  <div class="answers__text">
+                    <p>Алюсил — это заэвтектический алюминиевокремниевый сплав, содержащий около 78 % алюминия и 17 % кремния. Этот сплав был создан Швайцером и Ференбахом и в дальнейшем совершенствовался компанией Kolbenschmidt. Сплав широко используется для создания безгильзовых блоков цилиндров двигателей внутреннего сгорания.При травлении алюсила на поверхности остается прочная пленка кремния, это покрытие достаточно пористое для задерживания масла и в то же время износостойкое. BMW отказалась в пользу алюсила от использования покрытых никасилом цилиндров в 1996 году с целью устранения проблемы коррозии при использовании бензина с высоким содержанием серы.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="answers__item">
+                <div class="answers__content">
+                  <div class="answers__heading">
+                    <div class="answers__meta">20 Сентября 2018</div>
+                    <div class="answers__name">Отвечает: мастер приемщик Денис</div>
+                  </div>
+                  <div class="answers__title">Можно немножко подробнее о том, что такое «алюсил»?</div>
+                  <div class="answers__text">
+                    <p>Алюсил — это заэвтектический алюминиевокремниевый сплав, содержащий около 78 % алюминия и 17 % кремния. Этот сплав был создан Швайцером и Ференбахом и в дальнейшем совершенствовался компанией Kolbenschmidt. Сплав широко используется для создания безгильзовых блоков цилиндров двигателей внутреннего сгорания.При травлении алюсила на поверхности остается прочная пленка кремния, это покрытие достаточно пористое для задерживания масла и в то же время износостойкое. BMW отказалась в пользу алюсила от использования покрытых никасилом цилиндров в 1996 году с целью устранения проблемы коррозии при использовании бензина с высоким содержанием серы.</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <footer class="footer">
+          <ul class="footer__nav">
+            <li class="footer__item">
+              <div class="slogan">
+                <div class="slogan__text">Расточка головки блока цилиндров в Москве <br>ремонт ГБЦ по самым низким ценами</div>
+              </div>
+            </li>
+            <li class="footer__item">
+              <div class="address address--footer">
+                <div class="address__caption">ул. Южнопортовая, д.9, стр.2</div>
+                <div class="address__line">время работы: с 8:00 до 20:00</div>
+              </div>
+            </li>
+            <li class="footer__item">
+              <div class="call call--footer"><a class="call__caption" href="tel:84994903804">8 (499) 490-38-04</a><a class="call__line" href="#">перезвонить мне</a></div>
+            </li>
+            <li class="footer__item footer__item--last">
+              <div class="socials"> <a class="socials__link socials__link--viber" href="#" target="blanc"></a><a class="socials__link socials__link--whatsapp" href="#" target="blanc"></a></div>
+              <div class="create">
+                <div class="create__sub">создание <br>и продвижение</div><a class="create__link" href="#" target="blanc">умные <span class="create__bold">seo</span><br>технологии</a>
+              </div>
+            </li>
+          </ul>
+          <div class="footer__line">
+            <div class="footer__copy">Pit-Stop Motor © 2008-2018 Все права защищены.</div><a class="footer__policy" href="#" target="blanc">Политика обработки персональных данных</a><a class="footer__mail" href="mailto:info@pitstopmotor.ru">info@pitstopmotor.ru</a>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

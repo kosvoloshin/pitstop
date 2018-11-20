@@ -83,9 +83,21 @@
         color: $w;
         border-top: 1px solid #3777a7;
         border-bottom: 1px solid #1f5984;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .menu__item:hover .sub-menu{
+        opacity: 1;
+        z-index: 100;
+        visibility: visible;
+    }
+    .menu__item:hover .icon--arrow:after{
+        opacity: 1;
     }
 
     .menu__item {
+        padding-right: rem(38px);
         &:hover {
             background-color: #1f5984;
             border-left: rem(7px) solid #168ce3;
@@ -171,17 +183,8 @@
     }
 }
 
-.menu__item--sub {
-    &:hover .sub-menu {
-        opacity: 1;
-        z-index: 100;
-        visibility: visible;
-    }
-}
-
 .icon--arrow {
     position: relative;
-    float: right;
     margin-right: rem(-50px);
 
     &:after {
@@ -190,6 +193,8 @@
         color: $w;
         position: relative;
         right: 0;
+        opacity: 0;
+        transition: .35s;
     }
 }
 

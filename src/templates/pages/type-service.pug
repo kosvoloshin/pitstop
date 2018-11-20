@@ -6,9 +6,13 @@ block variables
 block content
     include ../common/sidebar.pug
     .wrapper
+        .preloader
+            .preloader__spinner
+                .preloader__animation
+                .preloader__percents 0%
         .container
             include ../common/header.pug
-            section.section.type-service
+            section.section.section-wrap.type-service
                 .type-service__wrap
                     h1.section__title.visuallyhidden type-service
                     .title ремонт блока цилиндров

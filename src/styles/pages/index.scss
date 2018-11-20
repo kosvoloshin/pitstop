@@ -486,6 +486,12 @@
 
 .ques__date {
     display: inline-block;
+
+    &:after {
+        content: '|';
+        display: inline-block;
+        margin: 0 rem(8px);
+    }
 }
 
 .ques__ans {
