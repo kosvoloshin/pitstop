@@ -10,8 +10,29 @@
     justify-content: space-between;
 }
 
+.footer__item {
+    flex: 1 0 auto;
+    position: relative;
+
+    &:after {
+        content: '';
+        height: rem(49px);
+        width: rem(1px);
+        background: #cdcdd2;
+        position: absolute;
+        top: 0;
+        right: rem(45px);
+    }
+}
+
 .footer__item--last {
     display: flex;
+    justify-content: flex-end;
+    margin-left: rem(-140px);
+
+    &:after {
+        display: none;
+    }
 }
 
 .slogan {
@@ -39,6 +60,7 @@
     flex-direction: row;
     padding: 0 rem(50px);
     margin-top: rem(-10px);
+    padding-top: rem(10px);
 }
 
 .socials__link {
@@ -53,11 +75,13 @@
     transform: rotateY(180deg);
 
     &:after {
-        content: '\e805';
+        content: '\e806';
         font-family: $f;
         color: #919191;
         transition: .35s;
-        font-size: rem(48px);
+        font-size: rem(44px);
+        line-height: initial;
+        display: inline-block;
     }
 
     &:hover:after {
@@ -72,6 +96,9 @@
         color: #919191;
         transition: .35s;
         font-size: rem(50px);
+        line-height: initial;
+        display: inline-block;
+        margin-top: rem(-4px);
     }
 
     &:hover:after {

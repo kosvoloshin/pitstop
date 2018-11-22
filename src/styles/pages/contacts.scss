@@ -1,0 +1,100 @@
+.contacts__row {
+    display: flex;
+    flex-direction: row;
+    background-color: #eaeaea;
+}
+
+.contacts__col {
+    width: 50%;
+}
+
+.contacts__content {
+    width: 100%;
+    height: 100%;
+    padding: rem(57px) rem(57px);
+}
+
+.contacts__line {
+    margin-bottom: rem(55px);
+
+    &:first-child {
+        margin-top: rem(55px);
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.contacts__subtitle {
+    font-family: $gopro;
+    font-size: rem(18px);
+    line-height: rem(18px);
+    color: #afafaf;
+    margin-bottom: rem(12px);
+}
+
+.contacts__text {
+    font-family: $gopro;
+    font-size: rem(20px);
+    line-height: rem(18px);
+    color: $b;
+}
+
+.contacts__link {
+    font-family: $gopro;
+    font-size: rem(20px);
+    line-height: rem(18px);
+    color: $blue;
+    transition: .35s;
+
+    &:hover {
+        color: #232323;
+    }
+}
+
+.contacts__icon {
+    float: right;
+    display: inline-block;
+    margin-top: rem(-22px);
+    margin-left: rem(20px);
+    margin-right: rem(34px);
+}
+
+.contacts__icon--viber {
+    transform: rotateY(180deg);
+
+    &:after {
+        content: '\e806';
+        font-family: $f;
+        color: #919191;
+        transition: .35s;
+        font-size: rem(44px);
+        line-height: initial;
+        display: inline-block;
+    }
+
+    &:hover:after {
+        color: #7f4da0;
+    }
+
+}
+
+.contacts__icon--whatsapp {
+
+    &:after {
+        content: '\f232';
+        font-family: $f;
+        color: #919191;
+        transition: .35s;
+        font-size: rem(50px);
+        line-height: initial;
+        display: inline-block;
+        margin-top: rem(-4px);
+    }
+
+    &:hover:after {
+        color: #40c36b;
+    }
+
+}

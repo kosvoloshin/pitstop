@@ -1,0 +1,56 @@
+extends ../template
+
+block variables
+    - var title = 'Сервисы'
+
+block content
+    include ../common/sidebar.pug
+    .wrapper
+        .preloader
+            .preloader__spinner
+                .preloader__animation
+                .preloader__percents 0%
+        .container
+            include ../common/header.pug
+            section.section.contacts
+                h1.section__title.visuallyhidden type-service
+                .contacts__row
+                    .contacts__col
+                        .contacts__content
+                            .title контакты
+                            ul.contacts__list
+                                li.contacts__line
+                                    .contacts__subtitle Адрес:
+                                    .contacts__text 115088, г. Москва, ул. Южнопортовая, д.9, стр.2
+                                li.contacts__line
+                                    .contacts__subtitle Телефон:
+                                    a(href="tel:84994903804").contacts__link 8 (499) 490-38-04
+                                    a(href="#" target="blanc").contacts__icon.contacts__icon--whatsapp
+                                    a(href="#" target="blanc").contacts__icon.contacts__icon--viber
+                                li.contacts__line
+                                    .contacts__subtitle Почта:
+                                    a(href="mailto:info@pitstopmotor.ru").contacts__link info@pitstopmotor.ru
+                                li.contacts__line
+                                    .contacts__subtitle Режим работы:
+                                    .contacts__text Ежедневно с 8:00 до 20:00
+                    .contacts__col
+                        form.form
+                            .title оставить заявку
+                            .form__column
+                                .form__row
+                                    label.form__block
+                                        input(type="text" name="user-name" placeholder="Имя" required).form__input.form__input--user
+                                    label.form__block
+                                        input(type="text" name="telephone" placeholder="Номер телефона" required).form__input.form__input--call
+                                .form__row
+                                    label.form__block
+                                        input(type="text" name="email" placeholder="Email" required).form__input.form__input--email
+                                    label.form__block
+                                        input(type="text" name="request" placeholder="Тема обращения" required).form__input.form__input--req
+                                .form__row
+                                    label.form__block
+                                        textarea(name="message" placeholder="Ваше сообщение" cols="30" rows="1" required).form__textarea
+                            button(type="submit").more отправить
+                .map#map.map--contacts
+                    script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBedBDOwDkXi5dlBT1B2VmOGHShZWbiVqg&callback=initMap')
+            include ../common/footer.pug

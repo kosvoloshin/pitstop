@@ -26,11 +26,30 @@ block content
                                 input(type="radio" name="option").price__check.price__check--import.visuallyhidden
                                 .price__btn-text Иномарки
                     .tabs
-                        ul.tabs__list
+                        ul.tabs__list.tabs__list--our.active
                             li.tabs__item
-                                a(href="#price-1").tabs__link Головка блока цилиндров (ГБЦ)
+                                a(href="#our-price-1").tabs__link Головка блока цилиндров (ГБЦ)
                             li.tabs__item
-                                a(href="#price-2").tabs__link Блок цилиндров (БЦ)
+                                a(href="#our-price-2").tabs__link Блок цилиндров (БЦ)
+                            li.tabs__item
+                                a(href="#our-price-3").tabs__link Коленчатый вал (КВ)
+                            li.tabs__item
+                                a(href="#our-price-4").tabs__link Шатуны, поршни
+                            li.tabs__item
+                                a(href="#our-price-5").tabs__link Маслонасос
+                            li.tabs__item
+                                a(href="#our-price-6").tabs__link Поддон
+                            li.tabs__item
+                                a(href="#our-price-7").tabs__link Коллектор
+                            li.tabs__item
+                                a(href="#our-price-8").tabs__link Другие детали
+                            li.tabs__item
+                                a(href="#our-price-9").tabs__link Сварка
+                        ul.tabs__list.tabs__list--import
+                            li.tabs__item
+                                a(href="#import-price-1").tabs__link Головка блока цилиндров (ГБЦ)
+                            li.tabs__item
+                                a(href="#import-price-2").tabs__link Блок цилиндров (БЦ)
                             li.tabs__item
                                 a(href="#").tabs__link Коленчатый вал (КВ)
                             li.tabs__item
@@ -52,7 +71,7 @@ block content
                             .table__name Наименование работ
                             .table__unit Ед. изм.
                             .table__cost Стоимость, руб.
-                        .table__block#price-1
+                        .table__block#our-price-1
                             .table__title Головка блока цилиндров (ГБЦ)
                             .table__subtitle Предварительные работы
                             .table__row
@@ -160,7 +179,7 @@ block content
                                     li.notes__item При работах по одному цилиндру: + 20% к стоимости работ
                                     li.notes__item Гильзовка при наличии трещины: + 20% к стоимости работ
                                     li.notes__item Гильзовка блоков с тонкими стенками: + 20% к стоимости работ
-                        .table__block#price-2
+                        .table__block#our-price-2
                             .table__title блок цилиндров (БЦ)
                             .table__subtitle Предварительные работы
                             .table__row
@@ -268,12 +287,89 @@ block content
                                     li.notes__item При работах по одному цилиндру: + 20% к стоимости работ
                                     li.notes__item Гильзовка при наличии трещины: + 20% к стоимости работ
                                     li.notes__item Гильзовка блоков с тонкими стенками: + 20% к стоимости работ
+                        .table__block#our-price-3
+                            .table__title Коленчатый вал (КВ)
+                            .table__subtitle Предварительные работы
+                            .table__row
+                                .table__name Мойка предварительная (технологическая)
+                                .table__unit ГБЦ
+                                .table__cost 60
+                            .table__row
+                                .table__name Мойка повторная (технологическая) перед сборкой
+                                .table__unit ГБЦ
+                                .table__cost 40
+                        .table__block#our-price-4
+                            .table__title Шатуны, поршни
+                            .table__subtitle Предварительные работы
+                            .table__row
+                                .table__name Мойка предварительная (технологическая)
+                                .table__unit ГБЦ
+                                .table__cost 60
+                            .table__row
+                                .table__name Мойка повторная (технологическая) перед сборкой
+                                .table__unit ГБЦ
+                                .table__cost 40
+                        .table__block#our-price-5
+                            .table__title Маслонасос
+                            .table__subtitle Предварительные работы
+                            .table__row
+                                .table__name Мойка предварительная (технологическая)
+                                .table__unit ГБЦ
+                                .table__cost 60
+                            .table__row
+                                .table__name Мойка повторная (технологическая) перед сборкой
+                                .table__unit ГБЦ
+                                .table__cost 40
+                        .table__block#our-price-6
+                            .table__title Поддон
+                            .table__subtitle Предварительные работы
+                            .table__row
+                                .table__name Мойка предварительная (технологическая)
+                                .table__unit ГБЦ
+                                .table__cost 60
+                            .table__row
+                                .table__name Мойка повторная (технологическая) перед сборкой
+                                .table__unit ГБЦ
+                                .table__cost 40
+                        .table__block#our-price-7
+                            .table__title Коллектор
+                            .table__subtitle Предварительные работы
+                            .table__row
+                                .table__name Мойка предварительная (технологическая)
+                                .table__unit ГБЦ
+                                .table__cost 60
+                            .table__row
+                                .table__name Мойка повторная (технологическая) перед сборкой
+                                .table__unit ГБЦ
+                                .table__cost 40
+                        .table__block#our-price-8
+                            .table__title Коллектор
+                            .table__subtitle Предварительные работы
+                            .table__row
+                                .table__name Мойка предварительная (технологическая)
+                                .table__unit ГБЦ
+                                .table__cost 60
+                            .table__row
+                                .table__name Мойка повторная (технологическая) перед сборкой
+                                .table__unit ГБЦ
+                                .table__cost 40
+                        .table__block#our-price-9
+                            .table__title Сварка
+                            .table__subtitle Предварительные работы
+                            .table__row
+                                .table__name Мойка предварительная (технологическая)
+                                .table__unit ГБЦ
+                                .table__cost 60
+                            .table__row
+                                .table__name Мойка повторная (технологическая) перед сборкой
+                                .table__unit ГБЦ
+                                .table__cost 40
                     .table#table-import
                         .table__heading
                             .table__name Наименование работ
                             .table__unit Ед. изм.
                             .table__cost Стоимость, руб.
-                        .table__block
+                        .table__block#import-price-1
                             .table__title Головка блока цилиндров (ГБЦ) (иномарки)
                             .table__subtitle Предварительные работы
                             .table__row
@@ -381,7 +477,7 @@ block content
                                     li.notes__item При работах по одному цилиндру: + 20% к стоимости работ
                                     li.notes__item Гильзовка при наличии трещины: + 20% к стоимости работ
                                     li.notes__item Гильзовка блоков с тонкими стенками: + 20% к стоимости работ
-                        .table__block
+                        .table__block#import-price-2
                             .table__title блок цилиндров (БЦ)
                             .table__subtitle Предварительные работы
                             .table__row

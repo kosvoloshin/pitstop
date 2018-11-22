@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Наше Оборудование</title>
+    <title>Сервисы</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -123,6 +123,12 @@
       </ul>
     </aside>
     <div class="wrapper">
+      <div class="preloader">
+        <div class="preloader__spinner">
+          <div class="preloader__animation"></div>
+          <div class="preloader__percents">0%</div>
+        </div>
+      </div>
       <div class="container">
         <header class="header" id="top">
           <div class="header__nav">
@@ -140,32 +146,62 @@
           </div>
           <button class="header__letter" type="button"></button>
         </header>
-        <section class="section tools">
-          <div class="tools__wrap">
-            <h1 class="section__title visuallyhidden">price</h1>
-            <div class="title">Наше Оборудование</div>
-            <ul class="tools__list">
-              <li class="tools__item">1</li>
-              <li class="tools__item">2</li>
-              <li class="tools__item">3</li>
-              <li class="tools__item">4</li>
-              <li class="tools__item">5</li>
-              <li class="tools__item">6</li>
-              <li class="tools__item">7</li>
-              <li class="tools__item">8</li>
-              <li class="tools__item">9</li>
-              <li class="tools__item">10</li>
-              <li class="tools__item">11</li>
-              <li class="tools__item">12</li>
-              <li class="tools__item">13</li>
-              <li class="tools__item">14</li>
-              <li class="tools__item">15</li>
-              <li class="tools__item">16</li>
-              <li class="tools__item">17</li>
-              <li class="tools__item">18</li>
-              <li class="tools__item">19</li>
-              <li class="tools__item">20</li>
-            </ul>
+        <section class="section contacts">
+          <h1 class="section__title visuallyhidden">type-service</h1>
+          <div class="contacts__row">
+            <div class="contacts__col">
+              <div class="contacts__content">
+                <div class="title">контакты</div>
+                <ul class="contacts__list">
+                  <li class="contacts__line">
+                    <div class="contacts__subtitle">Адрес:</div>
+                    <div class="contacts__text">115088, г. Москва, ул. Южнопортовая, д.9, стр.2</div>
+                  </li>
+                  <li class="contacts__line">
+                    <div class="contacts__subtitle">Телефон:</div><a class="contacts__link" href="tel:84994903804">8 (499) 490-38-04</a><a class="contacts__icon contacts__icon--whatsapp" href="#" target="blanc"></a><a class="contacts__icon contacts__icon--viber" href="#" target="blanc"></a>
+                  </li>
+                  <li class="contacts__line">
+                    <div class="contacts__subtitle">Почта:</div><a class="contacts__link" href="mailto:info@pitstopmotor.ru">info@pitstopmotor.ru</a>
+                  </li>
+                  <li class="contacts__line">
+                    <div class="contacts__subtitle">Режим работы:</div>
+                    <div class="contacts__text">Ежедневно с 8:00 до 20:00</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="contacts__col">
+              <form class="form">
+                <div class="title">оставить заявку</div>
+                <div class="form__column">
+                  <div class="form__row">
+                    <label class="form__block">
+                      <input class="form__input form__input--user" type="text" name="user-name" placeholder="Имя" required>
+                    </label>
+                    <label class="form__block">
+                      <input class="form__input form__input--call" type="text" name="telephone" placeholder="Номер телефона" required>
+                    </label>
+                  </div>
+                  <div class="form__row">
+                    <label class="form__block">
+                      <input class="form__input form__input--email" type="text" name="email" placeholder="Email" required>
+                    </label>
+                    <label class="form__block">
+                      <input class="form__input form__input--req" type="text" name="request" placeholder="Тема обращения" required>
+                    </label>
+                  </div>
+                  <div class="form__row">
+                    <label class="form__block">
+                      <textarea class="form__textarea" name="message" placeholder="Ваше сообщение" cols="30" rows="1" required></textarea>
+                    </label>
+                  </div>
+                </div>
+                <button class="more" type="submit">отправить</button>
+              </form>
+            </div>
+          </div>
+          <div class="map map--contacts" id="map">
+            <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBedBDOwDkXi5dlBT1B2VmOGHShZWbiVqg&amp;callback=initMap"></script>
           </div>
         </section>
         <footer class="footer">

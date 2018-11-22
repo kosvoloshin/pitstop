@@ -14,9 +14,8 @@ require('./common/price');
 
 const slider = require('./common/slider');
 
-slider(); // инициализируем слайдер
-
+slider(); // инициализируем слайдер 0
 
 const slider1 = require('./common/slider-reviews');
 
-slider1(); // инициализируем слайдер
+slider1(); // инициализируем слайдер 1

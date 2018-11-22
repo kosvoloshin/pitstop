@@ -7,17 +7,21 @@ $(document).ready(function() {
             if($('.price__check--our').prop('checked')){
                 $('#our').addClass('active');
                 $('#table-our').addClass('active');
+                $('.tabs__list--our').addClass('active');
             } else {
                 $('#our').removeClass('active');
                 $('#table-our').removeClass('active');
+                $('.tabs__list--our').removeClass('active');
             }
     
             if($('.price__check--import').prop('checked')){
                 $('#import').addClass('active');
                 $('#table-import').addClass('active');
+                $('.tabs__list--import').addClass('active');
             } else {
                 $('#import').removeClass('active');
                 $('#table-import').removeClass('active');
+                $('.tabs__list--import').removeClass('active');
             }
         });
     
@@ -90,7 +94,7 @@ $(document).ready(function() {
     };
 
     if($('.top').length){
-        $('a.top[href^="#"]').on('click', function(event) {
+        $('a[href*="#"].top').on('click', function(event) {
             event.preventDefault();
             
             var sc = $(this).attr("href"),
@@ -101,43 +105,38 @@ $(document).ready(function() {
         });
     };
 
-    if($('.tabs').length){
-        $(document).on("scroll", onScroll);
-        
-        //smoothscroll
-        $('a[href^="#"].tabs__link').on('click', function (e) {
-            e.preventDefault();
-            $(document).off("scroll");
-            
-            $('a').each(function () {
-                $(this).removeClass('active');
-            })
-            $(this).addClass('active');
-            
-            var target = this.hash,
-                menu = target;
-            $target = $(target);
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top+2
-            }, 500, 'swing', function () {
-                window.location.hash = target;
-                $(document).on("scroll", onScroll);
-            });
+    $(window).scroll(function(){
+        var sections = $('.table__block');
+        sections.each(function(i,el){
+            var top  = $(el).offset().top-230;
+            var bottom = top +$(el).height();
+            var scroll = $(window).scrollTop();
+            var id = $(el).attr('id');
+            if( scroll > top && scroll < bottom){
+                $('a.active').removeClass('active');
+                $('a[href="#'+id+'"]').addClass('active');
+
+            };
         });
-        
-        function onScroll(event){
-            var scrollPos = $(document).scrollTop();
-            $('.tabs a').each(function () {
-                var currLink = $(this);
-                var refElement = $(currLink.attr("href"));
-                if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-                    $('.tabs ul li a').removeClass("active");
-                    currLink.addClass("active");
-                }
-                else{
-                    currLink.removeClass("active");
-                }
-            });
-        }
-    };
+    });
+     
+    $(".tabs__list--our .tabs__item").on("click","a", function (event) {
+        event.preventDefault();
+    
+        var id  = $(this).attr('href'),
+    
+            top = $(id).offset().top;
+            top = top - 200;
+        $('body,html').animate({scrollTop: top}, 800);
+    });
+
+    $(".tabs__list--import .tabs__item").on("click","a", function (event) {
+        event.preventDefault();
+    
+        var id  = $(this).attr('href'),
+    
+            top = $(id).offset().top;
+            top = top - 200;
+        $('body,html').animate({scrollTop: top}, 800);
+    });
 });
