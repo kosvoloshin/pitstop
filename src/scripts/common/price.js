@@ -113,7 +113,7 @@ $(document).ready(function() {
             var scroll = $(window).scrollTop();
             var id = $(el).attr('id');
             if( scroll > top && scroll < bottom){
-                $('a.active').removeClass('active');
+                $('a.tabs__link.active').removeClass('active');
                 $('a[href="#'+id+'"]').addClass('active');
 
             };

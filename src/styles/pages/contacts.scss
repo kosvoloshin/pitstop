@@ -62,11 +62,9 @@
 }
 
 .contacts__icon--viber {
-    transform: rotateY(180deg);
 
     &:after {
-        content: '\e806';
-        font-family: $f;
+        content: url(../images/icons/viber.png);
         color: #919191;
         transition: .35s;
         font-size: rem(44px);
@@ -76,6 +74,7 @@
 
     &:hover:after {
         color: #7f4da0;
+        content: url(../images/icons/viber-hover.png);
     }
 
 }

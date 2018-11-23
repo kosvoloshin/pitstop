@@ -2,16 +2,128 @@
     height: 100%;
     width: 100%;
     text-align: justify;
+    padding-top: rem(44px);
+    margin-bottom: rem(-40px);
 }
 
 .tools__item {
-    width: 245px;
-    height: 245px;
-    background-color: #232323;
+    width: rem(245px);
     display: inline-block;
-    margin: 0 60px 60px 0;
-    color: #fff;
-    font-size: 100px;
-    text-align: center;
-    line-height: 245px;
+    margin: 0 50px 50px 0;
 }
+
+.tools__link {
+    display: block;
+    height: 100%;
+    width: 100%;
+
+    &:hover {
+        .tools__image:after,
+        .tools__image:before {
+            opacity: 1;
+        }
+        .tools__title {
+            color: $blue;
+        }
+    }
+}
+
+.tools__image {
+    height: rem(245px);
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &:after {
+        content: url(../images/icons/search2.png);
+        color: $w;
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: .3s;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba($color: #232323, $alpha: 0.5);
+        opacity: 0;
+        z-index: 1;
+        transition: .3s;
+    }
+}
+
+.tools__title {
+    font-size: rem(15px);
+    line-height: rem(18px);
+    color: #252527;
+    margin-top: rem(13px);
+}
+
+.gallery {
+    width: rem(684px);
+    position: absolute;
+    top: rem(350px);
+    left: 50%;
+    transform: translate(-50%,0);
+    z-index: 115;
+    display: none;
+}
+
+.gallery__wrap {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.gallery__featured {
+    height: 591px;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.gallery__panel {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: $w;
+    justify-content: space-between;
+    padding: rem(18px) rem(23px);
+}
+
+.close {
+    padding: 0;
+    border: initial;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    height: rem(60px);
+    width: rem(60px);
+    line-height: rem(60px);
+    text-align: center;
+    outline: none;
+    background-image: url(../images/icons/cancel.png);
+    background-repeat: no-repeat;
+    background-size: rem(30px);
+    background-position: center;
+    transition: .35s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $blue;
+    }
+}   

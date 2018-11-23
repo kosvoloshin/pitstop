@@ -15,6 +15,8 @@ block content
             section.section.service
                 h1.section__title.visuallyhidden service
                 .service__video
+                    video(preload='auto', autoplay='autoplay', loop='loop')
+                        source(src='test-video.mp4', type='video/mp4')
                 ul.service__list
                     li.service__item.service__item--empty
                     li.service__item
@@ -119,6 +121,8 @@ block content
                 .main__line-repair-ques    
                     .repair
                         .repair__video
+                            video(preload='auto', autoplay='autoplay', loop='loop')
+                                source(src='test-video.mp4', type='video/mp4')
                         .repair__content
                             .repair__sticky услуга
                             .title.title--white
