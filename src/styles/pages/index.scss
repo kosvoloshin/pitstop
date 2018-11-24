@@ -55,10 +55,26 @@
     text-align: center;
     border-right: 1px solid #818184;
     border-bottom: 1px solid #818184;
+
+    @include --xl {
+        width: 25%;
+    }
+
+    @include --lg {
+        width: calc(100% / 3);
+    }
 }
 
 .service__item--empty {
     width: 60%;
+
+    @include --xl {
+        width: 50%;
+    }
+
+    @include --lg {
+        display: none;
+    }
 }
 
 .service__link {
@@ -105,17 +121,30 @@
     display: flex;
     flex-direction: row;
     min-height: rem(400px);
+
+    @include --lg {
+        flex-direction: column;
+    }
 }
 
 .promo {
     width: 50%;
     position: relative;
+
+    @include --lg {
+        width: 100%;
+        min-height: rem(400px);
+    }
 }
 
 .promo__list {
     height: 100%;
     width: 100%;
     position: relative;
+
+    @include --lg {
+        position: initial;
+    }
 }
 
 .promo__item {
@@ -141,6 +170,14 @@
     height: 100%;
     width: 100%;
     padding: rem(43px) rem(61px);
+
+    @include --xxl {
+        padding: rem(40px) rem(40px);
+    }
+
+    @include --lg {
+        padding: rem(43px) rem(61px);
+    }
 }
 
 .promo__sticky {
@@ -189,6 +226,14 @@
     left: rem(60px);
     display: flex;
     align-items: center;
+
+    @include --xxl {
+        left: rem(40px);
+    }
+
+    @include --lg {
+        left: rem(60px); 
+    }
 }
 
 .controls--gallery {
@@ -279,6 +324,15 @@
     width: 50%; 
     background-color: #dedee0;
     padding: rem(54px) rem(48px);
+
+    @include --xxl {
+        padding: rem(54px) rem(40px);
+    }
+
+    @include --lg {
+        width: 100%;
+        padding: rem(54px) rem(48px);
+    }
 }
 
 .desc__text {
@@ -393,12 +447,43 @@
 .numbers {
     width: 100%;
     padding: rem(135px) 0;
+
+    @include --lg {
+        padding: rem(135px) rem(60px);
+    }
 }
 
 .numbers__list {
     width: 100%;
     display: flex;
     flex-direction: row;
+
+    @include --lg {
+        flex-flow: row wrap;
+        max-width: rem(792px);
+        margin: 0 auto;
+        position: relative;
+
+        &:after {
+            content: '';
+            width: 1px;
+            height: 100%;
+            left: 50%;
+            top: 0;
+            position: absolute;
+            background: #d1d1d6;
+        }
+
+        &:before {
+            content: '';
+            width: 100%;
+            height: 1px;
+            top: 50%;
+            left: 0;
+            position: absolute;
+            background: #d1d1d6;
+        }
+    }
 }
 
 .numbers__item {
@@ -410,11 +495,51 @@
     &:last-child {
         border-right: none;
     }
+
+    @include --xxl {
+        padding-left: rem(30px);
+        padding-right: rem(30px);
+    }
+
+    @include --xl {
+        padding-bottom: rem(30px);
+    }
+
+    @include --lg {
+        width: 50%;
+        height: 50%;
+        border-right: none;
+        padding: 0;
+        min-height: rem(203px);
+
+        &:first-child  {
+            padding-bottom: rem(30px);
+        }
+
+        &:last-child  {
+            padding-top: rem(30px);
+            padding-left: rem(50px);
+        }
+
+        &:nth-child(2) {
+            padding-bottom: rem(30px);
+            padding-left: rem(50px);
+        }
+
+        &:nth-child(3) {
+            padding-top: rem(30px);
+            padding-right: rem(50px);
+        }
+    }
 }
 
 .numbers__value {
     font-family: $goprom;
     font-size: rem(100px);
+
+    @include --xxl {
+        font-size: rem(85px);
+    }
 }
 
 .numbers__sub {
@@ -433,6 +558,13 @@
         color: #fff;
         left: 3px;
         top: 20px;
+
+        @include --xxl {
+            height: 34px;
+            width: 34px;
+            line-height: 34px;
+            top: 16px;
+        }
     }
 }
 
@@ -449,6 +581,10 @@
     font-family: $goprom;
     font-size: rem(20px);
     color: $blue;
+
+    @include --xxl {
+        font-size: rem(18px);
+    }
 }
 
 .numbers__text {
@@ -469,6 +605,10 @@
     background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
+
+    @include --lg {
+        width: 100%;
+    }
 }
 
 .repair__video {
@@ -504,6 +644,10 @@
     right: 0;
     z-index: 10;
     padding: rem(69px) rem(116px);
+
+    @include --xxl {
+        padding: rem(69px) rem(75px);
+    }
 }
 
 .repair__sticky {
@@ -533,12 +677,24 @@
 .ques {
     width: 50%;
     padding: rem(47px) rem(56px);
+
+    @include --xxl {
+        padding: rem(47px) rem(40px);
+    }
+
+    @include --lg {
+        display: none;
+    }
 }
 
 .ques__list {
     padding-top: rem(41px);
     padding-right: rem(100px);
     padding-bottom: rem(54px);
+
+    @include --xxl {
+        padding-right: 0;
+    }
 }
 
 .ques__heading {
@@ -578,15 +734,28 @@
     display: flex;
     flex-direction: row;
     min-height: rem(498px);
+
+    @include --xxl {
+        flex-flow: row wrap;
+    }
 }
 
 .bunners__item {
-    width: calc(72% / 3);
+    width: 25%;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     position: relative;
     padding: rem(48px) rem(42px) rem(48px) rem(42px);
+
+    @include --xxxl {
+        padding: rem(48px) rem(30px) rem(48px) rem(30px);
+    }
+
+    @include --xxl {
+        width: 50%;
+        min-height: rem(450px);
+    }
 }
 
 .pitstop {
@@ -607,6 +776,17 @@
     width: 100%;
     left: 0;
     padding: 0 rem(42px);
+
+    @include --xxl {
+        left: 50%;
+        transform: translate(-50%, 0);
+        max-width: rem(430px);
+        padding: 0;
+    }
+
+    @include --lg {
+        max-width: rem(300px);
+    }
 }
 
 .equipment {
@@ -619,10 +799,18 @@
     font-family: $goprom;
     margin-top: rem(44px);
     margin-bottom: rem(42px);
+
+    @include --xxl {
+        max-width: rem(500px);
+    }
 }
 
 .equipment__text {
     color: $w;
+
+    @include --xxl {
+        max-width: rem(500px);
+    }
 }
 
 .outbound {
@@ -653,6 +841,14 @@
         position: absolute;
         bottom: 58px;
         left: 50px;
+
+        @include --xxxl {
+            left: 30px;
+        }
+    }
+
+    @include --xxxl {
+        padding: rem(48px) rem(30px) rem(48px) rem(30px);
     }
 }
 
@@ -661,15 +857,31 @@
     font-size: rem(15px);
     font-family: $goprom;
     margin-top: rem(44px);
+
+    @include --xxl {
+        max-width: rem(390px);
+    }
 }
 
 .reviews {
     background-color: #f8f8f8;
-    width: 28%;
 
     .controls {
         left: rem(48px);
         bottom: rem(53px);
+
+        @include --lg {
+            left: rem(30px);
+            bottom: rem(30px);
+        }
+    }
+
+    @include --xxl {
+        width: 50%;
+    }
+
+    @include --lg {
+        padding-bottom: rem(75px);
     }
 }
 
@@ -694,12 +906,24 @@
 .reviews__text {
     font-family: $goprom;
     margin-bottom: rem(35px);
+
+    @include --xxl {
+        max-width: rem(500px);
+    }
+
+    @include --lg {
+        margin-bottom: rem(20px);
+    }
 }
 
 .reviews__name {
     font-size: rem(18px);
     font-family: $goprom;
     color: $blue;
+
+    @include --xxl {
+        max-width: rem(500px);
+    }
 }
 
 .reviews__dark-text {
@@ -708,12 +932,22 @@
 
 .reviews__desc {
     color: #afafaf;
+
+    @include --xxl {
+        max-width: rem(500px);
+    }
 }
 
 .main__line-request-map {
     display: flex;
     flex-direction: row;
     min-height: rem(597px);
+
+    @include --lg {
+        .request {
+            display: none;
+        }
+    }
 }
 .request {
     width: 50%;
@@ -725,6 +959,10 @@
     height: 100%;
     padding: rem(47px) rem(56px);
     background-color: #f8f8f8;
+
+    @include --xxl {
+        padding: rem(47px) rem(40px);
+    }
 }
 
 .form__column {
@@ -824,6 +1062,10 @@
 
 .map {
     width: 50%;
+
+    @include --lg {
+        width: 100%;
+    }
 }
 
 .map--contacts {

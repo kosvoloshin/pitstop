@@ -1,3 +1,9 @@
+@mixin --xxxl { // max-width: 1779px
+    @media screen and (max-width: $--xxxl) {
+        @content;
+    }
+}
+
 @mixin --xxl { // max-width: 1679px
     @media screen and (max-width: $--xxl) {
         @content;
@@ -5,7 +11,7 @@
 }
 
 @mixin --xl { // max-width: 1439px
-    @media screen and (max-width: $--xx) {
+    @media screen and (max-width: $--xl) {
         @content;
     }
 }

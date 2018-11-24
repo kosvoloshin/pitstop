@@ -10,17 +10,24 @@
     flex-direction: column;
     z-index: 101;
     background-color: #48494f;
-    display: none;////////
+    //display: none;////////
+
+    @include --xxl {
+        width: rem(282px);
+    }
 }
 
 .logo {
     width: 100%;
-    height: 100%;
-    max-height: rem(105px);
+    height: rem(105px);
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #e9e9ea;
+
+    @include --lg {
+        height: rem(95px);
+    }
 }
 
 .logo__img {
@@ -32,6 +39,10 @@
     width: 100%;
     padding: rem(27px) 0;
     position: relative;
+
+    @include --xl {
+        padding: rem(17px) 0;
+    }
 }
 
 .menu__item {
@@ -73,6 +84,14 @@
         transform: skew(20deg)translate(-50%,0);
         z-index: -1;
         transition: .35s;
+    }
+
+    @include --xxl {
+        padding: rem(13px) rem(13px);
+    }
+
+    @include --xl {
+        padding: rem(11px) rem(13px);
     }
 }
 
@@ -133,6 +152,14 @@
         border-top: 1px solid #56575c;
         border-bottom: 1px solid #3f4047;
         padding: rem(13px) rem(50px) rem(13px) rem(77px);
+
+        @include --xxl {
+            padding: rem(13px) rem(36px);
+        }
+
+        @include --xl {
+            padding: rem(11px) rem(36px);
+        }
     }
 
     .menu__item {
@@ -147,6 +174,10 @@
             position: absolute;
             top: 18px;
             left: 82px;
+
+            @include --xxl {
+                left: 40px;
+            }
         }
 
         &:hover {
@@ -204,11 +235,15 @@
     top: 0;
     z-index: -1;
     opacity: 0;
-    transition: .3s;
+    transition: .25s;
     background-color: #252527;
     padding: rem(38px) 0;
     width: rem(335px);
     visibility: hidden;
+
+    @include --xl {
+        padding: rem(28px) 0;
+    }
 }
 
 .sub-menu__title {
@@ -216,6 +251,10 @@
     color: #919191;
     margin-bottom: rem(5px);
     padding: 0 rem(55px);
+
+    @include --xxl {
+        padding: 0 rem(30px);
+    }
 }
 
 .sub-menu__list {
@@ -223,6 +262,10 @@
 
     &:last-child {
         margin-bottom: 0;
+    }
+
+    @include --xxl {
+        margin-bottom: rem(30px);
     }
 }
 
@@ -248,6 +291,10 @@
             transform: skew(-20deg)translate(0, 0);
             background-color: #1f5984;
         }
+    }
+
+    @include --xxl {
+        padding: 0 rem(30px);
     }
 }
 
@@ -278,6 +325,10 @@
         transform: skew(-20deg)translate(-50%,0);
         z-index: -1;
         transition: .35s;
+
+        @include --xxl {
+            left: calc(100% + 5px);
+        }
     }
 
     &:before {
@@ -291,5 +342,9 @@
         transform: skew(20deg)translate(-50%,0);
         z-index: -1;
         transition: .35s;
+
+        @include --xxl {
+            left: calc(100% + 5px);
+        }
     }
 }

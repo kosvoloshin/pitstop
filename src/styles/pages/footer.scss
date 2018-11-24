@@ -1,13 +1,19 @@
 .footer {
-    padding-right: rem(65px);
     padding-top: rem(127px);
-    padding-left: rem(20px);
 }
 
 .footer__nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-left: rem(10px);
+    padding-right: rem(60px);
+
+    @include --lg {
+        padding-right: rem(30px);
+        //flex-flow: row wrap;
+        //justify-content: flex-end;
+    }
 }
 
 .footer__item {
@@ -22,6 +28,34 @@
         position: absolute;
         top: 0;
         right: rem(45px);
+
+        @include --xxxl {
+            right: rem(22.5px);
+        }
+
+        @include --lg {
+            display: none;
+        }
+    }
+}
+
+.footer__item--call:after {
+    @include --xxxl {
+        display: none;
+    }
+
+    @include --xxl {
+        display: block;
+    }
+
+    @include --lg {
+        display: none;
+    }
+}
+
+.footer__item--slogan {
+    @include --xxl {
+        display: none;
     }
 }
 
@@ -32,6 +66,21 @@
 
     &:after {
         display: none;
+    }
+
+    @include --xxxl {
+        margin-left: rem(-90px);
+    }
+
+    @include --xxl {
+        margin-left: 0;
+        justify-content: space-between;
+    }
+
+    @include --lg {
+        //width: 100%;
+        //margin-top: rem(25px);
+        justify-content: flex-end;
     }
 }
 
@@ -61,6 +110,22 @@
     padding: 0 rem(50px);
     margin-top: rem(-10px);
     padding-top: rem(10px);
+
+    @include --xxxl {
+        padding: 0 rem(20px);
+        padding-top: rem(10px);
+    }
+
+    @include --xxxl {
+        padding-left: rem(30px);
+        padding-right: rem(20px);
+    }
+
+    @include --lg {
+        //padding-top: 0;
+        //margin-top: rem(30px);
+        display: none;
+    }
 }
 
 .socials__link {
@@ -107,6 +172,10 @@
 
 .create {
     transform: translate(0,-30%);
+
+    @include --lg {
+        //transform: translate(0,0);
+    }
 }
 
 .create__sub {
@@ -145,10 +214,35 @@
     margin-top: rem(50px);
     padding-top: rem(28px);
     padding-bottom: rem(28px);
+    padding-left: rem(10px);
+    padding-right: rem(60px);
+
+    @include --lg {
+        padding-right: rem(30px);
+        margin-top: rem(30px);
+    }
 }
 
 .footer__copy {
     color: #676767;
+
+    @include --lg {
+        text-align: center;
+    }
+}
+
+.footer__copy--first {
+    @include --xl {
+        display: none;
+    }
+}
+
+.footer__copy--second {
+    display: none;
+
+    @include --xl {
+        display: block;
+    }
 }
 
 .footer__policy {
@@ -159,6 +253,10 @@
     &:hover {
         color: #232323;
     }
+
+    @include --lg {
+        text-align: center;
+    }
 }
 
 .footer__mail {
@@ -168,5 +266,9 @@
 
     &:hover {
         color: #232323;
+    }
+
+    @include --lg {
+        text-align: center;
     }
 }
