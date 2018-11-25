@@ -13,7 +13,7 @@
   </head>
   <body>
     <aside class="sidebar">
-      <div class="logo"><a class="logo__link" href="index.html"><img class="logo__img" src="./assets/images/logo.png" alt="logo"></a></div>
+      <div class="logo logo--hide-md"><a class="logo__link" href="index.html"><img class="logo__img" src="./assets/images/logo.png" alt="logo"></a></div>
       <ul class="menu menu--top">
         <li class="menu__item"><a class="menu__link" href="#">Ремонт ГБЦ</a><span class="icon--arrow"></span>
           <div class="sub-menu">
@@ -131,6 +131,15 @@
       </div>
       <div class="container">
         <header class="header" id="top">
+          <div class="header__row header__row--show-md">
+            <div class="header__col">
+              <div class="logo"><a class="logo__link" href="index.html"><img class="logo__img" src="./assets/images/logo.png" alt="logo"></a></div>
+              <button class="hamburger" type="button" id="openFull">
+                <div class="hamburger__menu"></div>
+              </button>
+            </div>
+            <div class="header__col"><a class="header__calc" href="#"></a><a class="header__letter" href="#"></a></div>
+          </div>
           <div class="header__nav">
             <div class="address address--desktop">
               <div class="address__caption">Москва</div>
@@ -147,8 +156,7 @@
               <div class="calc__line">расчитать стоимость</div>
             </div>
             <div class="call"><a class="call__caption" href="tel:84994903804">8 (499) 490-38-04</a><a class="call__line" href="#">перезвонить мне</a></div>
-          </div>
-          <button class="header__letter" type="button"></button>
+          </div><a class="header__letter header__letter--hide-md" href="#"></a>
         </header>
         <section class="section section-wrap answers">
           <div class="answers__wrap">
@@ -255,7 +263,7 @@
           </div>
         </section>
         <footer class="footer">
-          <ul class="footer__nav">
+          <ul class="footer__nav footer__nav--hide-sm">
             <li class="footer__item footer__item--slogan">
               <div class="slogan">
                 <div class="slogan__text">Расточка головки блока цилиндров в Москве <br>ремонт ГБЦ по самым низким ценами</div>
@@ -277,9 +285,30 @@
               </div>
             </li>
           </ul>
+          <div class="footer__nav footer__nav--show-sm">
+            <div class="footer__col">
+              <div class="footer__item">
+                <div class="address address--footer">
+                  <div class="address__caption">ул. Южнопортовая, д.9, стр.2</div>
+                  <div class="address__line">время работы: с 8:00 до 20:00</div>
+                </div>
+              </div>
+              <div class="footer__item footer__item--call">
+                <div class="call call--footer"><a class="call__caption" href="tel:84994903804">8 (499) 490-38-04</a><a class="call__line" href="#">перезвонить мне</a></div>
+              </div>
+            </div>
+            <div class="footer__col">
+              <div class="footer__item footer__item--last">
+                <div class="socials"> <a class="socials__link socials__link--viber" href="#" target="blanc"></a><a class="socials__link socials__link--whatsapp" href="#" target="blanc"></a></div>
+                <div class="create"><a class="footer__mail" href="mailto:info@pitstopmotor.ru">info@pitstopmotor.ru</a>
+                  <div class="create__sub">создание <br>и продвижение</div><a class="create__link" href="#" target="blanc">умные <span class="create__bold">seo</span><br>технологии</a>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="footer__line">
             <div class="footer__copy footer__copy--first">Pit-Stop Motor © 2008-2018 Все права защищены.</div>
-            <div class="footer__copy footer__copy--second">Pit-Stop Motor © 2008-2018</div><a class="footer__policy" href="#" target="blanc">Политика обработки персональных данных</a><a class="footer__mail" href="mailto:info@pitstopmotor.ru">info@pitstopmotor.ru</a>
+            <div class="footer__copy footer__copy--second">Pit-Stop Motor © 2008-2018</div><a class="footer__policy" href="#" target="blanc">Политика обработки персональных данных</a><a class="footer__mail footer__mail--hide-s" href="mailto:info@pitstopmotor.ru">info@pitstopmotor.ru</a>
           </div>
         </footer>
       </div>

@@ -11,11 +11,12 @@ block content
                 .preloader__animation
                 .preloader__percents 0%
         .container
+            .bg#bg
             include ../common/header.pug
             section.section.service
                 h1.section__title.visuallyhidden service
                 .service__video
-                    video(preload='auto', autoplay='autoplay', loop='loop')
+                    //video(preload='auto', autoplay='autoplay', loop='loop')
                         source(src='test-video.mp4', type='video/mp4')
                 ul.service__list
                     li.service__item.service__item--empty
@@ -121,7 +122,7 @@ block content
                 .main__line-repair-ques    
                     .repair
                         .repair__video
-                            video(preload='auto', autoplay='autoplay', loop='loop')
+                            //video(preload='auto', autoplay='autoplay', loop='loop')
                                 source(src='test-video.mp4', type='video/mp4')
                         .repair__content
                             .repair__sticky услуга

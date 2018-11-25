@@ -1,4 +1,14 @@
 header.header#top
+    .header__row.header__row--show-md
+        .header__col
+            .logo
+                a(href="index.html").logo__link
+                    img(src="./assets/images/logo.png" alt="logo").logo__img
+            button(type="button").hamburger#openFull
+                .hamburger__menu
+        .header__col
+            a(href="#").header__calc
+            a(href="#").header__letter
     .header__nav
         .address.address--desktop
             .address__caption Москва
@@ -14,4 +24,4 @@ header.header#top
         .call
             a(href="tel:84994903804").call__caption 8 (499) 490-38-04
             a(href="#").call__line перезвонить мне
-    button(type="button").header__letter
+    a(href="#").header__letter.header__letter--hide-md

@@ -10,10 +10,23 @@
     flex-direction: column;
     z-index: 101;
     background-color: #48494f;
-    //display: none;////////
 
     @include --xxl {
         width: rem(282px);
+    }
+
+    @include --md {
+        position: absolute;
+        top: rem(85px);
+        left: 0;
+        transform: translate(-105%,0);
+        transition: .3s;
+        width: 50%;
+        min-height: auto;
+    }
+
+    &.active {
+        transform: translate(0,0);
     }
 }
 
@@ -28,11 +41,30 @@
     @include --lg {
         height: rem(95px);
     }
+
+    @include --md {
+        width: rem(200px);
+        height: rem(85px);
+    }
+
+    @include --s {
+        width: rem(180px);
+    }
+}
+
+.logo--hide-md {
+    @include --md {
+        display: none;
+    }
 }
 
 .logo__img {
     max-height: rem(65px);
     width: auto;
+
+    @include --md {
+        max-height: rem(55px);
+    }
 }
 
 .menu {
@@ -42,6 +74,10 @@
 
     @include --xl {
         padding: rem(17px) 0;
+    }
+
+    @include --md {
+        padding: rem(27px) 0;
     }
 }
 
@@ -92,6 +128,10 @@
 
     @include --xl {
         padding: rem(11px) rem(13px);
+    }
+
+    @include --md {
+        padding: rem(13px) rem(65px) rem(13px) rem(55px);
     }
 }
 
@@ -160,6 +200,10 @@
         @include --xl {
             padding: rem(11px) rem(36px);
         }
+
+        @include --md {
+            padding: rem(13px) rem(50px) rem(13px) rem(77px);
+        }
     }
 
     .menu__item {
@@ -177,6 +221,10 @@
 
             @include --xxl {
                 left: 40px;
+            }
+
+            @include --md {
+                left: 82px;
             }
         }
 
@@ -244,6 +292,14 @@
     @include --xl {
         padding: rem(28px) 0;
     }
+
+    @include --md {
+        width: 100%;
+    }
+
+    @include --md {
+        padding: rem(38px) 0;
+    }
 }
 
 .sub-menu__title {
@@ -254,6 +310,10 @@
 
     @include --xxl {
         padding: 0 rem(30px);
+    }
+
+    @include --md {
+        padding: 0 rem(55px);
     }
 }
 
@@ -266,6 +326,14 @@
 
     @include --xxl {
         margin-bottom: rem(30px);
+    }
+
+    @include --md {
+        margin-bottom: rem(40px);
+
+        &:last-child {
+            margin-bottom: rem(40px);
+        }
     }
 }
 
@@ -295,6 +363,10 @@
 
     @include --xxl {
         padding: 0 rem(30px);
+    }
+
+    @include --md {
+        padding: 0 rem(55px);
     }
 }
 
@@ -346,5 +418,23 @@
         @include --xxl {
             left: calc(100% + 5px);
         }
+    }
+}
+
+.bg {
+    display: none;
+    background: rgba($color: #232323, $alpha: 0.7);
+    position: absolute;
+    top: rem(85px);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    opacity: 0;
+    transition: .35s;
+
+    &.active {
+        display: block;
+        opacity: 1;
     }
 }

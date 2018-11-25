@@ -1,5 +1,5 @@
 footer.footer
-    ul.footer__nav
+    ul.footer__nav.footer__nav--hide-sm
         li.footer__item.footer__item--slogan
             .slogan
                 .slogan__text Расточка головки блока цилиндров в Москве 
@@ -25,8 +25,32 @@ footer.footer
                     span.create__bold seo
                     br
                     | технологии
+    .footer__nav.footer__nav--show-sm
+        .footer__col
+            .footer__item
+                .address.address--footer
+                    .address__caption ул. Южнопортовая, д.9, стр.2
+                    .address__line время работы: с 8:00 до 20:00
+            .footer__item.footer__item--call
+                .call.call--footer
+                    a(href="tel:84994903804").call__caption 8 (499) 490-38-04
+                    a(href="#").call__line перезвонить мне
+        .footer__col
+            .footer__item.footer__item--last
+                .socials 
+                    a(href="#" target="blanc").socials__link.socials__link--viber
+                    a(href="#" target="blanc").socials__link.socials__link--whatsapp
+                .create
+                    a(href="mailto:info@pitstopmotor.ru").footer__mail info@pitstopmotor.ru
+                    .create__sub создание 
+                        br
+                        | и продвижение
+                    a(href="#" target="blanc").create__link умные 
+                        span.create__bold seo
+                        br
+                        | технологии
     .footer__line
         .footer__copy.footer__copy--first Pit-Stop Motor © 2008-2018 Все права защищены.
         .footer__copy.footer__copy--second Pit-Stop Motor © 2008-2018
         a(href="#" target="blanc").footer__policy Политика обработки персональных данных
-        a(href="mailto:info@pitstopmotor.ru").footer__mail info@pitstopmotor.ru
+        a(href="mailto:info@pitstopmotor.ru").footer__mail.footer__mail--hide-s info@pitstopmotor.ru

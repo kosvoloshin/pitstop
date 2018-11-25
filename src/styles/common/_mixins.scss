@@ -34,6 +34,12 @@
     }
 }
 
+@mixin --s { // max-width: 640px
+    @media screen and (max-width: $--s) {
+        @content;
+    }
+}
+
 @mixin --xs { // max-width: 479px
     @media screen and (max-width: $--xs) {
         @content;

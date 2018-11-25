@@ -1,6 +1,5 @@
 const $ = require('jquery');
 
-function retina() {
     $(document).ready(function() {
         if($('.service__list').length){
             var images = $('.service__item img');
@@ -16,6 +15,3 @@ function retina() {
             });
         };
     });
-};
-
-window.onload = retina;

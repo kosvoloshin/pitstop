@@ -11,9 +11,25 @@
 
     @include --lg {
         padding-right: rem(30px);
-        //flex-flow: row wrap;
-        //justify-content: flex-end;
     }
+}
+
+.footer__nav--hide-sm {
+    @include --sm {
+        display: none;
+    }
+}
+
+.footer__nav--show-sm {
+    display: none;
+
+    @include --sm {
+        display: flex;
+    }
+}
+
+.footer__col {
+    width: 50%;
 }
 
 .footer__item {
@@ -36,6 +52,12 @@
         @include --lg {
             display: none;
         }
+    }
+}
+
+.footer__item--call {
+    @include --sm {
+        margin-top: rem(30px);
     }
 }
 
@@ -78,9 +100,11 @@
     }
 
     @include --lg {
-        //width: 100%;
-        //margin-top: rem(25px);
         justify-content: flex-end;
+    }
+
+    @include --sm {
+        justify-content: space-between;
     }
 }
 
@@ -122,9 +146,14 @@
     }
 
     @include --lg {
-        //padding-top: 0;
-        //margin-top: rem(30px);
         display: none;
+    }
+
+    @include --sm {
+        display: flex;
+        padding: 0;
+        flex-direction: column;
+        justify-content: space-between;
     }
 }
 
@@ -173,8 +202,8 @@
 .create {
     transform: translate(0,-30%);
 
-    @include --lg {
-        //transform: translate(0,0);
+    @include --sm {
+        transform: translate(0, 0);
     }
 }
 
@@ -221,6 +250,10 @@
         padding-right: rem(30px);
         margin-top: rem(30px);
     }
+
+    @include --md {
+        flex-flow: row wrap;
+    }
 }
 
 .footer__copy {
@@ -243,6 +276,14 @@
     @include --xl {
         display: block;
     }
+
+    @include --md {
+        width: 50%;
+    }
+
+    @include --s {
+        width: 100%;
+    }
 }
 
 .footer__policy {
@@ -257,6 +298,12 @@
     @include --lg {
         text-align: center;
     }
+
+    @include --md {
+        width: 100%;
+        order: 1;
+        margin-top: rem(20px);
+    }
 }
 
 .footer__mail {
@@ -270,5 +317,15 @@
 
     @include --lg {
         text-align: center;
+    }
+
+    @include --md {
+        width: 50%;
+    }
+}
+
+.footer__mail--hide-s {
+    @include --s {
+        display: none;
     }
 }

@@ -7,6 +7,29 @@
     @include --lg {
         height: rem(95px);
     }
+
+    @include --md {
+        flex-direction: column;
+        height: initial;
+    }
+}
+
+.header__row--show-md {
+    display: none;
+    background-color: #e9e9ea;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    @include --md {
+        display: flex;
+    }
+}
+
+.header__col {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .header__nav {
@@ -25,6 +48,10 @@
 
     @include --lg {
         padding-top: rem(28px);
+    }
+
+    @include --md {
+        padding: rem(27px) rem(15px);
     }
 }
 
@@ -53,9 +80,14 @@
 
 .address--notebook {
     display: none;
+
     @include --xl {
         display: flex;
         flex-direction: column;
+    }
+
+    @include --s {
+        width: 50%;
     }
 }
 
@@ -123,7 +155,7 @@
 }
 
 .call {
-    padding-left: 40px;
+    padding-left: rem(40px);
     position: relative;
 
     &:before {
@@ -163,10 +195,10 @@
 .header__letter {
     width: rem(105px);
     background-color: #168ce3;
-    border: initial;
-    outline: none;
     transition: .35s;
-    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &:before {
         content: '\e803';
@@ -177,5 +209,121 @@
 
     &:hover {
         background-color: darken(#168ce3, 10%);
+    }
+
+    @include --md {
+        height: rem(85px);
+    }
+
+    @include --s {
+        width: rem(95px);
+    }
+}
+
+.header__letter--hide-md {
+    @include --md {
+        display: none;
+    }
+}
+
+.header__calc {
+    width: rem(105px);
+    height: rem(85px);
+    background-color: #168ce3;
+    transition: .35s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1px;
+
+    &:before {
+        content: url(../images/icons/calc.png);
+    }
+
+    &:hover {
+        background-color: darken(#168ce3, 10%);
+    }
+
+    @include --s {
+        width: rem(95px);
+    }
+}
+
+.hamburger {
+    height: rem(85px);
+    width: rem(85px);
+    background: #fff;
+    border: initial;
+    cursor: pointer;
+    outline: none;
+}
+
+.hamburger__menu {
+    display: inline-block;
+    background: $b;
+    width: 43px;
+    height: 3px;
+    position: relative;
+    transition: .3s;
+    -webkit-transition: background 0 0.3s;
+    transition: background 0 0.3s;
+    
+    &::before, &::after {
+      -webkit-transition-duration: 0.3s, 0.3s;
+      transition-duration: 0.3s, 0.3s;
+      -webkit-transition-delay: 0.3s, 0;
+      transition-delay: 0.3s, 0;
+    }
+    
+    &:before {
+        content: "";
+        background: $b;
+        width: 43px;
+        height: 3px;
+        position: absolute;
+        top: 10px;
+        left: 0;
+    }
+
+    &:after {
+        content: "";
+        background: $b;
+        width: 43px;
+        height: 3px;
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+    }
+}
+
+.hamburger.active {
+    background-color: #246493;
+    .hamburger__menu {
+        background: none;
+
+        &:before {
+            background: $w;
+        }
+
+        &:after {
+            background: $w;
+        }
+        
+        &::before {
+            top: 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        &::after {
+            bottom: 0;
+            -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+        &::before, &::after {
+            -webkit-transition-delay: 0, 0.3s;
+            transition-delay: 0, 0.3s;
+        }
     }
 }

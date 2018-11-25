@@ -9,6 +9,10 @@
     @include --xxl {
         padding-left: rem(282px);
     }
+
+    @include --md {
+        padding-left: 0;
+    }
 }
 
 .section {

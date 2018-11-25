@@ -3,6 +3,14 @@
     max-height: 100%;
     width: 100%;
     overflow: hidden;
+
+    @include --lg {
+        height: rem(857px);
+    }
+
+    @include --s {
+        height: calc(290px * 4);
+    }
 }
 
 .service__video {
@@ -31,6 +39,10 @@
     video {
         width: 100%;
         height: auto;
+    }
+
+    @include --sm {
+        background-image: url(../images/services-bg-tablets.jpg);
     }
 }
 
@@ -62,6 +74,12 @@
 
     @include --lg {
         width: calc(100% / 3);
+        height: calc(100% / 3);
+    }
+
+    @include --s {
+        width: 50%;
+        height: rem(290px);
     }
 }
 
@@ -73,7 +91,11 @@
     }
 
     @include --lg {
-        display: none;
+        width: calc(100% / 3 * 2);
+    }
+
+    @include --s {
+        width: 50%;
     }
 }
 
@@ -103,6 +125,10 @@
 
     &:hover:before {
         opacity: 1;
+    }
+
+    @include --lg {
+        padding-bottom: rem(30px);
     }
 }
 
@@ -178,6 +204,10 @@
     @include --lg {
         padding: rem(43px) rem(61px);
     }
+
+    @include --s {
+        padding: rem(40px) rem(40px);
+    }
 }
 
 .promo__sticky {
@@ -233,6 +263,10 @@
 
     @include --lg {
         left: rem(60px); 
+    }
+
+    @include --s {
+        left: rem(40px);
     }
 }
 
@@ -472,6 +506,10 @@
             top: 0;
             position: absolute;
             background: #d1d1d6;
+
+            @include --s {
+                display: none;
+            }
         }
 
         &:before {
@@ -482,7 +520,16 @@
             left: 0;
             position: absolute;
             background: #d1d1d6;
+
+            @include --s {
+                display: none;
+            }
         }
+    }
+
+    @include --s {
+        flex-flow: initial;
+        flex-direction: column;
     }
 }
 
@@ -514,6 +561,7 @@
 
         &:first-child  {
             padding-bottom: rem(30px);
+            padding-right: rem(30px);
         }
 
         &:last-child  {
@@ -531,6 +579,39 @@
             padding-right: rem(50px);
         }
     }
+
+    @include --s {
+        width: 100%; 
+        border-bottom: 1px solid #d1d1d6;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &:first-child  {
+            padding-bottom: rem(30px);
+            padding-right: rem(30px);
+        }
+
+        &:last-child  {
+            padding-top: 0;
+            padding-left: 0;
+            padding-bottom: rem(30px);
+            padding-right: rem(30px);
+        }
+
+        &:nth-child(2) {
+            padding-left: 0;
+            padding-bottom: rem(30px);
+            padding-right: rem(30px);
+        }
+
+        &:nth-child(3) {
+            padding-top: 0;
+            padding-bottom: rem(30px);
+            padding-right: rem(30px);
+        }
+    } 
 }
 
 .numbers__value {
@@ -756,11 +837,19 @@
         width: 50%;
         min-height: rem(450px);
     }
+
+    @include --s {
+        width: 100%;
+    }
 }
 
 .pitstop {
     background-image: url(../images/pitstop-desktop.jpg);
     text-align: center;
+
+    @include --md {
+        background-image: url(../images/pitstop.jpg);
+    }
 }
 
 .pitstop__desc {
@@ -883,6 +972,10 @@
     @include --lg {
         padding-bottom: rem(75px);
     }
+
+    @include --s {
+        width: 100%;
+    }
 }
 
 .reviews__list {
@@ -947,6 +1040,10 @@
         .request {
             display: none;
         }
+    }
+
+    @include --s {
+        min-height: rem(400px);
     }
 }
 .request {
