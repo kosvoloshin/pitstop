@@ -4,6 +4,10 @@
     width: 100%;
     height: rem(105px);
 
+    @include --xl {
+        height: rem(90px);
+    }
+
     @include --lg {
         height: rem(95px);
     }
@@ -18,11 +22,14 @@
     display: none;
     background-color: #e9e9ea;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
 
     @include --md {
         display: flex;
+    }
+
+    @include --xs {
+        flex-direction: column;
     }
 }
 
@@ -30,6 +37,12 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    @include --xs {
+        width: 100%;
+        align-items: initial;
+        justify-content: space-between;
+    }
 }
 
 .header__nav {
@@ -46,12 +59,23 @@
         padding-right: rem(30px);
     }
 
+    @include --xxl {
+        padding-top: 0;
+        align-items: center;
+    }
+
     @include --lg {
         padding-top: rem(28px);
     }
 
     @include --md {
         padding: rem(27px) rem(15px);
+    }
+
+    @include --xs {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: rem(22px) rem(15px);
     }
 }
 
@@ -88,6 +112,10 @@
 
     @include --s {
         width: 50%;
+    }
+
+    @include --xs {
+        width: 100%;
     }
 }
 
@@ -167,6 +195,11 @@
         font-size: rem(31px);
         top: rem(-10px);
     }
+
+    @include --xs {
+        width: 100%;
+        margin-top: rem(20px);
+    }
 }
 
 .call__caption {
@@ -212,11 +245,16 @@
     }
 
     @include --md {
-        height: rem(85px);
+        height: 100%;
     }
 
     @include --s {
         width: rem(95px);
+    }
+
+    @include --xs {
+        width: 50%;
+        height: auto;
     }
 }
 
@@ -238,24 +276,41 @@
 
     &:before {
         content: url(../images/icons/calc.png);
+        line-height: initial;
     }
 
     &:hover {
         background-color: darken(#168ce3, 10%);
     }
 
+    @include --md {
+        height: 100%;
+    }
+
     @include --s {
         width: rem(95px);
+    }
+
+    @include --xs {
+        width: 50%;
+        height: auto;
+        padding: rem(5px) 0;
     }
 }
 
 .hamburger {
-    height: rem(85px);
+    height: 100%;
     width: rem(85px);
     background: #fff;
     border: initial;
     cursor: pointer;
     outline: none;
+
+    @include --xs {
+        height: auto;
+        order: -1;
+        background-color: transparent;
+    }
 }
 
 .hamburger__menu {
@@ -324,6 +379,20 @@
         &::before, &::after {
             -webkit-transition-delay: 0, 0.3s;
             transition-delay: 0, 0.3s;
+        }
+    }
+
+    @include --xs {
+        background-color: transparent;
+
+        .hamburger__menu {
+            &:before {
+                background: $b;
+            }
+    
+            &:after {
+                background: $b;
+            }
         }
     }
 }

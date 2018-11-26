@@ -17,12 +17,16 @@
 
     @include --md {
         position: absolute;
-        top: rem(85px);
+        top: rem(95px);
         left: 0;
         transform: translate(-105%,0);
         transition: .3s;
         width: 50%;
         min-height: auto;
+    }
+
+    @include --s {
+        width: 100%;
     }
 
     &.active {
@@ -33,13 +37,20 @@
 .logo {
     width: 100%;
     height: rem(105px);
+    min-height: rem(105px);
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #e9e9ea;
 
+    @include --xl {
+        height: rem(90px);
+        min-height: rem(90px);
+    }
+
     @include --lg {
         height: rem(95px);
+        min-height: rem(95px);
     }
 
     @include --md {
@@ -49,6 +60,10 @@
 
     @include --s {
         width: rem(180px);
+    }
+
+    @include --xs {
+        padding-right: rem(10px);
     }
 }
 
@@ -73,7 +88,7 @@
     position: relative;
 
     @include --xl {
-        padding: rem(17px) 0;
+        padding: rem(10px) 0;
     }
 
     @include --md {
@@ -86,6 +101,22 @@
     padding: 0 rem(26px);
     transition: .35s;
     border-left: rem(7px) solid transparent;
+
+    @include --xl {
+        padding: 0 rem(23px);
+        padding-right: rem(26px);
+    }
+
+    @include --s {
+        padding: 0;
+        border-left: none;
+
+        &.active {
+            .icon--arrow {
+                transform: translate(0, -50%) rotate(270deg);
+            }
+        }
+    }
 }
 
 .menu__link {
@@ -107,6 +138,10 @@
         transform: skew(-20deg)translate(-50%,0);
         z-index: -1;
         transition: .35s;
+
+        @include --s {
+            display: none;
+        }
     }
 
     &:before {
@@ -120,6 +155,10 @@
         transform: skew(20deg)translate(-50%,0);
         z-index: -1;
         transition: .35s;
+
+        @include --s {
+            display: none;
+        }
     }
 
     @include --xxl {
@@ -127,11 +166,20 @@
     }
 
     @include --xl {
-        padding: rem(11px) rem(13px);
+        padding: rem(9px) rem(13px);
     }
 
     @include --md {
         padding: rem(13px) rem(65px) rem(13px) rem(55px);
+    }
+
+    @include --sm {
+        padding: rem(13px) rem(30px) rem(13px) rem(30px);
+    }
+
+    @include --s {
+        margin: 0 10px;
+        width: calc(100% - 20px);
     }
 }
 
@@ -150,6 +198,12 @@
         opacity: 1;
         z-index: 100;
         visibility: visible;
+
+        @include --s {
+            position: unset;
+            opacity: 1;
+            visibility: visible;
+        }
     }
     .menu__item:hover .icon--arrow:after{
         opacity: 1;
@@ -172,6 +226,16 @@
             .menu__link:after {
                 transform: skew(-20deg)translate(0, 0);
             }
+
+            @include --s {
+                background-color: inherit;
+                border-left: none;
+            }
+        }
+
+        @include --s {
+            padding: 0;
+            position: relative;
         }
 
         &:first-child .menu__link {
@@ -180,6 +244,12 @@
 
         &:last-child .menu__link {
             border-bottom: transparent;
+        }
+
+        &.active {
+            .sub-menu {
+                padding: rem(38px) 0;
+            }
         }
     }
 }
@@ -198,11 +268,15 @@
         }
 
         @include --xl {
-            padding: rem(11px) rem(36px);
+            padding: rem(9px) rem(13px);
         }
 
         @include --md {
             padding: rem(13px) rem(50px) rem(13px) rem(77px);
+        }
+
+        @include --sm {
+            padding: rem(13px) rem(30px) rem(13px) rem(46px);
         }
     }
 
@@ -223,8 +297,20 @@
                 left: 40px;
             }
 
+            @include --xl {
+                left: 23px;
+            }
+
             @include --md {
                 left: 82px;
+            }
+
+            @include --sm {
+                left: 53px;
+            }
+
+            @include --s {
+                left: 30px;
             }
         }
 
@@ -250,7 +336,18 @@
             .menu__link:after {
                 transform: skew(-20deg)translate(0, 0);
             }
+
+            @include --s {
+                background-color: initial;
+                border-left: none;
+
+                .menu__link {
+                    color: $w;
+                    border-color: #3f4047;
+                }
+            }
         }
+
 
         &:first-child .menu__link {
             border-top: transparent;
@@ -263,8 +360,13 @@
 }
 
 .icon--arrow {
-    position: relative;
-    margin-right: rem(-50px);
+    position: absolute;
+    right: 0;
+    opacity: 1;
+    margin: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+    transition: .4s;
 
     &:after {
         content: '\e801';
@@ -274,6 +376,15 @@
         right: 0;
         opacity: 0;
         transition: .35s;
+    }
+
+    @include --s {
+        right: 20px;
+        transform: translate(0,-50%) rotate(90deg);
+
+        &:after {
+            opacity: 1;
+        }
     }
 }
 
@@ -299,6 +410,16 @@
 
     @include --md {
         padding: rem(38px) 0;
+    }
+
+    @include --s {
+        position: unset;
+        opacity: 1;
+        visibility: visible;
+        height: 0;
+        padding: 0;
+        overflow: hidden;
+        transition: height 0.4s;
     }
 }
 
@@ -419,13 +540,17 @@
             left: calc(100% + 5px);
         }
     }
+
+    @include --xl {
+        padding: rem(9px) rem(13px);
+    }
 }
 
 .bg {
     display: none;
     background: rgba($color: #232323, $alpha: 0.7);
     position: absolute;
-    top: rem(85px);
+    top: rem(95px);
     bottom: 0;
     left: 0;
     right: 0;

@@ -26,10 +26,25 @@
     @include --sm {
         display: flex;
     }
+
+    @include --xs {
+        flex-direction: column;
+    }
 }
 
 .footer__col {
     width: 50%;
+
+    @include --xs {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: rem(20px);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .footer__item {
@@ -58,6 +73,12 @@
 .footer__item--call {
     @include --sm {
         margin-top: rem(30px);
+    }
+
+    @include --xs {
+        order: -1;
+        margin-top: 0;
+        margin-bottom: rem(30px);
     }
 }
 
@@ -105,6 +126,15 @@
 
     @include --sm {
         justify-content: space-between;
+    }
+
+    @include --s {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    @include --xs {
+        flex-direction: row;
     }
 }
 
@@ -155,6 +185,17 @@
         flex-direction: column;
         justify-content: space-between;
     }
+
+    @include --s {
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-bottom: rem(10px);
+    }
+
+    @include --xs {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
 }
 
 .socials__link {
@@ -163,6 +204,15 @@
     &:last-child {
         margin-right: 0;
     }
+
+    @include --xs {
+        margin-right: 0;
+        margin-bottom: rem(25px);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .socials__link--viber {
@@ -170,15 +220,28 @@
     &:after {
         content: url(../images/icons/viber.png);
         color: #919191;
-        transition: .35s;
+        transition: .2s;
         font-size: rem(44px);
         line-height: initial;
         display: inline-block;
     }
 
-    &:hover:after {
-        color: #7f4da0;
+    &:before {
         content: url(../images/icons/viber-hover.png);
+        color: #919191;
+        transition: .2s;
+        font-size: rem(44px);
+        line-height: initial;
+        display: inline-block;
+        position: absolute;
+        opacity: 0;
+    }
+
+    &:hover:after {
+        opacity: 0;
+    }
+    &:hover:before {
+        opacity: 1;
     }
 }
 
@@ -204,6 +267,10 @@
 
     @include --sm {
         transform: translate(0, 0);
+    }
+
+    @include --xs {
+        order: -1;
     }
 }
 
@@ -262,6 +329,10 @@
     @include --lg {
         text-align: center;
     }
+
+    @include --xs {
+        text-align: left;
+    }
 }
 
 .footer__copy--first {
@@ -303,6 +374,10 @@
         width: 100%;
         order: 1;
         margin-top: rem(20px);
+    }
+
+    @include --xs {
+        text-align: left;
     }
 }
 

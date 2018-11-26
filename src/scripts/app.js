@@ -21,3 +21,5 @@ const slider1 = require('./common/slider-reviews');
 slider1(); // инициализируем слайдер 1
 
 require('./common/hamburger');
+
+require('./common/simple-slider');

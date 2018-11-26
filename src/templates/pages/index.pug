@@ -62,6 +62,51 @@ block content
                             .service__desk Сварка 
                                 br
                                 | аргоном
+                .controls.controls--services-xs
+                    button(type="button").controls__btn.controls__prev.ASPrev#pre
+                    button(type="button").controls__btn.controls__next.ASNext#nex
+                script.
+                    if(document.documentElement.clientWidth < 480) {
+                        $('.service__item--empty').detach();
+                        (function($){
+                        $(document).ready(function(){
+                        var options = {
+                        slides: '.service__item',
+                        swipe: false,
+                        transition: "slide",
+                        slideTracker: true,
+                        slideTrackerID: 'slideposition',
+                        slideOnInterval: true,
+                        interval: 4000, 
+                        animateDuration: 500, 
+                        animationEasing: 'ease', 
+                        };
+                        $(".service__list").simpleSlider(options);
+                        mainslider = $(".service__list").data("simpleslider");
+                        /* yes, that's all! */
+                        $(".service__list").on("beforeSliding", function(event){
+                        var prevSlide = event.prevSlide;
+                        var newSlide = event.newSlide;
+                        $(".service__list .service__list[data-index='" + prevSlide + "'] .slider__info").fadeOut();
+                        $(".service__list .service__list[data-index='" + newSlide + "'] .slider__info").hide();
+                        sliding = true;
+                        });
+                        $(".service__list").on("afterSliding", function(event){
+                        var prevSlide = event.prevSlide;
+                        var newSlide = event.newSlide;
+                        $(".service__list .service__list[data-index='" + newSlide + "'] .slider__info").fadeIn();
+                        sliding = false;
+                        });
+                        $("#pre").on("click", function(event){
+                        mainslider.prevSlide();
+                        });
+                        $("#nex").on("click", function(event){
+                        mainslider.nextSlide();
+                        });
+                        });
+                        })(jQuery);
+                    };
+                    
             section.section.main
                 h1.section__title.visuallyhidden main
                 .main__line-promo-desc

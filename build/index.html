@@ -14,8 +14,8 @@
   <body>
     <aside class="sidebar">
       <div class="logo logo--hide-md"><a class="logo__link" href="index.html"><img class="logo__img" src="./assets/images/logo.png" alt="logo"></a></div>
-      <ul class="menu menu--top">
-        <li class="menu__item"><a class="menu__link" href="#">Ремонт ГБЦ</a><span class="icon--arrow"></span>
+      <ul class="menu menu--top" id="accordion">
+        <li class="menu__item"><a class="menu__link" href="#">Ремонт ГБЦ<span class="icon--arrow"></span></a>
           <div class="sub-menu">
             <div class="sub-menu__title">иномарки:</div>
             <ul class="sub-menu__list">
@@ -31,7 +31,7 @@
             </ul>
           </div>
         </li>
-        <li class="menu__item"><a class="menu__link" href="#">Ремонт БЦ</a><span class="icon--arrow"></span>
+        <li class="menu__item"><a class="menu__link" href="#">Ремонт БЦ<span class="icon--arrow"></span></a>
           <div class="sub-menu">
             <div class="sub-menu__title">иномарки:</div>
             <ul class="sub-menu__list">
@@ -47,7 +47,7 @@
             </ul>
           </div>
         </li>
-        <li class="menu__item"><a class="menu__link" href="#">Ремонт КВ</a><span class="icon--arrow"></span>
+        <li class="menu__item"><a class="menu__link" href="#">Ремонт КВ<span class="icon--arrow"></span></a>
           <div class="sub-menu">
             <div class="sub-menu__title">иномарки:</div>
             <ul class="sub-menu__list">
@@ -63,7 +63,7 @@
             </ul>
           </div>
         </li>
-        <li class="menu__item"><a class="menu__link" href="#">Ремонт шатунов и поршней</a><span class="icon--arrow"></span>
+        <li class="menu__item"><a class="menu__link" href="#">Ремонт шатунов и поршней<span class="icon--arrow"></span></a>
           <div class="sub-menu">
             <div class="sub-menu__title">иномарки:</div>
             <ul class="sub-menu__list">
@@ -79,7 +79,7 @@
             </ul>
           </div>
         </li>
-        <li class="menu__item"><a class="menu__link" href="#">Нестандартный и сложный ремонт</a><span class="icon--arrow"></span>
+        <li class="menu__item"><a class="menu__link" href="#">Нестандартный и сложный ремонт<span class="icon--arrow"></span></a>
           <div class="sub-menu">
             <div class="sub-menu__title">иномарки:</div>
             <ul class="sub-menu__list">
@@ -95,7 +95,7 @@
             </ul>
           </div>
         </li>
-        <li class="menu__item"><a class="menu__link" href="#">Ремонт других деталей</a><span class="icon--arrow"></span>
+        <li class="menu__item"><a class="menu__link" href="#">Ремонт других деталей<span class="icon--arrow"></span></a>
           <div class="sub-menu">
             <div class="sub-menu__title">иномарки:</div>
             <ul class="sub-menu__list">
@@ -182,6 +182,53 @@
             <li class="service__item"><a class="service__link" href="#"><img class="service__image" src="./assets/images/icons/service-7.png" alt="service">
                 <div class="service__desk">Сварка <br>аргоном</div></a></li>
           </ul>
+          <div class="controls controls--services-xs">
+            <button class="controls__btn controls__prev ASPrev" type="button" id="pre"></button>
+            <button class="controls__btn controls__next ASNext" type="button" id="nex"></button>
+          </div>
+          <script>
+            if(document.documentElement.clientWidth < 480) {
+                $('.service__item--empty').detach();
+                (function($){
+                $(document).ready(function(){
+                var options = {
+                slides: '.service__item',
+                swipe: false,
+                transition: "slide",
+                slideTracker: true,
+                slideTrackerID: 'slideposition',
+                slideOnInterval: true,
+                interval: 4000, 
+                animateDuration: 500, 
+                animationEasing: 'ease', 
+                };
+                $(".service__list").simpleSlider(options);
+                mainslider = $(".service__list").data("simpleslider");
+                /* yes, that's all! */
+                $(".service__list").on("beforeSliding", function(event){
+                var prevSlide = event.prevSlide;
+                var newSlide = event.newSlide;
+                $(".service__list .service__list[data-index='" + prevSlide + "'] .slider__info").fadeOut();
+                $(".service__list .service__list[data-index='" + newSlide + "'] .slider__info").hide();
+                sliding = true;
+                });
+                $(".service__list").on("afterSliding", function(event){
+                var prevSlide = event.prevSlide;
+                var newSlide = event.newSlide;
+                $(".service__list .service__list[data-index='" + newSlide + "'] .slider__info").fadeIn();
+                sliding = false;
+                });
+                $("#pre").on("click", function(event){
+                mainslider.prevSlide();
+                });
+                $("#nex").on("click", function(event){
+                mainslider.nextSlide();
+                });
+                });
+                })(jQuery);
+            };
+            
+          </script>
         </section>
         <section class="section main">
           <h1 class="section__title visuallyhidden">main</h1>
