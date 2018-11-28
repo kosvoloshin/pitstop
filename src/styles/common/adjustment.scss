@@ -23,6 +23,14 @@
 .section-wrap {
     padding: rem(57px) rem(58px);
     background-color: #eaeaea;
+
+    @include --xl {
+        padding: rem(50px) rem(40px);
+    }
+
+    @include --sm {
+        padding: rem(40px) rem(15px);
+    }
 }
 
 .container {
@@ -42,4 +50,8 @@
 
 .footer {
     flex: 0 0 auto;
+}
+
+input, textarea {
+    border-radius: 0 !important;
 }

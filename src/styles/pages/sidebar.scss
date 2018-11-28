@@ -563,3 +563,59 @@
         opacity: 1;
     }
 }
+
+.popup {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%,0);
+    z-index: 200;
+
+    .form {
+        @include --xs {
+            padding: rem(30px) rem(20px);
+            padding-bottom: rem(50px);
+        }
+    }
+}
+
+.popup--one {
+    width: rem(760px);
+    max-width: calc(100% - 40px);
+    display: none;
+
+    @include --xs {
+        max-width: calc(100% - 20px);
+    }
+}
+
+.popup--two {
+    width: rem(430px);
+    max-width: calc(100% - 40px);
+    display: none;
+
+    @include --xs {
+        max-width: calc(100% - 20px);
+    }
+
+    .form__column {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+    .form__row:last-child {
+        border-bottom: none;
+    }
+}
+
+.popup-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    height: rem(20px);
+    width: rem(20px);
+    line-height: rem(20px);
+    background-image: url(../images/icons/cancel.png);
+    background-repeat: no-repeat;
+    background-size: rem(20px);
+    background-position: center;
+}

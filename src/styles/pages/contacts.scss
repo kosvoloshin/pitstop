@@ -4,14 +4,49 @@
     background-color: #eaeaea;
 }
 
+.contacts__row--show-lg {
+    display: none;
+
+    @include --lg {
+        display: block;
+    }
+}
+
 .contacts__col {
     width: 50%;
+
+    @include --lg {
+        width: 100%;
+    }
+}
+
+.contacts__col--hide--lg {
+    @include --lg {
+        display: none;
+    }
 }
 
 .contacts__content {
     width: 100%;
     height: 100%;
     padding: rem(57px) rem(57px);
+
+    @include --xxl {
+        padding: rem(47px) rem(40px);
+    }
+}
+
+.contacts__list {
+    @include --lg {
+        display: flex;
+        flex-flow: row wrap;
+        align-content: stretch;
+        padding-top: rem(55px);
+    }
+
+    @include --xs {
+        flex-direction: column;
+    }
 }
 
 .contacts__line {
@@ -23,6 +58,35 @@
 
     &:last-child {
         margin-bottom: 0;
+    }
+
+    @include --lg {
+        width: 50%;
+        height: 25%;
+        padding-right: rem(50px);
+        min-width: 450px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    
+        &:last-child {
+            margin-bottom: rem(55px);
+        }
+
+        &:nth-child(2) {
+            order: 1;
+
+            @include --xs {
+                order: initial
+            }
+        }
+    }
+
+    @include --xs {
+        min-width: auto;
+        width: 100%;
+        padding-right: 0;
     }
 }
 
@@ -51,6 +115,10 @@
     &:hover {
         color: #232323;
     }
+
+    @include --xs {
+        display: block;
+    }
 }
 
 .contacts__icon {
@@ -59,9 +127,16 @@
     margin-top: rem(-22px);
     margin-left: rem(20px);
     margin-right: rem(34px);
+
+    @include --xs {
+        float: none;
+        margin-top: rem(30px);
+        margin-left: 0;
+    }
 }
 
 .contacts__icon--viber {
+    position: relative;
 
     &:after {
         content: url(../images/icons/viber.png);
@@ -72,9 +147,25 @@
         display: inline-block;
     }
 
-    &:hover:after {
-        color: #7f4da0;
+    &:before {
         content: url(../images/icons/viber-hover.png);
+        transition: .35s;
+        font-size: rem(44px);
+        line-height: initial;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+
+    &:hover {
+        &:after {
+            opacity: 0;
+        }
+        &:before {
+            opacity: 1;
+        }
     }
 
 }

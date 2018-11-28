@@ -13,6 +13,19 @@
 
     &.scroll {
         padding-bottom: rem(182px);
+
+        @include --lg {
+            padding-bottom: rem(226px);
+        }
+
+        @include --xs {
+            padding-bottom: rem(146px);
+        }
+    }
+
+    @include --s {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
@@ -21,6 +34,15 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    @include --s {
+        margin-left: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        padding-left: rem(40px);
+        margin-top: rem(25px);
+    }
 }
 
 .price__btn {
@@ -42,6 +64,14 @@
 
     &.active {
         color: $blue
+    }
+
+    @include --s {
+        margin-bottom: rem(10px);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -68,6 +98,14 @@
         transform: translate(23px,-50%);
         transition: .5s;
     }
+
+    @include --s {
+        position: absolute;
+        left: -10px;
+        margin: 0;
+        transform: rotate(90deg);
+        top: 15px;
+    }
 }
 
 .price__btn.active + .price__view:after {
@@ -82,10 +120,45 @@
         position: fixed;
         top: 0;
         left: rem(415px);
+        z-index: 10;
 
         .tabs__list {
             padding: 0;
         }
+
+        .tabs__xs {
+            padding: 0;
+        }
+
+        @include --xxl {
+            left: rem(340px);
+        }
+
+        @include --xl {
+            left: rem(320px);
+        }
+
+        @include --lg {
+            max-width: calc(100% - 322px);
+        }
+
+        @include --md {
+            left: rem(40px);
+            max-width: calc(100% - 80px);
+        }
+
+        @include --sm {
+            left: rem(15px);
+            max-width: calc(100% - 30px);
+        }
+    }
+
+    @include --lg {
+        max-width: 100%;
+    }
+
+    @include --md {
+        max-width: 100%;
     }
 }
 
@@ -99,7 +172,19 @@
 
     &.active {
         display: flex;
+
+        @include --xs {
+            display: none;
+        }
     }
+
+    @include --xs {
+        display: none;
+    }
+}
+
+.tabs__xs {
+    padding: rem(44px) 0;
 }
 
 .tabs__link {
@@ -125,6 +210,18 @@
         background-color: $blue;
         border-color: $blue
     }
+
+    @include --lg {
+        padding: rem(15px) rem(20px);
+    }
+
+    @include --md {
+        padding: rem(18px) rem(23px);
+    }
+
+    @include --s {
+        padding: rem(11px) rem(15px);
+    }
 }
 
 .table {
@@ -134,12 +231,17 @@
     &.active {
         display: block;
     }
+
+    @include --lg {
+        max-width: rem(645px);
+        max-width: 100%;
+    }
 }
 
 .table__heading {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     background-color: #48494f;
     color: $w;
     border-bottom: 1px solid #eaeaea;
@@ -147,29 +249,80 @@
     .table__cost:after {
         content: '';
     }
+
+    @include --xs {
+        display: none;
+    }
 }
 
 .table__name {
     width: rem(554px);
     border-right: 1px solid #eaeaea;
     padding: rem(20px) rem(30px);
+
+    @include --lg {
+        width: 62%;
+    }
+
+    @include --sm {
+        padding: rem(20px) rem(25px);
+        width: 58%;
+    }
+
+    @include --xs {
+        border-right: none;
+    }
 }
 
 .table__unit {
     border-right: 1px solid #eaeaea;
     width: rem(130px);
     text-align: center;
-    padding: rem(20px) 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include --lg {
+        width: 14%;
+    }
+
+    @include --sm {
+        width: 18%;
+    }
+
+    @include --xs {
+        border-right: none;
+        width: 100%;
+        display: block;
+        text-align: left;
+        color: #676767;
+        margin-top: rem(5px);
+    }
 }
 
 .table__cost {
     width: rem(208px);
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &:after {
         content: '\f158';
         font-family: $f;
         margin-left: rem(2px);
+    }
+
+    @include --lg {
+        width: 23%;
+    }
+
+    @include --xs {
+        position: absolute;
+        right: 0;
+        top: rem(30px);
+        width: rem(75px);
+        text-align: center;
     }
 }
 
@@ -179,6 +332,20 @@
     }
     .table__name {
         padding-left: rem(103px);
+
+        @include --lg {
+            padding-left: rem(50px);
+        }
+
+        @include --sm {
+            padding-left: rem(25px);
+        }
+
+        @include --xs {
+            padding: 0;
+            width: 100%;
+            font-family: $goprom;
+        }
     }
 }
 
@@ -189,6 +356,12 @@
     text-transform: uppercase;
     font-family: $goprom;
     padding: rem(20px) rem(20px);
+
+    @include --xs {
+        text-transform: none;
+        font-family: $gopro;
+        padding: rem(15px) rem(15px);
+    }
 }
 
 .table__subtitle {
@@ -196,15 +369,34 @@
     color: #676767;
     border-top: 1px solid #eaeaea;
     padding: rem(22px) rem(68px);
+
+    @include --lg {
+        padding: rem(22px) rem(30px);
+    }
+
+    @include --sm {
+        padding: rem(22px) rem(25px);
+    }
+
+    @include --xs {
+        padding: rem(9px) rem(15px);
+    }
 }
 
 .table__row {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     border-top: 1px solid #eaeaea;
     background-color: #ffffff;
     color: #252527;
+
+    @include --xs {
+        flex-direction: column;
+        padding: rem(15px) rem(15px);
+        padding-right: rem(75px);
+        position: relative;
+    }
 }
 
 .notes {
@@ -212,6 +404,11 @@
     background-color: #f8f8f8;
     padding: rem(27px) rem(30px);
     padding-bottom: rem(11px);
+    
+    @include --xs {
+        padding: rem(20px) rem(10px);
+        padding-bottom: rem(11px);
+    }
 }
 
 .notes__title {
@@ -264,4 +461,141 @@
     &:hover:after {
         transform: translate(50%, 0);
     }
+
+    @include --xl {
+        right: 0;
+    }
+
+    @include --xs {
+        right: -10px;
+    }
 }
+
+.top--blue {
+    background: $blue;
+    color: #fff;
+    padding: 2px 15px;
+}
+
+// select one
+.select input
+{
+  display: none;
+}
+
+#text
+{
+  position: absolute;
+  display: block;
+  top: 0;
+  padding-left: 10px;
+  width: 100%;
+  padding: 13px;
+}
+
+.select
+{
+  display: inline-block;
+  width: 100%;
+  line-height: 30px;
+  position: relative;
+  height: auto;
+  min-height: 56px;
+}
+
+.select:before
+{
+  content: "";
+  display: inline-block;
+  background: transparent;
+  position: absolute;
+  right: 13px;
+  top: 40%;
+  transform: translate(0,-50%) rotate(-45deg);
+  z-index: 101;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  line-height: 15px;
+  border-bottom: 1px solid $w;
+  border-left: 1px solid $w;
+  cursor: pointer;
+}
+
+.select input[name="list"]:not(:checked) ~ #text
+{
+  color: $w;
+  background: $blue;
+}
+
+.select input[name="list"]:checked ~ #text
+{
+  background: transparent;
+  color: transparent;
+  z-index: 2;
+}
+
+#select:disabled ~ .items #text
+{
+  background: #eee;
+}
+
+.items
+{
+  display: block;
+  min-height: 56px;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  cursor: pointer;
+  z-index: 100;
+}
+
+#select:not(:checked) ~ .items
+{
+  height: auto;
+  min-height: 56px;
+}
+
+.items label
+{
+  display: none;
+  padding: 13px 10px;
+  background: $w;
+}
+
+.items label:hover
+{
+  background: #eee;
+  cursor: pointer;
+}
+
+#select:checked ~ .items
+{
+  padding-top: 56px;
+  border: 1px solid #676767;
+}
+
+#select:checked ~ .items label
+{
+  display: block;
+}
+
+.items input:checked + label
+{
+  display: block!important;
+  border: none;
+  background: white;
+}
+
+#select:checked ~ .bg-sel
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  background: rgba(0,0,0,0);
+}
+// select one end

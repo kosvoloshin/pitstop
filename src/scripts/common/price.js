@@ -1,7 +1,7 @@
 const $ = require('jquery');
 
 $(document).ready(function() {
-
+    // переключатель списков (отечественные/импортные) на странице price
     if($('.price').length){
         $('.price__check').on('change', function(){
             if($('.price__check--our').prop('checked')){
@@ -25,17 +25,7 @@ $(document).ready(function() {
             }
         });
     
-        var fixTop = $('.top');
-        
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 500 ) {
-                fixTop.addClass("fixed");
-            } else {
-                fixTop.removeClass("fixed");
-            }
-        });
-    
-          
+        // фиксация табов с категориями
         var fixCat = $('.tabs');
             var scroll = $('.price__heading');
             var head = $('.header').height();
@@ -55,7 +45,7 @@ $(document).ready(function() {
               }
         });
     };
-
+    // фиксация кнопки "скачать прайс"
     if($('.price').length){
         var fix = $('.more--desktop');
         var head = $('.header').height();
@@ -72,7 +62,7 @@ $(document).ready(function() {
             }
         });
     };
-
+    // фиксация кнопки "скачать прайс"
     if($('.type-service__buttons').length){
         var fix2 = $('.type-service__buttons');
         var head = $('.header').css('height'); 
@@ -92,19 +82,7 @@ $(document).ready(function() {
             }
         });
     };
-
-    if($('.top').length){
-        $('a[href*="#"].top').on('click', function(event) {
-            event.preventDefault();
-            
-            var sc = $(this).attr("href"),
-                dn = $(sc).offset().top;
-            
-            $('html, body').animate({scrollTop: dn}, 1000);
-            
-        });
-    };
-
+    // скрол по категория на странице price
     $(window).scroll(function(){
         var sections = $('.table__block');
         sections.each(function(i,el){
@@ -139,4 +117,26 @@ $(document).ready(function() {
             top = top - 200;
         $('body,html').animate({scrollTop: top}, 800);
     });
+    // кнопка "вверх"
+    var fixTop = $('.top');
+        
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 500 ) {
+            fixTop.addClass("fixed");
+        } else {
+            fixTop.removeClass("fixed");
+        }
+    });
+
+    if($('.top').length){
+        $('a[href*="#"].top').on('click', function(event) {
+            event.preventDefault();
+            
+            var sc = $(this).attr("href"),
+                dn = $(sc).offset().top;
+            
+            $('html, body').animate({scrollTop: dn}, 1000);
+            
+        });
+    };
 });

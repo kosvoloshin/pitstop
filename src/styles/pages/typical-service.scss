@@ -14,6 +14,16 @@
     width: rem(674px);
     height: rem(468px);
     flex-flow: row wrap;
+
+    @include --xl {
+        width: rem(384px);
+        height: rem(578px);
+    }
+
+    @include --sm {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .service-tabs__item {
@@ -22,6 +32,42 @@
     background: #fff;
     border-right: rem(4px) solid #eaeaea;
     border-bottom: rem(4px) solid #eaeaea;
+
+    @include --xl {
+        width: calc(100% / 2);
+        height: calc(100% / 3);
+    }
+
+    @include --sm {
+        width: calc(100% / 3);
+        height: rem(220px);
+        border-right: rem(14px) solid #eaeaea;
+        border-bottom: rem(14px) solid #eaeaea;
+
+        &:nth-child(3),
+        &:nth-child(6) {
+            border-right: none;
+        }
+    }
+
+    @include --s {
+        width: calc(100% / 2);
+        height: rem(180px);
+        border-right: rem(4px) solid #eaeaea;
+        border-bottom: rem(4px) solid #eaeaea;
+
+        &:nth-child(3),
+        &:nth-child(6) {
+            border-right: rem(4px) solid #eaeaea;
+            border-bottom: rem(4px) solid #eaeaea;
+        }
+
+        &:nth-child(2),
+        &:nth-child(4),
+        &:nth-child(6) {
+            border-right: none;
+        }
+    }
 }
 
 .service-tabs__link {
@@ -44,6 +90,25 @@
             color: $w;
         }
     }
+
+    @include --xl {
+        padding-bottom: rem(27px);
+    }
+
+    @include --s {
+        padding-bottom: rem(35px);
+    }
+}
+
+.service-tabs__link > img {
+
+    @include --xl {
+        max-width: rem(294px);
+    }
+
+    @include --s {
+        max-width: rem(234px);
+    }
 }
 
 .service-tabs__feautured {
@@ -52,6 +117,14 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+
+    @include --xl {
+        height: rem(574px);
+    }
+
+    @include --sm {
+        display: none;
+    }
 }
 
 .service-tabs__title {
@@ -61,6 +134,10 @@
     transition: .35s;
     line-height: rem(16px);
     margin-top: rem(12px);
+
+    @include --xs {
+        font-size: rem(15px);
+    }
 }
 
 .service-tabs__sub {
@@ -69,6 +146,10 @@
     color: #a5a6a7;
     transition: .35s;
     margin-bottom: rem(-20px);
+
+    @include --xs {
+        font-size: rem(12px);
+    }
 }
 
 .description {
@@ -88,14 +169,14 @@
             margin-bottom: 0;
         }
     }
+
+    @include --sm {
+        margin-top: rem(26px);
+    }
 }
 
 .description--fullwidth {
     max-width: 100%;
-
-    .description__tab {
-        padding-right: rem(250px);
-    }
 }
 
 .description__tab {
@@ -105,6 +186,18 @@
 
     &:last-child {
         margin-bottom: 0;
+    }
+
+    @include --md {
+        padding: rem(40px) rem(50px);
+    }
+
+    @include --sm {
+        padding: rem(20px) rem(25px);
+    }
+
+    @include --xs {
+        padding: rem(20px) rem(20px);
     }
 }
 
@@ -166,11 +259,46 @@
     flex-direction: row;
     min-height: rem(597px);
     margin-top: rem(60px);
+
+    .repair__subject {
+        margin-bottom: rem(100px);
+
+        @include --sm {
+            margin-bottom: rem(70px);
+        }
+    }
+
+    @include --lg {
+        flex-direction: column;
+
+        .repair {
+            min-height: rem(486px);
+            height: 100%;
+        }
+
+        .request {
+            width: 100%;
+        }
+    }
+
+    @include --xs {
+        .repair {
+            min-height: rem(540px);
+        }
+    }
 }
 
 .desc-page {
     background-color: #eaeaea;
     padding: rem(56px) rem(57px);
+
+    @include --xl {
+        padding: rem(50px) rem(40px);
+    }
+
+    @include --sm {
+        padding: rem(40px) rem(15px);
+    }
 }
 
 .title-description {
@@ -233,5 +361,9 @@
     border: 1px solid #eaeaea;
     padding: rem(21px) rem(27px);
     width: max-content;
+
+    @include --xxl {
+        width: 100%;
+    }
 }
     

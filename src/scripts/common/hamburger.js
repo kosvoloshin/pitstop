@@ -1,6 +1,7 @@
 const $ = require('jquery');
 
 $(document).ready(function() {
+    //открытие мобильного меню
     if($('#openFull').length){
       $("document").ready(function($){       
 
@@ -15,13 +16,14 @@ $(document).ready(function() {
                 $('.bg').removeClass('active');
             }
         });
-
+        // закрытие моб меню по клику на затемненный фон
         $('.bg').on('click', function(event) {
             $('#openFull').removeClass('active');
             $('.sidebar').removeClass('active');
             $('.bg').removeClass('active');
         });
 
+        // ссылки с выпадающими меню prevent по клику
         $('#accordion .menu__link').on('click', function(event) {
             event.preventDefault();
         });
@@ -29,7 +31,7 @@ $(document).ready(function() {
       });
     }
 });
-
+// аккордеон в моб меню при разрешении меньше 640px
 if(document.documentElement.clientWidth < 640) {
     var accordion = document.getElementById("accordion"),
     items = accordion.getElementsByClassName("menu__item"),

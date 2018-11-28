@@ -18,6 +18,14 @@
     &:last-child {
         margin-bottom: 0;
     }
+
+    @include --xl {
+        padding: rem(30px) rem(40px) rem(30px) rem(40px);
+    }
+
+    @include --sm {
+        padding: rem(30px) rem(25px) rem(30px) rem(25px);
+    }
 }
 
 .answers__content {
@@ -34,6 +42,10 @@
     flex-direction: row;
     align-items: center;
     margin-bottom: rem(3px);
+
+    @include --s {
+        display: block;
+    }
 }
 
 .answers__meta,
@@ -49,6 +61,14 @@
         content: '|';
         display: inline-block;
         margin: 0 rem(8px);
+
+        @include --s {
+            display: none;
+        }
+    }
+
+    @include --s {
+        border-bottom: 1px solid #676767;
     }
 }
 

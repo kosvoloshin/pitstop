@@ -556,6 +556,21 @@
             color: $w;
         }
     }
+
+    @include --sm {
+        padding: rem(13px) rem(25px);
+        margin-right: rem(20px);
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    @include --xs {
+        font-size: rem(14px);
+        padding: rem(13px) rem(19px);
+        margin-right: 0;
+    }
 }
 
 .more--white {
@@ -594,6 +609,16 @@
         background-color: $red;
         border-color: $red;
     }
+
+    @include --xxl {
+        display: inline-block;
+        float: none;
+        margin-top: rem(20px);
+    }
+
+    @include --sm {
+        margin-top: rem(15px);
+    }
 }
 
 .more--download.more--service {
@@ -601,18 +626,24 @@
 }
 .more--download.more--desktop {
     display: block;
+    margin-right: 0;
 
     &.fixed {
         position: fixed;
         top: 0;
         right: rem(58px);
     }
+
+    @include --xxl {
+        display: none;
+    }
 }
 
 .more--service {
     position: initial;
     margin-right: 0;
-    margin-bottom: rem(31px);
+    margin-bottom: rem(20px);
+    display: none;
 
     &:last-child {
         margin-bottom: 0;
@@ -621,6 +652,42 @@
     &:hover {
         background-color: $red;
         border-color: $red;
+    }
+
+    &.more--desktop {
+        display: block;
+        text-align: center;
+
+        @include --xxl {
+            display: none;
+        }
+    }
+    @include --xxl {
+        display: inline-block;
+    }
+
+    @include --s {
+        margin-top: rem(20px);
+    }
+
+    @include --xs {
+        margin-top: rem(15px);
+    }
+}
+
+.more--gallery {
+    display: none;
+    width: max-content;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto!important;
+
+    &:after {
+        display: none;
+    }
+
+    @include --xs {
+        display: block;
     }
 }
 
@@ -741,6 +808,7 @@
         &:first-child  {
             padding-bottom: rem(30px);
             padding-right: rem(30px);
+            padding-top: rem(30px);
         }
 
         &:last-child  {
@@ -748,18 +816,21 @@
             padding-left: 0;
             padding-bottom: rem(30px);
             padding-right: rem(30px);
+            padding-top: rem(30px);
         }
 
         &:nth-child(2) {
             padding-left: 0;
             padding-bottom: rem(30px);
             padding-right: rem(30px);
+            padding-top: rem(30px);
         }
 
         &:nth-child(3) {
             padding-top: 0;
             padding-bottom: rem(30px);
             padding-right: rem(30px);
+            padding-top: rem(30px);
         }
     } 
 }
@@ -1257,6 +1328,11 @@
     @include --xxl {
         padding: rem(47px) rem(40px);
     }
+
+    @include --xs {
+        padding: rem(30px) rem(10px);
+        padding-bottom: rem(50px);
+    }
 }
 
 .form__column {
@@ -1265,6 +1341,10 @@
     border-bottom: 1px solid #d1d1d6;
     padding-bottom: rem(37px);
     margin-bottom: rem(61px);
+
+    @include --xs {
+        margin-bottom: rem(37px);
+    }
 }
 
 .form__row {
@@ -1277,6 +1357,11 @@
         border-bottom: 1px solid #d1d1d6;
         padding-bottom: rem(32px);
     }
+
+    @include --xs {
+        flex-direction: column;
+        margin-bottom: rem(30px);
+    }
 }
 
 .form__block {
@@ -1285,6 +1370,15 @@
 
     &:last-child {
         margin-right: 0;
+    }
+
+    @include --xs {
+        margin-right: 0;
+        margin-bottom: rem(30px);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 

@@ -130,6 +130,7 @@
         </div>
       </div>
       <div class="container">
+        <div class="bg" id="bg"></div>
         <header class="header" id="top">
           <div class="header__row header__row--show-md">
             <div class="header__col">
@@ -182,7 +183,7 @@
                 </ul>
               </div>
             </div>
-            <div class="contacts__col">
+            <div class="contacts__col contacts__col--hide--lg">
               <form class="form">
                 <div class="title">оставить заявку</div>
                 <div class="form__column">
@@ -214,6 +215,37 @@
           </div>
           <div class="map map--contacts" id="map">
             <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBedBDOwDkXi5dlBT1B2VmOGHShZWbiVqg&amp;callback=initMap"></script>
+          </div>
+          <div class="contacts__row contacts__row--show-lg">
+            <div class="contacts__col">
+              <form class="form">
+                <div class="title">оставить заявку</div>
+                <div class="form__column">
+                  <div class="form__row">
+                    <label class="form__block">
+                      <input class="form__input form__input--user" type="text" name="user-name" placeholder="Имя" required>
+                    </label>
+                    <label class="form__block">
+                      <input class="form__input form__input--call" type="text" name="telephone" placeholder="Номер телефона" required>
+                    </label>
+                  </div>
+                  <div class="form__row">
+                    <label class="form__block">
+                      <input class="form__input form__input--email" type="text" name="email" placeholder="Email" required>
+                    </label>
+                    <label class="form__block">
+                      <input class="form__input form__input--req" type="text" name="request" placeholder="Тема обращения" required>
+                    </label>
+                  </div>
+                  <div class="form__row">
+                    <label class="form__block">
+                      <textarea class="form__textarea" name="message" placeholder="Ваше сообщение" cols="30" rows="1" required></textarea>
+                    </label>
+                  </div>
+                </div>
+                <button class="more" type="submit">отправить</button>
+              </form>
+            </div>
           </div>
         </section>
         <footer class="footer">

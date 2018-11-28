@@ -7,55 +7,95 @@ block content
     include ../common/sidebar.pug
     .wrapper
         .container
+            .bg#bg
             include ../common/header.pug
             section.section.section-wrap.tools
                 .tools__wrap
                     h1.section__title.visuallyhidden price
                     .title Наше Оборудование
                     ul.tools__list
-                        - var x = 2;
-                            - for (var i=1; i<=x; i++) {
-                            li.tools__item
-                                a(href="#").tools__link
-                                    .tools__image(style="background-image: url(./assets/images/tools-1.jpg)")
-                                    .tools__title Обработка плоскости - станок Berco (Италия)
-                            li.tools__item
-                                a(href="#").tools__link
-                                    .tools__image(style="background-image: url(./assets/images/tools-2.jpg)")
-                                    .tools__title Хонинговка цилиндров - станок Sunnen (США)
-                            li.tools__item
-                                a(href="#").tools__link
-                                    .tools__image(style="background-image: url(./assets/images/tools-3.jpg)")
-                                    .tools__title Расточка постели станок AZ (Италия)
-                            li.tools__item
-                                a(href="#").tools__link
-                                    .tools__image(style="background-image: url(./assets/images/tools-4.jpg)")
-                                    .tools__title Шлифовка клапанов - станок Kwik-way (США)
-                            li.tools__item
-                                a(href="#").tools__link
-                                    .tools__image(style="background-image: url(./assets/images/tools-5.jpg)")
-                                    .tools__title Приемка деталей в ремонт - проверка, контроль
-                            li.tools__item
-                                a(href="#").tools__link
-                                    .tools__image(style="background-image: url(./assets/images/tools-6.jpg)")
-                                    .tools__title Обработка плоскости - станок Berco (Италия)
-                            li.tools__item
-                                a(href="#").tools__link
-                                    .tools__image(style="background-image: url(./assets/images/tools-7.jpg)")
-                                    .tools__title Обработка плоскости - станок Berco (Италия)
-                            li.tools__item
-                                a(href="#").tools__link
-                                    .tools__image(style="background-image: url(./assets/images/tools-8.jpg)")
-                                    .tools__title Обработка плоскости - станок Berco (Италия)
-                            li.tools__item
-                                a(href="#").tools__link
-                                    .tools__image(style="background-image: url(./assets/images/tools-9.jpg)")
-                                    .tools__title Обработка плоскости - станок Berco (Италия)
-                            li.tools__item
-                                a(href="#").tools__link
-                                    .tools__image(style="background-image: url(./assets/images/tools-10.jpg)")
-                                    .tools__title Обработка плоскости - станок Berco (Италия)
-                            - }
+                        li.tools__item
+                            a(href="#").tools__link
+                                .tools__image(style="background-image: url(./assets/images/tools-1.jpg)")
+                                .tools__title Обработка плоскости - станок Berco (Италия)
+                        li.tools__item
+                            a(href="#").tools__link
+                                .tools__image(style="background-image: url(./assets/images/tools-2.jpg)")
+                                .tools__title Хонинговка цилиндров - станок Sunnen (США)
+                        li.tools__item
+                            a(href="#").tools__link
+                                .tools__image(style="background-image: url(./assets/images/tools-3.jpg)")
+                                .tools__title Расточка постели станок AZ (Италия)
+                        li.tools__item
+                            a(href="#").tools__link
+                                .tools__image(style="background-image: url(./assets/images/tools-4.jpg)")
+                                .tools__title Шлифовка клапанов - станок Kwik-way (США)
+                        li.tools__item.tools__item--hide-xs
+                            a(href="#").tools__link
+                                .tools__image(style="background-image: url(./assets/images/tools-5.jpg)")
+                                .tools__title Приемка деталей в ремонт - проверка, контроль
+                        li.tools__item.tools__item--hide-xs
+                            a(href="#").tools__link
+                                .tools__image(style="background-image: url(./assets/images/tools-6.jpg)")
+                                .tools__title Обработка плоскости - станок Berco (Италия)
+                        li.tools__item.tools__item--hide-xs
+                            a(href="#").tools__link
+                                .tools__image(style="background-image: url(./assets/images/tools-7.jpg)")
+                                .tools__title Обработка плоскости - станок Berco (Италия)
+                        li.tools__item.tools__item--hide-xs
+                            a(href="#").tools__link
+                                .tools__image(style="background-image: url(./assets/images/tools-8.jpg)")
+                                .tools__title Обработка плоскости - станок Berco (Италия)
+                        li.tools__item.tools__item--hide-xs
+                            a(href="#").tools__link
+                                .tools__image(style="background-image: url(./assets/images/tools-9.jpg)")
+                                .tools__title Обработка плоскости - станок Berco (Италия)
+                        li.tools__item.tools__item--hide-xs
+                            a(href="#").tools__link
+                                .tools__image(style="background-image: url(./assets/images/tools-10.jpg)")
+                                .tools__title Обработка плоскости - станок Berco (Италия)
+                        li.tools__item.tools__item--hide-xs
+                            a(href="#").tools__link
+                                .tools__image(style="background-image: url(./assets/images/tools-1.jpg)")
+                                .tools__title Обработка плоскости - станок Berco (Италия)
+                        li.tools__item.tools__item--hide-xs
+                            a(href="#").tools__link
+                                .tools__image(style="background-image: url(./assets/images/tools-2.jpg)")
+                                .tools__title Хонинговка цилиндров - станок Sunnen (США)
+                        li.tools__item.tools__item--hide-xs
+                            a(href="#").tools__link
+                                .tools__image(style="background-image: url(./assets/images/tools-3.jpg)")
+                                .tools__title Расточка постели станок AZ (Италия)
+                        li.tools__item.tools__item--hide-xs
+                            a(href="#").tools__link
+                                .tools__image(style="background-image: url(./assets/images/tools-4.jpg)")
+                                .tools__title Шлифовка клапанов - станок Kwik-way (США)
+                        li.tools__item.tools__item--hide-xs
+                            a(href="#").tools__link
+                                .tools__image(style="background-image: url(./assets/images/tools-5.jpg)")
+                                .tools__title Приемка деталей в ремонт - проверка, контроль
+                        li.tools__item.tools__item--hide-xs
+                            a(href="#").tools__link
+                                .tools__image(style="background-image: url(./assets/images/tools-6.jpg)")
+                                .tools__title Обработка плоскости - станок Berco (Италия)
+                        li.tools__item.tools__item--hide-xs
+                            a(href="#").tools__link
+                                .tools__image(style="background-image: url(./assets/images/tools-7.jpg)")
+                                .tools__title Обработка плоскости - станок Berco (Италия)
+                        li.tools__item.tools__item--hide-xs
+                            a(href="#").tools__link
+                                .tools__image(style="background-image: url(./assets/images/tools-8.jpg)")
+                                .tools__title Обработка плоскости - станок Berco (Италия)
+                        li.tools__item.tools__item--hide-xs
+                            a(href="#").tools__link
+                                .tools__image(style="background-image: url(./assets/images/tools-9.jpg)")
+                                .tools__title Обработка плоскости - станок Berco (Италия)
+                        li.tools__item.tools__item--hide-xs
+                            a(href="#").tools__link
+                                .tools__image(style="background-image: url(./assets/images/tools-10.jpg)")
+                                .tools__title Обработка плоскости - станок Berco (Италия)
+                    a(href="#").more.more--gallery еще фотографии
+                // gallery popup
                 .gallery
                     .gallery__wrap
                         .gallery__featured(style="background-image: url(./assets/images/tools-1-big.jpg)")

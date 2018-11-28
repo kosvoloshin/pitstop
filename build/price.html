@@ -130,6 +130,7 @@
         </div>
       </div>
       <div class="container">
+        <div class="bg" id="bg"></div>
         <header class="header" id="top">
           <div class="header__row header__row--show-md">
             <div class="header__col">
@@ -197,6 +198,33 @@
                 <li class="tabs__item"><a class="tabs__link" href="#">Другие детали</a></li>
                 <li class="tabs__item"><a class="tabs__link" href="#">Сварка</a></li>
               </ul>
+              <div class="tabs__xs">
+                <label class="select" for="select">
+                  <input id="bg-sel" type="radio" name="list" value="not_changed" checked="">
+                  <input id="select" type="radio" name="list" value="not_changed">
+                  <label class="bg-sel" for="bg-sel"></label>
+                  <div class="items">
+                    <input type="radio" name="list" value="first_value" id="list[0]">
+                    <label for="list[0]">Головка блока цилиндров (ГБЦ)</label>
+                    <input type="radio" name="list" value="second_value" id="list[1]">
+                    <label for="list[1]">Блок цилиндров (БЦ)</label>
+                    <input type="radio" name="list" value="third_value" id="list[2]">
+                    <label for="list[2]">Коленчатый вал (КВ)</label>
+                    <input type="radio" name="list" value="fourth_value" id="list[3]">
+                    <label for="list[3]">Шатуны, поршни</label>
+                    <input type="radio" name="list" value="fifth_value" id="list[4]">
+                    <label for="list[4]">Маслонасос</label>
+                    <input type="radio" name="list" value="sixth_value" id="list[5]">
+                    <label for="list[5]">Поддон</label>
+                    <input type="radio" name="list" value="seventh_value" id="list[6]">
+                    <label for="list[6]">Коллектор</label>
+                    <input type="radio" name="list" value="eight_value" id="list[7]">
+                    <label for="list[7]">Другие детали</label>
+                    <input type="radio" name="list" value="nineth_value" id="list[8]">
+                    <label for="list[8]">Сварка</label><span id="text">Весь прайс</span>
+                  </div>
+                </label>
+              </div>
             </div><a class="more more--download more--desktop" href="#" target="blanc">скачать прайс <span>(pdf, 220кб)</span></a>
             <div class="table active" id="table-our">
               <div class="table__heading">
@@ -852,8 +880,8 @@
                     <li class="notes__item">Гильзовка блоков с тонкими стенками: + 20% к стоимости работ</li>
                   </ol>
                 </div>
-              </div><a class="more more--download" href="" target="blanc">скачать прайс <span>(pdf, 220кб)</span></a>
-            </div>
+              </div>
+            </div><a class="more more--download" href="" target="blanc">скачать прайс <span>(pdf, 220кб)</span></a>
           </div><a class="top" href="#top">вверх</a>
         </section>
         <footer class="footer">

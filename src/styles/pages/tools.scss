@@ -1,15 +1,67 @@
 .tools__list {
     height: 100%;
     width: 100%;
-    text-align: justify;
     padding-top: rem(44px);
     margin-bottom: rem(-40px);
+    -moz-column-count: 5;
+    -webkit-column-count: 5;
+    column-count: 5;
+
+    @include --xxxl {
+        -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
+    }
+
+    @include --lg {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+
+    @include --sm {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+
+    @include --s {
+        -moz-column-count: initial;
+        -webkit-column-count: initial;
+        column-count: initial;
+        margin-bottom: 0;
+    }
 }
 
 .tools__item {
     width: rem(245px);
     display: inline-block;
-    margin: 0 50px 50px 0;
+    margin: 0 0 50px 0;
+
+    @include --xxl {
+        width: rem(210px);
+    }
+
+    @include --sm {
+        width: rem(245px);
+    }
+
+    @include --s {
+        width: rem(282px);
+        display: block;
+        margin: 0 auto;
+        margin-bottom: rem(30px);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.tools__item--hide-xs {
+    @include --xs {
+        display: none;
+    }
 }
 
 .tools__link {
@@ -60,6 +112,18 @@
         z-index: 1;
         transition: .3s;
     }
+
+    @include --xxl {
+        height: rem(210px);
+    }
+
+    @include --sm {
+        height: rem(245px);
+    }
+
+    @include --s {
+        height: rem(282px);
+    }
 }
 
 .tools__title {
@@ -72,11 +136,16 @@
 .gallery {
     width: rem(684px);
     position: absolute;
-    top: rem(350px);
+    top: 100px;
     left: 50%;
     transform: translate(-50%,0);
     z-index: 115;
     display: none;
+    //display: block;
+
+    @include --md {
+        width: rem(530px);
+    }
 }
 
 .gallery__wrap {
@@ -91,6 +160,10 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+
+    @include --md {
+        height: rem(450px);
+    }
 }
 
 .gallery__panel {
