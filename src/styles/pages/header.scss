@@ -275,8 +275,10 @@
     margin-right: 1px;
 
     &:before {
-        content: url(../images/icons/calc.png);
-        line-height: initial;
+        content: '\f1ec';
+        font-family: $f;
+        color: $w;
+        font-size: rem(50px);
     }
 
     &:hover {

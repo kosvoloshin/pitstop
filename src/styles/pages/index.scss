@@ -1338,9 +1338,10 @@
 .form__column {
     width: 100%;
     margin-top: rem(37px);
-    border-bottom: 1px solid #d1d1d6;
+    //border-bottom: 1px solid #d1d1d6;
     padding-bottom: rem(37px);
-    margin-bottom: rem(61px);
+    //margin-bottom: rem(61px);
+    margin-bottom: rem(14px);
 
     @include --xs {
         margin-bottom: rem(37px);
@@ -1354,8 +1355,8 @@
 
     &:last-child {
         margin-bottom: 0;
-        border-bottom: 1px solid #d1d1d6;
-        padding-bottom: rem(32px);
+        //border-bottom: 1px solid #d1d1d6;
+        //padding-bottom: rem(32px);
     }
 
     @include --xs {
@@ -1379,6 +1380,30 @@
         &:last-child {
             margin-bottom: 0;
         }
+    }
+}
+
+.form__block--textarea {
+    position: relative;
+
+    &:after {
+        content: '';
+        height: 1px;
+        width: 100%;
+        background: #ababb4;
+        display: block;
+        position: absolute;
+        top: 83px;
+    }
+
+    &:before {
+        content: '';
+        height: 1px;
+        width: 100%;
+        background: #ababb4;
+        display: block;
+        position: absolute;
+        top: 45px;
     }
 }
 
@@ -1437,9 +1462,10 @@
     resize: none;
     font-size: rem(15px);
     font-family: $gopro;
-    padding: rem(18px) 0;
+    //padding: rem(18px) 0;
     outline: none;
     transition: .35s;
+    line-height: 42px;
 
     &:hover,
     &:focus,

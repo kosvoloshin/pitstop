@@ -134,10 +134,11 @@
         position: absolute;
         background: #1f5984;
         bottom: 0;
-        left: 100%;
+        left: calc(100% + 11px);
         transform: skew(-20deg)translate(-50%,0);
-        z-index: -1;
+        z-index: 102;
         transition: .35s;
+        opacity: 0;
 
         @include --s {
             display: none;
@@ -151,10 +152,11 @@
         position: absolute;
         background: #1f5984;
         top: 0;
-        left: 100%;
+        left: calc(100% + 11px);
         transform: skew(20deg)translate(-50%,0);
-        z-index: -1;
+        z-index: 102;
         transition: .35s;
+        opacity: 0;
 
         @include --s {
             display: none;
@@ -221,10 +223,12 @@
 
             .menu__link:before {
                 transform: skew(20deg)translate(0, 0);
+                opacity: 1;
             }
 
             .menu__link:after {
                 transform: skew(-20deg)translate(0, 0);
+                opacity: 1;
             }
 
             @include --s {
@@ -278,6 +282,11 @@
         @include --sm {
             padding: rem(13px) rem(30px) rem(13px) rem(46px);
         }
+
+        &:before,
+        &:after {
+            display: none;
+        }
     }
 
     .menu__item {
@@ -315,26 +324,8 @@
         }
 
         &:hover {
-            background-color: #1f5984;
-            border-left: 0.46667rem solid #168ce3;
-            
-
             .menu__link {
                 color: $w;
-                border-color: #1f5984;
-
-                &:before,
-                &:after {
-                    background-color: #1f5984;
-                }
-            }
-
-            .menu__link:before {
-                transform: skew(20deg)translate(0, 0);
-            }
-
-            .menu__link:after {
-                transform: skew(-20deg)translate(0, 0);
             }
 
             @include --s {
@@ -464,11 +455,9 @@
     border-left: 0.46667rem solid transparent;
 
     &:hover {
-        background-color: #1f5984;
-        border-left: 0.46667rem solid #168ce3;
 
         .sub-menu__link {
-            border-color: #1f5984;
+            color: #168ce3;
         }
 
         .sub-menu__link:before {
@@ -506,40 +495,7 @@
     border-top: 1px solid #3f3f40;
     border-bottom: 1px solid #1f1e20;
     position: relative;
-
-    &:after {
-        content: '';
-        width: 30px;
-        height: 50%;
-        position: absolute;
-        background: #252527;
-        bottom: 0;
-        left: calc(100% + 29px);
-        transform: skew(-20deg)translate(-50%,0);
-        z-index: -1;
-        transition: .35s;
-
-        @include --xxl {
-            left: calc(100% + 5px);
-        }
-    }
-
-    &:before {
-        content: '';
-        width: 30px;
-        height: 50%;
-        position: absolute;
-        background: #252527;
-        top: 0;
-        left: calc(100% + 29px);
-        transform: skew(20deg)translate(-50%,0);
-        z-index: -1;
-        transition: .35s;
-
-        @include --xxl {
-            left: calc(100% + 5px);
-        }
-    }
+    transition: .35s;
 
     @include --xl {
         padding: rem(9px) rem(13px);
@@ -600,7 +556,6 @@
 
     .form__column {
         border-bottom: none;
-        margin-bottom: 0;
     }
     .form__row:last-child {
         border-bottom: none;

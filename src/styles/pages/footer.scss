@@ -218,30 +218,17 @@
 .socials__link--viber {
 
     &:after {
-        content: url(../images/icons/viber.png);
+        content: '\e806';
+        font-family: $f;
         color: #919191;
         transition: .2s;
         font-size: rem(44px);
         line-height: initial;
         display: inline-block;
-    }
-
-    &:before {
-        content: url(../images/icons/viber-hover.png);
-        color: #919191;
-        transition: .2s;
-        font-size: rem(44px);
-        line-height: initial;
-        display: inline-block;
-        position: absolute;
-        opacity: 0;
     }
 
     &:hover:after {
-        opacity: 0;
-    }
-    &:hover:before {
-        opacity: 1;
+        color: #7f4da0;
     }
 }
 

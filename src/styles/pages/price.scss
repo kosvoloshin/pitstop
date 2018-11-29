@@ -115,12 +115,15 @@
 .tabs {
     width: 100%;
     max-width: rem(893px);
+    background: rgba($color: #fff, $alpha: 0);
+    transition: .4s;
     
     &.fixed {
         position: fixed;
         top: 0;
         left: rem(415px);
         z-index: 10;
+        background: rgba($color: #fff, $alpha: 1);
 
         .tabs__list {
             padding: 0;
@@ -135,7 +138,7 @@
         }
 
         @include --xl {
-            left: rem(320px);
+            left: rem(322px);
         }
 
         @include --lg {
@@ -151,6 +154,10 @@
             left: rem(15px);
             max-width: calc(100% - 30px);
         }
+
+        @include --xs {
+            background: transparent;
+        }
     }
 
     @include --lg {
@@ -159,6 +166,10 @@
 
     @include --md {
         max-width: 100%;
+    }
+
+    @include --xs {
+        transition: 0s;
     }
 }
 
@@ -185,6 +196,11 @@
 
 .tabs__xs {
     padding: rem(44px) 0;
+    display: none;
+
+    @include --xs {
+        display: block;
+    }
 }
 
 .tabs__link {

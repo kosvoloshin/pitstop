@@ -139,33 +139,17 @@
     position: relative;
 
     &:after {
-        content: url(../images/icons/viber.png);
+        content: '\e806';
+        font-family: $f;
         color: #919191;
-        transition: .35s;
+        transition: .2s;
         font-size: rem(44px);
         line-height: initial;
         display: inline-block;
     }
 
-    &:before {
-        content: url(../images/icons/viber-hover.png);
-        transition: .35s;
-        font-size: rem(44px);
-        line-height: initial;
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-    }
-
-    &:hover {
-        &:after {
-            opacity: 0;
-        }
-        &:before {
-            opacity: 1;
-        }
+    &:hover:after {
+        color: #7f4da0;
     }
 
 }
