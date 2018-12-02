@@ -73,12 +73,30 @@
     }
 }
 
-.logo__img {
-    max-height: rem(65px);
+.logo__img-no-ret {
+    max-height: 65px;
     width: auto;
 
+    @media all and (-webkit-min-device-pixel-ratio: 1.5){
+        display: none;
+    }
+
     @include --md {
-        max-height: rem(55px);
+        max-height: 55px;
+    }
+}
+
+.logo__img {
+    max-height: 65px;
+    width: auto;
+    display: none;
+
+    @media all and (-webkit-min-device-pixel-ratio: 1.5){
+        display: block;
+    }
+
+    @include --md {
+        max-height: 55px;
     }
 }
 

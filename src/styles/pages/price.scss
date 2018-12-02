@@ -160,6 +160,12 @@
         }
     }
 
+    &.hide {
+        opacity: 0;
+        z-index: -10;
+        visibility: hidden;
+    }
+
     @include --lg {
         max-width: 100%;
     }
@@ -462,6 +468,10 @@
     &.fixed {
         transform: rotate(-90deg);
         z-index: 100;
+    }
+
+    &.hide {
+        transform: rotate(-90deg) translate(350px,0);
     }
 
     &:after {

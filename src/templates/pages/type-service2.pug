@@ -14,7 +14,7 @@ block content
             .bg#bg
             include ../common/header.pug
             section.section.section-wrap.type-service
-                .type-service__wrap
+                .type-service__wrap.type-service__wrap--two
                     h1.section__title.visuallyhidden type-service
                     .title ремонт блока цилиндров
                     .type-service__col
@@ -78,8 +78,72 @@ block content
                                     li.description__item износ фасок тарелок клапанов и стержней клапанов;
                                     li.description__item потеря упругости клапанных пружин;
                                     li.description__item трещины перемычек между седлами клапанов, трещины между седлами и отверстиями под распылители форсунок, трещины в отверстиях свечей зажигания или кавитационные разрушения на плоскостях камер сгорания;
+                    .tabs
+                        ul.tabs__list.tabs__list--our.active
+                            li.tabs__item
+                                a(href="#our-price-1").tabs__link Головка блока цилиндров (ГБЦ)
+                            li.tabs__item
+                                a(href="#our-price-2").tabs__link Блок цилиндров (БЦ)
+                            li.tabs__item
+                                a(href="#our-price-3").tabs__link Коленчатый вал (КВ)
+                            li.tabs__item
+                                a(href="#our-price-4").tabs__link Шатуны, поршни
+                            li.tabs__item
+                                a(href="#our-price-5").tabs__link Маслонасос
+                            li.tabs__item
+                                a(href="#our-price-6").tabs__link Поддон
+                            li.tabs__item
+                                a(href="#our-price-7").tabs__link Коллектор
+                            li.tabs__item
+                                a(href="#our-price-8").tabs__link Другие детали
+                            li.tabs__item
+                                a(href="#our-price-9").tabs__link Сварка
+                        ul.tabs__list.tabs__list--import
+                            li.tabs__item
+                                a(href="#import-price-1").tabs__link Головка блока цилиндров (ГБЦ)
+                            li.tabs__item
+                                a(href="#import-price-2").tabs__link Блок цилиндров (БЦ)
+                            li.tabs__item
+                                a(href="#").tabs__link Коленчатый вал (КВ)
+                            li.tabs__item
+                                a(href="#").tabs__link Шатуны, поршни
+                            li.tabs__item
+                                a(href="#").tabs__link Маслонасос
+                            li.tabs__item
+                                a(href="#").tabs__link Поддон
+                            li.tabs__item
+                                a(href="#").tabs__link Коллектор
+                            li.tabs__item
+                                a(href="#").tabs__link Другие детали
+                            li.tabs__item
+                                a(href="#").tabs__link Сварка
+                        .tabs__xs
+                            label.select(for='select')
+                                input#bg-sel(type='radio', name='list', value='not_changed', checked='')
+                                input#select(type='radio', name='list', value='not_changed')
+                                label.bg-sel(for='bg-sel')
+                                .items
+                                    input(type='radio', name='list', value='first_value', id='list[0]')
+                                    label(for='list[0]') Головка блока цилиндров (ГБЦ)
+                                    input(type='radio', name='list', value='second_value', id='list[1]')
+                                    label(for='list[1]') Блок цилиндров (БЦ)
+                                    input(type='radio', name='list', value='third_value', id='list[2]')
+                                    label(for='list[2]') Коленчатый вал (КВ)
+                                    input(type='radio', name='list', value='fourth_value', id='list[3]')
+                                    label(for='list[3]') Шатуны, поршни
+                                    input(type='radio', name='list', value='fifth_value', id='list[4]')
+                                    label(for='list[4]') Маслонасос
+                                    input(type='radio', name='list', value='sixth_value', id='list[5]')
+                                    label(for='list[5]') Поддон
+                                    input(type='radio', name='list', value='seventh_value', id='list[6]')
+                                    label(for='list[6]') Коллектор
+                                    input(type='radio', name='list', value='eight_value', id='list[7]')
+                                    label(for='list[7]') Другие детали
+                                    input(type='radio', name='list', value='nineth_value', id='list[8]')
+                                    label(for='list[8]') Сварка
+                                    span#text Весь прайс
                     .type-service__table
-                        .type-service__buttons#tsb
+                        .type-service__buttons#tsb2
                             a(href="" target="blanc").more.more--download.more--service.more--desktop скачать прайс 
                                 span (pdf, 220кб)
                             a(href="" target="blanc").more.more--service.more--desktop прайс на все услуги

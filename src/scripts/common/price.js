@@ -63,8 +63,8 @@ $(document).ready(function() {
         });
     };
     // фиксация кнопки "скачать прайс"
-    if($('.type-service__buttons').length){
-        var fix2 = $('.type-service__buttons');
+    if($('#tsb').length){
+        var fix2 = $('#tsb');
         var head = $('.header').css('height'); 
         var size0 = $('.type-service__wrap').css('padding-top');
         var size1 = $('.title').css('height');
@@ -117,26 +117,49 @@ $(document).ready(function() {
             top = top - 200;
         $('body,html').animate({scrollTop: top}, 800);
     });
-    // кнопка "вверх"
-    var fixTop = $('.top');
-        
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 500 ) {
-            fixTop.addClass("fixed");
-        } else {
-            fixTop.removeClass("fixed");
-        }
-    });
 
     if($('.top').length){
-        $('a[href*="#"].top').on('click', function(event) {
-            event.preventDefault();
+        // кнопка "вверх"
+        var fixTop = $('.top');
             
-            var sc = $(this).attr("href"),
-                dn = $(sc).offset().top;
-            
-            $('html, body').animate({scrollTop: dn}, 1000);
-            
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 500 ) {
+                fixTop.addClass("fixed");
+            } else {
+                fixTop.removeClass("fixed");
+            }
         });
+
+        var total2 = $('.section-wrap').innerHeight();
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > (total2 * 0.9) ) {
+                fixTop.addClass("hide");
+            } else {
+                fixTop.removeClass("hide");
+            }
+        });
+
+        if(document.documentElement.clientWidth < 480) {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > (total2 * 0.98) ) {
+                    fixTop.addClass("hide");
+                } else {
+                    fixTop.removeClass("hide");
+                }
+            });
+        };
+
+        if($('.top').length){
+            $('a[href*="#"].top').on('click', function(event) {
+                event.preventDefault();
+                
+                var sc = $(this).attr("href"),
+                    dn = $(sc).offset().top;
+                
+                $('html, body').animate({scrollTop: dn}, 1000);
+                
+            });
+        };
     };
 });

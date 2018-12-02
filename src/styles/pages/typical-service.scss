@@ -157,6 +157,10 @@
     overflow: hidden;
     width: 100%;
 
+    &.scroll {
+        margin-bottom: rem(128px);
+    }
+
     p {
         margin: 1.5em 0;
 

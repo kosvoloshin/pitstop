@@ -165,6 +165,20 @@
 
 .service__image {
     z-index: 1;
+    display: block;
+
+    @media all and (-webkit-min-device-pixel-ratio: 1.5){
+        display: none;
+    }
+}
+
+.service__image-ret {
+    z-index: 1;
+    display: none;
+
+    @media all and (-webkit-min-device-pixel-ratio: 1.5){
+        display: block;
+    }
 }
 
 .service__desk {
@@ -255,7 +269,7 @@
 
 .promo__item {
     background-size: cover;
-    background-position: center center;
+    background-position: right center;
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
@@ -269,6 +283,26 @@
 
     &.visible {
         opacity: 1;
+    }
+
+    &:nth-child(1) {
+        background-image: url(../images/promo-11.jpg);
+        
+        @include --xs {
+            background-image: url(../images/promo-1-mob.jpg);
+        }
+    }
+
+    &:nth-child(2) {
+        background-image: url(../images/promo-2.jpg);
+    }
+
+    &:nth-child(3) {
+        background-image: url(../images/promo-11.jpg);
+
+        @include --xs {
+            background-image: url(../images/promo-1-mob.jpg);
+        }
     }
 }
 
@@ -872,6 +906,11 @@
             top: 16px;
         }
 
+        @media all and (-webkit-min-device-pixel-ratio: 1.5){
+            top: 0;
+            left: 2px;
+        } 
+
         @include --xs {
             font-size: 14px;
             height: 25px;
@@ -882,6 +921,9 @@
         }
     }
 }
+
+
+
 
 .numbers__grove {
 
@@ -1099,12 +1141,8 @@
 }
 
 .pitstop {
-    background-image: url(../images/pitstop-desktop.jpg);
+    background-image: url(../images/pitstop.jpg);
     text-align: center;
-
-    @include --md {
-        background-image: url(../images/pitstop.jpg);
-    }
 }
 
 .pitstop__desc {

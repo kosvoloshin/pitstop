@@ -25,3 +25,5 @@ require('./common/hamburger');
 require('./common/simple-slider');
 
 require('./common/gallery');
+
+require('./common/type-service2');
