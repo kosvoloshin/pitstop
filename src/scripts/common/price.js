@@ -171,7 +171,7 @@ $(document).ready(function() {
     function price_item(g_id) {
         var act = g_id;
         var act_div = '#' + g_id;
-        jQuery('.table__block').show().not(act_div).hide();
+        jQuery('#table-our .table__block').show().not(act_div).hide();
     }
 
     $('input[name=list]').change(function() {
@@ -180,6 +180,22 @@ $(document).ready(function() {
         if (curr_item != "not_changed") {
             if (curr_item != "price0") {
                 price_item(curr_item);
+            };
+        }
+    });
+
+    function price_item2(g_id) {
+        var act = g_id;
+        var act_div = '#' + g_id;
+        jQuery('#table-import .table__block').show().not(act_div).hide();
+    }
+
+    $('input[name=list-import]').change(function() {
+        var curr_item = jQuery('input[name=list-import]:checked').val();
+        
+        if (curr_item != "not_changed") {
+            if (curr_item != "price0") {
+                price_item2(curr_item);
             };
         }
     });

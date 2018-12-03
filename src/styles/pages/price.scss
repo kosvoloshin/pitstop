@@ -675,13 +675,13 @@
   cursor: pointer;
 }
 
-.select2 input[name="list"]:not(:checked) ~ #text2
+.select2 input[name="list-import"]:not(:checked) ~ #text2
 {
   color: $w;
   background: $blue;
 }
 
-.select2 input[name="list"]:checked ~ #text2
+.select2 input[name="list-import"]:checked ~ #text2
 {
   background: transparent;
   color: transparent;
