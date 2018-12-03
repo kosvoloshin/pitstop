@@ -5,6 +5,38 @@ block variables
 
 block content
     include ../common/sidebar.pug
+    .bg-popup
+    .popup.popup--one
+        form.form
+            a(href="#").popup-close
+            .title оставить заявку
+            .form__column
+                .form__row
+                    label.form__block
+                        input(type="text" name="user-name" placeholder="Имя" required).form__input.form__input--user
+                    label.form__block
+                        input(type="text" name="telephone" placeholder="Номер телефона" required).form__input.form__input--call
+                .form__row
+                    label.form__block
+                        input(type="text" name="email" placeholder="Email" required).form__input.form__input--email
+                    label.form__block
+                        input(type="text" name="request" placeholder="Тема обращения" required).form__input.form__input--req
+                .form__row
+                    label.form__block.form__block--textarea
+                        textarea(name="message" placeholder="Ваше сообщение" cols="30" rows="3" required).form__textarea
+            button(type="submit").more отправить
+    .popup.popup--two
+        form.form
+            a(href="#").popup-close
+            .title заказать звонок
+            .form__column
+                .form__row
+                    label.form__block
+                        input(type="text" name="user-name" placeholder="Имя" required).form__input.form__input--user
+                .form__row
+                    label.form__block
+                        input(type="text" name="telephone" placeholder="Номер телефона" required).form__input.form__input--call
+            button(type="submit").more отправить
     .wrapper
         .preloader
             .preloader__spinner
@@ -65,31 +97,56 @@ block content
                                 a(href="#").tabs__link Другие детали
                             li.tabs__item
                                 a(href="#").tabs__link Сварка
-                        .tabs__xs
+                        .tabs__xs.tabs__xs--our.active
                             label.select(for='select')
                                 input#bg-sel(type='radio', name='list', value='not_changed', checked='')
                                 input#select(type='radio', name='list', value='not_changed')
                                 label.bg-sel(for='bg-sel')
                                 .items
-                                    input(type='radio', name='list', value='first_value', id='list[0]')
+                                    input(type='radio', name='list', value='our-price-1', id='list[0]')
                                     label(for='list[0]') Головка блока цилиндров (ГБЦ)
-                                    input(type='radio', name='list', value='second_value', id='list[1]')
+                                    input(type='radio', name='list', value='our-price-2', id='list[1]')
                                     label(for='list[1]') Блок цилиндров (БЦ)
-                                    input(type='radio', name='list', value='third_value', id='list[2]')
+                                    input(type='radio', name='list', value='our-price-3', id='list[2]')
                                     label(for='list[2]') Коленчатый вал (КВ)
-                                    input(type='radio', name='list', value='fourth_value', id='list[3]')
+                                    input(type='radio', name='list', value='our-price-4', id='list[3]')
                                     label(for='list[3]') Шатуны, поршни
-                                    input(type='radio', name='list', value='fifth_value', id='list[4]')
+                                    input(type='radio', name='list', value='our-price-5', id='list[4]')
                                     label(for='list[4]') Маслонасос
-                                    input(type='radio', name='list', value='sixth_value', id='list[5]')
+                                    input(type='radio', name='list', value='our-price-6', id='list[5]')
                                     label(for='list[5]') Поддон
-                                    input(type='radio', name='list', value='seventh_value', id='list[6]')
+                                    input(type='radio', name='list', value='our-price-7', id='list[6]')
                                     label(for='list[6]') Коллектор
-                                    input(type='radio', name='list', value='eight_value', id='list[7]')
+                                    input(type='radio', name='list', value='our-price-8', id='list[7]')
                                     label(for='list[7]') Другие детали
-                                    input(type='radio', name='list', value='nineth_value', id='list[8]')
+                                    input(type='radio', name='list', value='our-price-9', id='list[8]')
                                     label(for='list[8]') Сварка
-                                    span#text Весь прайс
+                                    span#text Весь прайс (1)
+                        .tabs__xs.tabs__xs--import
+                            label.select2(for='select2')
+                                input#bg-sel2(type='radio', name='list', value='not_changed', checked='')
+                                input#select2(type='radio', name='list', value='not_changed')
+                                label.bg-sel2(for='bg-sel2')
+                                .items
+                                    input(type='radio', name='list', value='our-price-1', id='list[0]')
+                                    label(for='list[0]') Головка блока цилиндров (ГБЦ)
+                                    input(type='radio', name='list', value='our-price-2', id='list[1]')
+                                    label(for='list[1]') Блок цилиндров (БЦ)
+                                    input(type='radio', name='list', value='our-price-3', id='list[2]')
+                                    label(for='list[2]') Коленчатый вал (КВ)
+                                    input(type='radio', name='list', value='our-price-4', id='list[3]')
+                                    label(for='list[3]') Шатуны, поршни
+                                    input(type='radio', name='list', value='our-price-5', id='list[4]')
+                                    label(for='list[4]') Маслонасос
+                                    input(type='radio', name='list', value='our-price-6', id='list[5]')
+                                    label(for='list[5]') Поддон
+                                    input(type='radio', name='list', value='our-price-7', id='list[6]')
+                                    label(for='list[6]') Коллектор
+                                    input(type='radio', name='list', value='our-price-8', id='list[7]')
+                                    label(for='list[7]') Другие детали
+                                    input(type='radio', name='list', value='our-price-9', id='list[8]')
+                                    label(for='list[8]') Сварка
+                                    span#text2 Весь прайс (2)
                     a(href="#" target="blanc").more.more--download.more--desktop скачать прайс 
                         span (pdf, 220кб)
                     .table.active#table-our

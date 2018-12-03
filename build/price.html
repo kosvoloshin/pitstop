@@ -113,15 +113,63 @@
         </li>
       </ul>
       <ul class="menu menu--bottom">
-        <li class="menu__item"><a class="menu__link" href="#">Капитальный ремонт ДВС</a></li>
+        <li class="menu__item"><a class="menu__link" href="type-service2.html">Капитальный ремонт ДВС</a></li>
         <li class="menu__item"><a class="menu__link" href="price.html">Прайс-лист </a></li>
         <li class="menu__item"><a class="menu__link" href="#">Акции и скидки</a></li>
         <li class="menu__item"><a class="menu__link" href="#">Договор по безналу</a></li>
         <li class="menu__item"><a class="menu__link" href="tools.html">Наше оборудование</a></li>
         <li class="menu__item"><a class="menu__link" href="#">Выездная приемка</a></li>
-        <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+        <li class="menu__item"><a class="menu__link" href="contacts.html">Контакты</a></li>
       </ul>
     </aside>
+    <div class="bg-popup"></div>
+    <div class="popup popup--one">
+      <form class="form"><a class="popup-close" href="#"></a>
+        <div class="title">оставить заявку</div>
+        <div class="form__column">
+          <div class="form__row">
+            <label class="form__block">
+              <input class="form__input form__input--user" type="text" name="user-name" placeholder="Имя" required>
+            </label>
+            <label class="form__block">
+              <input class="form__input form__input--call" type="text" name="telephone" placeholder="Номер телефона" required>
+            </label>
+          </div>
+          <div class="form__row">
+            <label class="form__block">
+              <input class="form__input form__input--email" type="text" name="email" placeholder="Email" required>
+            </label>
+            <label class="form__block">
+              <input class="form__input form__input--req" type="text" name="request" placeholder="Тема обращения" required>
+            </label>
+          </div>
+          <div class="form__row">
+            <label class="form__block form__block--textarea">
+              <textarea class="form__textarea" name="message" placeholder="Ваше сообщение" cols="30" rows="3" required></textarea>
+            </label>
+          </div>
+        </div>
+        <button class="more" type="submit">отправить</button>
+      </form>
+    </div>
+    <div class="popup popup--two">
+      <form class="form"><a class="popup-close" href="#"></a>
+        <div class="title">заказать звонок</div>
+        <div class="form__column">
+          <div class="form__row">
+            <label class="form__block">
+              <input class="form__input form__input--user" type="text" name="user-name" placeholder="Имя" required>
+            </label>
+          </div>
+          <div class="form__row">
+            <label class="form__block">
+              <input class="form__input form__input--call" type="text" name="telephone" placeholder="Номер телефона" required>
+            </label>
+          </div>
+        </div>
+        <button class="more" type="submit">отправить</button>
+      </form>
+    </div>
     <div class="wrapper">
       <div class="preloader">
         <div class="preloader__spinner">
@@ -156,7 +204,7 @@
             <div class="calc"><a class="calc__caption" href="#">Калькулятор</a>
               <div class="calc__line">расчитать стоимость</div>
             </div>
-            <div class="call"><a class="call__caption" href="tel:84994903804">8 (499) 490-38-04</a><a class="call__line" href="#">перезвонить мне</a></div>
+            <div class="call"><a class="call__caption" href="tel:84994903804">8 (499) 490-38-04</a><a class="call__line" href="#" id="popup-two">перезвонить мне</a></div>
           </div><a class="header__letter header__letter--hide-md" href="#"></a>
         </header>
         <section class="section section-wrap price">
@@ -198,30 +246,57 @@
                 <li class="tabs__item"><a class="tabs__link" href="#">Другие детали</a></li>
                 <li class="tabs__item"><a class="tabs__link" href="#">Сварка</a></li>
               </ul>
-              <div class="tabs__xs">
+              <div class="tabs__xs tabs__xs--our active">
                 <label class="select" for="select">
                   <input id="bg-sel" type="radio" name="list" value="not_changed" checked="">
                   <input id="select" type="radio" name="list" value="not_changed">
                   <label class="bg-sel" for="bg-sel"></label>
                   <div class="items">
-                    <input type="radio" name="list" value="first_value" id="list[0]">
+                    <input type="radio" name="list" value="our-price-1" id="list[0]">
                     <label for="list[0]">Головка блока цилиндров (ГБЦ)</label>
-                    <input type="radio" name="list" value="second_value" id="list[1]">
+                    <input type="radio" name="list" value="our-price-2" id="list[1]">
                     <label for="list[1]">Блок цилиндров (БЦ)</label>
-                    <input type="radio" name="list" value="third_value" id="list[2]">
+                    <input type="radio" name="list" value="our-price-3" id="list[2]">
                     <label for="list[2]">Коленчатый вал (КВ)</label>
-                    <input type="radio" name="list" value="fourth_value" id="list[3]">
+                    <input type="radio" name="list" value="our-price-4" id="list[3]">
                     <label for="list[3]">Шатуны, поршни</label>
-                    <input type="radio" name="list" value="fifth_value" id="list[4]">
+                    <input type="radio" name="list" value="our-price-5" id="list[4]">
                     <label for="list[4]">Маслонасос</label>
-                    <input type="radio" name="list" value="sixth_value" id="list[5]">
+                    <input type="radio" name="list" value="our-price-6" id="list[5]">
                     <label for="list[5]">Поддон</label>
-                    <input type="radio" name="list" value="seventh_value" id="list[6]">
+                    <input type="radio" name="list" value="our-price-7" id="list[6]">
                     <label for="list[6]">Коллектор</label>
-                    <input type="radio" name="list" value="eight_value" id="list[7]">
+                    <input type="radio" name="list" value="our-price-8" id="list[7]">
                     <label for="list[7]">Другие детали</label>
-                    <input type="radio" name="list" value="nineth_value" id="list[8]">
-                    <label for="list[8]">Сварка</label><span id="text">Весь прайс</span>
+                    <input type="radio" name="list" value="our-price-9" id="list[8]">
+                    <label for="list[8]">Сварка</label><span id="text">Весь прайс (1)</span>
+                  </div>
+                </label>
+              </div>
+              <div class="tabs__xs tabs__xs--import">
+                <label class="select2" for="select2">
+                  <input id="bg-sel2" type="radio" name="list" value="not_changed" checked="">
+                  <input id="select2" type="radio" name="list" value="not_changed">
+                  <label class="bg-sel2" for="bg-sel2"></label>
+                  <div class="items">
+                    <input type="radio" name="list" value="our-price-1" id="list[0]">
+                    <label for="list[0]">Головка блока цилиндров (ГБЦ)</label>
+                    <input type="radio" name="list" value="our-price-2" id="list[1]">
+                    <label for="list[1]">Блок цилиндров (БЦ)</label>
+                    <input type="radio" name="list" value="our-price-3" id="list[2]">
+                    <label for="list[2]">Коленчатый вал (КВ)</label>
+                    <input type="radio" name="list" value="our-price-4" id="list[3]">
+                    <label for="list[3]">Шатуны, поршни</label>
+                    <input type="radio" name="list" value="our-price-5" id="list[4]">
+                    <label for="list[4]">Маслонасос</label>
+                    <input type="radio" name="list" value="our-price-6" id="list[5]">
+                    <label for="list[5]">Поддон</label>
+                    <input type="radio" name="list" value="our-price-7" id="list[6]">
+                    <label for="list[6]">Коллектор</label>
+                    <input type="radio" name="list" value="our-price-8" id="list[7]">
+                    <label for="list[7]">Другие детали</label>
+                    <input type="radio" name="list" value="our-price-9" id="list[8]">
+                    <label for="list[8]">Сварка</label><span id="text2">Весь прайс (2)</span>
                   </div>
                 </label>
               </div>

@@ -97,6 +97,7 @@
 
     @include --md {
         max-height: 55px;
+        display: block;
     }
 }
 
@@ -538,11 +539,30 @@
     }
 }
 
+.bg-popup {
+    display: none;
+    background: rgba($color: #232323, $alpha: 0.7);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -10;
+    opacity: 0;
+    transition: .35s;
+
+    &.active {
+        display: block;
+        opacity: 1;
+        z-index: 120;
+    }
+}
+
 .popup {
-    position: absolute;
-    top: 200px;
+    position: fixed;
+    top: calc(50% + 0px);
     left: 50%;
-    transform: translate(-50%,0);
+    transform: translate(-50%, -52%);
     z-index: 200;
 
     .form {
@@ -551,12 +571,25 @@
             padding-bottom: rem(50px);
         }
     }
+
+    @include --lg {
+        position: absolute;
+    }
+
+    @include --s {
+        top: 50px;
+        transform: translate(-50%, 0);
+    }
 }
 
 .popup--one {
     width: rem(760px);
     max-width: calc(100% - 40px);
     display: none;
+
+    &.active {
+        display: block;
+    }
 
     @include --xs {
         max-width: calc(100% - 20px);
@@ -567,6 +600,10 @@
     width: rem(430px);
     max-width: calc(100% - 40px);
     display: none;
+
+    &.active {
+        display: block;
+    }
 
     @include --xs {
         max-width: calc(100% - 20px);

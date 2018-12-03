@@ -1431,7 +1431,7 @@
         background: #ababb4;
         display: block;
         position: absolute;
-        top: 83px;
+        top: 86px;
     }
 
     &:before {
@@ -1468,28 +1468,28 @@
     background-image: url(../images/icons/user.png);
     background-repeat: no-repeat;
     background-size: 22px 28px;
-    background-position: right;
+    background-position: 99% center;
 }
 
 .form__input--call {
     background-image: url(../images/icons/call.png);
     background-repeat: no-repeat;
     background-size: 26px 26px;
-    background-position: right;
+    background-position: 99% center;
 }
 
 .form__input--email {
     background-image: url(../images/icons/mail.png);
     background-repeat: no-repeat;
     background-size: 33px 15px;
-    background-position: right;
+    background-position: 99% center;
 }
 
 .form__input--req {
     background-image: url(../images/icons/pencil.png);
     background-repeat: no-repeat;
     background-size: 26px 26px;
-    background-position: right;
+    background-position: 99% center;
 }
 
 .form__textarea {
@@ -1500,7 +1500,6 @@
     resize: none;
     font-size: rem(15px);
     font-family: $gopro;
-    //padding: rem(18px) 0;
     outline: none;
     transition: .35s;
     line-height: 42px;

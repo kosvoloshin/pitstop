@@ -249,11 +249,18 @@
     position: initial;
     float: right;
     text-align: right;
+    transition: .4s;
 
     &.fixed {
         position: fixed;
         top: 0;
         right: rem(58px);
+    }
+
+    &.hide {
+        opacity: 0;
+        z-index: -10;
+        visibility: hidden;
     }
 }
 

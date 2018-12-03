@@ -46,5 +46,9 @@ function sliderInit(){
     }
 }
 
+setInterval(function(){
+    jQuery('#nextSlide').trigger('click')
+}, 7000)
+
 
 module.exports = sliderInit;

@@ -4,6 +4,7 @@ $(document).ready(function() {
     if($('.type-service__wrap--two').length){
         // фиксация табов с категориями
             var fixCat = $('.tabs');
+            var fix2 = $('#tsb2');
             var scroll = $('.description');
             var head = $('.header').height();
             var size10 = $('.section-wrap').css('padding-top');
@@ -28,8 +29,10 @@ $(document).ready(function() {
             $(window).scroll(function () {
                 if ($(this).scrollTop() > (total * 0.95) ) {
                     fixCat.addClass("hide");
+                    fix2.addClass("hide");
                 } else {
                     fixCat.removeClass("hide");
+                    fix2.removeClass("hide");
                 }
             });
 

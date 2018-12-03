@@ -205,7 +205,10 @@
     display: none;
 
     @include --xs {
-        display: block;
+
+        &.active {
+            display: block;
+        }
     }
 }
 
@@ -504,7 +507,7 @@
     padding: 2px 15px;
 }
 
-// select one
+// select our
 .select input
 {
   display: none;
@@ -625,4 +628,127 @@
   z-index: 0;
   background: rgba(0,0,0,0);
 }
-// select one end
+// select our end
+
+// select import
+.select2 input
+{
+  display: none;
+}
+
+#text2
+{
+  position: absolute;
+  display: block;
+  top: 0;
+  padding-left: 10px;
+  width: 100%;
+  padding: 13px;
+}
+
+.select2
+{
+  display: inline-block;
+  width: 100%;
+  line-height: 30px;
+  position: relative;
+  height: auto;
+  min-height: 56px;
+}
+
+.select2:before
+{
+  content: "";
+  display: inline-block;
+  background: transparent;
+  position: absolute;
+  right: 13px;
+  top: 40%;
+  transform: translate(0,-50%) rotate(-45deg);
+  z-index: 101;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  line-height: 15px;
+  border-bottom: 1px solid $w;
+  border-left: 1px solid $w;
+  cursor: pointer;
+}
+
+.select2 input[name="list"]:not(:checked) ~ #text2
+{
+  color: $w;
+  background: $blue;
+}
+
+.select2 input[name="list"]:checked ~ #text2
+{
+  background: transparent;
+  color: transparent;
+  z-index: 2;
+}
+
+#select2:disabled ~ .items #text2
+{
+  background: #eee;
+}
+
+.items
+{
+  display: block;
+  min-height: 56px;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  cursor: pointer;
+  z-index: 100;
+}
+
+#select2:not(:checked) ~ .items
+{
+  height: auto;
+  min-height: 56px;
+}
+
+.items label
+{
+  display: none;
+  padding: 13px 10px;
+  background: $w;
+}
+
+.items label:hover
+{
+  background: #eee;
+  cursor: pointer;
+}
+
+#select2:checked ~ .items
+{
+  padding-top: 56px;
+  border: 1px solid #676767;
+}
+
+#select2:checked ~ .items label
+{
+  display: block;
+}
+
+.items input:checked + label
+{
+  display: block!important;
+  border: none;
+  background: white;
+}
+
+#select2:checked ~ .bg-sel2
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  background: rgba(0,0,0,0);
+}
+// select import end

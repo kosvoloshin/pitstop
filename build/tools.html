@@ -113,15 +113,63 @@
         </li>
       </ul>
       <ul class="menu menu--bottom">
-        <li class="menu__item"><a class="menu__link" href="#">Капитальный ремонт ДВС</a></li>
+        <li class="menu__item"><a class="menu__link" href="type-service2.html">Капитальный ремонт ДВС</a></li>
         <li class="menu__item"><a class="menu__link" href="price.html">Прайс-лист </a></li>
         <li class="menu__item"><a class="menu__link" href="#">Акции и скидки</a></li>
         <li class="menu__item"><a class="menu__link" href="#">Договор по безналу</a></li>
         <li class="menu__item"><a class="menu__link" href="tools.html">Наше оборудование</a></li>
         <li class="menu__item"><a class="menu__link" href="#">Выездная приемка</a></li>
-        <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+        <li class="menu__item"><a class="menu__link" href="contacts.html">Контакты</a></li>
       </ul>
     </aside>
+    <div class="bg-popup"></div>
+    <div class="popup popup--one">
+      <form class="form"><a class="popup-close" href="#"></a>
+        <div class="title">оставить заявку</div>
+        <div class="form__column">
+          <div class="form__row">
+            <label class="form__block">
+              <input class="form__input form__input--user" type="text" name="user-name" placeholder="Имя" required>
+            </label>
+            <label class="form__block">
+              <input class="form__input form__input--call" type="text" name="telephone" placeholder="Номер телефона" required>
+            </label>
+          </div>
+          <div class="form__row">
+            <label class="form__block">
+              <input class="form__input form__input--email" type="text" name="email" placeholder="Email" required>
+            </label>
+            <label class="form__block">
+              <input class="form__input form__input--req" type="text" name="request" placeholder="Тема обращения" required>
+            </label>
+          </div>
+          <div class="form__row">
+            <label class="form__block form__block--textarea">
+              <textarea class="form__textarea" name="message" placeholder="Ваше сообщение" cols="30" rows="3" required></textarea>
+            </label>
+          </div>
+        </div>
+        <button class="more" type="submit">отправить</button>
+      </form>
+    </div>
+    <div class="popup popup--two">
+      <form class="form"><a class="popup-close" href="#"></a>
+        <div class="title">заказать звонок</div>
+        <div class="form__column">
+          <div class="form__row">
+            <label class="form__block">
+              <input class="form__input form__input--user" type="text" name="user-name" placeholder="Имя" required>
+            </label>
+          </div>
+          <div class="form__row">
+            <label class="form__block">
+              <input class="form__input form__input--call" type="text" name="telephone" placeholder="Номер телефона" required>
+            </label>
+          </div>
+        </div>
+        <button class="more" type="submit">отправить</button>
+      </form>
+    </div>
     <div class="wrapper">
       <div class="container">
         <div class="bg" id="bg"></div>
@@ -150,7 +198,7 @@
             <div class="calc"><a class="calc__caption" href="#">Калькулятор</a>
               <div class="calc__line">расчитать стоимость</div>
             </div>
-            <div class="call"><a class="call__caption" href="tel:84994903804">8 (499) 490-38-04</a><a class="call__line" href="#">перезвонить мне</a></div>
+            <div class="call"><a class="call__caption" href="tel:84994903804">8 (499) 490-38-04</a><a class="call__line" href="#" id="popup-two">перезвонить мне</a></div>
           </div><a class="header__letter header__letter--hide-md" href="#"></a>
         </header>
         <section class="section section-wrap tools">

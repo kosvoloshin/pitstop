@@ -113,15 +113,63 @@
         </li>
       </ul>
       <ul class="menu menu--bottom">
-        <li class="menu__item"><a class="menu__link" href="#">Капитальный ремонт ДВС</a></li>
+        <li class="menu__item"><a class="menu__link" href="type-service2.html">Капитальный ремонт ДВС</a></li>
         <li class="menu__item"><a class="menu__link" href="price.html">Прайс-лист </a></li>
         <li class="menu__item"><a class="menu__link" href="#">Акции и скидки</a></li>
         <li class="menu__item"><a class="menu__link" href="#">Договор по безналу</a></li>
         <li class="menu__item"><a class="menu__link" href="tools.html">Наше оборудование</a></li>
         <li class="menu__item"><a class="menu__link" href="#">Выездная приемка</a></li>
-        <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+        <li class="menu__item"><a class="menu__link" href="contacts.html">Контакты</a></li>
       </ul>
     </aside>
+    <div class="bg-popup"></div>
+    <div class="popup popup--one">
+      <form class="form"><a class="popup-close" href="#"></a>
+        <div class="title">оставить заявку</div>
+        <div class="form__column">
+          <div class="form__row">
+            <label class="form__block">
+              <input class="form__input form__input--user" type="text" name="user-name" placeholder="Имя" required>
+            </label>
+            <label class="form__block">
+              <input class="form__input form__input--call" type="text" name="telephone" placeholder="Номер телефона" required>
+            </label>
+          </div>
+          <div class="form__row">
+            <label class="form__block">
+              <input class="form__input form__input--email" type="text" name="email" placeholder="Email" required>
+            </label>
+            <label class="form__block">
+              <input class="form__input form__input--req" type="text" name="request" placeholder="Тема обращения" required>
+            </label>
+          </div>
+          <div class="form__row">
+            <label class="form__block form__block--textarea">
+              <textarea class="form__textarea" name="message" placeholder="Ваше сообщение" cols="30" rows="3" required></textarea>
+            </label>
+          </div>
+        </div>
+        <button class="more" type="submit">отправить</button>
+      </form>
+    </div>
+    <div class="popup popup--two">
+      <form class="form"><a class="popup-close" href="#"></a>
+        <div class="title">заказать звонок</div>
+        <div class="form__column">
+          <div class="form__row">
+            <label class="form__block">
+              <input class="form__input form__input--user" type="text" name="user-name" placeholder="Имя" required>
+            </label>
+          </div>
+          <div class="form__row">
+            <label class="form__block">
+              <input class="form__input form__input--call" type="text" name="telephone" placeholder="Номер телефона" required>
+            </label>
+          </div>
+        </div>
+        <button class="more" type="submit">отправить</button>
+      </form>
+    </div>
     <div class="wrapper">
       <div class="preloader">
         <div class="preloader__spinner">
@@ -156,7 +204,7 @@
             <div class="calc"><a class="calc__caption" href="#">Калькулятор</a>
               <div class="calc__line">расчитать стоимость</div>
             </div>
-            <div class="call"><a class="call__caption" href="tel:84994903804">8 (499) 490-38-04</a><a class="call__line" href="#">перезвонить мне</a></div>
+            <div class="call"><a class="call__caption" href="tel:84994903804">8 (499) 490-38-04</a><a class="call__line" href="#" id="popup-two">перезвонить мне</a></div>
           </div><a class="header__letter header__letter--hide-md" href="#"></a>
         </header>
         <section class="section section-wrap type-service">
@@ -231,43 +279,70 @@
                 <li class="tabs__item"><a class="tabs__link" href="#">Другие детали</a></li>
                 <li class="tabs__item"><a class="tabs__link" href="#">Сварка</a></li>
               </ul>
-              <div class="tabs__xs">
+              <div class="tabs__xs tabs__xs--our active">
                 <label class="select" for="select">
                   <input id="bg-sel" type="radio" name="list" value="not_changed" checked="">
                   <input id="select" type="radio" name="list" value="not_changed">
                   <label class="bg-sel" for="bg-sel"></label>
                   <div class="items">
-                    <input type="radio" name="list" value="first_value" id="list[0]">
+                    <input type="radio" name="list" value="our-price-1" id="list[0]">
                     <label for="list[0]">Головка блока цилиндров (ГБЦ)</label>
-                    <input type="radio" name="list" value="second_value" id="list[1]">
+                    <input type="radio" name="list" value="our-price-2" id="list[1]">
                     <label for="list[1]">Блок цилиндров (БЦ)</label>
-                    <input type="radio" name="list" value="third_value" id="list[2]">
+                    <input type="radio" name="list" value="our-price-3" id="list[2]">
                     <label for="list[2]">Коленчатый вал (КВ)</label>
-                    <input type="radio" name="list" value="fourth_value" id="list[3]">
+                    <input type="radio" name="list" value="our-price-4" id="list[3]">
                     <label for="list[3]">Шатуны, поршни</label>
-                    <input type="radio" name="list" value="fifth_value" id="list[4]">
+                    <input type="radio" name="list" value="our-price-5" id="list[4]">
                     <label for="list[4]">Маслонасос</label>
-                    <input type="radio" name="list" value="sixth_value" id="list[5]">
+                    <input type="radio" name="list" value="our-price-6" id="list[5]">
                     <label for="list[5]">Поддон</label>
-                    <input type="radio" name="list" value="seventh_value" id="list[6]">
+                    <input type="radio" name="list" value="our-price-7" id="list[6]">
                     <label for="list[6]">Коллектор</label>
-                    <input type="radio" name="list" value="eight_value" id="list[7]">
+                    <input type="radio" name="list" value="our-price-8" id="list[7]">
                     <label for="list[7]">Другие детали</label>
-                    <input type="radio" name="list" value="nineth_value" id="list[8]">
-                    <label for="list[8]">Сварка</label><span id="text">Весь прайс</span>
+                    <input type="radio" name="list" value="our-price-9" id="list[8]">
+                    <label for="list[8]">Сварка</label><span id="text">Весь прайс (1)</span>
+                  </div>
+                </label>
+              </div>
+              <div class="tabs__xs tabs__xs--import">
+                <label class="select2" for="select2">
+                  <input id="bg-sel2" type="radio" name="list" value="not_changed" checked="">
+                  <input id="select2" type="radio" name="list" value="not_changed">
+                  <label class="bg-sel2" for="bg-sel2"></label>
+                  <div class="items">
+                    <input type="radio" name="list" value="our-price-1" id="list[0]">
+                    <label for="list[0]">Головка блока цилиндров (ГБЦ)</label>
+                    <input type="radio" name="list" value="our-price-2" id="list[1]">
+                    <label for="list[1]">Блок цилиндров (БЦ)</label>
+                    <input type="radio" name="list" value="our-price-3" id="list[2]">
+                    <label for="list[2]">Коленчатый вал (КВ)</label>
+                    <input type="radio" name="list" value="our-price-4" id="list[3]">
+                    <label for="list[3]">Шатуны, поршни</label>
+                    <input type="radio" name="list" value="our-price-5" id="list[4]">
+                    <label for="list[4]">Маслонасос</label>
+                    <input type="radio" name="list" value="our-price-6" id="list[5]">
+                    <label for="list[5]">Поддон</label>
+                    <input type="radio" name="list" value="our-price-7" id="list[6]">
+                    <label for="list[6]">Коллектор</label>
+                    <input type="radio" name="list" value="our-price-8" id="list[7]">
+                    <label for="list[7]">Другие детали</label>
+                    <input type="radio" name="list" value="our-price-9" id="list[8]">
+                    <label for="list[8]">Сварка</label><span id="text2">Весь прайс (2)</span>
                   </div>
                 </label>
               </div>
             </div>
             <div class="type-service__table">
               <div class="type-service__buttons" id="tsb2"><a class="more more--download more--service more--desktop" href="" target="blanc">скачать прайс <span>(pdf, 220кб)</span></a><a class="more more--service more--desktop" href="" target="blanc">прайс на все услуги</a></div>
-              <div class="table active">
+              <div class="table active" id="table-our">
                 <div class="table__heading">
                   <div class="table__name">Наименование работ</div>
                   <div class="table__unit">Ед. изм.</div>
                   <div class="table__cost">Стоимость, руб.</div>
                 </div>
-                <div class="table__block">
+                <div class="table__block" id="our-price-1">
                   <div class="table__title">Головка блока цилиндров (ГБЦ)</div>
                   <div class="table__subtitle">Предварительные работы</div>
                   <div class="table__row">
@@ -290,65 +365,18 @@
                     <div class="table__unit">операция</div>
                     <div class="table__cost">150</div>
                   </div>
-                  <div class="table__row">
-                    <div class="table__name">Удаление форсунок (М-В 611 и т.п.)</div>
-                    <div class="table__unit">операция</div>
-                    <div class="table__cost">1897</div>
+                  <div class="notes">
+                    <div class="notes__title">примечания:</div>
+                    <ol class="notes__list">
+                      <li class="notes__item">При работах по одному цилиндру: + 20% к стоимости работ</li>
+                      <li class="notes__item">Гильзовка при наличии трещины: + 20% к стоимости работ</li>
+                      <li class="notes__item">Гильзовка блоков с тонкими стенками: + 20% к стоимости работ</li>
+                    </ol>
                   </div>
-                  <div class="table__row">
-                    <div class="table__name">Снятие свечей накаливания</div>
-                    <div class="table__unit">операция</div>
-                    <div class="table__cost">150</div>
-                  </div>
-                  <div class="table__row">
-                    <div class="table__name">Разборка от коллектора</div>
-                    <div class="table__unit">коллектор</div>
-                    <div class="table__cost">500</div>
-                  </div>
-                  <div class="table__row">
-                    <div class="table__name">Разборка от осей и коромысел или от РВ</div>
-                    <div class="table__unit">ось</div>
-                    <div class="table__cost">300</div>
-                  </div>
-                  <div class="table__row">
-                    <div class="table__name">Шарошка каналов</div>
-                    <div class="table__unit">канал</div>
-                    <div class="table__cost">1056</div>
-                  </div>
-                  <div class="table__subtitle">Опрессовка</div>
-                  <div class="table__row">
-                    <div class="table__name">Опрессовка ГБЦ</div>
-                    <div class="table__unit">цилиндр</div>
-                    <div class="table__cost">250</div>
-                  </div>
-                  <div class="table__row">
-                    <div class="table__name">Опрессовка ГБЦ
-                      <div class="table__sub-name">1-2 цилиндра</div>
-                    </div>
-                    <div class="table__unit">ГБЦ</div>
-                    <div class="table__cost">500</div>
-                  </div>
-                  <div class="table__row">
-                    <div class="table__name">Опрессовка ГБЦ (повторная)</div>
-                    <div class="table__unit">цилиндр</div>
-                    <div class="table__cost">150</div>
-                  </div>
+                </div>
+                <div class="table__block" id="our-price-2">
+                  <div class="table__title">блок цилиндров (БЦ)</div>
                   <div class="table__subtitle">Предварительные работы</div>
-                  <div class="table__row">
-                    <div class="table__name">Разборка клапана (рассухаривание)</div>
-                    <div class="table__unit">клапан</div>
-                    <div class="table__cost">40</div>
-                  </div>
-                  <div class="table__row">
-                    <div class="table__name">Дефектация направляющих втулок и клапанов</div>
-                    <div class="table__unit">клапан</div>
-                    <div class="table__cost">21</div>
-                  </div>
-                  <div class="table__row">
-                    <div class="table__name">Чистка клапана</div>
-                    <div class="table__unit">клапан</div>
-                    <div class="table__cost">25</div>
-                  </div>
                   <div class="table__row">
                     <div class="table__name">Мойка предварительная (технологическая)</div>
                     <div class="table__unit">ГБЦ</div>
@@ -367,32 +395,231 @@
                   <div class="table__row">
                     <div class="table__name">Снятие форсунок</div>
                     <div class="table__unit">операция</div>
-                    <div class="table__cost">150</div>
+                    <div class="table__cost">150       </div>
+                  </div>
+                  <div class="notes">
+                    <div class="notes__title">примечания:</div>
+                    <ol class="notes__list">
+                      <li class="notes__item">При работах по одному цилиндру: + 20% к стоимости работ</li>
+                      <li class="notes__item">Гильзовка при наличии трещины: + 20% к стоимости работ</li>
+                      <li class="notes__item">Гильзовка блоков с тонкими стенками: + 20% к стоимости работ</li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="table__block" id="our-price-3">
+                  <div class="table__title">Коленчатый вал (КВ)</div>
+                  <div class="table__subtitle">Предварительные работы</div>
+                  <div class="table__row">
+                    <div class="table__name">Мойка предварительная (технологическая)</div>
+                    <div class="table__unit">ГБЦ</div>
+                    <div class="table__cost">60</div>
                   </div>
                   <div class="table__row">
-                    <div class="table__name">Удаление форсунок (М-В 611 и т.п.)</div>
+                    <div class="table__name">Мойка повторная (технологическая) перед сборкой</div>
+                    <div class="table__unit">ГБЦ</div>
+                    <div class="table__cost">40</div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__name">Снятие/установка предкамер (М-В 601 и т.п.)</div>
                     <div class="table__unit">операция</div>
-                    <div class="table__cost">1897</div>
+                    <div class="table__cost">396</div>
                   </div>
                   <div class="table__row">
-                    <div class="table__name">Снятие свечей накаливания</div>
+                    <div class="table__name">Снятие форсунок</div>
                     <div class="table__unit">операция</div>
-                    <div class="table__cost">150</div>
+                    <div class="table__cost">150       </div>
+                  </div>
+                  <div class="notes">
+                    <div class="notes__title">примечания:</div>
+                    <ol class="notes__list">
+                      <li class="notes__item">При работах по одному цилиндру: + 20% к стоимости работ</li>
+                      <li class="notes__item">Гильзовка при наличии трещины: + 20% к стоимости работ</li>
+                      <li class="notes__item">Гильзовка блоков с тонкими стенками: + 20% к стоимости работ</li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="table__block" id="our-price-4">
+                  <div class="table__title">Шатуны, поршни</div>
+                  <div class="table__subtitle">Предварительные работы</div>
+                  <div class="table__row">
+                    <div class="table__name">Мойка предварительная (технологическая)</div>
+                    <div class="table__unit">ГБЦ</div>
+                    <div class="table__cost">60</div>
                   </div>
                   <div class="table__row">
-                    <div class="table__name">Разборка от коллектора</div>
-                    <div class="table__unit">коллектор</div>
-                    <div class="table__cost">500</div>
+                    <div class="table__name">Мойка повторная (технологическая) перед сборкой</div>
+                    <div class="table__unit">ГБЦ</div>
+                    <div class="table__cost">40</div>
                   </div>
                   <div class="table__row">
-                    <div class="table__name">Разборка от осей и коромысел или от РВ</div>
-                    <div class="table__unit">ось</div>
-                    <div class="table__cost">300</div>
+                    <div class="table__name">Снятие/установка предкамер (М-В 601 и т.п.)</div>
+                    <div class="table__unit">операция</div>
+                    <div class="table__cost">396</div>
                   </div>
                   <div class="table__row">
-                    <div class="table__name">Шарошка каналов</div>
-                    <div class="table__unit">канал</div>
-                    <div class="table__cost">1056   </div>
+                    <div class="table__name">Снятие форсунок</div>
+                    <div class="table__unit">операция</div>
+                    <div class="table__cost">150       </div>
+                  </div>
+                  <div class="notes">
+                    <div class="notes__title">примечания:</div>
+                    <ol class="notes__list">
+                      <li class="notes__item">При работах по одному цилиндру: + 20% к стоимости работ</li>
+                      <li class="notes__item">Гильзовка при наличии трещины: + 20% к стоимости работ</li>
+                      <li class="notes__item">Гильзовка блоков с тонкими стенками: + 20% к стоимости работ</li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="table__block" id="our-price-5">
+                  <div class="table__title">Маслонасос</div>
+                  <div class="table__subtitle">Предварительные работы</div>
+                  <div class="table__row">
+                    <div class="table__name">Мойка предварительная (технологическая)</div>
+                    <div class="table__unit">ГБЦ</div>
+                    <div class="table__cost">60</div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__name">Мойка повторная (технологическая) перед сборкой</div>
+                    <div class="table__unit">ГБЦ</div>
+                    <div class="table__cost">40</div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__name">Снятие/установка предкамер (М-В 601 и т.п.)</div>
+                    <div class="table__unit">операция</div>
+                    <div class="table__cost">396</div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__name">Снятие форсунок</div>
+                    <div class="table__unit">операция</div>
+                    <div class="table__cost">150       </div>
+                  </div>
+                  <div class="notes">
+                    <div class="notes__title">примечания:</div>
+                    <ol class="notes__list">
+                      <li class="notes__item">При работах по одному цилиндру: + 20% к стоимости работ</li>
+                      <li class="notes__item">Гильзовка при наличии трещины: + 20% к стоимости работ</li>
+                      <li class="notes__item">Гильзовка блоков с тонкими стенками: + 20% к стоимости работ</li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="table__block" id="our-price-6">
+                  <div class="table__title">Поддон</div>
+                  <div class="table__subtitle">Предварительные работы</div>
+                  <div class="table__row">
+                    <div class="table__name">Мойка предварительная (технологическая)</div>
+                    <div class="table__unit">ГБЦ</div>
+                    <div class="table__cost">60</div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__name">Мойка повторная (технологическая) перед сборкой</div>
+                    <div class="table__unit">ГБЦ</div>
+                    <div class="table__cost">40</div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__name">Снятие/установка предкамер (М-В 601 и т.п.)</div>
+                    <div class="table__unit">операция</div>
+                    <div class="table__cost">396</div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__name">Снятие форсунок</div>
+                    <div class="table__unit">операция</div>
+                    <div class="table__cost">150       </div>
+                  </div>
+                  <div class="notes">
+                    <div class="notes__title">примечания:</div>
+                    <ol class="notes__list">
+                      <li class="notes__item">При работах по одному цилиндру: + 20% к стоимости работ</li>
+                      <li class="notes__item">Гильзовка при наличии трещины: + 20% к стоимости работ</li>
+                      <li class="notes__item">Гильзовка блоков с тонкими стенками: + 20% к стоимости работ</li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="table__block" id="our-price-7">
+                  <div class="table__title">Коллектор</div>
+                  <div class="table__subtitle">Предварительные работы</div>
+                  <div class="table__row">
+                    <div class="table__name">Мойка предварительная (технологическая)</div>
+                    <div class="table__unit">ГБЦ</div>
+                    <div class="table__cost">60</div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__name">Мойка повторная (технологическая) перед сборкой</div>
+                    <div class="table__unit">ГБЦ</div>
+                    <div class="table__cost">40</div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__name">Снятие/установка предкамер (М-В 601 и т.п.)</div>
+                    <div class="table__unit">операция</div>
+                    <div class="table__cost">396</div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__name">Снятие форсунок</div>
+                    <div class="table__unit">операция</div>
+                    <div class="table__cost">150       </div>
+                  </div>
+                  <div class="notes">
+                    <div class="notes__title">примечания:</div>
+                    <ol class="notes__list">
+                      <li class="notes__item">При работах по одному цилиндру: + 20% к стоимости работ</li>
+                      <li class="notes__item">Гильзовка при наличии трещины: + 20% к стоимости работ</li>
+                      <li class="notes__item">Гильзовка блоков с тонкими стенками: + 20% к стоимости работ</li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="table__block" id="our-price-8">
+                  <div class="table__title">Другие детали</div>
+                  <div class="table__subtitle">Предварительные работы</div>
+                  <div class="table__row">
+                    <div class="table__name">Мойка предварительная (технологическая)</div>
+                    <div class="table__unit">ГБЦ</div>
+                    <div class="table__cost">60</div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__name">Мойка повторная (технологическая) перед сборкой</div>
+                    <div class="table__unit">ГБЦ</div>
+                    <div class="table__cost">40</div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__name">Снятие/установка предкамер (М-В 601 и т.п.)</div>
+                    <div class="table__unit">операция</div>
+                    <div class="table__cost">396</div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__name">Снятие форсунок</div>
+                    <div class="table__unit">операция</div>
+                    <div class="table__cost">150       </div>
+                  </div>
+                  <div class="notes">
+                    <div class="notes__title">примечания:</div>
+                    <ol class="notes__list">
+                      <li class="notes__item">При работах по одному цилиндру: + 20% к стоимости работ</li>
+                      <li class="notes__item">Гильзовка при наличии трещины: + 20% к стоимости работ</li>
+                      <li class="notes__item">Гильзовка блоков с тонкими стенками: + 20% к стоимости работ</li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="table__block" id="our-price-9">
+                  <div class="table__title">Сварка</div>
+                  <div class="table__subtitle">Предварительные работы</div>
+                  <div class="table__row">
+                    <div class="table__name">Мойка предварительная (технологическая)</div>
+                    <div class="table__unit">ГБЦ</div>
+                    <div class="table__cost">60</div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__name">Мойка повторная (технологическая) перед сборкой</div>
+                    <div class="table__unit">ГБЦ</div>
+                    <div class="table__cost">40</div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__name">Снятие/установка предкамер (М-В 601 и т.п.)</div>
+                    <div class="table__unit">операция</div>
+                    <div class="table__cost">396</div>
+                  </div>
+                  <div class="table__row">
+                    <div class="table__name">Снятие форсунок</div>
+                    <div class="table__unit">операция</div>
+                    <div class="table__cost">150       </div>
                   </div>
                   <div class="notes">
                     <div class="notes__title">примечания:</div>

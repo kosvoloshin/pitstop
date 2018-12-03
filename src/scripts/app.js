@@ -27,3 +27,9 @@ require('./common/simple-slider');
 require('./common/gallery');
 
 require('./common/type-service2');
+
+require('./common/popup');
+
+if(document.documentElement.clientWidth > 1259) {
+  require('./common/faq');
+};

@@ -6,20 +6,24 @@ $(document).ready(function() {
         $('.price__check').on('change', function(){
             if($('.price__check--our').prop('checked')){
                 $('#our').addClass('active');
+                $('.tabs__xs--our').addClass('active');
                 $('#table-our').addClass('active');
                 $('.tabs__list--our').addClass('active');
             } else {
                 $('#our').removeClass('active');
+                $('.tabs__xs--our').removeClass('active');
                 $('#table-our').removeClass('active');
                 $('.tabs__list--our').removeClass('active');
             }
     
             if($('.price__check--import').prop('checked')){
                 $('#import').addClass('active');
+                $('.tabs__xs--import').addClass('active');
                 $('#table-import').addClass('active');
                 $('.tabs__list--import').addClass('active');
             } else {
                 $('#import').removeClass('active');
+                $('.tabs__xs--import').removeClass('active');
                 $('#table-import').removeClass('active');
                 $('.tabs__list--import').removeClass('active');
             }
@@ -82,7 +86,7 @@ $(document).ready(function() {
             }
         });
     };
-    // скрол по категория на странице price
+    // скрол по категориям на странице price
     $(window).scroll(function(){
         var sections = $('.table__block');
         sections.each(function(i,el){
@@ -162,4 +166,21 @@ $(document).ready(function() {
             });
         };
     };
+
+    // select с категориями на странице прайс и типовые услуги для мобильного разрешения
+    function price_item(g_id) {
+        var act = g_id;
+        var act_div = '#' + g_id;
+        jQuery('.table__block').show().not(act_div).hide();
+    }
+
+    $('input[name=list]').change(function() {
+        var curr_item = jQuery('input[name=list]:checked').val();
+        
+        if (curr_item != "not_changed") {
+            if (curr_item != "price0") {
+                price_item(curr_item);
+            };
+        }
+    });
 });
