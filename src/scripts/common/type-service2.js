@@ -45,8 +45,6 @@ $(document).ready(function() {
             var size2 = $('.type-service__col').css('height');
             var size3 = $('.description').css('height');
             var size4 = $('.tabs').css('height');
-
-            console.log(size4);
             
             var sizeSum2 = parseInt(head) + parseInt(size0) + parseInt(size1) + parseInt(size2) + parseInt(size3) + parseInt(size4);
 
