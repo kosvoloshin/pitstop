@@ -1,0 +1,142 @@
+extends ../template
+
+block variables
+    - var title = 'Договора'
+
+block content
+    include ../common/sidebar.pug
+    .bg-popup
+    .popup.popup--one
+        form.form
+            a(href="#").popup-close
+            .title оставить заявку
+            .form__column
+                .form__row
+                    label.form__block
+                        input(type="text" name="user-name" placeholder="Имя" required).form__input.form__input--user
+                    label.form__block
+                        input(type="text" name="telephone" placeholder="Номер телефона" required).form__input.form__input--call
+                .form__row
+                    label.form__block
+                        input(type="text" name="email" placeholder="Email" required).form__input.form__input--email
+                    label.form__block
+                        input(type="text" name="request" placeholder="Тема обращения" required).form__input.form__input--req
+                .form__row
+                    label.form__block.form__block--textarea
+                        textarea(name="message" placeholder="Ваше сообщение" cols="30" rows="3" required).form__textarea
+            button(type="submit").more отправить
+    .popup.popup--two
+        form.form
+            a(href="#").popup-close
+            .title заказать звонок
+            .form__column
+                .form__row
+                    label.form__block
+                        input(type="text" name="user-name" placeholder="Имя" required).form__input.form__input--user
+                .form__row
+                    label.form__block
+                        input(type="text" name="telephone" placeholder="Номер телефона" required).form__input.form__input--call
+            button(type="submit").more отправить
+    .wrapper
+        .preloader
+            .preloader__spinner
+                .preloader__animation
+                .preloader__percents 0%
+        .container
+            .bg#bg
+            include ../common/header.pug
+            section.section.section-wrap.doc
+                .title договор по безналичному расчету
+                .doc__wrap
+                    .doc__col
+                        .doc__title Типовой договор на оказание услуг
+                        .doc__list
+                            .doc__item.visible
+                                a(href="#").doc__link
+                                    img(src="./assets/images/blanc-1.jpg" alt="document").doc__img
+                            .doc__item
+                                a(href="#").doc__link
+                                    img(src="./assets/images/blanc-2.jpg" alt="document").doc__img
+                            .doc__item
+                                a(href="#").doc__link
+                                    img(src="./assets/images/blanc-3.jpg" alt="document").doc__img
+                            .controls.controls--doc
+                                button(type="button").controls__btn.controls__prev#prev-doc
+                                button(type="button").controls__btn.controls__next#next-doc
+                                .progress-doc
+                                    .progress-complete-doc
+                                .count-doc
+                    .doc__col
+                        .doc__title Обслуживание по безналу
+                        .doc__desc
+                            .doc__text
+                                p Уважаемые клиенты! Вы можете оплатить услуги нашей компании безналичной оплатой и по желанию заключить договор с нами.
+                                p Работа с юридическими лицами осуществляется по договору на оказание услуг, оплата производится по безналичному расчету по факту оказания услуг в течении 5 дней. Для начала работы достаточно заранее заключить договор на обслуживание, выписать гарантийное письмо на оплату и доверенность на водителя. По окончании работ выписывается заказ-наряд, на основании которого и производится оплата.
+                                p Вы можете ознакомиться с текстом Договора, представленным на сайте или скачать текст документа в формате PDF.
+                                p Договор оформляется в полном соответствии с требованиями Главы 39 Гражданского Кодекса Российской Федерации (ГК РФ) Часть 2.
+                            a(href="" target="blanc").more.more--doc скачать договор 
+                                span (pdf, 220кб)
+                        .doc__subj.doc__subj--hide-xl
+                            p По всем вопросам связанным с обслуживанием по безналичному расчету обращайтесь к специалистам нашей компании по телефону: 
+                                span.strong-desc
+                                    a(href="tel:84994903804") 8 (499) 490-38-04; 
+                                |  или электронной почте: 
+                                span.strong-desc
+                                    a(href="mailto:info@pitstopmotor.ru") info@pitstopmotor.ru
+                    .doc__subj.doc__subj--show-xl
+                        p По всем вопросам связанным с обслуживанием по безналичному расчету обращайтесь к специалистам нашей компании по телефону: 
+                            span.strong-desc
+                                a(href="tel:84994903804") 8 (499) 490-38-04; 
+                            |  или электронной почте: 
+                            span.strong-desc
+                                a(href="mailto:info@pitstopmotor.ru") info@pitstopmotor.ru
+                .doc__subtitle благодарственные письма
+                .doc__wrap
+                    .thank
+                        .thank__item.visible
+                            a(href="#").thank__link
+                                img(src="./assets/images/th-1.jpg" alt="thank").thank__img
+                                .thank__title ООО "Агни"
+                        .thank__item
+                            a(href="#").thank__link
+                                img(src="./assets/images/th-2.jpg" alt="thank").thank__img
+                                .thank__title ООО "Ассамблея"
+                        .thank__item
+                            a(href="#").thank__link
+                                img(src="./assets/images/th-3.jpg" alt="thank").thank__img
+                                .thank__title ООО "АИК Колор"
+                        .thank__item
+                            a(href="#").thank__link
+                                img(src="./assets/images/th-4.jpg" alt="thank").thank__img
+                                .thank__title ООО "КОМ ТРЕЙДИНГ"
+                        .thank__item
+                            a(href="#").thank__link
+                                img(src="./assets/images/th-5.jpg" alt="thank").thank__img
+                                .thank__title ООО "Мега Транс Логистика"
+                        .thank__item
+                            a(href="#").thank__link
+                                img(src="./assets/images/th-1.jpg" alt="thank").thank__img
+                                .thank__title ООО "Агни"
+                        .thank__item
+                            a(href="#").thank__link
+                                img(src="./assets/images/th-2.jpg" alt="thank").thank__img
+                                .thank__title ООО "Ассамблея"
+                        .thank__item
+                            a(href="#").thank__link
+                                img(src="./assets/images/th-3.jpg" alt="thank").thank__img
+                                .thank__title ООО "АИК Колор"
+                        .thank__item
+                            a(href="#").thank__link
+                                img(src="./assets/images/th-4.jpg" alt="thank").thank__img
+                                .thank__title ООО "КОМ ТРЕЙДИНГ"
+                        .thank__item
+                            a(href="#").thank__link
+                                img(src="./assets/images/th-5.jpg" alt="thank").thank__img
+                                .thank__title ООО "Мега Транс Логистика"
+                        .controls.controls--thank
+                                button(type="button").controls__btn.controls__prev#prev-thank
+                                button(type="button").controls__btn.controls__next#next-thank
+                                .progress-thank
+                                    .progress-complete-thank
+                                .count-thank
+            include ../common/footer.pug

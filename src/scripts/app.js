@@ -20,6 +20,15 @@ const slider1 = require('./common/slider-reviews');
 
 slider1(); // инициализируем слайдер 1
 
+const slider2 = require('./common/slider-doc');
+
+slider2(); // инициализируем слайдер 2
+if(document.documentElement.clientWidth < 480) {
+  const slider3 = require('./common/slider-thank');
+  
+  slider3(); // инициализируем слайдер 3
+};
+
 require('./common/hamburger');
 
 require('./common/simple-slider');

@@ -458,22 +458,34 @@
 }
 
 .progress,
-.progress-reviews {
+.progress-reviews,
+.progress-doc,
+.progress-thank {
     width: rem(138px);
     height: 1px;
     background-color: #ababb4;
     margin-right: rem(9px);
 }
+.progress-doc,
+.progress-thank {
+    @include --xs {
+        width: rem(100px);
+    }
+}
 
 .progress-complete,
-.progress-complete-reviews {
+.progress-complete-reviews,
+.progress-complete-doc,
+.progress-complete-thank {
     height: 100%;
     background-color: #252527;
 }
 
 .count,
 .count-reviews,
-.gallery__count {
+.gallery__count,
+.count-doc,
+.count-thank {
     font-family: $goprom;
     font-size: rem(25px);
 }
@@ -652,6 +664,16 @@
 
     @include --sm {
         margin-top: rem(15px);
+    }
+}
+
+.more--doc {
+    &:after {
+        content: '';
+    }
+    &:hover {
+        background-color: $red;
+        border-color: $red;
     }
 }
 

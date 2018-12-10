@@ -331,6 +331,16 @@
 
 .strong-desc {
     font-family: $goprom;
+
+    a {
+        color: #252527;
+        transition: .4s;
+        display: inline-block;
+
+        &:hover {
+            color: $red;
+        }
+    }
 }
 
 .description__row {

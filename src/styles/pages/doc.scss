@@ -1,0 +1,278 @@
+.doc__wrap {
+    background-color: #fff;
+    padding: rem(40px) rem(60px);
+    display: flex;
+    flex-direction: row;
+
+    @include --xl {
+        flex-flow: row wrap;
+        padding: rem(40px) rem(25px);
+    }
+
+    @include --lg {
+        flex-flow: initial;
+        flex-direction: column;
+    }
+
+    @include --xs {
+        padding: rem(30px) rem(20px);
+    }
+}
+
+.doc__wrap p:first-child {
+    margin-top: 0;
+}
+
+.title + .doc__wrap {
+    margin-top: rem(45px);
+}
+
+.doc__col {
+    display: inline-block;
+    margin-right: rem(75px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:nth-child(2) {
+        margin-right: 0;
+
+        @include --lg {
+            order: -1;
+        }
+    }
+
+    @include --xl {
+        margin-right: 0;
+        flex: 1;
+    }
+}
+
+.doc__title {
+    font-size: rem(18px);
+    line-height: rem(22px);
+    font-family: $goprom;
+    margin-bottom: rem(35px);
+
+    @include --xs {
+        margin-bottom: rem(30px);
+    }
+}
+
+.doc__desc {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include --xl {
+        padding-bottom: rem(75px);
+    }
+
+    @include --lg {
+        padding-bottom: rem(50px);
+    }
+
+    @include --xs {
+        padding-bottom: rem(30px);
+    }
+}
+.more--doc {
+    @include --lg {
+        margin-top: rem(30px);
+    }
+
+    @include --sm {
+        display: none;
+    }
+}
+
+.doc__list {
+    position: relative;
+    height: 559px;
+    width: 396px;
+    margin-bottom: 75px;
+
+    .controls {
+        left: 50%;
+        transform: translate(-50%,0);
+        top: calc(100% + 35px);
+        bottom: auto;
+    }
+
+    @include --s {
+        height: 538px;
+        width: 381px;
+    }
+    @include --xs {
+        height: 327px;
+        width: 232px;
+    }
+}
+
+.doc__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    transition: .4s;
+
+    &.visible {
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
+.doc__link {
+    &:hover .doc__img {
+        border-color: $blue;
+    }
+}
+
+.doc__img {
+    width: 395px;
+    height: auto;
+    border: 1px solid #adadb6;
+    transition: .4s;
+
+    @include --s {
+        width: rem(380px);
+    }
+
+    @include --xs {
+        width: rem(230px);
+    }
+}
+
+.doc__subj {
+    border-top: 1px solid #d6d6d9;
+    padding-top: rem(45px);
+    margin-top: rem(45px);
+}
+
+.doc__subj--hide-xl {
+    @include --xl {
+        display: none;
+    }
+}
+
+.doc__subj--show-xl {
+    display: none;
+
+    @include --xl {
+        display: block;
+    }
+}
+
+.doc__subtitle {
+    text-transform: uppercase;
+    font-size: rem(20px);
+    line-height: rem(22px);
+    font-family: $goprom;
+    margin-bottom: rem(30px);
+    margin-top: rem(60px);
+}
+
+.thank {
+    display: inline-block;
+    margin-right: rem(-35px);
+    margin-bottom: rem(-40px);
+    font-size: 0;
+
+    .controls {
+        display: none!important;
+    }
+
+    @include --xl {
+        margin-right: rem(-18px);
+    }
+
+    @include --xs {
+        position: relative;
+        width: 200px;
+        min-height: 320px;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: rem(60px);
+
+        .controls {
+            display: flex!important;
+            left: 50%;
+            transform: translate(-50%,0);
+            top: calc(100% + 25px);
+            bottom: auto;
+        }
+    }
+}
+
+.thank__item {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: rem(30px);
+    margin-bottom: rem(45px);
+    transition: .4s;
+
+    @include --xl {
+        margin-right: rem(18px);
+    }
+
+    @include --md {
+        margin-right: rem(13px);
+    }
+
+    @include --xs {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: -1;
+        margin: 0;
+
+        &.visible {
+            opacity: 1;
+            z-index: 1;
+        }
+    }
+}
+
+.thank__link {
+    display: inline-block;
+
+    &:hover .thank__img {
+        border-color: $blue;
+    }
+    &:hover .thank__title {
+        color: $blue;
+    }
+    @include --xl {
+        max-width: rem(200px);
+    }
+
+    @include --xs {
+        margin: 0 auto;
+        width: 100%;
+        display: block;
+    }
+}
+
+.thank__img {
+    border: 1px solid #adadb6;
+    transition: .4s;
+
+    @include --xl {
+        max-width: rem(200px);
+        height: auto;
+    }
+}
+
+.thank__title {
+    margin-top: rem(10px);
+    color: #252527;
+    transition: .4s;
+    font-size: rem(15px);
+    font-family: $goprom;
+}
