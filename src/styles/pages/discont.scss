@@ -1,0 +1,513 @@
+.discont__row {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    margin-top: rem(40px);
+
+    @include --xl {
+        margin-top: rem(30px);
+        flex-direction: column;
+    }
+}
+
+.discont__row--bottom {
+    padding: rem(50px) rem(50px) rem(45px) rem(50px);
+
+    @include --lg {
+        padding: rem(40px) rem(25px);
+    }
+}
+
+.discont__row + .title-description {
+    margin-top: rem(60px);
+}
+
+.discont__col {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border-right: 4px solid #eaeaea;
+
+    &:last-child {
+        border: none;
+    }
+
+    @include --xl {
+        width: 100%;
+        flex-direction: row;
+        height: rem(265px);
+        border-bottom: 4px solid #eaeaea;
+        border-right: none;
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    @include --s {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+.discont__col--hor {
+    flex-direction: row;
+
+    .numeral {
+        border-bottom: none;
+        border-right: 4px solid #eaeaea;
+
+        &:last-child {
+            border: none;
+        }
+
+        @include --s {
+            border-bottom: 4px solid #eaeaea;
+            border-right: none;
+        }
+    }
+
+    @include --s {
+        flex-direction: column;
+    }
+}
+
+.numeral {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 4px solid #eaeaea;
+    padding: rem(20px) rem(30px);
+
+    &:last-child {
+        border: none;
+    }
+
+    @include --xl {
+        width: 50%;
+        border-bottom: none;
+        border-right: 4px solid #eaeaea;
+        flex-direction: column;
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    @include --s {
+        width: 100%;
+        border-right: none;
+        border-bottom: 4px solid #eaeaea;
+        height: 248px;
+
+        &:last-child {
+            border: none;
+        }
+    }
+}
+
+.numeral--vert {
+    flex-direction: column;
+    width: 41%;
+
+    .numeral__col {
+        border-right: none;
+        border-bottom: 1px solid #d1d1d6;
+        padding-bottom: rem(34px);
+        margin-bottom: rem(19px);
+        padding-left: rem(6px);
+
+        &:last-child {
+            border: none;
+            padding-left: rem(6px);
+            margin-bottom: 0;
+            padding-left: 0;
+
+            @include --xxl {
+                padding-left: 0;
+            }
+
+            @include --xl {
+                max-width: rem(215px);
+            }
+        }
+
+        @include --xl {
+            padding: rem(20px) 0;
+            margin-bottom: 0;
+        }
+    }
+
+    @include --xxxl {
+        width: 45%;
+    }
+
+    @include --xl {
+        width: 50%;
+    }
+
+    @include --s {
+        width: 100%;
+    }
+}
+
+.numeral__col {
+    border-right: 1px solid #d1d1d6;
+    padding: rem(9px) 0;
+
+    &:first-child {
+        min-width: 33%;
+    }
+
+    &:last-child {
+        border: none;
+        padding-left: rem(40px);
+
+        @include --xxl {
+            padding-left: rem(25px);
+        }
+
+        @include --xl {
+            padding-left: 0;
+        }
+    }
+
+    @include --xl {
+        padding-left: 0;
+        border-right: none;
+        border-bottom: 1px solid #d1d1d6;
+        padding: rem(20px) 0;
+
+        &:first-child {
+            padding-top: 9px;
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    @include --lg {
+        padding: rem(12px) 0;
+    }
+}
+
+.numeral__title {
+    font-size: rem(60px);
+    font-family: $goprob;
+    color: #252527;
+    line-height: 1;
+
+    @include --lg {
+        font-size: rem(55px);
+    }
+}
+
+.numeral__subtitle {
+    font-size: rem(20px);
+    line-height: rem(22px);
+    color: #168ce3;
+    font-family: $gopro;
+    margin-top: rem(5px);
+
+    @include --xxl {
+        font-size: rem(17px);
+    }
+
+    @include --xl {
+        font-size: rem(20px);
+    }
+
+    @include --lg {
+        font-size: rem(18px);
+    }
+}
+
+.numeral__head {
+    font-size: rem(16px);
+    line-height: rem(22px);
+    font-family: $goprom;
+    color: #252527;
+
+    @include --xxl {
+        font-size: rem(15px);
+    }
+
+    @include --xl {
+        font-size: rem(16px);
+    }
+
+    @include --lg {
+        font-size: rem(15px);
+        line-height: rem(20px);
+    }
+}
+
+.numeral__text {
+    font-size: rem(14px);
+    line-height: rem(18px);
+    font-family: $gopro;
+    color: #676767;
+    max-width: rem(220px);
+    margin-top: rem(10px);
+
+    @include --xl {
+        max-width: none;
+        margin-top: rem(17px);
+    }
+
+    @include --lg {
+        font-size: rem(15px);
+        margin-top: rem(7px);
+    }
+}
+
+.discont__promo {
+    width: 59%;
+    padding: rem(54px) rem(45px);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    @include --xxxl {
+        width: 55%;
+    }
+
+    @include --xxl {
+        padding: rem(44px) rem(35px);  
+    }
+
+    @include --xl {
+        width: 50%;
+        padding: rem(54px) rem(45px);
+    }
+
+    @include --lg {
+        padding: rem(30px);  
+    }
+
+    @include --s {
+        width: 100%;
+        height: 248px;
+    }
+}
+
+.discont__promo--hide-md {
+    @include --md {
+        display: none;
+    }
+}
+
+.discont__promo--show-md {
+    display: none;
+
+    @include --md {
+        display: block;
+    }
+}
+
+.discont__promo-title {
+    font-size: rem(37px);
+    line-height: rem(38px);
+    color: #fff;
+    font-family: $goprob;
+
+    @include --xxl {
+        font-size: rem(29px);
+        line-height: rem(30px);
+    }
+
+    @include --xl {
+        font-size: rem(37px);
+        line-height: rem(38px);
+    }
+
+    @include --lg {
+        font-size: rem(27px);
+        line-height: rem(32px);
+    }
+}
+
+.discont__promo-subtitle {
+    font-size: rem(15px);
+    line-height: rem(22px);
+    color: #fff;
+    font-family: $gopro;
+    margin-top: rem(35px);
+}
+
+.card__image {
+
+    &.card__image--hide--lg {
+        @include --lg {
+            display: none;
+        }
+    }
+
+    &.card__image--show--lg {
+        display: none;
+        width: rem(300px);
+        height: auto;
+        transform: translate(10px,0);
+
+        @include --lg {
+            display: block;
+        }
+
+        @include --s {
+            transform: translate(0,0);
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}
+
+.card__wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @include --s {
+        flex-direction: column;
+    }
+}
+
+.card__col {
+    margin-right: rem(65px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include --xxl {
+        margin-right: rem(45px);
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    @include --lg {
+        margin-right: 0;
+
+        &:last-child {
+            order: -1;
+        }
+    }
+
+    @include --s {
+
+        &:last-child {
+            order: 1;
+            margin-top: rem(30px);
+        }
+    }
+}
+
+.card__desc {
+    border-bottom: 1px solid #d6d6d9;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: rem(10px);
+    margin-bottom: rem(25px);
+
+    @include --xl {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        flex-direction: column;
+    }
+}
+
+.card__desc-col {
+    margin-right: rem(70px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include --xxl {
+        margin-right: rem(50px);
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    @include --xl {
+        margin-right: 0;
+        margin-bottom: rem(44px);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @include --lg {
+        margin-bottom: rem(30px);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.card__title {
+    font-size: rem(20px);
+    line-height: rem(22px);
+    font-family: $goprom;
+    color: #252527;
+}
+
+.card__text {
+    font-size: rem(15px);
+    line-height: rem(22px);
+    font-family: $gopro;
+    color: #252527;
+    margin-top: rem(30px);
+
+    @include --xl {
+        margin-top: rem(24px);
+    }
+
+    @include --lg {
+        margin-top: rem(20px);
+    }
+}
+
+.card__footer {
+    font-size: rem(15px);
+    line-height: rem(22px);
+    font-family: $gopro;
+    color: #252527;
+
+    p {
+        margin: 0;
+    }
+}
+.card__footer--hide-desktop {
+    display: none;
+
+    @include --xl {
+        display: block;
+        border-top: 1px solid #d6d6d9;
+        padding-top: rem(25px);
+        margin-top: rem(25px);
+    }
+}
+
+.card__footer--hide-laptop {
+    @include --xl {
+        display: none;
+    }
+}
+
+.card__link {
+    font-family: $goprom;
+    color: $b;
+    transition: 0.35s;
+    display: inline-block;
+
+    &:hover {
+        color: $blue;
+    }
+}

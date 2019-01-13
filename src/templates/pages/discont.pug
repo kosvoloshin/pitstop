@@ -1,0 +1,112 @@
+extends ../template
+
+block variables
+    - var title = 'Акции и скидки'
+
+block content
+    include ../common/sidebar.pug
+    .bg-popup
+    .popup.popup--one
+        form.form
+            a(href="#").popup-close
+            .title оставить заявку
+            .form__column
+                .form__row
+                    label.form__block
+                        input(type="text" name="user-name" placeholder="Имя" required).form__input.form__input--user
+                    label.form__block
+                        input(type="text" name="telephone" placeholder="Номер телефона" required).form__input.form__input--call
+                .form__row
+                    label.form__block
+                        input(type="text" name="email" placeholder="Email" required).form__input.form__input--email
+                    label.form__block
+                        input(type="text" name="request" placeholder="Тема обращения" required).form__input.form__input--req
+                .form__row
+                    label.form__block.form__block--textarea
+                        textarea(name="message" placeholder="Ваше сообщение" cols="30" rows="3" required).form__textarea
+            button(type="submit").more отправить
+    .popup.popup--two
+        form.form
+            a(href="#").popup-close
+            .title заказать звонок
+            .form__column
+                .form__row
+                    label.form__block
+                        input(type="text" name="user-name" placeholder="Имя" required).form__input.form__input--user
+                .form__row
+                    label.form__block
+                        input(type="text" name="telephone" placeholder="Номер телефона" required).form__input.form__input--call
+            button(type="submit").more отправить
+    .wrapper
+        .preloader
+            .preloader__spinner
+                .preloader__animation
+                .preloader__percents 0%
+        .container
+            .bg#bg
+            include ../common/header.pug
+            section.section.discont.section-wrap
+                h1.section__title.visuallyhidden discont
+                .title Акции и скидки
+                .discont__wrap
+                    .discont__row
+                        .discont__col
+                            .numeral
+                                .numeral__col
+                                    .numeral__title 15%
+                                    .numeral__subtitle День рождения
+                                .numeral__col
+                                    .numeral__head Неделя до дня рождения и неделя после скидка на все работы 20%. 
+                                    .numeral__text Скидка не распространяется на запчасти.
+                            .numeral
+                                .numeral__col
+                                    .numeral__title 10%
+                                    .numeral__subtitle Приведи друга
+                                .numeral__col
+                                    .numeral__head Приведи друга к нам на ремонт - получи скидку на все работы 10%.
+                                    .numeral__text Скидка не распространяется на запчасти.
+                        .discont__col.discont__col--hor
+                            .numeral.numeral--vert
+                                .numeral__col
+                                    .numeral__title 5%
+                                    .numeral__subtitle Третье посещение
+                                .numeral__col
+                                    .numeral__head При третьем посещении и более скидка 5%
+                            .discont__promo(style="background-image: url(./assets/images/discont.jpg)").discont__promo--hide-md
+                                .discont__promo-title Бесплатная мойка детали
+                                .discont__promo-subtitle При втором посещении мойка детали двигателя бесплатно
+                            .discont__promo(style="background-image: url(./assets/images/discont-720.jpg)").discont__promo--show-md
+                                .discont__promo-title Бесплатная мойка детали
+                                .discont__promo-subtitle При втором посещении мойка детали двигателя бесплатно
+                    .title-description Накопительная дисконтная карта
+                    .discont__row.discont__row--bottom
+                        .card
+                            .card__wrap
+                                .card__col
+                                    img.card__image(src="./assets/images/card.png" alt="card").card__image--hide--lg
+                                    img.card__image(src="./assets/images/card-720.png" alt="card").card__image--show--lg
+                                .card__col
+                                    .card__desc
+                                        .card__desc-col
+                                            .card__title 1. Как получить бонусную карту?
+                                            .card__text
+                                                p Вы можете получить бонусную карту постоянного клиента в Техцентре «Пит-Стоп Мотор». Для этого Вам необходимо просто обратиться к директору по развитию и заполнить анкету.
+                                        .card__desc-col
+                                            .card__title 2. На что действует скидка?
+                                            .card__text
+                                                p Скидка по бонусной карте постоянного клиента «Пит-Стоп Мотор» распространяется только на услуги Техцентра. Для получения более подробной информации обращайтесь к директору по развитию.
+                                    .card__footer.card__footer--hide-laptop
+                                        .card__line
+                                            p По всем вопросам обращайтесь к специалистам нашей компании
+                                        .card__line
+                                            p по телефону: 
+                                                a.card__link(href="tel:84994903804") 8 (499) 490-38-04 
+                                                | или электронной почте: 
+                                                a.card__link(href="mailto:info@pitstopmotor.ru") info@pitstopmotor.ru
+                            .card__footer.card__footer--hide-desktop
+                                .card__line
+                                    p По всем вопросам обращайтесь к специалистам нашей компании по телефону: 
+                                        a.card__link(href="tel:84994903804") 8 (499) 490-38-04 
+                                        |  или электронной почте: 
+                                        a.card__link(href="mailto:info@pitstopmotor.ru") info@pitstopmotor.ru
+            include ../common/footer.pug
